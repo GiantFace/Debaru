@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Debaru Kft. — Wireframe felfedezés</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Patrick+Hand&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  html, body { margin: 0; padding: 0; }
+  body { background: #f0eee9; }
+</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- SVG filter defs for sketchy "roughen" effect -->
+<svg width="0" height="0" style="position:absolute">
+  <filter id="wf-roughen">
+    <feTurbulence baseFrequency="0.04" numOctaves="2" seed="2" />
+    <feDisplacementMap in="SourceGraphic" scale="1.5" />
+  </filter>
+</svg>
+
+<div id="root"></div>
+
+<template id="__bundler_thumbnail" data-bg-color="#f0eee9">
+  <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
+    <rect x="40" y="40" width="120" height="80" fill="none" stroke="#1a1a1a" stroke-width="2" rx="3"/>
+    <rect x="170" y="40" width="100" height="80" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="4 3" rx="3"/>
+    <rect x="280" y="40" width="80" height="80" fill="#ff6b35" stroke="#1a1a1a" stroke-width="2" rx="3"/>
+    <line x1="50" y1="60" x2="140" y2="60" stroke="#1a1a1a" stroke-width="3"/>
+    <line x1="50" y1="75" x2="120" y2="75" stroke="#999" stroke-width="2"/>
+    <line x1="50" y1="88" x2="135" y2="88" stroke="#999" stroke-width="2"/>
+    <rect x="40" y="140" width="320" height="100" fill="none" stroke="#1a1a1a" stroke-width="2" rx="3"/>
+    <text x="200" y="195" font-family="Architects Daughter, sans-serif" font-size="22" text-anchor="middle" fill="#1a1a1a" font-weight="700">Debaru. Wireframes</text>
+  </svg>
+</template>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="wf-primitives.jsx"></script>
+<script type="text/babel" src="pages-home.jsx"></script>
+<script type="text/babel" src="pages-inner.jsx"></script>
+<script type="text/babel" src="ticketing-auth.jsx"></script>
+<script type="text/babel" src="ticketing-tickets.jsx"></script>
+
+<script type="text/babel">
+const { useTweaks, TweaksPanel, TweakSection, TweakRadio, TweakSelect, TweakToggle, TweakColor, TweakSlider } = window;
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "navStyle": "top",
+  "accent": "#ff6b35",
+  "density": "airy",
+  "dark": false,
+  "sketchy": true,
+  "fontPreset": "work"
+}/*EDITMODE-END*/;
+
+// Curated font pairings — komoly, mérnöki hangulat. Max 1 lazabb display elem.
+const FONT_PRESETS = {
+  blueprint: { label: 'Blueprint · jegyzet',   display: 'Architects Daughter', body: 'Inter' },
+  notebook:  { label: 'Notebook · vegyes',     display: 'Patrick Hand',        body: 'Inter' },
+  grotesk:   { label: 'Grotesk · tiszta',      display: 'Space Grotesk',       body: 'Inter' },
+  technical: { label: 'Műszaki · sans+mono',   display: 'Space Grotesk',       body: 'JetBrains Mono' },
+  plex:      { label: 'IBM Plex · technikai',  display: 'IBM Plex Sans',       body: 'IBM Plex Mono' },
+  editorial: { label: 'Editorial · DM',        display: 'DM Sans',             body: 'Inter' },
+  neutral:   { label: 'Manrope · semleges',    display: 'Manrope',             body: 'Inter' },
+  work:      { label: 'Work Sans · vállalati', display: 'Work Sans',           body: 'Inter' },
+};
+
+// Frame wraps an artboard's content with the WF theme so all tweaks (dark,
+// density, accent, fonts, sketchy) flow through one place.
+function Frame({ children, t, w = 1280, h = 860 }) {
+  const cls = [
+    'wf',
+    t.dark ? 'dark' : '',
+    `density-${t.density}`,
+    t.sketchy ? 'sketchy' : '',
+  ].filter(Boolean).join(' ');
+  const preset = FONT_PRESETS[t.fontPreset] || FONT_PRESETS.blueprint;
+  return (
+    <div className={cls} style={{
+      '--accent': t.accent,
+      '--accent-soft': t.accent + '22',
+      '--wf-display-font': `"${preset.display}"`,
+      '--wf-body-font': `"${preset.body}"`,
+      width: w, height: h,
+    }}>
+      {children}
+    </div>
+  );
+}
+
+const ART = { w: 1280, h: 860 };
+
+function App() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const navStyle = t.navStyle;
+  const accent = t.accent;
+
+  return (
+    <>
+      <DesignCanvas>
+        {/* ─────────── INTRO ─────────── */}
+        <DCSection id="intro" title="Debaru Kft. — Wireframe felfedezés" subtitle="Tervezési vázlatok a publikus weboldalhoz és az ügyfélportálhoz. Minden képernyő alacsony hűségű, csak strukturális.">
+          <DCArtboard id="brief" label="Brief · Olvass el először" width={520} height={620}>
+            {(() => { const _p = FONT_PRESETS[t.fontPreset] || FONT_PRESETS.blueprint;
+              const dF = `"${_p.display}", sans-serif`;
+              const bF = `"${_p.body}", "Inter", sans-serif`;
+              return (
+            <div style={{ padding: '36px 40px', fontFamily: bF, height: '100%', overflow: 'auto', background: '#fafaf7' }}>
+              <div style={{ fontFamily: dF, fontSize: 36, fontWeight: 700, lineHeight: 1, marginBottom: 8 }}>
+                Debaru<span style={{ color: accent }}>.</span> Kft.
+              </div>
+              <div style={{ fontSize: 12, color: '#666', letterSpacing: 1.5, textTransform: 'uppercase', marginBottom: 24 }}>
+                Wireframe felfedezés · 2026 · v1
+              </div>
+
+              <div style={{ fontFamily: dF, fontSize: 22, marginTop: 12, marginBottom: 6 }}>Mit látsz itt?</div>
+              <div style={{ fontSize: 14, color: '#333', marginBottom: 14, lineHeight: 1.5 }}>
+                Alacsony hűségű wireframe-ek a teljes Debaru-projekthez: <b>publikus weboldal</b> + <b>zárt ügyfélportál / ticketing rendszer</b>. A cél: struktúra, információs hierarchia és UX-irányok feltárása — még nem a végleges látvány.
+              </div>
+
+              <div style={{ fontFamily: dF, fontSize: 22, marginTop: 18, marginBottom: 6 }}>Hogyan használd?</div>
+              <ul style={{ fontSize: 13, color: '#333', lineHeight: 1.6, paddingLeft: 18, margin: 0 }}>
+                <li><b>Görgess / húzd</b> a vásznat — pinch / scroll wheel zoom.</li>
+                <li>Kattints egy artboard-címkére → <b>fókusz nézet</b>.</li>
+                <li>Jobb alsó sarok: <b>Tweaks</b> panel — színek, sűrűség, font, dark mode, sketchy.</li>
+                <li>Kommentelj rá bármelyikre — jelölőd alapján iterálunk.</li>
+              </ul>
+
+              <div style={{ fontFamily: dF, fontSize: 22, marginTop: 18, marginBottom: 6 }}>Mi NINCS benne (még)?</div>
+              <div style={{ fontSize: 13, color: '#333', lineHeight: 1.5 }}>
+                Végleges tipográfia · valódi fotók · márka színpaletta · animációk · admin felület mélyén lévő tartalom-szerkesztő. Ezek a következő körben, miután kiválasztottad az irányt.
+              </div>
+
+              <div style={{ marginTop: 24, padding: 12, background: '#fff4a8', fontFamily: dF, fontSize: 14, color: '#5a4a2a', transform: 'rotate(-1deg)', boxShadow: '1px 2px 4px rgba(0,0,0,.1)' }}>
+                Tipp: próbáld ki a Tweaks panelt → <b>Font párosítás</b> — 8 különböző wireframe-hangulat.
+              </div>
+            </div>
+              ); })()}
+          </DCArtboard>
+        </DCSection>
+
+        {/* ─────────── HOMEPAGE VARIATIONS ─────────── */}
+        <DCSection id="home" title="1 · Kezdőlap variánsok" subtitle="Öt különböző irány. Eltérő hierarchia, hangulat és sűrűség. A nav-stílus minden kártyán követi a Tweak-et.">
+          <DCArtboard id="home-a" label="A · Klasszikus vállalati" width={ART.w} height={ART.h}>
+            <Frame t={t}><HomeA navStyle={navStyle} accent={accent}/></Frame>
+          </DCArtboard>
+          <DCArtboard id="home-b" label="B · Split tech · fotó" width={ART.w} height={ART.h}>
+            <Frame t={t}><HomeB navStyle={navStyle} accent={accent}/></Frame>
+          </DCArtboard>
+          <DCArtboard id="home-c" label="C · Editorial · sűrű" width={ART.w} height={ART.h}>
+            <Frame t={t}><HomeC navStyle={navStyle} accent={accent}/></Frame>
+          </DCArtboard>
+          <DCArtboard id="home-d" label="D · Modern ipari · full-bleed" width={ART.w} height={ART.h}>
+            <Frame t={t}><HomeD navStyle={navStyle} accent={accent}/></Frame>
+          </DCArtboard>
+          <DCArtboard id="home-e" label="E · Tipográfia · minimalista" width={ART.w} height={ART.h}>
+            <Frame t={t}><HomeE navStyle={navStyle} accent={accent}/></Frame>
+          </DCArtboard>
+        </DCSection>
+
+        {/* ─────────── INNER PAGES ─────────── */}
+        <DCSection id="inner" title="2 · Aloldalak" subtitle="Rólunk · Szolgáltatások · Projektjeink (lista + részletes) · Kapcsolat. Egy iránnyal — később variálható.">
+          <DCArtboard id="about" label="Rólunk" width={ART.w} height={ART.h}>
+            <Frame t={t}><PageAbout navStyle={navStyle} accent={accent}/></Frame>
+          </DCArtboard>
+          <DCArtboard id="services" label="Szolgáltatások" width={ART.w} height={ART.h}>
+            <Frame t={t}><PageServices navStyle={navStyle} accent={accent}/></Frame>
+          </DCArtboard>
+          <DCArtboard id="projects" label="Projektjeink (lista)" width={ART.w} height={ART.h}>
+            <Frame t={t}><PageProjects navStyle={navStyle} accent={accent}/></Frame>
+          </DCArtboard>
+          <DCArtboard id="project-detail" label="Projekt — részletes oldal" width={ART.w} height={ART.h}>
+            <Frame t={t}><PageProjectDetail navStyle={navStyle} accent={accent}/></Frame>
+          </DCArtboard>
+          <DCArtboard id="contact" label="Kapcsolat" width={ART.w} height={ART.h}>
+            <Frame t={t}><PageContact navStyle={navStyle} accent={accent}/></Frame>
+          </DCArtboard>
+        </DCSection>
+
+        {/* ─────────── TICKETING — LOGIN + DASHBOARDS ─────────── */}
+        <DCSection id="portal-dash" title="3 · Ügyfélportál — Bejelentkezés és Dashboardok" subtitle="Login + 4 szerepkör dashboard-ja: ügyfél, ügyfél admin, Debaru munkatárs, Debaru admin.">
+          <DCArtboard id="login" label="Bejelentkezés" width={ART.w} height={ART.h}>
+            <Frame t={t}><TicketLogin accent={accent}/></Frame>
+          </DCArtboard>
+          <DCArtboard id="dash-customer" label="Ügyfél · Dashboard" width={ART.w} height={ART.h}>
+            <Frame t={t}><DashCustomer accent={accent}/></Frame>
+          </DCArtboard>
+          <DCArtboard id="dash-customer-admin" label="Ügyfél admin · Dashboard" width={ART.w} height={ART.h}>
+            <Frame t={t}><DashCustomerAdmin accent={accent}/></Frame>
+          </DCArtboard>
+          <DCArtboard id="dash-staff" label="Debaru munkatárs · Munkalista" width={ART.w} height={ART.h}>
+            <Frame t={t}><DashStaff accent={accent}/></Frame>
+          </DCArtboard>
+          <DCArtboard id="dash-admin" label="Debaru admin · Vezetői áttekintés" width={ART.w} height={ART.h}>
+            <Frame t={t}><DashAdmin accent={accent}/></Frame>
+          </DCArtboard>
+        </DCSection>
+
+        {/* ─────────── TICKETING — TICKET LIST UX VARIATIONS ─────────── */}
+        <DCSection id="ticket-list" title="4 · Hibajegy lista — 3 UX variáns" subtitle="Ugyanaz az adathalmaz, három különböző feldolgozási modell. Melyik illik leginkább a Debaru munkamenetéhez?">
+          <DCArtboard id="list-a" label="A · Lista (klasszikus tábla)" width={ART.w} height={ART.h}>
+            <Frame t={t}><TicketListA accent={accent}/></Frame>
+          </DCArtboard>
+          <DCArtboard id="list-b" label="B · Kanban (státusz-oszlopok)" width={ART.w} height={ART.h}>
+            <Frame t={t}><TicketListB accent={accent}/></Frame>
+          </DCArtboard>
+          <DCArtboard id="list-c" label="C · Idővonal (esemény-fókuszú)" width={ART.w} height={ART.h}>
+            <Frame t={t}><TicketListC accent={accent}/></Frame>
+          </DCArtboard>
+        </DCSection>
+
+        {/* ─────────── TICKET DETAIL + CREATE ─────────── */}
+        <DCSection id="ticket-detail" title="5 · Hibajegy — Részletes és Új jegy" subtitle="A jegy életét bemutató oldal (üzenetfolyam + belső megjegyzések + meta) és az új-jegy űrlap.">
+          <DCArtboard id="ticket-detail-ab" label="Hibajegy — Részletes nézet" width={ART.w} height={ART.h}>
+            <Frame t={t}><TicketDetail accent={accent}/></Frame>
+          </DCArtboard>
+          <DCArtboard id="ticket-create" label="Új hibajegy létrehozása" width={ART.w} height={ART.h}>
+            <Frame t={t}><TicketCreate accent={accent}/></Frame>
+          </DCArtboard>
+        </DCSection>
+
+      </DesignCanvas>
+
+      <TweaksPanel title="Tweaks">
+        <TweakSection label="Szín · Hangulat" />
+        <TweakColor
+          label="Kiemelőszín"
+          value={t.accent}
+          options={['#3b6ef5', '#00b8d4', '#ff6b35', '#f59e0b', '#10b981', '#8b2532']}
+          onChange={(v) => setTweak('accent', v)}
+        />
+        <TweakToggle label="Dark mode" value={t.dark} onChange={(v) => setTweak('dark', v)} />
+        <TweakToggle label="Sketchy stílus" value={t.sketchy} onChange={(v) => setTweak('sketchy', v)} />
+
+        <TweakSection label="Layout" />
+        <TweakRadio
+          label="Nav stílus"
+          value={t.navStyle}
+          options={['top', 'mega']}
+          onChange={(v) => setTweak('navStyle', v)}
+        />
+        <TweakRadio
+          label="Sűrűség"
+          value={t.density}
+          options={['tight', 'normal', 'airy']}
+          onChange={(v) => setTweak('density', v)}
+        />
+
+        <TweakSection label="Tipográfia" />
+        <TweakSelect
+          label="Font párosítás"
+          value={t.fontPreset}
+          options={Object.keys(FONT_PRESETS).map(k => ({ value: k, label: FONT_PRESETS[k].label }))}
+          onChange={(v) => setTweak('fontPreset', v)}
+        />
+        <div style={{ fontSize: 10, color: 'rgba(41,38,27,.55)', padding: '2px 2px 4px', lineHeight: 1.5 }}>
+          <b>{(FONT_PRESETS[t.fontPreset] || FONT_PRESETS.blueprint).display}</b> <span style={{ opacity: .6 }}>(címek)</span><br/>
+          <b>{(FONT_PRESETS[t.fontPreset] || FONT_PRESETS.blueprint).body}</b> <span style={{ opacity: .6 }}>(szöveg)</span>
+        </div>
+      </TweaksPanel>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+// ── Standalone-mode toggle ───────────────────────────────────────────────
+// When the file is opened outside the design host (e.g. downloaded HTML),
+// there's no toolbar to flip Tweaks open. Detect "no host" and add a
+// floating button that fires the same postMessage the host would.
+(function () {
+  const inHost = window.parent !== window;
+  if (inHost) return;
+
+  let open = false;
+  const btn = document.createElement('button');
+  btn.textContent = '⚙ Tweaks';
+  btn.style.cssText = `
+    position:fixed; right:16px; bottom:16px; z-index:2147483647;
+    padding:8px 14px; border:1px solid #29261b; border-radius:20px;
+    background:#fafaf7; color:#29261b; font:600 12px/1 ui-sans-serif,system-ui,sans-serif;
+    cursor:pointer; box-shadow:0 4px 16px rgba(0,0,0,.12);
+  `;
+  btn.onmouseenter = () => (btn.style.background = '#f0eee9');
+  btn.onmouseleave = () => (btn.style.background = '#fafaf7');
+  btn.onclick = () => {
+    open = !open;
+    window.postMessage({ type: open ? '__activate_edit_mode' : '__deactivate_edit_mode' }, '*');
+    btn.style.display = open ? 'none' : '';
+  };
+
+  // When user closes the panel via its × button, the panel posts
+  // __edit_mode_dismissed — listen for that to re-show our toggle.
+  window.addEventListener('message', (e) => {
+    if (e.data?.type === '__edit_mode_dismissed') {
+      open = false;
+      btn.style.display = '';
+    }
+  });
+
+  document.body.appendChild(btn);
+})();
+</script>
+
+</body>
+</html>

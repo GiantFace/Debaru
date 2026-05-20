@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tervezés · Debaru</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #0e0f12;
+        --fg: #f4f5f7;
+        --muted: #a1a4ad;
+        --card: #1a1c22;
+        --card-hover: #23262e;
+        --border: #2c2f38;
+        --accent: #ffb547;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+      main { max-width: 900px; margin: 0 auto; padding: 64px 24px 96px; }
+      .crumb { font-size: 13px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+      .crumb a { color: var(--muted); text-decoration: none; }
+      .crumb a:hover { color: var(--fg); }
+      h1 { font-size: 40px; line-height: 1.1; margin: 0 0 12px; letter-spacing: -0.02em; }
+      .lede { font-size: 17px; color: var(--muted); margin: 0 0 40px; max-width: 60ch; }
+      .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+      a.card { display: block; padding: 24px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; text-decoration: none; color: inherit; transition: background 120ms ease, transform 120ms ease, border-color 120ms ease; }
+      a.card:hover { background: var(--card-hover); border-color: var(--accent); transform: translateY(-1px); }
+      .folder { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; font-size: 14px; color: var(--muted); }
+      .name { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; }
+      .desc { margin-top: 6px; font-size: 14px; color: var(--muted); }
+      footer { margin-top: 64px; font-size: 12px; color: var(--muted); }
+      footer a { color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="crumb"><a href="../">Debaru</a> &nbsp;/&nbsp; Tervezés</div>
+      <h1>Tervezés</h1>
+      <p class="lede">A tervezési fázisok mappái. Az első fázis tartalmazza az interaktív wireframe-et és a forrásokat.</p>
+
+      <div class="grid">
+        <a class="card" href="I.%20F%C3%A1zis%20-%20Wireframe/">
+          <div class="folder">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            <span>Mappa</span>
+          </div>
+          <div class="name">I. Fázis – Wireframe</div>
+          <div class="desc">Interaktív wireframe és a hozzá tartozó forrásfájlok.</div>
+        </a>
+      </div>
+
+      <footer>
+        <a href="https://github.com/GiantFace/Debaru">Forrás a GitHubon</a>
+      </footer>
+    </main>
+  </body>
+</html>
