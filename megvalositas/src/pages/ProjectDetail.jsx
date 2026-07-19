@@ -1,13 +1,21 @@
 import { useParams, Navigate, Link } from 'react-router-dom'
 import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal, RevealStagger } from '../components/ui/Reveal.jsx'
+import { ParallaxMedia } from '../components/ui/ParallaxMedia.jsx'
 import { StatBlock } from '../components/ui/StatBlock.jsx'
 import { VideoGallery } from '../components/sections/VideoGallery.jsx'
 import { Button } from '../components/ui/Button.jsx'
-import { Arrow } from '../components/ui/Icons.jsx'
+import { Arrow, Check } from '../components/ui/Icons.jsx'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import { projects, projectBySlug } from '../data/projects.js'
 import { bkvVideos } from '../data/videos.js'
+
+// Közös checklist-elem (szállított elemek / eredmények).
+const CheckItem = ({ children }) => (
+  <li style={{ display: 'flex', gap: 12, alignItems: 'flex-start', color: 'var(--muted)', fontSize: 15 }}>
+    <Check style={{ width: 19, height: 19, color: 'var(--accent-2)', flexShrink: 0, marginTop: 2 }} />{children}
+  </li>
+)
 
 // Egy projekt önálló, SEO-barát esettanulmány-oldala (/projektjeink/:slug).
 export default function ProjectDetail() {
@@ -28,8 +36,30 @@ export default function ProjectDetail() {
         lede={p.lede}
       />
 
-      {/* leírás + projektadatok oldalsáv */}
-      <section className="section" style={{ paddingTop: 0 }}>
+      {/* áttekintés + kép + szállított elemek */}
+      <section className="section" style={{ paddingTop: 40 }}>
+        <div className="wrap">
+          <div className="split" style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 56, alignItems: 'start' }}>
+            <Reveal>
+              <div className="eyebrow">Áttekintés</div>
+              <h2 style={{ fontSize: 'clamp(24px,3vw,32px)', margin: '16px 0 16px' }}>A projekt röviden</h2>
+              {p.overview.map((par, i) => (
+                <p key={i} className="muted" style={{ marginBottom: i < p.overview.length - 1 ? 14 : 0 }}>{par}</p>
+              ))}
+              <div className="eyebrow" style={{ margin: '30px 0 14px' }}>Amit szállítottunk</div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
+                {p.scope.map((it) => <CheckItem key={it}>{it}</CheckItem>)}
+              </ul>
+            </Reveal>
+            <ParallaxMedia reveal speed={0.08} style={{ height: 420 }} placeholder={p.placeholder} />
+          </div>
+        </div>
+      </section>
+
+      <hr className="divider" />
+
+      {/* kihívás / megoldás / eredmény + projektadatok oldalsáv */}
+      <section className="section">
         <div className="wrap">
           <div className="split" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: 64, alignItems: 'start' }}>
             <div>
@@ -69,7 +99,26 @@ export default function ProjectDetail() {
 
       <hr className="divider" />
 
-      {/* mit valósítottunk meg — kiemelt elemek */}
+      {/* a megvalósítás lépései */}
+      <section className="section">
+        <div className="wrap">
+          <Reveal className="eyebrow">A megvalósítás</Reveal>
+          <Reveal as="h2" style={{ fontSize: 'clamp(26px,4vw,40px)', margin: '16px 0 48px', maxWidth: '16ch' }}>Lépésről lépésre</Reveal>
+          <RevealStagger className="grid g-4" step={90}>
+            {p.process.map((s) => (
+              <div key={s.n}>
+                <div className="kicker-num">{s.n}</div>
+                <h3 style={{ fontSize: 19, margin: '14px 0 8px' }}>{s.title}</h3>
+                <p className="muted" style={{ fontSize: 14.5 }}>{s.desc}</p>
+              </div>
+            ))}
+          </RevealStagger>
+        </div>
+      </section>
+
+      <hr className="divider" />
+
+      {/* kulcselemek + műszaki paraméterek */}
       <section className="section">
         <div className="wrap">
           <Reveal className="eyebrow">A projekt kulcselemei</Reveal>
@@ -82,6 +131,45 @@ export default function ProjectDetail() {
               </div>
             ))}
           </RevealStagger>
+
+          {p.tech && (
+            <Reveal style={{ marginTop: 48 }}>
+              <div className="eyebrow" style={{ marginBottom: 18 }}>Műszaki paraméterek</div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+                {p.tech.map((t) => (
+                  <span key={t} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 14, color: 'var(--muted)', background: 'var(--card)', border: '1px solid var(--border)', padding: '9px 15px', borderRadius: 999 }}>
+                    <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--accent-2)', flexShrink: 0 }} />{t}
+                  </span>
+                ))}
+              </div>
+            </Reveal>
+          )}
+        </div>
+      </section>
+
+      <hr className="divider" />
+
+      {/* eredmények + CTA */}
+      <section className="section">
+        <div className="wrap">
+          <div className="split" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'center' }}>
+            <Reveal>
+              <div className="eyebrow">Az eredmény</div>
+              <h2 style={{ fontSize: 'clamp(24px,3vw,34px)', margin: '16px 0 22px', maxWidth: '16ch' }}>Amit a projekt hozott</h2>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 14 }}>
+                {p.outcome.map((o) => (
+                  <li key={o} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', fontSize: 16 }}>
+                    <Check style={{ width: 20, height: 20, color: 'var(--accent-2)', flexShrink: 0, marginTop: 3 }} />{o}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+            <Reveal className="card" style={{ textAlign: 'center', padding: '56px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
+              <h3 style={{ fontSize: 'clamp(22px,3vw,30px)', maxWidth: '18ch', margin: '0 auto 16px' }}>Hasonló projektet tervez?</h3>
+              <p className="muted" style={{ margin: '0 auto 26px', maxWidth: '34ch' }}>Kérjen díjmentes szakmai konzultációt — 3 munkanapon belül visszajelzünk.</p>
+              <Button to="/kapcsolat" arrow>Ajánlatot kérek</Button>
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -118,7 +206,7 @@ export default function ProjectDetail() {
         <div className="wrap">
           <Reveal style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
             <Button variant="ghost" to="/projektjeink"><Arrow style={{ transform: 'rotate(180deg)' }} />Összes projekt</Button>
-            <Button to="/kapcsolat" arrow>Hasonló projektet tervez?</Button>
+            <Button to="/kapcsolat" arrow>Beszéljünk a projektjéről</Button>
           </Reveal>
         </div>
       </section>
