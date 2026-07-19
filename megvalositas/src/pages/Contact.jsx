@@ -6,9 +6,9 @@ import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal } from '../components/ui/Reveal.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Field } from '../components/ui/Field.jsx'
-import { Arrow, Check, Close, Upload, Warn, infoIcons } from '../components/ui/Icons.jsx'
+import { Check, Close, Upload, Warn, infoIcons } from '../components/ui/Icons.jsx'
 import { useToast } from '../hooks/useToast.jsx'
-import { contactHead, contactAreas, contactCards, budgets, timelines, MAP_EMBED, MAP_DIRECTIONS } from '../data/contact.js'
+import { contactHead, contactAreas, contactCards, budgets, timelines, MAP_EMBED } from '../data/contact.js'
 
 const MSG_MAX = 5000
 const MAX_FILE = 10 * 1024 * 1024 // 10 MB / fájl
@@ -192,7 +192,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* térkép — beágyazott Google Maps + brandelt overlay */}
+      {/* térkép — beágyazott Google Maps + brand-jelvény a jobb felső sarokban */}
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <Reveal className="media" style={{ height: 420 }}>
@@ -201,11 +201,7 @@ export default function Contact() {
               src={MAP_EMBED} width="100%" height="100%" style={{ border: 0, display: 'block' }}
               loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen
             />
-            <div className="map-card">
-              <div className="mc-brand">Debaru Kft.</div>
-              <div className="mc-addr">1117 Budapest,<br />Budafoki út 97.</div>
-              <a className="btn btn-primary btn-arrow" href={MAP_DIRECTIONS} target="_blank" rel="noopener noreferrer">Útvonalterv<Arrow /></a>
-            </div>
+            <div className="map-badge"><img src="/assets/debaru_logo.png" alt="Debaru" /></div>
           </Reveal>
         </div>
       </section>

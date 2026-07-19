@@ -296,11 +296,10 @@ a.b:hover .arr { opacity: 1; transform: none; }
 .file-item .fi-x:hover { background: var(--danger-soft); color: var(--danger); }
 .file-item .fi-x svg { width: 15px; height: 15px; }
 
-/* brandelt térkép-overlay — bal oldal közepén (nem ütközik a Google gombjaival) */
-.map-card { position: absolute; top: 50%; left: 24px; transform: translateY(-50%); z-index: 2; max-width: 268px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; box-shadow: var(--shadow); }
-.map-card .mc-brand { font-family: var(--display); font-weight: 600; font-size: 17px; color: var(--fg); }
-.map-card .mc-addr { color: var(--muted); font-size: 14px; margin: 6px 0 16px; line-height: 1.5; }
-@media (max-width: 620px) { .map-card { top: auto; bottom: 16px; left: 16px; right: 16px; transform: none; max-width: none; } }
+/* brandelt jelvény a térkép jobb felső sarkában */
+.map-badge { position: absolute; top: 20px; right: 20px; z-index: 2; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 18px; box-shadow: var(--shadow); }
+.map-badge img { height: 20px; width: auto; display: block; }
+@media (max-width: 620px) { .map-badge { top: 14px; right: 14px; padding: 10px 14px; } }
 
 /* ---------- GYIK akkordeon ---------- */
 .faq { border-top: 1px solid var(--border); }
