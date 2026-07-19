@@ -91,7 +91,7 @@ export default function ServiceDetail() {
               )}
             </Reveal>
             <Reveal className="card" style={{ textAlign: 'center', padding: '56px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
-              <h3 style={{ fontSize: 'clamp(22px,3vw,30px)', maxWidth: '18ch', margin: '0 auto 16px' }}>Van egy {svc.title.toLowerCase()} feladata?</h3>
+              <h3 style={{ fontSize: 'clamp(22px,3vw,30px)', maxWidth: '18ch', margin: '0 auto 16px' }}>Van egy hasonló feladata?</h3>
               <p className="muted" style={{ margin: '0 auto 26px', maxWidth: '34ch' }}>Kérjen díjmentes szakmai konzultációt — 3 munkanapon belül visszajelzünk.</p>
               <Button to="/kapcsolat" arrow>Ajánlatot kérek</Button>
             </Reveal>
