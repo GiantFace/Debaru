@@ -51,7 +51,7 @@ export default function Projects() {
           <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 40px', maxWidth: '20ch' }}>
             A BKV Etele téri projekt — élőben
           </Reveal>
-          <Reveal><VideoGallery videos={bkvVideos} /></Reveal>
+          <Reveal><VideoGallery videos={bkvVideos} projectLink /></Reveal>
         </div>
       </section>
 

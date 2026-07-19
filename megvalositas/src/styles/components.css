@@ -324,16 +324,28 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 .vgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 @media (max-width: 900px) { .vgrid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .vgrid { grid-template-columns: 1fr; } }
-.vcard { position: relative; aspect-ratio: 16 / 9; width: 100%; padding: 0; text-align: left; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: var(--bg-2); cursor: pointer; transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
-.vcard:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.vcard img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
-.vcard:hover img { transform: scale(1.05); }
-.vcard .vc-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15, 17, 21, .12) 38%, rgba(15, 17, 21, .78) 100%); }
-.vcard .vc-tag { position: absolute; top: 14px; left: 14px; font-size: 11.5px; font-weight: 600; color: #fff; background: rgba(255, 255, 255, .16); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, .3); padding: 5px 11px; border-radius: 999px; }
-.vcard .vc-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; border-radius: 50%; background: rgba(255, 255, 255, .92); display: grid; place-items: center; color: var(--accent-2); box-shadow: 0 10px 30px -8px rgba(0, 0, 0, .5); transition: .2s var(--ease); }
-.vcard:hover .vc-play { background: #fff; transform: translate(-50%, -50%) scale(1.08); }
-.vcard .vc-play svg { width: 24px; height: 24px; margin-left: 3px; }
-.vcard .vc-title { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 20px; color: #fff; font-family: var(--display); font-weight: 600; font-size: 17px; line-height: 1.25; text-shadow: 0 1px 14px rgba(0, 0, 0, .45); }
+.vcard { position: relative; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: var(--card); transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease); }
+.vcard:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--accent-line); }
+/* előnézet */
+.vc-thumb { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-2); }
+.vc-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
+.vcard:hover .vc-thumb img { transform: scale(1.05); }
+.vc-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15, 17, 21, .3) 0%, rgba(15, 17, 21, .04) 45%, rgba(15, 17, 21, .12) 100%); }
+.vc-tag { position: absolute; top: 14px; left: 14px; z-index: 2; pointer-events: none; font-size: 11.5px; font-weight: 600; color: #fff; background: rgba(255, 255, 255, .16); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, .3); padding: 5px 11px; border-radius: 999px; }
+.vc-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3; width: 58px; height: 58px; border: 0; border-radius: 50%; background: rgba(255, 255, 255, .92); color: var(--accent-2); cursor: pointer; display: grid; place-items: center; box-shadow: 0 10px 30px -8px rgba(0, 0, 0, .5); transition: .2s var(--ease); }
+.vc-play:hover { background: #fff; transform: translate(-50%, -50%) scale(1.08); }
+.vc-play svg { width: 22px; height: 22px; margin-left: 3px; }
+/* infó + paraméterek */
+.vc-info { padding: 20px 20px 22px; }
+.vc-info h3 { font-family: var(--display); font-weight: 600; font-size: 18px; letter-spacing: -.01em; color: var(--fg); }
+.vc-specs { list-style: none; padding: 0; margin: 13px 0 0; display: flex; flex-direction: column; gap: 8px; }
+.vc-specs li { display: flex; align-items: center; gap: 9px; font-size: 13px; color: var(--muted); }
+.vc-specs li::before { content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.vc-cta { display: inline-flex; align-items: center; gap: 7px; margin-top: 16px; font-size: 13.5px; font-weight: 600; color: var(--accent-2); }
+.vc-cta svg { width: 15px; height: 15px; transition: transform .2s var(--ease); }
+.vcard:hover .vc-cta svg { transform: translateX(3px); }
+/* stretched link: az egész kártya klikkelhető (a play gomb fölötte marad) */
+.vc-cover { position: absolute; inset: 0; z-index: 1; border: 0; background: transparent; cursor: pointer; }
 
 /* ---------- videó-lightbox ---------- */
 .lightbox { position: fixed; inset: 0; z-index: 300; background: rgba(10, 11, 14, .86); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); display: grid; place-items: center; padding: 24px; animation: lb-in .2s var(--ease); }

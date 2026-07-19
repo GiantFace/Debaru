@@ -1,24 +1,38 @@
 import { useState } from 'react'
-import { Play } from '../ui/Icons.jsx'
+import { Link } from 'react-router-dom'
+import { Arrow, Play } from '../ui/Icons.jsx'
 import { VideoLightbox } from '../ui/VideoLightbox.jsx'
 
-// Videó-kártyák rácsa (poszter + play + cím). Kattintásra lightboxban játszik.
-export function VideoGallery({ videos }) {
+// Videó-kártyák rácsa. A kártya a projektre (esettanulmány) linkel, a play gomb
+// a YouTube-videót nyitja lightboxban; a specs-ek a referencia paraméterei.
+// `projectLink=false` (pl. magán a projekt oldalon) → az egész kártya videót játszik.
+export function VideoGallery({ videos, projectLink = false }) {
   const [active, setActive] = useState(null)
   return (
     <>
       <div className="vgrid">
         {videos.map((v) => (
-          <button className="vcard" key={v.id} onClick={() => setActive(v.id)} aria-label={`${v.title} — videó lejátszása`}>
-            <img
-              src={`https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`} alt={v.title} loading="lazy"
-              onError={(e) => { e.currentTarget.src = `https://img.youtube.com/vi/${v.id}/hqdefault.jpg` }}
-            />
-            <span className="vc-scrim" />
-            {v.tag && <span className="vc-tag">{v.tag}</span>}
-            <span className="vc-play"><Play /></span>
-            <span className="vc-title">{v.title}</span>
-          </button>
+          <div className="vcard" key={v.id}>
+            <div className="vc-thumb">
+              <img
+                src={`https://img.youtube.com/vi/${v.id}/maxresdefault.jpg`} alt={v.title} loading="lazy"
+                onError={(e) => { e.currentTarget.src = `https://img.youtube.com/vi/${v.id}/hqdefault.jpg` }}
+              />
+              <span className="vc-scrim" />
+              {v.tag && <span className="vc-tag">{v.tag}</span>}
+              <button className="vc-play" onClick={() => setActive(v.id)} aria-label={`${v.title} — videó lejátszása`}><Play /></button>
+            </div>
+            <div className="vc-info">
+              <h3>{v.title}</h3>
+              {v.specs && <ul className="vc-specs">{v.specs.map((s) => <li key={s}>{s}</li>)}</ul>}
+              {projectLink && <span className="vc-cta">Projekt megtekintése <Arrow /></span>}
+            </div>
+            {/* stretched link: az egész kártya a projektre visz (a play gomb fölötte marad),
+                a projekt oldalon viszont maga a kártya is videót játszik */}
+            {projectLink
+              ? <Link to={v.href} className="vc-cover" aria-label={`${v.title} — projekt megtekintése`} />
+              : <button className="vc-cover" onClick={() => setActive(v.id)} aria-label={`${v.title} — videó lejátszása`} />}
+          </div>
         ))}
       </div>
       <VideoLightbox videoId={active} onClose={() => setActive(null)} />
