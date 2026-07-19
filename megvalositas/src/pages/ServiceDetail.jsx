@@ -68,6 +68,41 @@ export default function ServiceDetail() {
         </div>
       </section>
 
+      {/* hogyan dolgozunk — folyamat */}
+      {svc.process && (
+        <>
+          <hr className="divider" />
+          <section className="section">
+            <div className="wrap">
+              <Reveal className="eyebrow">Hogyan dolgozunk</Reveal>
+              <Reveal as="h2" style={{ fontSize: 'clamp(26px,4vw,40px)', margin: '16px 0 48px', maxWidth: '16ch' }}>A koncepciótól az átadásig</Reveal>
+              <RevealStagger className="grid g-4" step={90}>
+                {svc.process.map((s) => (
+                  <div key={s.n}>
+                    <div className="kicker-num">{s.n}</div>
+                    <h3 style={{ fontSize: 19, margin: '14px 0 8px' }}>{s.title}</h3>
+                    <p className="muted" style={{ fontSize: 14.5 }}>{s.desc}</p>
+                  </div>
+                ))}
+              </RevealStagger>
+
+              {svc.tech && (
+                <Reveal style={{ marginTop: 48 }}>
+                  <div className="eyebrow" style={{ marginBottom: 18 }}>Szabványok & technológiák</div>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+                    {svc.tech.map((t) => (
+                      <span key={t} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 14, color: 'var(--muted)', background: 'var(--card)', border: '1px solid var(--border)', padding: '9px 15px', borderRadius: 999 }}>
+                        <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--accent-2)', flexShrink: 0 }} />{t}
+                      </span>
+                    ))}
+                  </div>
+                </Reveal>
+              )}
+            </div>
+          </section>
+        </>
+      )}
+
       <hr className="divider" />
 
       {/* miért a Debaru + kapcsolódó projekt */}
