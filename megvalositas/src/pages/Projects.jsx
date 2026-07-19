@@ -2,10 +2,12 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal } from '../components/ui/Reveal.jsx'
+import { VideoGallery } from '../components/sections/VideoGallery.jsx'
 import { ImageSlot } from '../components/ui/ImageSlot.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Arrow } from '../components/ui/Icons.jsx'
 import { projectsHead, projectFilters, projectCards } from '../data/projects.js'
+import { bkvVideos } from '../data/videos.js'
 
 // Projektjeink oldal — szűrhető bento rács (a terv projektjeink.html alapján).
 export default function Projects() {
@@ -39,6 +41,17 @@ export default function Projects() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* referenciavideók — a BKV Etele téri munkáról */}
+      <section className="section" style={{ paddingTop: 0 }} id="videok">
+        <div className="wrap">
+          <Reveal className="eyebrow">Munkáink videón</Reveal>
+          <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 40px', maxWidth: '20ch' }}>
+            A BKV Etele téri projekt — élőben
+          </Reveal>
+          <Reveal><VideoGallery videos={bkvVideos} /></Reveal>
         </div>
       </section>
 

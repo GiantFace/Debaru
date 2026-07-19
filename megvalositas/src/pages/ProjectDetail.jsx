@@ -1,10 +1,11 @@
 import { PageHead } from '../components/sections/PageHead.jsx'
-import { Reveal, RevealStagger } from '../components/ui/Reveal.jsx'
+import { Reveal } from '../components/ui/Reveal.jsx'
 import { StatBlock } from '../components/ui/StatBlock.jsx'
-import { ParallaxMedia } from '../components/ui/ParallaxMedia.jsx'
+import { VideoGallery } from '../components/sections/VideoGallery.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Arrow } from '../components/ui/Icons.jsx'
 import { projectDetail as d } from '../data/projectDetail.js'
+import { bkvVideos } from '../data/videos.js'
 
 // Esettanulmány oldal — a terv projekt.html hű változata.
 export default function ProjectDetail() {
@@ -57,14 +58,12 @@ export default function ProjectDetail() {
         </div>
       </section>
 
-      {/* galéria */}
+      {/* videó-galéria — a projekt három szakasza */}
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap">
-          <RevealStagger className="grid g-3" step={90}>
-            {d.gallery.map((g) => (
-              <ParallaxMedia key={g} speed={0.06} style={{ height: 240 }} placeholder={g} />
-            ))}
-          </RevealStagger>
+          <Reveal className="eyebrow">A projekt videón</Reveal>
+          <Reveal as="h2" style={{ fontSize: 'clamp(24px,3vw,34px)', margin: '16px 0 32px' }}>Áramátalakító, diszpécser, végállomás</Reveal>
+          <Reveal><VideoGallery videos={bkvVideos} /></Reveal>
         </div>
       </section>
 
