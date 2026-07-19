@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
 import flags from 'react-phone-number-input/flags'
 import 'react-phone-number-input/style.css'
@@ -39,11 +39,16 @@ function validate(f, phone) {
 
 const EMPTY = { nev: '', ceg: '', email: '', terulet: '', teruletEgyeb: '', hatarido: '', uzenet: '', gdpr: false }
 
+// Piszkozat gyorsítótár: gépelés közben ment, frissítés után visszatölt, küldés után törlődik.
+// (Fájlokat nem tárolunk — a File objektum nem szerializálható.)
+const DRAFT_KEY = 'debaru-contact-draft'
+const loadDraft = () => { try { return JSON.parse(localStorage.getItem(DRAFT_KEY)) || null } catch { return null } }
+
 export default function Contact() {
   useDocumentTitle(contactHead.crumb, contactHead.lede)
   const toast = useToast()
-  const [form, setForm] = useState(EMPTY)
-  const [phone, setPhone] = useState()
+  const [form, setForm] = useState(() => { const d = loadDraft(); return d?.form ? { ...EMPTY, ...d.form } : EMPTY })
+  const [phone, setPhone] = useState(() => loadDraft()?.phone)
   const [touched, setTouched] = useState({})
   const [files, setFiles] = useState([])
   const [drag, setDrag] = useState(false)
@@ -51,6 +56,15 @@ export default function Contact() {
   const [captcha, setCaptcha] = useState('') // Turnstile token
   const [captchaKey, setCaptchaKey] = useState(0) // remount = widget újratöltés
   const fileRef = useRef(null)
+
+  // piszkozat mentése/törlése a beírt adatok alapján (küldéskor a form üresre áll -> törlődik)
+  useEffect(() => {
+    const has = form.nev || form.ceg || form.email || form.terulet || form.teruletEgyeb || form.hatarido || form.uzenet || form.gdpr || phone
+    try {
+      if (has) localStorage.setItem(DRAFT_KEY, JSON.stringify({ form, phone }))
+      else localStorage.removeItem(DRAFT_KEY)
+    } catch { /* pl. privát mód vagy tele a tár */ }
+  }, [form, phone])
 
   const errors = validate(form, phone)
   const showErr = (k) => (touched[k] && errors[k]) || undefined
