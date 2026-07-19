@@ -24,7 +24,7 @@ function loadTurnstile() {
   return scriptPromise
 }
 
-export function Turnstile({ siteKey = TURNSTILE_SITE_KEY, onVerify, onExpire, theme = 'light' }) {
+export function Turnstile({ siteKey = TURNSTILE_SITE_KEY, onVerify, onExpire, theme = 'light', size = 'flexible' }) {
   const ref = useRef(null)
   const widgetId = useRef(null)
 
@@ -38,6 +38,7 @@ export function Turnstile({ siteKey = TURNSTILE_SITE_KEY, onVerify, onExpire, th
       widgetId.current = tr.render(ref.current, {
         sitekey: siteKey,
         theme,
+        size, // 'flexible' = a konténer teljes szélességét kitölti
         callback: (token) => onVerify?.(token),
         'expired-callback': () => onExpire?.(),
         'error-callback': () => onExpire?.(),
