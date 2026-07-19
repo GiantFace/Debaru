@@ -17,7 +17,7 @@ export function Process() {
         <RevealStagger className="grid g-4" step={90}>
           {processSteps.map((s) => (
             <div key={s.n}>
-              <Parallax className="kicker-num" speed={0.07}>{s.n}</Parallax>
+              <div className="kicker-num">{s.n}</div>
               <h3 style={{ fontSize: '19px', margin: '14px 0 8px' }}>{s.title}</h3>
               <p className="muted" style={{ fontSize: '14.5px' }}>{s.desc}</p>
             </div>
