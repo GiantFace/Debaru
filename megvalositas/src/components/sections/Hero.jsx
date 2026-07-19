@@ -1,12 +1,14 @@
 import { useParallax } from '../../hooks/useParallax.js'
 import { ImageSlot } from '../ui/ImageSlot.jsx'
+import { ParallaxFade } from '../ui/Parallax.jsx'
 import { Button } from '../ui/Button.jsx'
 import { Reveal } from '../ui/Reveal.jsx'
 import { heroStats } from '../../data/content.js'
 
-// Full-bleed fotós hero, finom parallaxszal és lebegő stat-kártyával.
+// Full-bleed fotós hero — több rétegű parallax: fotó, lebegő stat, szövegblokk.
 export function Hero() {
-  const media = useParallax(0.08)
+  const media = useParallax(0.08)   // háttérfotó (leglassabb réteg)
+  const inner = useParallax(0.03)   // szövegblokk (előtér, finoman elúszik)
   return (
     <section className="hero-full" id="top">
       <div className="hf-media" ref={media}>
@@ -15,17 +17,17 @@ export function Hero() {
       <div className="hf-scrim" />
       <div className="hf-accent" />
 
-      <Reveal className="hf-stat">
+      <ParallaxFade className="hf-stat" speed={0.06}>
         <div className="hs-lbl">Élesben, folyamatosan</div>
         <div className="hs-row">
           {heroStats.map((s) => (
             <div key={s.k}><div className="v">{s.v}</div><div className="k">{s.k}</div></div>
           ))}
         </div>
-      </Reveal>
+      </ParallaxFade>
 
       <div className="wrap" style={{ position: 'relative' }}>
-        <div className="hf-inner">
+        <div className="hf-inner" ref={inner}>
           <Reveal className="hf-eyebrow">Ipari automatizálás · PLC / SCADA · Áramellátás</Reveal>
           <Reveal as="h1" className="hf-title" delay={90}>
             Megbízható rendszerek<br />kritikus infrastruktúrákhoz.

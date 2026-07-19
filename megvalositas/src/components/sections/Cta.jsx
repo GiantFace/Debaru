@@ -1,11 +1,12 @@
 import { Reveal } from '../ui/Reveal.jsx'
+import { Parallax } from '../ui/Parallax.jsx'
 import { Button } from '../ui/Button.jsx'
 
-// Záró CTA — kiemelt kártya, közvetlen kapcsolatfelvétellel.
+// Záró CTA — kiemelt kártya, finom parallax elúszással.
 export function Cta() {
   return (
     <section className="section-sm" id="cta">
-      <div className="wrap">
+      <Parallax className="wrap" speed={0.05}>
         <Reveal
           className="card"
           style={{ textAlign: 'center', padding: '72px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}
@@ -18,7 +19,7 @@ export function Cta() {
           </p>
           <Button to="/kapcsolat" arrow>Kapcsolatfelvétel</Button>
         </Reveal>
-      </div>
+      </Parallax>
     </section>
   )
 }

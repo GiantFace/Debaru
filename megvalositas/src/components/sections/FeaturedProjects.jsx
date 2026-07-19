@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Reveal, RevealStagger } from '../ui/Reveal.jsx'
 import { ParallaxMedia } from '../ui/ParallaxMedia.jsx'
+import { Parallax } from '../ui/Parallax.jsx'
 import { Button } from '../ui/Button.jsx'
 import { projects } from '../../data/content.js'
 
@@ -9,10 +10,12 @@ export function FeaturedProjects() {
   return (
     <section className="section" id="kiemelt" style={{ paddingTop: 0 }}>
       <div className="wrap">
-        <Reveal className="eyebrow">Kiemelt munkák</Reveal>
-        <Reveal as="h2" style={{ fontSize: 'clamp(30px,4vw,48px)', margin: '16px 0 48px', maxWidth: '18ch' }}>
-          Rendszerek, amelyek nap mint nap dolgoznak
-        </Reveal>
+        <Parallax speed={0.05}>
+          <Reveal className="eyebrow">Kiemelt munkák</Reveal>
+          <Reveal as="h2" style={{ fontSize: 'clamp(30px,4vw,48px)', margin: '16px 0 48px', maxWidth: '18ch' }}>
+            Rendszerek, amelyek nap mint nap dolgoznak
+          </Reveal>
+        </Parallax>
 
         <RevealStagger className="grid g-2" step={120} style={{ gap: '24px' }}>
           {projects.map((p) => (
