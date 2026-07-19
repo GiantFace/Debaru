@@ -72,6 +72,8 @@ a.card:hover { border-color: var(--accent-line); }
 .kicker-num { font-family: var(--display); font-size: 14px; color: var(--faint); font-weight: 600; letter-spacing: .1em; }
 
 /* ---------- kép-helykitöltő (image-slot pótlás) ---------- */
+/* keret: containing block + levágás, hogy a belső parallax réteg ne lógjon ki */
+.media { position: relative; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: var(--bg-2); }
 .img-slot {
   display: grid; place-items: center; width: 100%; height: 100%; min-height: 120px;
   background: var(--bg-2); color: var(--faint); position: relative; overflow: hidden;
