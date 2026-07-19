@@ -4,6 +4,7 @@ import { Background } from './Background.jsx'
 import { Navbar } from './Navbar.jsx'
 import { Footer } from './Footer.jsx'
 import { ScrollToTop } from './ScrollToTop.jsx'
+import { CookieBanner } from '../ui/CookieBanner.jsx'
 
 // Közös váz minden oldalhoz: háttér + nav + tartalom (Outlet) + footer.
 // A lazy oldalak betöltéséig a nav/footer megmarad; a tartalomterület helyet tart.
@@ -19,6 +20,7 @@ export function Layout() {
         </Suspense>
       </main>
       <Footer />
+      <CookieBanner />
     </>
   )
 }

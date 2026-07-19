@@ -319,6 +319,16 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 /* honeypot — képernyőn kívüli botcsapda (nem display:none, hogy a botok kitöltsék) */
 .hp-field { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
 
+/* süti-tájékoztató sáv (bal alsó, a toast-tól elkülönítve) */
+.cookie-banner { position: fixed; z-index: 90; left: 24px; bottom: 24px; width: min(420px, calc(100% - 32px)); background: var(--card); border: 1px solid var(--border-2); border-radius: 14px; box-shadow: var(--shadow); padding: 20px 22px; animation: ck-in .35s var(--ease); }
+@keyframes ck-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.cookie-banner strong { display: block; font-size: 15px; color: var(--fg); margin-bottom: 8px; }
+.cookie-banner p { font-size: 13px; color: var(--muted); line-height: 1.55; margin: 0 0 16px; }
+.cookie-banner p a { color: var(--accent-2); }
+.cookie-banner .btn { width: 100%; justify-content: center; }
+@media (max-width: 520px) { .cookie-banner { left: 12px; right: 12px; bottom: 12px; width: auto; } }
+@media (prefers-reduced-motion: reduce) { .cookie-banner { animation: none; } }
+
 /* Turnstile widget — hely lefoglalása töltés közben (ne ugráljon a layout) */
 .turnstile { min-height: 65px; }
 
