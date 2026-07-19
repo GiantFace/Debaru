@@ -19,8 +19,9 @@ export function CustomScrollbar() {
 
     const sync = () => setShow(flags.current.near || flags.current.dragging || flags.current.scrolling)
 
-    // csúszka pozíció/magasság a görgetésből
+    // csúszka pozíció/magasság a görgetésből (húzás közben a drag kezeli — ne írjuk felül)
     const layout = () => {
+      if (flags.current.dragging) return
       const vh = doc.clientHeight
       const sh = doc.scrollHeight
       const trackH = vh - INSET * 2
@@ -50,37 +51,50 @@ export function CustomScrollbar() {
     window.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('mousemove', onMove, { passive: true })
     window.addEventListener('resize', onResize)
+    // az oldalmagasság változásaira (lazy tartalom, reveal) is frissítsük a csúszkát
+    const ro = new ResizeObserver(() => layout())
+    ro.observe(document.body)
     return () => {
       window.removeEventListener('scroll', onScroll)
       window.removeEventListener('mousemove', onMove)
       window.removeEventListener('resize', onResize)
+      ro.disconnect()
       clearTimeout(hideT.current)
       if (raf) cancelAnimationFrame(raf)
     }
   }, [])
 
-  // csúszka húzása
+  // csúszka húzása — a csúszkát KÖZVETLENÜL mozgatjuk (1:1 az egérrel), és a
+  // görgetést azonnalira kapcsoljuk (a globális smooth-scroll ne lassítsa)
   const onDown = (e) => {
     e.preventDefault()
     const doc = document.documentElement
-    const vh = doc.clientHeight, sh = doc.scrollHeight
+    const thumb = thumbRef.current
+    const vh = doc.clientHeight
+    const sh = doc.scrollHeight
     const trackH = vh - INSET * 2
     const thumbH = Math.max(MIN_THUMB, (vh / sh) * trackH)
     const maxTop = trackH - thumbH
+    const range = sh - vh
     const startY = e.clientY
-    const startScroll = window.scrollY
+    const startTop = range > 0 ? maxTop * (window.scrollY / range) : 0
+
     flags.current.dragging = true
     setShow(true)
     document.body.style.userSelect = 'none'
+    const prevBehavior = doc.style.scrollBehavior
+    doc.style.scrollBehavior = 'auto' // azonnali görgetés húzás közben
+
     const move = (ev) => {
-      const dy = ev.clientY - startY
-      const scrollDelta = maxTop > 0 ? (dy / maxTop) * (sh - vh) : 0
-      window.scrollTo(0, startScroll + scrollDelta)
+      const top = Math.max(0, Math.min(maxTop, startTop + (ev.clientY - startY)))
+      thumb.style.transform = `translateY(${top}px)` // azonnali vizuális követés
+      window.scrollTo(0, maxTop > 0 ? (top / maxTop) * range : 0)
     }
     const up = () => {
       flags.current.dragging = false
       setShow(flags.current.near)
       document.body.style.userSelect = ''
+      doc.style.scrollBehavior = prevBehavior
       window.removeEventListener('mousemove', move)
       window.removeEventListener('mouseup', up)
     }

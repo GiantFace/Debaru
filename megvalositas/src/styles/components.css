@@ -95,9 +95,6 @@ a.card:hover { border-color: var(--accent-line); transform: translateY(-4px); bo
 .b-img .pm-layer .img-slot { position: absolute; inset: 0; }
 
 /* ---------- footer ---------- */
-/* zöld olvasás-jelző a header alatt */
-.scroll-progress { position: fixed; top: var(--nav-h); left: 0; right: 0; height: 3px; z-index: 101; background: var(--accent); transform: scaleX(0); transform-origin: left center; will-change: transform; }
-
 /* egyedi görgetősáv — a natív rejtve, ez a jobb szélen jelenik meg */
 html, body { scrollbar-width: none; -ms-overflow-style: none; }
 html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; display: none; }
