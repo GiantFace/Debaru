@@ -11,6 +11,7 @@ const ServiceDetail = lazy(() => import('./pages/ServiceDetail.jsx'))
 const Projects = lazy(() => import('./pages/Projects.jsx'))
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail.jsx'))
 const Contact = lazy(() => import('./pages/Contact.jsx'))
+const Legal = lazy(() => import('./pages/Legal.jsx'))
 const NotFound = lazy(() => import('./pages/NotFound.jsx'))
 
 // Útvonalak — közös Layout (nav + footer), alatta az oldalak.
@@ -29,6 +30,9 @@ export default function App() {
             {/* régi útvonal → a BKV esettanulmányra irányítjuk */}
             <Route path="/projekt" element={<Navigate to="/projektjeink/bkv-etele-ter" replace />} />
             <Route path="/kapcsolat" element={<Contact />} />
+            <Route path="/adatvedelem" element={<Legal doc="privacy" />} />
+            <Route path="/aszf" element={<Legal doc="terms" />} />
+            <Route path="/impresszum" element={<Legal doc="imprint" />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
