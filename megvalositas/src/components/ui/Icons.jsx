@@ -15,6 +15,11 @@ export const Check = (p) => (
   <svg viewBox="0 0 24 24" strokeWidth="2.4" {...stroke} {...p}><path d="M20 6 9 17l-5-5" /></svg>
 )
 
+// Figyelmeztető ikon az űrlap-hibaüzenetekhez.
+export const Warn = (p) => (
+  <svg viewBox="0 0 24 24" strokeWidth="2" {...stroke} {...p}><circle cx="12" cy="12" r="10" /><path d="M12 8v4M12 16h.01" /></svg>
+)
+
 // Érték- és kapcsolat-ikonok (kártyafejlécek).
 const line = { viewBox: '0 0 24 24', strokeWidth: '1.7', ...stroke }
 export const infoIcons = {

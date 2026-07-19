@@ -1,20 +1,67 @@
+import { useState } from 'react'
+import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
+import flags from 'react-phone-number-input/flags'
+import 'react-phone-number-input/style.css'
 import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal } from '../components/ui/Reveal.jsx'
 import { Button } from '../components/ui/Button.jsx'
-import { ImageSlot } from '../components/ui/ImageSlot.jsx'
-import { infoIcons } from '../components/ui/Icons.jsx'
+import { Warn, infoIcons } from '../components/ui/Icons.jsx'
 import { useToast } from '../hooks/useToast.jsx'
 import { contactHead, contactAreas, contactCards } from '../data/contact.js'
 
-// Kapcsolat oldal — űrlap + elérhetőségek (a terv kapcsolat.html alapján).
+const MSG_MAX = 5000
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+// Teljes frontend validáció, pontos magyar hibaüzenetekkel.
+function validate(f, phone) {
+  const e = {}
+  if (!f.nev.trim()) e.nev = 'Kérjük, adja meg a nevét.'
+  else if (f.nev.trim().length < 2) e.nev = 'A név túl rövid — legalább 2 karakter.'
+
+  if (!f.email.trim()) e.email = 'Kérjük, adja meg az e-mail címét.'
+  else if (!EMAIL_RE.test(f.email.trim())) e.email = 'Érvénytelen e-mail cím — ellenőrizze a formátumot (pl. nev@ceg.hu).'
+
+  if (phone && !isValidPhoneNumber(phone)) e.tel = 'A telefonszám érvénytelen a kiválasztott országhoz.'
+
+  if (!f.uzenet.trim()) e.uzenet = 'Kérjük, írja le röviden a feladatot.'
+  else if (f.uzenet.length > MSG_MAX) e.uzenet = `Az üzenet legfeljebb ${MSG_MAX} karakter lehet.`
+  return e
+}
+
+const EMPTY = { nev: '', ceg: '', email: '', terulet: contactAreas[0], uzenet: '' }
+
 export default function Contact() {
   const toast = useToast()
+  const [form, setForm] = useState(EMPTY)
+  const [phone, setPhone] = useState()
+  const [touched, setTouched] = useState({})
+
+  const errors = validate(form, phone)
+  const showErr = (k) => (touched[k] && errors[k]) || null
+
+  const update = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }))
+  const markTouched = (k) => () => setTouched((t) => ({ ...t, [k]: true }))
 
   const onSubmit = (e) => {
     e.preventDefault()
+    if (Object.keys(errors).length) {
+      setTouched({ nev: true, email: true, tel: true, uzenet: true })
+      toast('Kérjük, javítsa a pirossal jelölt mezőket.')
+      const first = document.querySelector('.field.error input, .field.error textarea, .field.error .PhoneInputInput')
+      if (first) first.focus()
+      return
+    }
     toast('Köszönjük! Üzenetét megkaptuk — hamarosan jelentkezünk.')
-    e.target.reset()
+    setForm(EMPTY)
+    setPhone(undefined)
+    setTouched({})
   }
+
+  const msgLen = form.uzenet.length
+  const msgWarn = msgLen > MSG_MAX - 200
+
+  // Hibaüzenet-sor (ikon + pontos szöveg), csak ha a mező „érintett".
+  const Err = ({ k }) => showErr(k) ? <span className="err"><Warn />{errors[k]}</span> : null
 
   return (
     <>
@@ -25,25 +72,57 @@ export default function Contact() {
           <div className="split" style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: 56, alignItems: 'start' }}>
             {/* űrlap */}
             <Reveal className="card" style={{ padding: 36 }}>
-              <form onSubmit={onSubmit}>
+              <form onSubmit={onSubmit} noValidate>
                 <div className="grid g-2" style={{ gap: 18 }}>
-                  <div className="field"><label htmlFor="nev">Név *</label><input id="nev" required placeholder="Kovács János" /></div>
-                  <div className="field"><label htmlFor="ceg">Cég</label><input id="ceg" placeholder="Cég neve" /></div>
+                  <div className={`field${showErr('nev') ? ' error' : ''}`}>
+                    <label htmlFor="nev">Név *</label>
+                    <input id="nev" value={form.nev} onChange={update('nev')} onBlur={markTouched('nev')} placeholder="Kovács János" autoComplete="name" aria-invalid={!!showErr('nev')} />
+                    <Err k="nev" />
+                  </div>
+                  <div className="field">
+                    <label htmlFor="ceg">Cég</label>
+                    <input id="ceg" value={form.ceg} onChange={update('ceg')} placeholder="Cég neve" autoComplete="organization" />
+                  </div>
                 </div>
+
                 <div className="grid g-2" style={{ gap: 18 }}>
-                  <div className="field"><label htmlFor="email">E-mail *</label><input id="email" type="email" required placeholder="janos@ceg.hu" /></div>
-                  <div className="field"><label htmlFor="tel">Telefon</label><input id="tel" placeholder="+36 30 123 4567" /></div>
+                  <div className={`field${showErr('email') ? ' error' : ''}`}>
+                    <label htmlFor="email">E-mail *</label>
+                    <input id="email" type="email" value={form.email} onChange={update('email')} onBlur={markTouched('email')} placeholder="janos@ceg.hu" autoComplete="email" aria-invalid={!!showErr('email')} />
+                    <Err k="email" />
+                  </div>
+                  <div className={`field${showErr('tel') ? ' error' : ''}`}>
+                    <label htmlFor="tel">Telefon</label>
+                    <PhoneInput
+                      international
+                      defaultCountry="HU"
+                      flags={flags}
+                      value={phone}
+                      onChange={setPhone}
+                      onBlur={markTouched('tel')}
+                      numberInputProps={{ id: 'tel' }}
+                      placeholder="30 123 4567"
+                    />
+                    <Err k="tel" />
+                  </div>
                 </div>
+
                 <div className="field">
                   <label htmlFor="terulet">Terület</label>
-                  <select id="terulet" defaultValue={contactAreas[0]}>
+                  <select id="terulet" value={form.terulet} onChange={update('terulet')}>
                     {contactAreas.map((a) => <option key={a}>{a}</option>)}
                   </select>
                 </div>
-                <div className="field">
+
+                <div className={`field${showErr('uzenet') ? ' error' : ''}`}>
                   <label htmlFor="uzenet">Üzenet *</label>
-                  <textarea id="uzenet" required placeholder="Néhány mondat a feladatról, a helyszínről és a tervezett ütemezésről…" />
+                  <textarea id="uzenet" value={form.uzenet} onChange={update('uzenet')} onBlur={markTouched('uzenet')} maxLength={MSG_MAX} placeholder="Néhány mondat a feladatról, a helyszínről és a tervezett ütemezésről…" aria-invalid={!!showErr('uzenet')} />
+                  <div className="row-end">
+                    <Err k="uzenet" />
+                    <span className={`char-count${msgWarn ? ' warn' : ''}`}>{msgLen} / {MSG_MAX}</span>
+                  </div>
                 </div>
+
                 <Button type="submit" arrow style={{ width: '100%', justifyContent: 'center' }}>Üzenet küldése</Button>
                 <p className="muted" style={{ fontSize: 12.5, marginTop: 14, textAlign: 'center' }}>A gomb megnyomásával elfogadja az adatkezelési tájékoztatót.</p>
               </form>

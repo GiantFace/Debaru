@@ -1,12 +1,15 @@
+import { lazy } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ToastProvider } from './hooks/useToast.jsx'
 import { Layout } from './components/layout/Layout.jsx'
-import Home from './pages/Home.jsx'
-import About from './pages/About.jsx'
-import Services from './pages/Services.jsx'
-import Projects from './pages/Projects.jsx'
-import ProjectDetail from './pages/ProjectDetail.jsx'
-import Contact from './pages/Contact.jsx'
+
+// Route-onkénti code-splitting — így pl. a telefon-lib csak a Kapcsolat oldallal töltődik.
+const Home = lazy(() => import('./pages/Home.jsx'))
+const About = lazy(() => import('./pages/About.jsx'))
+const Services = lazy(() => import('./pages/Services.jsx'))
+const Projects = lazy(() => import('./pages/Projects.jsx'))
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail.jsx'))
+const Contact = lazy(() => import('./pages/Contact.jsx'))
 
 // Útvonalak — közös Layout (nav + footer), alatta az oldalak.
 export default function App() {

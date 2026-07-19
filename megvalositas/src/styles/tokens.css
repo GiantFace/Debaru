@@ -16,6 +16,7 @@
   --accent: #51a685; --accent-2: #3f8e70; --accent-ink: #ffffff;
   --accent-soft: rgba(81, 166, 133, .12);
   --accent-line: rgba(81, 166, 133, .30);
+  --danger: #c2410c; --danger-soft: rgba(194, 65, 12, .12);
 
   /* felület / geometria */
   --shadow: 0 22px 50px -26px rgba(27, 29, 34, .28);
