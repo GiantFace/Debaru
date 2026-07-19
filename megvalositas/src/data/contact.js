@@ -7,9 +7,11 @@ export const contactHead = {
   lede: 'Írja le röviden a feladatot, és mérnökeink 3 munkanapon belül visszajeleznek egy első szakmai állásfoglalással. A konzultáció díjmentes.',
 }
 
+// Az "egyéb" opció külön konstans — kiválasztva pontosító mező jelenik meg.
+export const OTHER_AREA = 'Egyéb / nem tudom még'
 export const contactAreas = [
   'Ipari automatizálás', 'Kapcsolószekrény-gyártás', 'SCADA & felügyelet',
-  'Villamos energetika', 'Közlekedési rendszerek', 'Üzemeltetés & szerviz', 'Egyéb / nem tudom még',
+  'Villamos energetika', 'Közlekedési rendszerek', 'Üzemeltetés & szerviz', OTHER_AREA,
 ]
 
 // Opcionális gyors-választók (legördülő listák).

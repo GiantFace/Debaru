@@ -316,6 +316,9 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 .select-clear { color: var(--faint); font-size: 13.5px; border-radius: 0; border-bottom: 1px solid var(--border); margin-bottom: 4px; padding-bottom: 12px; }
 .select-clear:hover { color: var(--muted); background: transparent; }
 
+/* honeypot — képernyőn kívüli botcsapda (nem display:none, hogy a botok kitöltsék) */
+.hp-field { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+
 /* GDPR checkbox */
 .check { display: flex; align-items: flex-start; gap: 11px; cursor: pointer; font-size: 13.5px; color: var(--muted); line-height: 1.5; margin: 2px 0 18px; }
 .check input { position: absolute; opacity: 0; width: 0; height: 0; }

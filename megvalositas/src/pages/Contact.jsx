@@ -9,9 +9,10 @@ import { Field } from '../components/ui/Field.jsx'
 import { Select } from '../components/ui/Select.jsx'
 import { Check, Close, Upload, Warn, infoIcons } from '../components/ui/Icons.jsx'
 import { useToast } from '../hooks/useToast.jsx'
-import { contactHead, contactAreas, contactCards, contactTrust, timelines, MAP_EMBED } from '../data/contact.js'
+import { contactHead, contactAreas, contactCards, contactTrust, timelines, OTHER_AREA, MAP_EMBED } from '../data/contact.js'
 
 const MSG_MAX = 5000
+const OTHER_MAX = 100 // "Egyéb" pontosító mező max. hossza
 const MAX_FILE = 10 * 1024 * 1024 // 10 MB / fájl
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const fmtSize = (b) => (b < 1024 * 1024 ? `${Math.round(b / 1024)} KB` : `${(b / 1024 / 1024).toFixed(1)} MB`)
@@ -34,7 +35,7 @@ function validate(f, phone) {
   return e
 }
 
-const EMPTY = { nev: '', ceg: '', email: '', terulet: '', hatarido: '', uzenet: '', gdpr: false }
+const EMPTY = { nev: '', ceg: '', email: '', terulet: '', teruletEgyeb: '', hatarido: '', uzenet: '', gdpr: false }
 
 export default function Contact() {
   const toast = useToast()
@@ -43,6 +44,7 @@ export default function Contact() {
   const [touched, setTouched] = useState({})
   const [files, setFiles] = useState([])
   const [drag, setDrag] = useState(false)
+  const [hp, setHp] = useState('') // honeypot — botcsapda
   const fileRef = useRef(null)
 
   const errors = validate(form, phone)
@@ -60,8 +62,15 @@ export default function Contact() {
   }
   const onDrop = (e) => { e.preventDefault(); setDrag(false); if (e.dataTransfer.files?.length) addFiles(e.dataTransfer.files) }
 
+  // terület váltása: ha nem "Egyéb", a pontosító mezőt is ürítjük
+  const setTerulet = (v) => setForm((f) => ({ ...f, terulet: v, teruletEgyeb: v === OTHER_AREA ? f.teruletEgyeb : '' }))
+
+  const resetForm = () => { setForm(EMPTY); setPhone(undefined); setFiles([]); setTouched({}); setHp('') }
+
   const onSubmit = (e) => {
     e.preventDefault()
+    // honeypot: ha kitöltötték, bot — csendben elvetjük (nem áruljuk el a csapdát)
+    if (hp) { resetForm(); toast('Köszönjük! Üzenetét megkaptuk — hamarosan jelentkezünk.'); return }
     if (Object.keys(errors).length) {
       setTouched({ nev: true, email: true, tel: true, uzenet: true, gdpr: true })
       toast('Kérjük, javítsa a pirossal jelölt mezőket.')
@@ -70,7 +79,7 @@ export default function Contact() {
       return
     }
     toast('Köszönjük! Üzenetét megkaptuk — hamarosan jelentkezünk.')
-    setForm(EMPTY); setPhone(undefined); setFiles([]); setTouched({})
+    resetForm()
   }
 
   const msgLen = form.uzenet.length
@@ -86,6 +95,12 @@ export default function Contact() {
             {/* űrlap */}
             <Reveal className="card" style={{ padding: 36 }}>
               <form onSubmit={onSubmit} noValidate>
+                {/* honeypot: képernyőn kívüli botcsapda — ember nem látja, nem tölti ki */}
+                <div className="hp-field" aria-hidden="true">
+                  <label htmlFor="company_url">Ne töltse ki ezt a mezőt</label>
+                  <input id="company_url" name="company_url" type="text" tabIndex={-1} autoComplete="off" value={hp} onChange={(e) => setHp(e.target.value)} />
+                </div>
+
                 <div className="grid g-2" style={{ gap: 18 }}>
                   <Field id="nev" label="Név *" error={showErr('nev')} filled={!!form.nev}>
                     <input id="nev" value={form.nev} onChange={update('nev')} onBlur={markTouched('nev')} placeholder="Kovács János" autoComplete="name" aria-invalid={!!showErr('nev')} />
@@ -106,9 +121,19 @@ export default function Contact() {
                 </div>
 
                 <div className="grid g-2" style={{ gap: 18 }}>
-                  <Select label="Terület" optional options={contactAreas} value={form.terulet} placeholder="Válasszon területet…" onChange={(v) => setField('terulet', v)} />
+                  <Select label="Terület" optional options={contactAreas} value={form.terulet} placeholder="Válasszon területet…" onChange={setTerulet} />
                   <Select label="Határidő" optional options={timelines} value={form.hatarido} placeholder="Válasszon határidőt…" onChange={(v) => setField('hatarido', v)} />
                 </div>
+
+                {/* "Egyéb" választásakor opcionális, rövid pontosító mező */}
+                {form.terulet === OTHER_AREA && (
+                  <Field
+                    id="teruletEgyeb" label="Miben segíthetünk? · opcionális" filled={!!form.teruletEgyeb}
+                    footer={<span className={`char-count${form.teruletEgyeb.length > OTHER_MAX - 20 ? ' warn' : ''}`}>{form.teruletEgyeb.length} / {OTHER_MAX}</span>}
+                  >
+                    <input id="teruletEgyeb" value={form.teruletEgyeb} onChange={update('teruletEgyeb')} maxLength={OTHER_MAX} placeholder="Röviden, milyen feladatról van szó…" />
+                  </Field>
+                )}
 
                 <Field
                   id="uzenet" label="Üzenet *" error={showErr('uzenet')} filled={!!form.uzenet}
