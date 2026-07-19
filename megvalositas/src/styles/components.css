@@ -544,4 +544,9 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 }
 /* telefonon a header CTA a menübe kerül — header = logó + hamburger */
 @media (max-width: 680px) { .nav-right { display: none; } }
-@media (max-width: 760px) { .footer .cols { grid-template-columns: 1fr 1fr; gap: 28px; } }
+@media (max-width: 760px) {
+  .footer .cols { grid-template-columns: 1fr 1fr; gap: 30px 24px; }
+  .footer .foot-brand { grid-column: 1 / -1; margin-bottom: 4px; }
+  .footer .foot-brand p { max-width: none; }
+}
+@media (max-width: 420px) { .footer .cols { grid-template-columns: 1fr; gap: 26px; } }
