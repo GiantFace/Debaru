@@ -32,7 +32,7 @@ export const MAP_DIRECTIONS = 'https://www.google.com/maps/dir/?api=1&destinatio
 export const contactCards = [
   { icon: 'pin', title: 'Telephely', lines: ['1117 Budapest,', 'Budafoki út 97.'] },
   { icon: 'phone', title: 'Telefon & e-mail', links: [
-    { label: '+36 1 200 1234', href: 'tel:+3612001234' },
+    { label: '+36 1 445 4166', href: 'tel:+3614454166' },
     { label: 'info@debaru.hu', href: 'mailto:info@debaru.hu' },
   ] },
   { icon: 'clock', title: 'Ügyelet', lines: ['Iroda: H–P 8:00–17:00', 'Hibaügyelet: 24/7'] },

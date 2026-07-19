@@ -352,7 +352,9 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 .legal-rows dd { margin: 0; color: var(--fg); font-size: 15px; }
 @media (max-width: 560px) { .legal-rows > div { grid-template-columns: 1fr; gap: 3px; } }
 /* footer jogi linkek */
-.foot-legal a { color: inherit; text-decoration: none; transition: color .15s var(--ease); }
+/* egy sorban: felülírjuk a .footer a { display:block }-ot */
+.foot-legal { display: inline-flex; align-items: center; flex-wrap: wrap; }
+.foot-legal a { display: inline; color: inherit; text-decoration: none; padding: 0; transition: color .15s var(--ease); }
 .foot-legal a:hover { color: var(--accent-2); }
 
 /* GDPR checkbox */

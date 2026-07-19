@@ -8,7 +8,7 @@ const COMPANY = {
   name: 'Debaru Kft.',
   seat: '1117 Budapest, Budafoki út 97.',
   email: 'info@debaru.hu',
-  phone: '+36 1 200 1234',
+  phone: '+36 1 445 4166',
 }
 
 export const legalDocs = {
@@ -154,8 +154,8 @@ export const legalDocs = {
         { rows: [
           { label: 'Cégnév', value: COMPANY.name },
           { label: 'Székhely', value: COMPANY.seat },
-          { label: 'Cégjegyzékszám', value: '01-09-XXXXXX  [SABLON]' },
-          { label: 'Adószám', value: 'XXXXXXXX-2-43  [SABLON]' },
+          { label: 'Cégjegyzékszám', value: '01-09-896759' },
+          { label: 'Adószám', value: '14277148-2-43' },
           { label: 'Nyilvántartó bíróság', value: 'Fővárosi Törvényszék Cégbírósága' },
           { label: 'Képviselő', value: '[SABLON: ügyvezető neve]' },
         ] },

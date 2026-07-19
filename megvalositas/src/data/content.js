@@ -85,7 +85,7 @@ export const footer = {
       { label: 'Energetika', to: '/szolgaltatasok/energetika' },
     ] },
     { title: 'Kapcsolat', links: [
-      { label: '+36 1 200 1234', href: 'tel:+3612001234' },
+      { label: '+36 1 445 4166', href: 'tel:+3614454166' },
       { label: 'info@debaru.hu', href: 'mailto:info@debaru.hu' },
     ], address: '1117 Budapest,\nBudafoki út 97.' },
   ],
