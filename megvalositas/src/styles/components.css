@@ -233,6 +233,10 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 .svc-lead-ico { width: 52px; height: 52px; border-radius: 13px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent-2); border: 1px solid var(--accent-line); }
 .svc-lead-ico svg { width: 25px; height: 25px; }
 
+/* ---------- pill (állapotjelző badge) ---------- */
+.pill { display: inline-flex; align-items: center; gap: 9px; padding: 7px 15px 7px 12px; border: 1px solid var(--border); background: var(--card); border-radius: 999px; font-size: 13px; color: var(--muted); }
+.pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+
 /* ---------- chip szűrők ---------- */
 .chips { display: flex; flex-wrap: wrap; gap: 10px; }
 .chip { appearance: none; font: 500 13.5px/1 var(--body); color: var(--muted); background: var(--card); border: 1px solid var(--border); padding: 9px 15px; border-radius: 999px; cursor: pointer; transition: .15s; }

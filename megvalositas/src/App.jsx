@@ -11,6 +11,7 @@ const ServiceDetail = lazy(() => import('./pages/ServiceDetail.jsx'))
 const Projects = lazy(() => import('./pages/Projects.jsx'))
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail.jsx'))
 const Contact = lazy(() => import('./pages/Contact.jsx'))
+const NotFound = lazy(() => import('./pages/NotFound.jsx'))
 
 // Útvonalak — közös Layout (nav + footer), alatta az oldalak.
 export default function App() {
@@ -26,7 +27,7 @@ export default function App() {
             <Route path="/projektjeink" element={<Projects />} />
             <Route path="/projekt" element={<ProjectDetail />} />
             <Route path="/kapcsolat" element={<Contact />} />
-            <Route path="*" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
