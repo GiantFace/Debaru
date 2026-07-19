@@ -28,6 +28,7 @@ export default function Projects() {
 
       <section className="section" style={{ paddingTop: 16 }}>
         <div className="wrap">
+          <h2 className="sr-only">Projektek</h2>
           <div className="pgrid">
             {shown.map((c) => (
               <Link className={`pcard${c.feat ? ' feat' : ''}`} to={`/projektjeink/${c.slug}`} key={c.slug}>

@@ -4,8 +4,8 @@ import { partners } from '../../data/partners.js'
 // Egy logó + hoverre megjelenő teljes név (a LogoLoop renderItem-jén keresztül).
 const renderPartner = (item) => (
   <span className="rs-logo">
-    <img src={item.src} alt={item.alt} title={item.title} loading="lazy" decoding="async" draggable={false} />
-    <span className="rs-name">{item.title}</span>
+    <img src={item.src} alt={item.alt} loading="lazy" decoding="async" draggable={false} />
+    <span className="rs-name" aria-hidden="true">{item.title}</span>
   </span>
 )
 

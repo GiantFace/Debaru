@@ -29,7 +29,7 @@ export function Navbar() {
         <div className="wrap">
           <Link className="brand" to="/" aria-label="Debaru kezdőlap"><img src={LOGO} alt="Debaru" /></Link>
 
-          <nav className="nav-links">
+          <nav className="nav-links" aria-label="Fő navigáció">
             {nav.map((n) => (
               <NavLink key={n.label} to={n.to} end={n.to === '/'} className={({ isActive }) => (isActive ? 'active' : undefined)}>{n.label}</NavLink>
             ))}

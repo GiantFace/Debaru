@@ -64,9 +64,9 @@ export default function Legal({ doc }) {
         <div className="wrap">
           <div className="legal-grid">
             {/* bal: sticky tartalomjegyzék */}
-            <aside className="legal-toc">
+            <div className="legal-toc">
               <div className="legal-toc-title">Tartalom</div>
-              <nav>
+              <nav aria-label="Tartalomjegyzék">
                 <ol>
                   {data.sections.map((s, i) => (
                     <li key={s.id}>
@@ -77,7 +77,7 @@ export default function Legal({ doc }) {
                   ))}
                 </ol>
               </nav>
-            </aside>
+            </div>
 
             {/* jobb: részletes leírás */}
             <div className="legal-content">

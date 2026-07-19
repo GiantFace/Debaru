@@ -10,7 +10,7 @@
 :root {
   /* színek */
   --bg: #fbfaf8; --bg-2: #f3f1ec;
-  --fg: #1b1d22; --muted: #5c616b; --faint: #9298a2;
+  --fg: #1b1d22; --muted: #5c616b; --faint: #656b76; /* faint sötétítve a WCAG AA kontrasztért */
   --card: #ffffff; --card-2: #f7f5f1; --card-hover: #f4f2ed;
   --border: #e7e4dd; --border-2: #d8d4ca;
   --accent: #51a685; --accent-2: #3f8e70; --accent-ink: #ffffff;

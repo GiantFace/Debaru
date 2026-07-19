@@ -76,9 +76,9 @@ export default function ProjectDetail() {
               ))}
             </div>
 
-            <Reveal as="aside">
+            <Reveal as="div">
               <div className="card" style={{ position: 'sticky', top: 96 }}>
-                <h4 style={{ fontFamily: 'var(--body)', fontSize: 12.5, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 18 }}>Projektadatok</h4>
+                <h3 style={{ fontFamily: 'var(--body)', fontSize: 12.5, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 18 }}>Projektadatok</h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                   {p.facts.map((f) => (
                     <div key={f.label}>

@@ -60,6 +60,9 @@ p { margin: 0; }
   [data-reveal], [data-reveal-stagger] > * { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
 
+/* csak képolvasónak látható (vizuálisan rejtett, de a11y-fában benne van) */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
 /* ---- reszponzív alaprács ---- */
 @media (max-width: 960px) {
   .g-4 { grid-template-columns: repeat(2, 1fr); }

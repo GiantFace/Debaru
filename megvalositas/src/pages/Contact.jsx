@@ -99,6 +99,7 @@ export default function Contact() {
 
       <section className="section" style={{ paddingTop: 24 }} id="urlap">
         <div className="wrap">
+          <h2 className="sr-only">Kapcsolatfelvétel</h2>
           <div className="split" style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: 56, alignItems: 'start' }}>
             {/* űrlap */}
             <Reveal className="card" style={{ padding: 36 }}>
@@ -180,7 +181,7 @@ export default function Contact() {
                   <label className={`check${showErr('gdpr') ? ' error' : ''}`}>
                     <input type="checkbox" checked={form.gdpr} onChange={(e) => { setField('gdpr', e.target.checked); setTouched((t) => ({ ...t, gdpr: true })) }} />
                     <span className="box"><Check /></span>
-                    <span>Elolvastam és elfogadom az <a href="#adatvedelem" onClick={(e) => e.preventDefault()}>adatvédelmi tájékoztatót</a>. *</span>
+                    <span>Elolvastam és elfogadom az <a href="/adatvedelem" target="_blank" rel="noopener noreferrer">adatvédelmi tájékoztatót</a>. *</span>
                   </label>
                   {showErr('gdpr') && <span className="err"><Warn />{errors.gdpr}</span>}
                 </div>

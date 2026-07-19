@@ -97,7 +97,7 @@ a.card:hover { border-color: var(--accent-line); transform: translateY(-4px); bo
 /* ---------- footer ---------- */
 .footer { border-top: 1px solid var(--border); padding: 72px 0 40px; background: var(--bg-2); position: relative; z-index: 1; }
 .footer .cols { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; }
-.footer h4 { font-family: var(--body); font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); margin-bottom: 16px; }
+.footer h3 { font-family: var(--body); font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); margin-bottom: 16px; }
 .footer a { display: block; color: var(--muted); font-size: 14.5px; padding: 5px 0; }
 .footer a:hover { color: var(--accent-2); }
 .footer .foot-brand img { height: 24px; margin-bottom: 16px; }
