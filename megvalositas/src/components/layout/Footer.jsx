@@ -38,9 +38,9 @@ export function Footer() {
           <span>© {new Date().getFullYear()} Debaru Kft. Minden jog fenntartva.</span>
           <span className="foot-legal">
             <Link to="/adatvedelem">Adatvédelem</Link>
-            <span aria-hidden="true"> · </span>
+            <span aria-hidden="true">·</span>
             <Link to="/aszf">ÁSZF</Link>
-            <span aria-hidden="true"> · </span>
+            <span aria-hidden="true">·</span>
             <Link to="/impresszum">Impresszum</Link>
           </span>
         </div>
