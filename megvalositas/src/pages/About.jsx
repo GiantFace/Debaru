@@ -1,4 +1,5 @@
 import { PageHead } from '../components/sections/PageHead.jsx'
+import { VideoBand } from '../components/sections/VideoBand.jsx'
 import { Reveal, RevealStagger } from '../components/ui/Reveal.jsx'
 import { StatBlock } from '../components/ui/StatBlock.jsx'
 import { ParallaxMedia } from '../components/ui/ParallaxMedia.jsx'
@@ -39,7 +40,8 @@ export default function About() {
         </div>
       </section>
 
-      <hr className="divider" />
+      {/* full-bleed háttérvideó */}
+      <VideoBand videoId="8t5K-FrwARQ" start={3} eyebrow="Bepillantás" title="A műhely, ahol a rendszerek készülnek" />
 
       {/* értékek */}
       <section className="section">

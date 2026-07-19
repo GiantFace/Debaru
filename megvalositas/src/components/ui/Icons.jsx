@@ -31,6 +31,11 @@ export const Upload = (p) => (
   <svg viewBox="0 0 24 24" strokeWidth="1.7" {...stroke} {...p}><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v13" /></svg>
 )
 
+// Lejátszás (kitöltött háromszög) — videó-poszterhez.
+export const Play = (p) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...p}><path d="M8 5v14l11-7z" /></svg>
+)
+
 // Érték- és kapcsolat-ikonok (kártyafejlécek).
 const line = { viewBox: '0 0 24 24', strokeWidth: '1.7', ...stroke }
 export const infoIcons = {

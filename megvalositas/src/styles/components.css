@@ -301,6 +301,19 @@ a.b:hover .arr { opacity: 1; transform: none; }
 .map-badge img { height: 20px; width: auto; display: block; }
 @media (max-width: 620px) { .map-badge { top: 10px; right: 10px; padding: 10px 14px; } }
 
+/* ---------- full-bleed háttérvideó-sáv ---------- */
+.video-band { position: relative; width: 100%; height: 64vh; min-height: 440px; max-height: 700px; overflow: hidden; display: flex; align-items: flex-end; background: #101216; }
+.video-band .vb-iframe { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100vw; height: 56.25vw; min-width: 177.78vh; min-height: 100vh; border: 0; pointer-events: none; }
+.video-band .vb-poster { position: absolute; inset: 0; background-size: cover; background-position: center; display: grid; place-items: center; }
+.video-band .vb-play { width: 68px; height: 68px; border-radius: 50%; background: rgba(255, 255, 255, .92); display: grid; place-items: center; color: var(--accent-2); box-shadow: 0 10px 30px -8px rgba(0, 0, 0, .5); transition: transform .2s var(--ease); }
+.video-band .vb-poster:hover .vb-play { transform: scale(1.06); }
+.video-band .vb-play svg { width: 26px; height: 26px; margin-left: 3px; }
+.video-band .vb-scrim { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(16, 18, 22, .5) 0%, rgba(16, 18, 22, .2) 42%, rgba(16, 18, 22, .82) 100%); }
+.video-band .vb-inner { position: relative; width: 100%; padding-top: 48px; padding-bottom: 52px; }
+.video-band .vb-inner .eyebrow { color: rgba(255, 255, 255, .85); }
+.video-band .vb-inner .eyebrow::before { background: rgba(255, 255, 255, .5); }
+.video-band .vb-inner h2 { color: #fff; font-size: clamp(28px, 4vw, 46px); margin: 16px 0 24px; max-width: 20ch; text-shadow: 0 2px 22px rgba(0, 0, 0, .4); }
+
 /* ---------- GYIK akkordeon ---------- */
 .faq { border-top: 1px solid var(--border); }
 .faq-item { border-bottom: 1px solid var(--border); }
