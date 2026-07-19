@@ -4,6 +4,8 @@ import { Background } from './Background.jsx'
 import { Navbar } from './Navbar.jsx'
 import { Footer } from './Footer.jsx'
 import { ScrollToTop } from './ScrollToTop.jsx'
+import { ScrollProgress } from './ScrollProgress.jsx'
+import { CustomScrollbar } from './CustomScrollbar.jsx'
 
 // Süti-sáv lazy-vel — nem blokkolja a kezdeti betöltést.
 const CookieBanner = lazy(() => import('../ui/CookieBanner.jsx'))
@@ -27,6 +29,8 @@ export function Layout() {
     <>
       <ScrollToTop />
       <Navbar />
+      <ScrollProgress />
+      <CustomScrollbar />
       <div className="page-shell">
         <Background />
         <main>

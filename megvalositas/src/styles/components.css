@@ -95,6 +95,20 @@ a.card:hover { border-color: var(--accent-line); transform: translateY(-4px); bo
 .b-img .pm-layer .img-slot { position: absolute; inset: 0; }
 
 /* ---------- footer ---------- */
+/* zöld olvasás-jelző a header alatt */
+.scroll-progress { position: fixed; top: var(--nav-h); left: 0; right: 0; height: 3px; z-index: 101; background: var(--accent); transform: scaleX(0); transform-origin: left center; will-change: transform; }
+
+/* egyedi görgetősáv — a natív rejtve, ez a jobb szélen jelenik meg */
+html, body { scrollbar-width: none; -ms-overflow-style: none; }
+html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; display: none; }
+.custom-sb { position: fixed; top: 8px; bottom: 8px; right: 5px; width: 11px; z-index: 150; opacity: 0; pointer-events: none; transition: opacity .22s var(--ease); }
+.custom-sb.show { opacity: 1; pointer-events: auto; }
+.custom-sb-track { position: absolute; inset: 0 3px; border-radius: 6px; background: var(--accent-soft); }
+.custom-sb-thumb { position: absolute; top: 0; left: 2px; right: 2px; border-radius: 6px; background: var(--accent); cursor: grab; will-change: transform, height; transition: background .15s var(--ease); }
+.custom-sb-thumb:hover { background: var(--accent-2); }
+.custom-sb-thumb:active { cursor: grabbing; background: var(--accent-2); }
+@media (max-width: 760px) { .custom-sb { display: none; } }
+
 /* reveal-footer: a tartalom (page-shell) fölécsúszik a fixen alul lévő footernek */
 .page-shell { position: relative; z-index: 2; min-height: 100vh; background: var(--bg); box-shadow: 0 40px 80px -44px rgba(15, 17, 21, .5); }
 
