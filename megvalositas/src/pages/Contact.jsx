@@ -7,6 +7,7 @@ import { Reveal } from '../components/ui/Reveal.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Field } from '../components/ui/Field.jsx'
 import { Select } from '../components/ui/Select.jsx'
+import { Turnstile } from '../components/ui/Turnstile.jsx'
 import { Check, Close, Upload, Warn, infoIcons } from '../components/ui/Icons.jsx'
 import { useToast } from '../hooks/useToast.jsx'
 import { contactHead, contactAreas, contactCards, contactTrust, timelines, OTHER_AREA, MAP_EMBED } from '../data/contact.js'
@@ -45,6 +46,8 @@ export default function Contact() {
   const [files, setFiles] = useState([])
   const [drag, setDrag] = useState(false)
   const [hp, setHp] = useState('') // honeypot — botcsapda
+  const [captcha, setCaptcha] = useState('') // Turnstile token
+  const [captchaKey, setCaptchaKey] = useState(0) // remount = widget újratöltés
   const fileRef = useRef(null)
 
   const errors = validate(form, phone)
@@ -65,19 +68,22 @@ export default function Contact() {
   // terület váltása: ha nem "Egyéb", a pontosító mezőt is ürítjük
   const setTerulet = (v) => setForm((f) => ({ ...f, terulet: v, teruletEgyeb: v === OTHER_AREA ? f.teruletEgyeb : '' }))
 
-  const resetForm = () => { setForm(EMPTY); setPhone(undefined); setFiles([]); setTouched({}); setHp('') }
+  const resetForm = () => { setForm(EMPTY); setPhone(undefined); setFiles([]); setTouched({}); setHp(''); setCaptcha(''); setCaptchaKey((k) => k + 1) }
 
   const onSubmit = (e) => {
     e.preventDefault()
     // honeypot: ha kitöltötték, bot — csendben elvetjük (nem áruljuk el a csapdát)
     if (hp) { resetForm(); toast('Köszönjük! Üzenetét megkaptuk — hamarosan jelentkezünk.'); return }
-    if (Object.keys(errors).length) {
-      setTouched({ nev: true, email: true, tel: true, uzenet: true, gdpr: true })
-      toast('Kérjük, javítsa a pirossal jelölt mezőket.')
+    const hasErr = Object.keys(errors).length > 0
+    if (hasErr || !captcha) {
+      setTouched({ nev: true, email: true, tel: true, uzenet: true, gdpr: true, captcha: true })
+      toast(hasErr ? 'Kérjük, javítsa a pirossal jelölt mezőket.' : 'Kérjük, igazolja, hogy nem robot.')
       const first = document.querySelector('.field.error input, .field.error textarea, .field.error .PhoneInputInput, .check.error input')
       if (first) first.focus()
       return
     }
+    // NOTE: a `captcha` tokent a szerveren kell ellenőrizni a Turnstile secret key-jel
+    // (challenges.cloudflare.com/turnstile/v0/siteverify) — lásd a README-jegyzetet.
     toast('Köszönjük! Üzenetét megkaptuk — hamarosan jelentkezünk.')
     resetForm()
   }
@@ -175,6 +181,12 @@ export default function Contact() {
                     <span>Elolvastam és elfogadom az <a href="#adatvedelem" onClick={(e) => e.preventDefault()}>adatvédelmi tájékoztatót</a>. *</span>
                   </label>
                   {showErr('gdpr') && <span className="err"><Warn />{errors.gdpr}</span>}
+                </div>
+
+                {/* Cloudflare Turnstile CAPTCHA — a beküldés csak sikeres ellenőrzés után enged */}
+                <div className={`field group${touched.captcha && !captcha ? ' error' : ''}`} style={{ marginBottom: 18 }}>
+                  <Turnstile key={captchaKey} onVerify={(t) => { setCaptcha(t); setTouched((s) => ({ ...s, captcha: true })) }} onExpire={() => setCaptcha('')} />
+                  {touched.captcha && !captcha && <span className="err"><Warn />Kérjük, igazolja, hogy nem robot.</span>}
                 </div>
 
                 <Button type="submit" arrow style={{ width: '100%', justifyContent: 'center' }}>Üzenet küldése</Button>
