@@ -129,12 +129,16 @@ a.card:hover { border-color: var(--accent-line); transform: translateY(-4px); bo
 
 /* ---------- referencia sáv ---------- */
 .refstrip { border-bottom: 1px solid var(--border); }
-.refstrip .wrap { display: flex; align-items: center; gap: 30px; padding-top: 22px; padding-bottom: 22px; flex-wrap: wrap; }
+.refstrip .wrap { display: flex; align-items: center; gap: 30px; padding-top: 8px; padding-bottom: 8px; flex-wrap: wrap; }
 .refstrip .rs-lbl { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--faint); font-weight: 600; white-space: nowrap; }
-/* mozgó logó-marquee — a logók szürkeárnyalatosan, hoverre színesben */
-.refstrip .rs-loop { flex: 1 1 340px; min-width: 0; overflow: hidden; }
+/* mozgó logó-marquee — magasabb sáv, hogy a hover-tooltip beleférjen a levágásba */
+.refstrip .rs-loop { flex: 1 1 340px; min-width: 0; overflow: hidden; height: 124px; display: flex; align-items: center; }
 .refstrip .logoloop__item img { filter: grayscale(1); opacity: .6; transition: filter .25s var(--ease), opacity .25s var(--ease); }
 .refstrip .logoloop__item:hover img { filter: grayscale(0); opacity: 1; }
+/* logó + hoverre a teljes név (tooltip a logó alatt) */
+.rs-logo { position: relative; display: inline-flex; align-items: center; }
+.rs-logo .rs-name { position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%) translateY(4px); white-space: nowrap; font: 600 12.5px/1 var(--body); color: var(--fg); background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 6px 11px; box-shadow: var(--shadow); opacity: 0; pointer-events: none; transition: opacity .2s var(--ease), transform .2s var(--ease); }
+.refstrip .logoloop__item:hover .rs-name { opacity: 1; transform: translateX(-50%) translateY(0); }
 
 /* ---------- bento rács ---------- */
 .bento { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 196px; grid-auto-flow: dense; gap: 18px; }
