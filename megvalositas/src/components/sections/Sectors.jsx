@@ -11,7 +11,7 @@ export function Sectors() {
         <div className="hscroll-head">
           <div className="eyebrow">Ágazatok</div>
           <h2 style={{ fontSize: 'clamp(28px,4vw,46px)', margin: '16px 0 0', maxWidth: '20ch' }}>
-            Ahol a rendszereink dolgoznak — görgessen végig
+            Ahol a rendszereink dolgoznak
           </h2>
         </div>
 

@@ -1,5 +1,5 @@
 import { lazy } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { ToastProvider } from './hooks/useToast.jsx'
 import { Layout } from './components/layout/Layout.jsx'
 
@@ -25,7 +25,9 @@ export default function App() {
             <Route path="/szolgaltatasok" element={<Services />} />
             <Route path="/szolgaltatasok/:slug" element={<ServiceDetail />} />
             <Route path="/projektjeink" element={<Projects />} />
-            <Route path="/projekt" element={<ProjectDetail />} />
+            <Route path="/projektjeink/:slug" element={<ProjectDetail />} />
+            {/* régi útvonal → a BKV esettanulmányra irányítjuk */}
+            <Route path="/projekt" element={<Navigate to="/projektjeink/bkv-etele-ter" replace />} />
             <Route path="/kapcsolat" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Route>

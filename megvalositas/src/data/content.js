@@ -35,12 +35,14 @@ export const projects = [
     title: '1-es villamos — energiaellátás korszerűsítés',
     desc: 'Felsővezeték-hálózat és két új egyenirányító alállomás kivitelezése a teljes vonalon, üzemszünet nélkül.',
     placeholder: 'Projektfotó — villamos vonal / felsővezeték',
+    to: '/projektjeink/1-es-villamos',
   },
   {
     tag: 'Automatizálás',
     title: 'Élelmiszeripari csomagolósor integráció',
     desc: 'Nyolc gépegység egységes PLC-vezérlés alá vonása és központi SCADA felügyelet kiépítése.',
     placeholder: 'Projektfotó — gyártósor / automatizálás',
+    to: '/projektjeink/elelmiszeripari-csomagolosor',
   },
 ]
 

@@ -104,7 +104,7 @@ export const services = [
       { title: 'Diszpécser-felügyelet', desc: 'A közlekedési energetika bekötése a központi diszpécserközpontba.' },
     ],
     benefits: ['Valós BKV-referenciák', 'Kivitelezés forgalomkiesés nélkül', 'Energia- és töltésinfrastruktúra egy kézben'],
-    projectHref: '/projekt',
+    projectHref: '/projektjeink/bkv-etele-ter',
   },
   {
     slug: 'szerviz', chip: 'Szerviz', tag: '06 · Üzemeltetés', title: 'Üzemeltetés & szerviz',

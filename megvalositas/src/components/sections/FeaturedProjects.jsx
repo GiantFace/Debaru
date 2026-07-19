@@ -19,7 +19,7 @@ export function FeaturedProjects() {
 
         <RevealStagger className="grid g-2" step={120} style={{ gap: '24px' }}>
           {projects.map((p) => (
-            <Link className="card" key={p.title} to="/projekt" style={{ padding: 0 }}>
+            <Link className="card" key={p.title} to={p.to} style={{ padding: 0 }}>
               <ParallaxMedia speed={0.07} placeholder={p.placeholder} style={{ aspectRatio: '16 / 10', border: 0, borderRadius: '16px 16px 0 0' }} />
               <div style={{ padding: '26px 28px 28px' }}>
                 <span className="tag">{p.tag}</span>

@@ -6,13 +6,13 @@ import { VideoGallery } from '../components/sections/VideoGallery.jsx'
 import { ImageSlot } from '../components/ui/ImageSlot.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Arrow } from '../components/ui/Icons.jsx'
-import { projectsHead, projectFilters, projectCards } from '../data/projects.js'
+import { projectsHead, projectFilters, projects } from '../data/projects.js'
 import { bkvVideos } from '../data/videos.js'
 
 // Projektjeink oldal — szűrhető bento rács (a terv projektjeink.html alapján).
 export default function Projects() {
   const [filter, setFilter] = useState('all')
-  const shown = projectCards.filter((c) => filter === 'all' || c.cat === filter)
+  const shown = projects.filter((c) => filter === 'all' || c.cat === filter)
 
   return (
     <>
@@ -28,7 +28,7 @@ export default function Projects() {
         <div className="wrap">
           <div className="pgrid">
             {shown.map((c) => (
-              <Link className={`pcard${c.feat ? ' feat' : ''}`} to="/projekt" key={c.title}>
+              <Link className={`pcard${c.feat ? ' feat' : ''}`} to={`/projektjeink/${c.slug}`} key={c.slug}>
                 <div className="pc-img"><ImageSlot placeholder={c.placeholder} /></div>
                 <div className="pc-scrim" />
                 <span className="pc-tag">{c.tag}</span>
