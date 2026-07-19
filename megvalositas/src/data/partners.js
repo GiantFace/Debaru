@@ -1,0 +1,9 @@
+// Partner-/referencia-logók (public/partners/). A LogoLoop marquee ezekből épül.
+export const partners = [
+  { src: '/partners/audi-logo.png', alt: 'Audi', title: 'Audi' },
+  { src: '/partners/mercedes-logo.png', alt: 'Mercedes-Benz', title: 'Mercedes-Benz' },
+  { src: '/partners/volkswagen-logo-transparent-2.png', alt: 'Volkswagen', title: 'Volkswagen' },
+  { src: '/partners/bkv-logo.png', alt: 'BKV', title: 'BKV' },
+  { src: '/partners/metro4-logo.png', alt: 'Metró 4', title: 'Metró 4' },
+  { src: '/partners/cranfield-university.png', alt: 'Cranfield University', title: 'Cranfield University' },
+]

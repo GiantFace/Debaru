@@ -1,15 +1,24 @@
-import { Parallax } from '../ui/Parallax.jsx'
-import { references } from '../../data/content.js'
+import LogoLoop from '../ui/LogoLoop.jsx'
+import { partners } from '../../data/partners.js'
 
-// Referencia-logók sávja a hero alatt — a logók finoman elúsznak scrollra.
+// Partner-/referencia-sáv a hero alatt — végtelenített, mozgó logó-marquee.
 export function RefStrip() {
   return (
     <section className="refstrip">
       <div className="wrap">
-        <span className="rs-lbl">Referenciák</span>
-        <Parallax className="rs-logos" speed={0.05}>
-          {references.map((r) => <span key={r}>{r}</span>)}
-        </Parallax>
+        <span className="rs-lbl">Partnereink</span>
+        <div className="rs-loop">
+          <LogoLoop
+            logos={partners}
+            speed={42}
+            direction="left"
+            logoHeight={34}
+            gap={64}
+            fadeOut
+            fadeOutColor="var(--bg)"
+            ariaLabel="Partnereink és referenciáink"
+          />
+        </div>
       </div>
     </section>
   )

@@ -131,9 +131,10 @@ a.card:hover { border-color: var(--accent-line); transform: translateY(-4px); bo
 .refstrip { border-bottom: 1px solid var(--border); }
 .refstrip .wrap { display: flex; align-items: center; gap: 30px; padding-top: 22px; padding-bottom: 22px; flex-wrap: wrap; }
 .refstrip .rs-lbl { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--faint); font-weight: 600; white-space: nowrap; }
-.refstrip .rs-logos { display: flex; gap: 30px; flex-wrap: wrap; align-items: center; }
-.refstrip .rs-logos span { font-family: var(--display); font-weight: 600; font-size: 17px; color: var(--muted); letter-spacing: .02em; opacity: .7; transition: opacity .15s, color .15s; }
-.refstrip .rs-logos span:hover { opacity: 1; color: var(--fg); }
+/* mozgó logó-marquee — a logók szürkeárnyalatosan, hoverre színesben */
+.refstrip .rs-loop { flex: 1 1 340px; min-width: 0; overflow: hidden; }
+.refstrip .logoloop__item img { filter: grayscale(1); opacity: .6; transition: filter .25s var(--ease), opacity .25s var(--ease); }
+.refstrip .logoloop__item:hover img { filter: grayscale(0); opacity: 1; }
 
 /* ---------- bento rács ---------- */
 .bento { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 196px; grid-auto-flow: dense; gap: 18px; }
