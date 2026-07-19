@@ -6,7 +6,7 @@ import { heroStats } from '../../data/content.js'
 
 // Full-bleed fotós hero, finom parallaxszal és lebegő stat-kártyával.
 export function Hero() {
-  const media = useParallax(0.05)
+  const media = useParallax(0.08)
   return (
     <section className="hero-full" id="top">
       <div className="hf-media" ref={media}>

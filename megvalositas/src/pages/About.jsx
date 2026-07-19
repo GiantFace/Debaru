@@ -1,7 +1,7 @@
 import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal, RevealStagger } from '../components/ui/Reveal.jsx'
 import { StatBlock } from '../components/ui/StatBlock.jsx'
-import { ImageSlot } from '../components/ui/ImageSlot.jsx'
+import { ParallaxMedia } from '../components/ui/ParallaxMedia.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { infoIcons } from '../components/ui/Icons.jsx'
 import { aboutHead, story, aboutStats, values, milestones, team } from '../data/about.js'
@@ -15,7 +15,7 @@ export default function About() {
       {/* nagy fotó */}
       <section className="section" style={{ paddingTop: 32 }}>
         <div className="wrap">
-          <Reveal className="media" style={{ height: 440 }}><ImageSlot placeholder={aboutHead.heroPlaceholder} /></Reveal>
+          <ParallaxMedia reveal speed={0.09} style={{ height: 440 }} placeholder={aboutHead.heroPlaceholder} />
         </div>
       </section>
 
@@ -92,7 +92,7 @@ export default function About() {
           <RevealStagger className="grid g-4" step={80}>
             {team.map((t) => (
               <div key={t.name}>
-                <div className="media" style={{ height: 260, marginBottom: 16 }}><ImageSlot placeholder="Portré" /></div>
+                <ParallaxMedia speed={0.06} style={{ height: 260, marginBottom: 16 }} placeholder="Portré" />
                 <h3 style={{ fontSize: 17 }}>{t.name}</h3>
                 <p className="muted" style={{ fontSize: 14 }}>{t.role}</p>
               </div>

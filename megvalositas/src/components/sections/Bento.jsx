@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { RevealStagger } from '../ui/Reveal.jsx'
 import { Counter } from '../ui/Counter.jsx'
-import { ImageSlot } from '../ui/ImageSlot.jsx'
+import { ParallaxImage } from '../ui/ParallaxImage.jsx'
 import { Button } from '../ui/Button.jsx'
 import { Arrow, serviceIcons } from '../ui/Icons.jsx'
 import { services, bentoStats } from '../../data/content.js'
@@ -42,7 +42,7 @@ export function Bento() {
           <Stat to={team.to} label={team.label} />
 
           <div className="b b-img b-2w">
-            <ImageSlot placeholder="Fotó — saját szekrénygyártó műhely" />
+            <ParallaxImage className="pm-layer" speed={0.05} placeholder="Fotó — saját szekrénygyártó műhely" />
             <div className="b-scrim" />
             <div className="b-cap">
               <h3 style={{ fontSize: '19px', margin: '0 0 4px' }}>Saját szekrénygyártó műhely</h3>

@@ -1,7 +1,7 @@
 import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal, RevealStagger } from '../components/ui/Reveal.jsx'
 import { StatBlock } from '../components/ui/StatBlock.jsx'
-import { ImageSlot } from '../components/ui/ImageSlot.jsx'
+import { ParallaxMedia } from '../components/ui/ParallaxMedia.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Arrow } from '../components/ui/Icons.jsx'
 import { projectDetail as d } from '../data/projectDetail.js'
@@ -62,7 +62,7 @@ export default function ProjectDetail() {
         <div className="wrap">
           <RevealStagger className="grid g-3" step={90}>
             {d.gallery.map((g) => (
-              <div className="media" style={{ height: 240 }} key={g}><ImageSlot placeholder={g} /></div>
+              <ParallaxMedia key={g} speed={0.06} style={{ height: 240 }} placeholder={g} />
             ))}
           </RevealStagger>
         </div>

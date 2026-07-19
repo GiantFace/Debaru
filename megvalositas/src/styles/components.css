@@ -86,6 +86,11 @@ a.card:hover { border-color: var(--accent-line); }
 .img-slot span { position: relative; z-index: 1; font-size: 13px; line-height: 1.4; text-align: center; max-width: 80%; padding: 12px; }
 .img-slot img { width: 100%; height: 100%; object-fit: cover; }
 
+/* belső parallax réteg: túlméretezett, hogy a kép a keretén belül mozoghasson */
+.pm-layer { position: absolute; left: 0; right: 0; top: -25%; height: 150%; will-change: transform; }
+.pm-layer .img-slot { height: 100%; }
+.b-img .pm-layer .img-slot { position: absolute; inset: 0; }
+
 /* ---------- footer ---------- */
 .footer { border-top: 1px solid var(--border); padding: 72px 0 40px; background: var(--bg-2); position: relative; z-index: 1; }
 .footer .cols { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; }
