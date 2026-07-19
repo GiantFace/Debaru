@@ -9,7 +9,9 @@ export const nav = [
   { label: 'Kapcsolat', to: '/kapcsolat' },
 ]
 
-export const langs = ['HU', 'EN', 'DE']
+// Aktív nyelvek. Egyelőre csak HU — az EN/DE gombok addig rejtve, amíg nincs
+// valódi fordítás (i18n). Ha kész, ide visszakerül: ['HU', 'EN', 'DE'].
+export const langs = ['HU']
 
 export const heroStats = [
   { v: '15+', k: 'év' },

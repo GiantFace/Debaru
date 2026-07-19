@@ -21,7 +21,7 @@ const CheckItem = ({ children }) => (
 export default function ProjectDetail() {
   const { slug } = useParams()
   const p = projectBySlug[slug]
-  useDocumentTitle(p?.title)
+  useDocumentTitle(p?.title, p?.lede)
   if (!p) return <Navigate to="/projektjeink" replace />
 
   const related = projects.filter((x) => x.slug !== p.slug).slice(0, 5)

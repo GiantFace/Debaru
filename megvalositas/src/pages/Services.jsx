@@ -5,9 +5,11 @@ import { ParallaxImage } from '../components/ui/ParallaxImage.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Check } from '../components/ui/Icons.jsx'
 import { servicesHead, services } from '../data/services.js'
+import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 
 // Szolgáltatások áttekintő — minden blokkból „Részletek" visz a saját aloldalra.
 export default function Services() {
+  useDocumentTitle(servicesHead.crumb, servicesHead.lede)
   return (
     <>
       <PageHead placeholder={servicesHead.headPlaceholder} trail={[{ label: servicesHead.crumb }]} title={servicesHead.title} lede={servicesHead.lede}>

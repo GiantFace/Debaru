@@ -6,9 +6,11 @@ import { ParallaxMedia } from '../components/ui/ParallaxMedia.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { infoIcons } from '../components/ui/Icons.jsx'
 import { aboutHead, story, aboutStats, values, milestones, team } from '../data/about.js'
+import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 
 // Rólunk oldal — a terv rolunk.html hű React változata.
 export default function About() {
+  useDocumentTitle(aboutHead.crumb, aboutHead.lede)
   return (
     <>
       <PageHead placeholder={aboutHead.headPlaceholder} trail={[{ label: aboutHead.crumb }]} title={aboutHead.title} lede={aboutHead.lede} />

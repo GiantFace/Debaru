@@ -10,6 +10,7 @@ import { Select } from '../components/ui/Select.jsx'
 import { Turnstile } from '../components/ui/Turnstile.jsx'
 import { Check, Close, Upload, Warn, infoIcons } from '../components/ui/Icons.jsx'
 import { useToast } from '../hooks/useToast.jsx'
+import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import { contactHead, contactAreas, contactCards, contactTrust, timelines, OTHER_AREA, MAP_EMBED } from '../data/contact.js'
 
 const MSG_MAX = 5000
@@ -39,6 +40,7 @@ function validate(f, phone) {
 const EMPTY = { nev: '', ceg: '', email: '', terulet: '', teruletEgyeb: '', hatarido: '', uzenet: '', gdpr: false }
 
 export default function Contact() {
+  useDocumentTitle(contactHead.crumb, contactHead.lede)
   const toast = useToast()
   const [form, setForm] = useState(EMPTY)
   const [phone, setPhone] = useState()

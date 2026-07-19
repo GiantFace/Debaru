@@ -27,7 +27,7 @@ function Block({ b }) {
 // jobb 2/3 részletes leírás. A tartalomjegyzék görgetéskor kiemeli az aktív szekciót.
 export default function Legal({ doc }) {
   const data = legalDocs[doc]
-  useDocumentTitle(data?.title)
+  useDocumentTitle(data?.title, data?.intro)
   const [active, setActive] = useState(data?.sections[0]?.id)
 
   // aktív szekció követése görgetéskor (a nav magasságát a rootMargin veszi ki)

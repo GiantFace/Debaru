@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Debaru Kft. — oldaltérkép. Új szolgáltatás/projekt aloldalnál ide is fel kell venni. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://debaru.hu/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://debaru.hu/rolunk</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://debaru.hu/szolgaltatasok</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://debaru.hu/szolgaltatasok/automatizalas</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://debaru.hu/szolgaltatasok/szekreny</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://debaru.hu/szolgaltatasok/scada</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://debaru.hu/szolgaltatasok/energetika</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://debaru.hu/szolgaltatasok/kozlekedes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://debaru.hu/szolgaltatasok/szerviz</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://debaru.hu/projektjeink</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://debaru.hu/projektjeink/bkv-etele-ter</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://debaru.hu/projektjeink/1-es-villamos</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://debaru.hu/projektjeink/elelmiszeripari-csomagolosor</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://debaru.hu/projektjeink/logisztikai-park-betaplalas</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://debaru.hu/projektjeink/vezerloszekreny-sorozat</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://debaru.hu/projektjeink/regionalis-vizmu-scada</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://debaru.hu/projektjeink/elektromosbusz-depo-toltes</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://debaru.hu/projektjeink/ipari-napelempark</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://debaru.hu/projektjeink/hegeszto-robotcella</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://debaru.hu/projektjeink/adatkozpont-fo-eloszto</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <url><loc>https://debaru.hu/kapcsolat</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://debaru.hu/adatvedelem</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://debaru.hu/aszf</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://debaru.hu/impresszum</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

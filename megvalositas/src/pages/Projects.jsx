@@ -8,9 +8,11 @@ import { Button } from '../components/ui/Button.jsx'
 import { Arrow } from '../components/ui/Icons.jsx'
 import { projectsHead, projectFilters, projects } from '../data/projects.js'
 import { bkvVideos } from '../data/videos.js'
+import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 
 // Projektjeink oldal — szűrhető bento rács (a terv projektjeink.html alapján).
 export default function Projects() {
+  useDocumentTitle(projectsHead.crumb, projectsHead.lede)
   const [filter, setFilter] = useState('all')
   const shown = projects.filter((c) => filter === 'all' || c.cat === filter)
 

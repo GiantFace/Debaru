@@ -11,7 +11,7 @@ import { services, serviceBySlug } from '../data/services.js'
 export default function ServiceDetail() {
   const { slug } = useParams()
   const svc = serviceBySlug[slug]
-  useDocumentTitle(svc?.title)
+  useDocumentTitle(svc?.title, svc?.lede)
   if (!svc) return <Navigate to="/szolgaltatasok" replace />
 
   const Icon = serviceIcons[svc.slug]

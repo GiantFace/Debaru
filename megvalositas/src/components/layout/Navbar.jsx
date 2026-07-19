@@ -36,11 +36,14 @@ export function Navbar() {
           </nav>
 
           <div className="nav-right">
-            <div className="langs" role="group" aria-label="Nyelvválasztó">
-              {langs.map((l) => (
-                <button key={l} data-lang={l} className={lang === l ? 'on' : undefined} onClick={() => pickLang(l)}>{l}</button>
-              ))}
-            </div>
+            {/* nyelvváltó — csak akkor, ha egynél több aktív nyelv van (i18n után) */}
+            {langs.length > 1 && (
+              <div className="langs" role="group" aria-label="Nyelvválasztó">
+                {langs.map((l) => (
+                  <button key={l} data-lang={l} className={lang === l ? 'on' : undefined} onClick={() => pickLang(l)}>{l}</button>
+                ))}
+              </div>
+            )}
             <Button to="/kapcsolat" arrow>Ajánlatot kérek</Button>
           </div>
 
