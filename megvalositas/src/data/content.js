@@ -67,6 +67,14 @@ export const processSteps = [
   { n: '04', title: 'Üzemeltetés', desc: 'Betanítás, dokumentációátadás és folyamatos karbantartás, 24/7 ügyelettel.' },
 ]
 
+export const faq = [
+  { q: 'Hogyan kérhetek ajánlatot?', a: 'Töltse ki a kapcsolati űrlapot vagy hívjon minket — 3 munkanapon belül visszajelzünk egy első szakmai állásfoglalással és becsült költségkerettel.' },
+  { q: 'Vállalnak vidéki és külföldi munkát is?', a: 'Igen. Aktív projektjeink jelenleg négy országban futnak; a helyszíni kivitelezést és a távfelügyeletet egyaránt biztosítjuk.' },
+  { q: 'Mennyi idő egy kapcsolószekrény legyártása?', a: 'A komplexitástól függ, de egy egyedi vezérlőszekrény jellemzően 3–6 hét a jóváhagyott tervektől számítva, saját műhelyünkben gyártva.' },
+  { q: 'Van sürgősségi ügyelet?', a: 'Igen, 24/7 hibaelhárítási ügyeletet tartunk a karbantartási szerződéssel rendelkező ügyfeleink számára, garantált kiszállási idővel.' },
+  { q: 'Milyen platformokon dolgoznak?', a: 'Siemens TIA Portal, Schneider és B&R PLC/HMI vezérlés, EPLAN alapú tervezés és saját SCADA-integráció — a meglévő rendszereihez is illesztve.' },
+]
+
 export const footer = {
   columns: [
     { title: 'Cég', links: [

@@ -20,6 +20,17 @@ export const Warn = (p) => (
   <svg viewBox="0 0 24 24" strokeWidth="2" {...stroke} {...p}><circle cx="12" cy="12" r="10" /><path d="M12 8v4M12 16h.01" /></svg>
 )
 
+// Plusz (GYIK — nyitáskor 45°-kal × lesz), bezárás, feltöltés.
+export const Plus = (p) => (
+  <svg viewBox="0 0 24 24" strokeWidth="2" {...stroke} {...p}><path d="M12 5v14M5 12h14" /></svg>
+)
+export const Close = (p) => (
+  <svg viewBox="0 0 24 24" strokeWidth="2" {...stroke} {...p}><path d="M18 6 6 18M6 6l12 12" /></svg>
+)
+export const Upload = (p) => (
+  <svg viewBox="0 0 24 24" strokeWidth="1.7" {...stroke} {...p}><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v13" /></svg>
+)
+
 // Érték- és kapcsolat-ikonok (kártyafejlécek).
 const line = { viewBox: '0 0 24 24', strokeWidth: '1.7', ...stroke }
 export const infoIcons = {
