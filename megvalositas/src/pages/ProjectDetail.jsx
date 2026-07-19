@@ -61,7 +61,9 @@ export default function ProjectDetail() {
       {/* kihívás / megoldás / eredmény + projektadatok oldalsáv */}
       <section className="section">
         <div className="wrap">
-          <div className="split" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: 64, alignItems: 'start' }}>
+          {/* align-items: stretch → a jobb oszlop a bal szöveg magasságáig nyúlik,
+              így a sticky Projektadatok-kártya végig követi a szekciót görgetéskor. */}
+          <div className="split" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: 64, alignItems: 'stretch' }}>
             <div>
               {p.sections.map((s, i) => (
                 <Reveal key={s.eyebrow} style={i > 0 ? { marginTop: 36 } : undefined}>

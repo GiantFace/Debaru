@@ -6,7 +6,9 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0; background: var(--bg); color: var(--fg);
   font-family: var(--body); font-size: 17px; line-height: 1.6;
-  text-rendering: optimizeLegibility; overflow-x: hidden;
+  /* clip (nem hidden): elvágja a vízszintes túlnyúlást, de NEM hoz létre
+     scroll-konténert — így a position: sticky (pl. Projektadatok) működik. */
+  text-rendering: optimizeLegibility; overflow-x: clip;
 }
 img { max-width: 100%; display: block; }
 a { color: var(--accent-2); text-decoration: none; transition: color .15s var(--ease); }
