@@ -27,14 +27,7 @@ export const bentoStats = {
   support: { to: 24, suffix: '/7', label: 'ügyeleti terméktámogatás' },
 }
 
-export const services = [
-  { slug: 'automatizalas', title: 'Ipari automatizálás', desc: 'PLC/HMI gépvezérlés és gyártósor-integráció.' },
-  { slug: 'szekreny', title: 'Kapcsolószekrény', desc: 'Egyedi erősáramú és vezérlőszekrény gyártás.' },
-  { slug: 'scada', title: 'SCADA & felügyelet', desc: 'Távfelügyelet, adatgyűjtés és riasztáskezelés.' },
-  { slug: 'energetika', title: 'Villamos energetika', desc: 'Hálózatok, alállomások és tartalék betáplálás.' },
-  { slug: 'kozlekedes', title: 'Közlekedés', desc: 'Villamos- és vasúti energiaellátás, depói töltés.' },
-  { slug: 'szerviz', title: 'Üzemeltetés', desc: '24/7 hibaelhárítás és megelőző karbantartás.' },
-]
+// A szolgáltatások adatai átkerültek a data/services.js-be (egységes forrás).
 
 export const projects = [
   {
@@ -84,10 +77,10 @@ export const footer = {
       { label: 'Kapcsolat', to: '/kapcsolat' },
     ] },
     { title: 'Szolgáltatás', links: [
-      { label: 'Automatizálás', to: '/szolgaltatasok#automatizalas' },
-      { label: 'Kapcsolószekrény', to: '/szolgaltatasok#szekreny' },
-      { label: 'SCADA', to: '/szolgaltatasok#scada' },
-      { label: 'Energetika', to: '/szolgaltatasok#energetika' },
+      { label: 'Automatizálás', to: '/szolgaltatasok/automatizalas' },
+      { label: 'Kapcsolószekrény', to: '/szolgaltatasok/szekreny' },
+      { label: 'SCADA', to: '/szolgaltatasok/scada' },
+      { label: 'Energetika', to: '/szolgaltatasok/energetika' },
     ] },
     { title: 'Kapcsolat', links: [
       { label: '+36 1 200 1234', href: 'tel:+3612001234' },

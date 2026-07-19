@@ -1,32 +1,38 @@
+import { Link } from 'react-router-dom'
 import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal } from '../components/ui/Reveal.jsx'
 import { ParallaxImage } from '../components/ui/ParallaxImage.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Check } from '../components/ui/Icons.jsx'
-import { servicesHead, serviceChips, serviceBlocks } from '../data/services.js'
+import { servicesHead, services } from '../data/services.js'
 
-// Szolgáltatások oldal — a terv szolgaltatasok.html hű változata (váltakozó blokkok).
+// Szolgáltatások áttekintő — minden blokkból „Részletek" visz a saját aloldalra.
 export default function Services() {
   return (
     <>
       <PageHead placeholder={servicesHead.headPlaceholder} trail={[{ label: servicesHead.crumb }]} title={servicesHead.title} lede={servicesHead.lede}>
         <Reveal className="chips" delay={200}>
-          {serviceChips.map((c) => <a key={c.id} className="chip" href={`#${c.id}`}>{c.label}</a>)}
+          {services.map((s) => <a key={s.slug} className="chip" href={`#${s.slug}`}>{s.chip}</a>)}
         </Reveal>
       </PageHead>
 
       <div className="wrap">
-        {serviceBlocks.map((b, i) => (
-          <Reveal as="section" className="svc" id={b.id} key={b.id} style={i === serviceBlocks.length - 1 ? { borderBottom: '1px solid var(--border)' } : undefined}>
+        {services.map((s, i) => (
+          <Reveal as="section" className="svc" id={s.slug} key={s.slug} style={i === services.length - 1 ? { borderBottom: '1px solid var(--border)' } : undefined}>
             <div>
-              <span className="tag">{b.tag}</span>
-              <h2 style={{ fontSize: 'clamp(26px,3vw,36px)', margin: '16px 0 12px' }}>{b.title}</h2>
-              <p className="muted">{b.desc}</p>
+              <span className="tag">{s.tag}</span>
+              <h2 style={{ fontSize: 'clamp(26px,3vw,36px)', margin: '16px 0 12px' }}>
+                <Link to={`/szolgaltatasok/${s.slug}`} style={{ color: 'inherit' }}>{s.title}</Link>
+              </h2>
+              <p className="muted">{s.desc}</p>
               <ul>
-                {b.items.map((it) => <li key={it}><Check />{it}</li>)}
+                {s.items.map((it) => <li key={it}><Check />{it}</li>)}
               </ul>
+              <div style={{ marginTop: 24 }}>
+                <Button variant="ghost" to={`/szolgaltatasok/${s.slug}`} arrow>Részletek</Button>
+              </div>
             </div>
-            <ParallaxImage className="svc-media media" speed={0.11} style={{ height: 380 }} placeholder={b.placeholder} />
+            <ParallaxImage className="svc-media media" speed={0.11} style={{ height: 380 }} placeholder={s.placeholder} />
           </Reveal>
         ))}
       </div>

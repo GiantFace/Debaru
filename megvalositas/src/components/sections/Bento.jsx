@@ -4,7 +4,8 @@ import { Counter } from '../ui/Counter.jsx'
 import { ParallaxImage } from '../ui/ParallaxImage.jsx'
 import { Button } from '../ui/Button.jsx'
 import { Arrow, serviceIcons } from '../ui/Icons.jsx'
-import { services, bentoStats } from '../../data/content.js'
+import { bentoStats } from '../../data/content.js'
+import { services } from '../../data/services.js'
 
 // Statisztika-csempe animált számlálóval.
 function Stat({ to, decimals, suffix, label }) {
@@ -53,10 +54,10 @@ export function Bento() {
           {services.map((s) => {
             const Icon = serviceIcons[s.slug]
             return (
-              <Link className="b" key={s.slug} to={`/szolgaltatasok#${s.slug}`}>
+              <Link className="b" key={s.slug} to={`/szolgaltatasok/${s.slug}`}>
                 <div className="b-ico"><Icon /></div>
                 <h3>{s.title}</h3>
-                <p>{s.desc}</p>
+                <p>{s.short}</p>
                 <span className="arr"><Arrow /></span>
               </Link>
             )

@@ -7,6 +7,7 @@ import { Layout } from './components/layout/Layout.jsx'
 const Home = lazy(() => import('./pages/Home.jsx'))
 const About = lazy(() => import('./pages/About.jsx'))
 const Services = lazy(() => import('./pages/Services.jsx'))
+const ServiceDetail = lazy(() => import('./pages/ServiceDetail.jsx'))
 const Projects = lazy(() => import('./pages/Projects.jsx'))
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail.jsx'))
 const Contact = lazy(() => import('./pages/Contact.jsx'))
@@ -21,6 +22,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/rolunk" element={<About />} />
             <Route path="/szolgaltatasok" element={<Services />} />
+            <Route path="/szolgaltatasok/:slug" element={<ServiceDetail />} />
             <Route path="/projektjeink" element={<Projects />} />
             <Route path="/projekt" element={<ProjectDetail />} />
             <Route path="/kapcsolat" element={<Contact />} />
