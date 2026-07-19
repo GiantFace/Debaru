@@ -22,7 +22,7 @@ export function Bento() {
   return (
     <section className="section" id="szolg">
       <div className="wrap">
-        <RevealStagger className="bento" step={60}>
+        <RevealStagger className="bento" step={40}>
           <div className="b b-accent b-2w b-2h">
             <div className="eyebrow">Amit csinálunk</div>
             <h2 style={{ fontSize: 'clamp(26px,3.4vw,40px)', margin: '16px 0 14px', lineHeight: 1.05, maxWidth: '15ch' }}>

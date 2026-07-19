@@ -50,9 +50,9 @@ p { margin: 0; }
 @media (prefers-reduced-motion: reduce) { .orb { display: none; } }
 
 /* ---- scroll-reveal (belépő animáció) ---- */
-[data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+[data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity .5s var(--ease), transform .5s var(--ease); }
 [data-reveal].in { opacity: 1; transform: none; }
-[data-reveal-stagger] > * { opacity: 0; transform: translateY(28px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+[data-reveal-stagger] > * { opacity: 0; transform: translateY(28px); transition: opacity .5s var(--ease), transform .5s var(--ease); }
 [data-reveal-stagger].in > * { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   [data-reveal], [data-reveal-stagger] > * { opacity: 1 !important; transform: none !important; transition: none !important; }

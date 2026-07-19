@@ -4,7 +4,7 @@ import { prefersReducedMotion } from '../../hooks/motion.js'
 
 // Számláló, ami láthatóvá váláskor 0-ról a célértékig fut (easeOutCubic).
 // `className`/`style` a szám-elemet szabja (bento: "n", oldalak: "num").
-export function Counter({ to, decimals = 0, suffix = '', duration = 1400, className = 'n', style }) {
+export function Counter({ to, decimals = 0, suffix = '', duration = 1000, className = 'n', style }) {
   const [ref, inView] = useInView({ threshold: 0.5, rootMargin: '0px' })
   const [val, setVal] = useState(0)
   const started = useRef(false)
