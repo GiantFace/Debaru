@@ -63,9 +63,9 @@ body.hero-light .nav:not(.scrolled) .langs button.on { background: var(--accent)
   background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 28px;
   transition: background .2s var(--ease), border-color .2s var(--ease), transform .2s var(--ease); position: relative; overflow: hidden;
 }
-.card:hover { background: var(--card-hover); border-color: var(--border-2); transform: translateY(-4px); }
 a.card { color: inherit; }
-a.card:hover { border-color: var(--accent-line); }
+/* csak a kattintható (link) kártyák reagálnak hoverre — a statikus tartalmi kártyák (form, elérhetőségek, CTA) nem */
+a.card:hover { background: var(--card-hover); border-color: var(--accent-line); transform: translateY(-4px); }
 .card h3 { font-size: 20px; margin-bottom: 9px; }
 .card p { font-size: 15px; color: var(--muted); line-height: 1.55; }
 .tag { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .04em; color: var(--accent-2); background: var(--accent-soft); border: 1px solid var(--accent-line); padding: 5px 11px; border-radius: 7px; }
@@ -296,11 +296,11 @@ a.b:hover .arr { opacity: 1; transform: none; }
 .file-item .fi-x:hover { background: var(--danger-soft); color: var(--danger); }
 .file-item .fi-x svg { width: 15px; height: 15px; }
 
-/* brandelt térkép-overlay */
-.map-card { position: absolute; top: 20px; left: 20px; z-index: 2; max-width: 268px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; box-shadow: var(--shadow); }
+/* brandelt térkép-overlay — bal oldal közepén (nem ütközik a Google gombjaival) */
+.map-card { position: absolute; top: 50%; left: 24px; transform: translateY(-50%); z-index: 2; max-width: 268px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; box-shadow: var(--shadow); }
 .map-card .mc-brand { font-family: var(--display); font-weight: 600; font-size: 17px; color: var(--fg); }
 .map-card .mc-addr { color: var(--muted); font-size: 14px; margin: 6px 0 16px; line-height: 1.5; }
-@media (max-width: 620px) { .map-card { top: auto; bottom: 16px; left: 16px; right: 16px; max-width: none; } }
+@media (max-width: 620px) { .map-card { top: auto; bottom: 16px; left: 16px; right: 16px; transform: none; max-width: none; } }
 
 /* ---------- GYIK akkordeon ---------- */
 .faq { border-top: 1px solid var(--border); }
