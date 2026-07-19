@@ -138,14 +138,16 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* térkép helye */}
+      {/* térkép — beágyazott Google Maps (API-kulcs nélkül) */}
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap">
-          <Reveal className="media" style={{ height: 360, display: 'grid', placeItems: 'center', background: 'var(--bg-2)' }}>
-            <div style={{ textAlign: 'center', color: 'var(--faint)' }}>
-              <infoIcons.pin style={{ width: 34, height: 34, margin: '0 auto 10px' }} />
-              <div style={{ fontSize: 14 }}>Térkép — Budafoki út 97.</div>
-            </div>
+          <Reveal className="media" style={{ height: 360 }}>
+            <iframe
+              title="Debaru Kft. — Budafoki út 97., Budapest"
+              src="https://maps.google.com/maps?q=Budafoki%20%C3%BAt%2097%2C%201117%20Budapest&z=15&hl=hu&output=embed"
+              width="100%" height="100%" style={{ border: 0, display: 'block' }}
+              loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen
+            />
           </Reveal>
         </div>
       </section>
