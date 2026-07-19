@@ -1,10 +1,12 @@
-import { Suspense } from 'react'
+import { lazy, Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
 import { Background } from './Background.jsx'
 import { Navbar } from './Navbar.jsx'
 import { Footer } from './Footer.jsx'
 import { ScrollToTop } from './ScrollToTop.jsx'
-import { CookieBanner } from '../ui/CookieBanner.jsx'
+
+// Süti-sáv lazy-vel — nem blokkolja a kezdeti betöltést.
+const CookieBanner = lazy(() => import('../ui/CookieBanner.jsx'))
 
 // Közös váz minden oldalhoz: háttér + nav + tartalom (Outlet) + footer.
 // A lazy oldalak betöltéséig a nav/footer megmarad; a tartalomterület helyet tart.
@@ -20,7 +22,7 @@ export function Layout() {
         </Suspense>
       </main>
       <Footer />
-      <CookieBanner />
+      <Suspense fallback={null}><CookieBanner /></Suspense>
     </>
   )
 }
