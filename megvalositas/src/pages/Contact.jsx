@@ -6,9 +6,10 @@ import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal } from '../components/ui/Reveal.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Field } from '../components/ui/Field.jsx'
+import { Select } from '../components/ui/Select.jsx'
 import { Check, Close, Upload, Warn, infoIcons } from '../components/ui/Icons.jsx'
 import { useToast } from '../hooks/useToast.jsx'
-import { contactHead, contactAreas, contactCards, budgets, timelines, MAP_EMBED } from '../data/contact.js'
+import { contactHead, contactAreas, contactCards, contactTrust, timelines, MAP_EMBED } from '../data/contact.js'
 
 const MSG_MAX = 5000
 const MAX_FILE = 10 * 1024 * 1024 // 10 MB / fájl
@@ -33,21 +34,7 @@ function validate(f, phone) {
   return e
 }
 
-const EMPTY = { nev: '', ceg: '', email: '', terulet: '', koltsegkeret: '', hatarido: '', uzenet: '', gdpr: false }
-
-// Egyszeres kiválasztású chip-csoport (újrakattintva törölhető).
-function ChipGroup({ label, optional, options, value, onSelect }) {
-  return (
-    <div className="field group">
-      <span className="grp-label">{label}{optional && <span className="opt"> · opcionális</span>}</span>
-      <div className="chips">
-        {options.map((o) => (
-          <button type="button" key={o} className={`chip${value === o ? ' on' : ''}`} onClick={() => onSelect(value === o ? '' : o)}>{o}</button>
-        ))}
-      </div>
-    </div>
-  )
-}
+const EMPTY = { nev: '', ceg: '', email: '', terulet: '', hatarido: '', uzenet: '', gdpr: false }
 
 export default function Contact() {
   const toast = useToast()
@@ -118,11 +105,9 @@ export default function Contact() {
                   </Field>
                 </div>
 
-                <ChipGroup label="Terület" optional options={contactAreas} value={form.terulet} onSelect={(v) => setField('terulet', v)} />
-
                 <div className="grid g-2" style={{ gap: 18 }}>
-                  <ChipGroup label="Költségkeret" optional options={budgets} value={form.koltsegkeret} onSelect={(v) => setField('koltsegkeret', v)} />
-                  <ChipGroup label="Határidő" optional options={timelines} value={form.hatarido} onSelect={(v) => setField('hatarido', v)} />
+                  <Select label="Terület" optional options={contactAreas} value={form.terulet} placeholder="Válasszon területet…" onChange={(v) => setField('terulet', v)} />
+                  <Select label="Határidő" optional options={timelines} value={form.hatarido} placeholder="Válasszon határidőt…" onChange={(v) => setField('hatarido', v)} />
                 </div>
 
                 <Field
@@ -171,22 +156,33 @@ export default function Contact() {
               </form>
             </Reveal>
 
-            {/* elérhetőségek */}
+            {/* elérhetőségek + bizalmi blokk */}
             <Reveal delay={100}>
-              {contactCards.map((c, i) => {
+              {contactCards.map((c) => {
                 const Icon = infoIcons[c.icon]
                 return (
-                  <div className="card" key={c.title} style={{ marginBottom: i < contactCards.length - 1 ? 16 : 0 }}>
+                  <div className="card info-card" key={c.title} style={{ marginBottom: 16 }}>
                     <div className="ico"><Icon /></div>
-                    <h3 style={{ fontSize: 18, marginBottom: 6 }}>{c.title}</h3>
-                    <p className="muted" style={{ fontSize: 15 }}>
-                      {c.links
-                        ? c.links.map((l, j) => <span key={l.href}>{j > 0 && <br />}<a href={l.href}>{l.label}</a></span>)
-                        : c.lines.map((line, j) => <span key={j}>{j > 0 && <br />}{line}</span>)}
-                    </p>
+                    <div className="ic-body">
+                      <h3>{c.title}</h3>
+                      <p className="muted">
+                        {c.links
+                          ? c.links.map((l, j) => <span key={l.href}>{j > 0 && <br />}<a href={l.href}>{l.label}</a></span>)
+                          : c.lines.map((line, j) => <span key={j}>{j > 0 && <br />}{line}</span>)}
+                      </p>
+                    </div>
                   </div>
                 )
               })}
+
+              <div className="card contact-trust">
+                <h3>Miért a Debaru?</h3>
+                <ul>
+                  {contactTrust.map((t) => (
+                    <li key={t}><Check />{t}</li>
+                  ))}
+                </ul>
+              </div>
             </Reveal>
           </div>
         </div>
