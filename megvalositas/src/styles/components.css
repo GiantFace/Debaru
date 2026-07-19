@@ -235,24 +235,35 @@ a.b:hover .arr { opacity: 1; transform: none; }
 .field input::placeholder, .field textarea::placeholder { color: var(--faint); }
 
 /* validáció: hibaállapot + üzenet + karakterszámláló */
-.field.error input, .field.error textarea, .field.error select, .field.error .PhoneInputInput, .field.error .PhoneInputCountry { border-color: var(--danger); }
-.field.error input:focus, .field.error textarea:focus, .field.error select:focus, .field.error .PhoneInputInput:focus { border-color: var(--danger); box-shadow: 0 0 0 4px var(--danger-soft); }
+.field.error input, .field.error textarea, .field.error select, .field.error .PhoneInput { border-color: var(--danger); }
+.field.error input:focus, .field.error textarea:focus, .field.error select:focus, .field.error .PhoneInput:focus-within { border-color: var(--danger); box-shadow: 0 0 0 4px var(--danger-soft); }
 .field .err { color: var(--danger); font-size: 12.5px; font-weight: 500; display: flex; align-items: center; gap: 6px; }
 .field .err svg { width: 14px; height: 14px; flex-shrink: 0; }
-.field .row-end { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.field .row-end { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
 .char-count { font-size: 12px; color: var(--faint); margin-left: auto; font-variant-numeric: tabular-nums; }
 .char-count.warn { color: var(--danger); font-weight: 600; }
 
-/* nemzetközi telefonmező a design systemhez igazítva */
-.field .PhoneInput { display: flex; align-items: stretch; gap: 10px; }
-.field .PhoneInputInput { font: 400 15px/1.5 var(--body); color: var(--fg); background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 13px 15px; width: 100%; transition: .15s; }
-.field .PhoneInputInput:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
-.field .PhoneInputInput::placeholder { color: var(--faint); }
-.field .PhoneInputCountry { margin: 0; padding: 0 12px; display: flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; transition: .15s; }
+/* nemzetközi telefonmező: egy dobozban a (nem választható) zászló + a szám */
+.field .PhoneInput { display: flex; align-items: center; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 0 14px; transition: .15s; }
+.field .PhoneInput:focus-within { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.field .PhoneInputCountry { margin: 0 10px 0 0; pointer-events: none; }         /* a zászló a számból jön, nem választható */
+.field .PhoneInputCountrySelect, .field .PhoneInputCountrySelectArrow { display: none; }
 .field .PhoneInputCountryIcon { width: 27px; height: 20px; box-shadow: none; }
 .field .PhoneInputCountryIcon--border { box-shadow: none; background: transparent; }
-.field .PhoneInputCountrySelectArrow { color: var(--muted); opacity: .6; margin-left: 2px; }
-.field .PhoneInputCountry:focus-within { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.field .PhoneInputInput { border: 0; background: transparent; padding: 13px 0; font: 400 15px/1.5 var(--body); color: var(--fg); width: 100%; }
+.field .PhoneInputInput:focus { outline: none; box-shadow: none; }
+.field .PhoneInputInput::placeholder { color: var(--faint); }
+
+/* lebegő címke: a label a mezőben ül, fókuszra/kitöltésre a keret bal-felső sarkába úszik */
+.field.float { display: block; }
+.field.float .fw { position: relative; }
+.field.float .fw > label { position: absolute; left: 11px; top: 15px; margin: 0; font: 400 15px/1 var(--body); color: var(--faint); pointer-events: none; background: var(--card); padding: 0 5px; border-radius: 4px; transition: top .16s var(--ease), font-size .16s var(--ease), color .16s var(--ease); }
+.field.float.active .fw > label { top: -7px; font-size: 12px; font-weight: 500; color: var(--accent); }
+.field.float.error .fw > label { color: var(--danger); }
+.field.float .row-end { margin-top: 6px; }
+/* a placeholder csak fókuszban látszik (nyugalmi állapotban a label a helyén ül) */
+.field.float input::placeholder, .field.float textarea::placeholder, .field.float .PhoneInputInput::placeholder { color: transparent; transition: color .15s; }
+.field.float input:focus::placeholder, .field.float textarea:focus::placeholder, .field.float .PhoneInputInput:focus::placeholder { color: var(--faint); }
 
 /* ---------- projekt bento rács ---------- */
 .pgrid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 288px; grid-auto-flow: dense; gap: 20px; }

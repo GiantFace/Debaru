@@ -5,7 +5,8 @@ import 'react-phone-number-input/style.css'
 import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal } from '../components/ui/Reveal.jsx'
 import { Button } from '../components/ui/Button.jsx'
-import { Warn, infoIcons } from '../components/ui/Icons.jsx'
+import { Field } from '../components/ui/Field.jsx'
+import { infoIcons } from '../components/ui/Icons.jsx'
 import { useToast } from '../hooks/useToast.jsx'
 import { contactHead, contactAreas, contactCards } from '../data/contact.js'
 
@@ -37,7 +38,7 @@ export default function Contact() {
   const [touched, setTouched] = useState({})
 
   const errors = validate(form, phone)
-  const showErr = (k) => (touched[k] && errors[k]) || null
+  const showErr = (k) => (touched[k] && errors[k]) || undefined
 
   const update = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }))
   const markTouched = (k) => () => setTouched((t) => ({ ...t, [k]: true }))
@@ -60,9 +61,6 @@ export default function Contact() {
   const msgLen = form.uzenet.length
   const msgWarn = msgLen > MSG_MAX - 200
 
-  // Hibaüzenet-sor (ikon + pontos szöveg), csak ha a mező „érintett".
-  const Err = ({ k }) => showErr(k) ? <span className="err"><Warn />{errors[k]}</span> : null
-
   return (
     <>
       <PageHead placeholder={contactHead.headPlaceholder} trail={[{ label: contactHead.crumb }]} title={contactHead.title} lede={contactHead.lede} />
@@ -74,25 +72,20 @@ export default function Contact() {
             <Reveal className="card" style={{ padding: 36 }}>
               <form onSubmit={onSubmit} noValidate>
                 <div className="grid g-2" style={{ gap: 18 }}>
-                  <div className={`field${showErr('nev') ? ' error' : ''}`}>
-                    <label htmlFor="nev">Név *</label>
+                  <Field id="nev" label="Név *" error={showErr('nev')} filled={!!form.nev}>
                     <input id="nev" value={form.nev} onChange={update('nev')} onBlur={markTouched('nev')} placeholder="Kovács János" autoComplete="name" aria-invalid={!!showErr('nev')} />
-                    <Err k="nev" />
-                  </div>
-                  <div className="field">
-                    <label htmlFor="ceg">Cég</label>
+                  </Field>
+                  <Field id="ceg" label="Cég" filled={!!form.ceg}>
                     <input id="ceg" value={form.ceg} onChange={update('ceg')} placeholder="Cég neve" autoComplete="organization" />
-                  </div>
+                  </Field>
                 </div>
 
                 <div className="grid g-2" style={{ gap: 18 }}>
-                  <div className={`field${showErr('email') ? ' error' : ''}`}>
-                    <label htmlFor="email">E-mail *</label>
+                  <Field id="email" label="E-mail *" error={showErr('email')} filled={!!form.email}>
                     <input id="email" type="email" value={form.email} onChange={update('email')} onBlur={markTouched('email')} placeholder="janos@ceg.hu" autoComplete="email" aria-invalid={!!showErr('email')} />
-                    <Err k="email" />
-                  </div>
-                  <div className={`field${showErr('tel') ? ' error' : ''}`}>
-                    <label htmlFor="tel">Telefon</label>
+                  </Field>
+                  {/* telefon: a zászló a beírt szám országkódjából jön (nem választható), a szám elé töltve */}
+                  <Field id="tel" label="Telefon" error={showErr('tel')} filled={!!phone} always>
                     <PhoneInput
                       international
                       defaultCountry="HU"
@@ -103,25 +96,21 @@ export default function Contact() {
                       numberInputProps={{ id: 'tel' }}
                       placeholder="30 123 4567"
                     />
-                    <Err k="tel" />
-                  </div>
+                  </Field>
                 </div>
 
-                <div className="field">
-                  <label htmlFor="terulet">Terület</label>
+                <Field id="terulet" label="Terület" always>
                   <select id="terulet" value={form.terulet} onChange={update('terulet')}>
                     {contactAreas.map((a) => <option key={a}>{a}</option>)}
                   </select>
-                </div>
+                </Field>
 
-                <div className={`field${showErr('uzenet') ? ' error' : ''}`}>
-                  <label htmlFor="uzenet">Üzenet *</label>
+                <Field
+                  id="uzenet" label="Üzenet *" error={showErr('uzenet')} filled={!!form.uzenet}
+                  footer={<span className={`char-count${msgWarn ? ' warn' : ''}`}>{msgLen} / {MSG_MAX}</span>}
+                >
                   <textarea id="uzenet" value={form.uzenet} onChange={update('uzenet')} onBlur={markTouched('uzenet')} maxLength={MSG_MAX} placeholder="Néhány mondat a feladatról, a helyszínről és a tervezett ütemezésről…" aria-invalid={!!showErr('uzenet')} />
-                  <div className="row-end">
-                    <Err k="uzenet" />
-                    <span className={`char-count${msgWarn ? ' warn' : ''}`}>{msgLen} / {MSG_MAX}</span>
-                  </div>
-                </div>
+                </Field>
 
                 <Button type="submit" arrow style={{ width: '100%', justifyContent: 'center' }}>Üzenet küldése</Button>
                 <p className="muted" style={{ fontSize: 12.5, marginTop: 14, textAlign: 'center' }}>A gomb megnyomásával elfogadja az adatkezelési tájékoztatót.</p>
