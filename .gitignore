@@ -4,3 +4,6 @@ Thumbs.db
 .idea/
 .vscode/
 node_modules/
+
+# Markdown dokumentumok (belső munkadokumentumok, nem a webhelyhez tartoznak)
+*.md
