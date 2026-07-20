@@ -459,8 +459,10 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 .vcard:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--accent-line); }
 /* előnézet */
 .vc-thumb { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-2); }
-.vc-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease); }
-.vcard:hover .vc-thumb img { transform: scale(1.05); }
+/* parallax-réteg: a görgetéssel függőlegesen mozog; a kép zoom-mal ad mozgásteret */
+.vc-thumb-par { position: absolute; inset: 0; will-change: transform; }
+.vc-thumb-par img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.5); transition: transform .5s var(--ease); }
+.vcard:hover .vc-thumb-par img { transform: scale(1.56); }
 .vc-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15, 17, 21, .3) 0%, rgba(15, 17, 21, .04) 45%, rgba(15, 17, 21, .12) 100%); }
 .vc-tag { position: absolute; top: 14px; left: 14px; z-index: 2; pointer-events: none; font-size: 11.5px; font-weight: 600; color: #fff; background: rgba(255, 255, 255, .16); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, .3); padding: 5px 11px; border-radius: 999px; }
 .vc-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3; width: 58px; height: 58px; border: 0; border-radius: 50%; background: rgba(255, 255, 255, .92); color: var(--accent-2); cursor: pointer; display: grid; place-items: center; box-shadow: 0 10px 30px -8px rgba(0, 0, 0, .5); transition: .2s var(--ease); }
