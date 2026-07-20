@@ -50,9 +50,9 @@ export default function NotFound() {
       <div className="wrap">
         <div className="e404-grid">
           <div>
-            <Reveal className="pill"><span className="dot" />Hiba 404 · Megszakadt kapcsolat</Reveal>
+            <Reveal className="pill"><span className="dot" />Hiba 404 · Keresett oldal nem létezik</Reveal>
             <Reveal as="h1" delay={80}>Úgy tűnik, ez a vezeték<br /><span className="accent">sehová sem vezet.</span></Reveal>
-            <Reveal as="p" className="lede" delay={160}>A keresett oldal áthelyeződött, megszűnt, vagy sosem létezett. Ne aggódjon — a rendszer többi része hibátlanul üzemel. Innen visszatalál a fő áramkörre.</Reveal>
+            <Reveal as="p" className="lede" delay={160}>A keresett oldal áthelyeződött, megszűnt, vagy sosem létezett. Ne aggódjon, a rendszer többi része hibátlanul üzemel. Innen visszatalál a fő áramkörre.</Reveal>
             <Reveal className="e404-actions" delay={240}>
               <Button to="/" arrow>Vissza a kezdőlapra</Button>
               <Button variant="ghost" to="/kapcsolat">Kapcsolat</Button>
