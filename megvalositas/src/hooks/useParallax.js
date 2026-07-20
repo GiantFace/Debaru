@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react'
-import { prefersReducedMotion } from './motion.js'
+import { prefersReducedMotion, liteMode } from './motion.js'
 
 // Viewport-relatív, kizárólag transform-alapú parallax (rAF-fékezve).
 export function useParallax(speed = 0.06) {
   const ref = useRef(null)
   useEffect(() => {
     const el = ref.current
-    if (prefersReducedMotion || !el) return
+    if (prefersReducedMotion || liteMode || !el) return
     let ticking = false
     const apply = () => {
       const mid = window.innerHeight / 2

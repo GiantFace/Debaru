@@ -71,6 +71,18 @@
     })();
   </script>
 
+  <!-- Gyenge eszköz felismerése: 'lite' osztály → nehéz effektek (parallax, blur) kikapcsolása -->
+  <script>
+    (function () {
+      try {
+        var cores = navigator.hardwareConcurrency || 8;
+        var mem = navigator.deviceMemory || 8;
+        var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (cores <= 4 || mem <= 4 || reduce) document.documentElement.classList.add('lite');
+      } catch (e) {}
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://i.ytimg.com" />
