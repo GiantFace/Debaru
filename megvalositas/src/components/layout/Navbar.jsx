@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { NavLink, Link, useLocation } from 'react-router-dom'
 import { useScrolled } from '../../hooks/useScrolled.js'
 import { useToast } from '../../hooks/useToast.jsx'
@@ -7,6 +7,35 @@ import { Menu, Close, Arrow, infoIcons } from '../ui/Icons.jsx'
 import { nav, langs } from '../../data/content.js'
 
 const LOGO = '/assets/debaru_logo.png'
+
+// Nyelvválasztó legördülő (asztali nav). A tartalom jelenleg HU; EN/DE „hamarosan".
+function LangMenu({ lang, onPick }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef(null)
+  useEffect(() => {
+    if (!open) return
+    const onDoc = (e) => { if (!ref.current?.contains(e.target)) setOpen(false) }
+    const onKey = (e) => { if (e.key === 'Escape') setOpen(false) }
+    document.addEventListener('mousedown', onDoc)
+    document.addEventListener('keydown', onKey)
+    return () => { document.removeEventListener('mousedown', onDoc); document.removeEventListener('keydown', onKey) }
+  }, [open])
+  return (
+    <div className={`lang${open ? ' open' : ''}`} ref={ref}>
+      <button className="lang-btn" onClick={() => setOpen((o) => !o)} aria-haspopup="listbox" aria-expanded={open} aria-label="Nyelvválasztó">
+        <span>{lang}</span>
+        <svg className="lang-chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+      </button>
+      {open && (
+        <ul className="lang-menu" role="listbox">
+          {langs.map((l) => (
+            <li key={l}><button role="option" aria-selected={l === lang} className={l === lang ? 'on' : undefined} onClick={() => { onPick(l); setOpen(false) }}>{l}</button></li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+}
 
 export function Navbar() {
   const scrolled = useScrolled()
@@ -44,14 +73,7 @@ export function Navbar() {
           </nav>
 
           <div className="nav-right">
-            {/* nyelvváltó — csak akkor, ha egynél több aktív nyelv van (i18n után) */}
-            {langs.length > 1 && (
-              <div className="langs" role="group" aria-label="Nyelvválasztó">
-                {langs.map((l) => (
-                  <button key={l} data-lang={l} className={lang === l ? 'on' : undefined} onClick={() => pickLang(l)}>{l}</button>
-                ))}
-              </div>
-            )}
+            <LangMenu lang={lang} onPick={pickLang} />
             <Button to="/kapcsolat" arrow>Ajánlatot kérek</Button>
           </div>
 
@@ -76,6 +98,11 @@ export function Navbar() {
             <div className="mm-contact">
               <a href="tel:+3614454166"><infoIcons.phone />+36 1 445 4166</a>
               <a href="mailto:info@debaru.hu"><infoIcons.mail />info@debaru.hu</a>
+            </div>
+            <div className="mm-lang" role="group" aria-label="Nyelvválasztó">
+              {langs.map((l) => (
+                <button key={l} className={lang === l ? 'on' : undefined} onClick={() => pickLang(l)}>{l}</button>
+              ))}
             </div>
           </div>
         </div>

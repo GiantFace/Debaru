@@ -24,6 +24,18 @@
 .langs button { appearance: none; border: 0; background: transparent; color: var(--faint); font: 600 12px/1 var(--body); letter-spacing: .04em; padding: 6px 8px; border-radius: 6px; cursor: pointer; transition: .15s; }
 .langs button:hover { color: var(--fg); }
 .langs button.on { background: var(--accent); color: var(--accent-ink); }
+/* nyelvválasztó legördülő (asztali nav) */
+.lang { position: relative; }
+.lang-btn { display: inline-flex; align-items: center; gap: 6px; appearance: none; background: var(--card); border: 1px solid var(--border); color: var(--fg); font: 600 13px/1 var(--body); letter-spacing: .05em; padding: 9px 11px; border-radius: 9px; cursor: pointer; transition: .15s var(--ease); }
+.lang-btn:hover { border-color: var(--border-2); }
+.lang-chev { transition: transform .18s var(--ease); }
+.lang.open .lang-chev { transform: rotate(180deg); }
+.lang-menu { position: absolute; top: calc(100% + 6px); right: 0; min-width: 78px; margin: 0; padding: 5px; list-style: none; background: var(--card); border: 1px solid var(--border-2); border-radius: 10px; box-shadow: var(--shadow); z-index: 60; animation: sel-in .14s var(--ease); }
+.lang-menu button { display: block; width: 100%; text-align: left; appearance: none; border: 0; background: transparent; color: var(--muted); font: 600 13px/1 var(--body); letter-spacing: .05em; padding: 8px 10px; border-radius: 7px; cursor: pointer; transition: .12s; }
+.lang-menu button:hover { background: var(--card-hover); color: var(--fg); }
+.lang-menu button.on { background: var(--accent-soft); color: var(--accent-2); }
+body.hero-light .nav:not(.scrolled) .lang-btn { background: rgba(255, 255, 255, .12); border-color: rgba(255, 255, 255, .28); color: #fff; }
+
 .menu-btn { display: none; appearance: none; background: var(--card); border: 1px solid var(--border); color: var(--fg); width: 40px; height: 40px; border-radius: 9px; cursor: pointer; }
 
 /* nav a világos (fotós) hero fölött — fehér szöveg görgetésig */
@@ -62,6 +74,10 @@ body.hero-light .nav:not(.scrolled) .langs button.on { background: var(--accent)
 .mm-contact a { display: inline-flex; align-items: center; gap: 12px; width: fit-content; color: rgba(255, 255, 255, .85); font-size: 16px; padding: 7px 0; transition: color .15s var(--ease); }
 .mm-contact a svg { width: 19px; height: 19px; color: #7fd6ae; flex-shrink: 0; }
 .mm-contact a:hover { color: #fff; }
+.mm-lang { display: inline-flex; gap: 4px; margin-top: 24px; padding: 4px; background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .18); border-radius: 10px; }
+.mm-lang button { appearance: none; border: 0; background: transparent; color: rgba(255, 255, 255, .8); font: 600 13px/1 var(--body); letter-spacing: .05em; padding: 8px 14px; border-radius: 7px; cursor: pointer; transition: .15s var(--ease); }
+.mm-lang button:hover { color: #fff; }
+.mm-lang button.on { background: #fff; color: #1c4a39; }
 
 /* ---------- gombok ---------- */
 .btn {
