@@ -43,8 +43,8 @@ body.hero-light .nav:not(.scrolled) .langs button.on { background: var(--accent)
 
 .mobile-menu {
   position: fixed; inset: var(--nav-h) 0 0; z-index: 99; overflow: hidden auto;
-  display: flex; flex-direction: column; justify-content: space-between;
-  padding: 22px 26px 34px; color: rgba(255, 255, 255, .92);
+  display: flex; flex-direction: column; justify-content: flex-start;
+  padding: 26px 26px 40px; color: rgba(255, 255, 255, .92);
   background: linear-gradient(180deg, #2c6f55 0%, #1c4a39 100%);
   animation: mm-in .28s var(--ease);
 }
@@ -55,7 +55,7 @@ body.hero-light .nav:not(.scrolled) .langs button.on { background: var(--accent)
 .mm-links a svg { width: 20px; height: 20px; color: rgba(255, 255, 255, .5); opacity: 0; transform: translateX(-8px); transition: .2s var(--ease); }
 .mm-links a.active { padding-left: 10px; }
 .mm-links a.active svg { opacity: 1; transform: none; color: #7fd6ae; }
-.mm-foot { position: relative; z-index: 1; padding-top: 26px; }
+.mm-foot { position: relative; z-index: 1; margin-top: 36px; }
 .mm-foot .btn { width: 100%; justify-content: center; background: #fff; color: #1c4a39; border-color: #fff; }
 .mm-foot .btn:hover { background: rgba(255, 255, 255, .9); color: #1c4a39; transform: translateY(-2px); }
 .mm-contact { display: flex; flex-direction: column; gap: 8px; margin-top: 22px; }
