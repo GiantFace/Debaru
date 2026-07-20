@@ -79,6 +79,7 @@ export const footer = {
       { label: 'Szolgáltatások', to: '/szolgaltatasok' },
       { label: 'Projektjeink', to: '/projektjeink' },
       { label: 'Kapcsolat', to: '/kapcsolat' },
+      { label: 'GYIK', to: '/#gyik' },
     ] },
     { title: 'Szolgáltatás', links: [
       { label: 'Automatizálás', to: '/szolgaltatasok/automatizalas' },
