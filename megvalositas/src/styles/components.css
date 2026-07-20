@@ -545,13 +545,11 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 /* telefonon a header CTA a menübe kerül — header = logó + hamburger */
 @media (max-width: 680px) { .nav-right { display: none; } }
 @media (max-width: 760px) {
+  /* link-oszlopok két oszlopban, balra igazítva (márka teljes szélességű) */
   .footer .cols { grid-template-columns: 1fr 1fr; gap: 30px 24px; }
   .footer .foot-brand { grid-column: 1 / -1; margin-bottom: 4px; }
   .footer .foot-brand p { max-width: none; }
-}
-@media (max-width: 560px) {
-  .footer .cols { grid-template-columns: 1fr; gap: 30px; text-align: center; }
-  .footer .foot-brand img { margin-left: auto; margin-right: auto; }
+  /* csak a legalsó sáv (copyright + jogi linkek) középen */
   .footer .foot-bottom { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
   .footer .foot-legal { justify-content: center; }
 }
