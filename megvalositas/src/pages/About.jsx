@@ -109,8 +109,8 @@ export default function About() {
       <section className="section-sm">
         <div className="wrap">
           <Reveal className="card" style={{ textAlign: 'center', padding: '72px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
-            <h2 style={{ fontSize: 'clamp(28px,4vw,44px)', maxWidth: '20ch', margin: '0 auto 18px' }}>Dolgozzunk együtt a következő rendszerén</h2>
-            <Button to="/kapcsolat" arrow>Beszéljünk</Button>
+            <h2 style={{ fontSize: 'clamp(28px,4vw,44px)', maxWidth: '20ch', margin: '0 auto 18px' }}>Dolgozzunk együtt a következő rendszerén!</h2>
+            <Button to="/kapcsolat" arrow>Beszéljünk!</Button>
           </Reveal>
         </div>
       </section>

@@ -61,8 +61,8 @@ export default function Projects() {
       <section className="section-sm">
         <div className="wrap">
           <Reveal className="card" style={{ textAlign: 'center', padding: '72px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
-            <h2 style={{ fontSize: 'clamp(28px,4vw,44px)', maxWidth: '20ch', margin: '0 auto 18px' }}>A következő referencia az Öné lehet</h2>
-            <Button to="/kapcsolat" arrow>Beszéljünk a projektjéről</Button>
+            <h2 style={{ fontSize: 'clamp(28px,4vw,44px)', maxWidth: '20ch', margin: '0 auto 18px' }}>A következő referencia az Öné lehet!</h2>
+            <Button to="/kapcsolat" arrow>Beszéljünk a projektjéről!</Button>
           </Reveal>
         </div>
       </section>

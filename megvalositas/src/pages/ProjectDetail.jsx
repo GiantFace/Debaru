@@ -208,7 +208,7 @@ export default function ProjectDetail() {
         <div className="wrap">
           <Reveal style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
             <Button variant="ghost" to="/projektjeink"><Arrow style={{ transform: 'rotate(180deg)' }} />Összes projekt</Button>
-            <Button to="/kapcsolat" arrow>Beszéljünk a projektjéről</Button>
+            <Button to="/kapcsolat" arrow>Beszéljünk a projektjéről!</Button>
           </Reveal>
         </div>
       </section>
