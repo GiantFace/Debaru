@@ -91,9 +91,9 @@ export default function About() {
       {/* csapat */}
       <section className="section">
         <div className="wrap">
-          <Reveal className="eyebrow">A csapat</Reveal>
-          <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 48px' }}>Akik a rendszerek mögött állnak</Reveal>
-          <RevealStagger className="grid g-4" step={80}>
+          <Reveal className="eyebrow">Vezetőség</Reveal>
+          <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 48px' }}>Akik a Debaru élén állnak</Reveal>
+          <RevealStagger className="grid g-2" step={80}>
             {team.map((t) => (
               <div key={t.name}>
                 <ParallaxMedia speed={0.06} style={{ height: 260, marginBottom: 16 }} placeholder="Portré" />

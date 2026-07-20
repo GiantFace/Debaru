@@ -157,7 +157,7 @@ export const legalDocs = {
           { label: 'Cégjegyzékszám', value: '01-09-896759' },
           { label: 'Adószám', value: '14277148-2-43' },
           { label: 'Nyilvántartó bíróság', value: 'Fővárosi Törvényszék Cégbírósága' },
-          { label: 'Képviselő', value: '[SABLON: ügyvezető neve]' },
+          { label: 'Képviselő', value: 'Takács Gergő ügyvezető' },
         ] },
       ] },
       { id: 'elerhetoseg', title: 'Elérhetőség', body: [

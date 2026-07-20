@@ -39,9 +39,8 @@ export const milestones = [
   { year: '2023', title: 'Új gyártócsarnok', desc: '1 200 m²-es szekrénygyártó műhely és mérőlabor a budafoki telephelyen.' },
 ]
 
+// Valós vezetőség. (A titulust érdemes pontosítani: Takács Gergő ügyvezető/cégvezető.)
 export const team = [
-  { name: 'Balogh Tamás', role: 'Ügyvezető · villamosmérnök' },
-  { name: 'Kovács Réka', role: 'Automatizálási vezető' },
-  { name: 'Nagy Dávid', role: 'Energetikai tervező' },
-  { name: 'Szabó Anna', role: 'Projektvezető' },
+  { name: 'Takács Gergő', role: 'Ügyvezető' },
+  { name: 'Barcsa Levente Koppány', role: 'Ügyvezető-helyettes' },
 ]
