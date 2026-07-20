@@ -1,50 +1,24 @@
-# Debaru weboldal — oldalak és URL-ek
-
-Melyik oldal melyik URL-en érhető el. (A `debaru.hu` a végleges domain; a fejlesztői
-címen ugyanezek az útvonalak működnek, csak más domainnel.)
-
-## Fő oldalak
-| Oldal | URL |
-|---|---|
-| Kezdőlap | `/` |
-| Rólunk | `/rolunk` |
-| Szolgáltatások | `/szolgaltatasok` |
-| Projektjeink | `/projektjeink` |
-| Kapcsolat | `/kapcsolat` |
-
-## Szolgáltatás-aloldalak
-| Oldal | URL |
-|---|---|
-| Ipari automatizálás | `/szolgaltatasok/automatizalas` |
-| Kapcsolószekrény-gyártás | `/szolgaltatasok/szekreny` |
-| SCADA & folyamatfelügyelet | `/szolgaltatasok/scada` |
-| Villamos energetika | `/szolgaltatasok/energetika` |
-| Közlekedési rendszerek | `/szolgaltatasok/kozlekedes` |
-| Üzemeltetés & szerviz | `/szolgaltatasok/szerviz` |
-
-## Projekt-aloldalak
-| Oldal | URL |
-|---|---|
-| BKV Etele téri villamos-végállomás | `/projektjeink/bkv-etele-ter` |
-| 1-es villamos — energiaellátás korszerűsítés | `/projektjeink/1-es-villamos` |
-| Élelmiszeripari csomagolósor integráció | `/projektjeink/elelmiszeripari-csomagolosor` |
-| Logisztikai park betáplálás | `/projektjeink/logisztikai-park-betaplalas` |
-| Vezérlőszekrény-sorozat gyártás | `/projektjeink/vezerloszekreny-sorozat` |
-| Regionális vízmű SCADA | `/projektjeink/regionalis-vizmu-scada` |
-| Elektromosbusz-depó töltés | `/projektjeink/elektromosbusz-depo-toltes` |
-| Ipari napelempark csatlakozás | `/projektjeink/ipari-napelempark` |
-| Hegesztő robotcella integráció | `/projektjeink/hegeszto-robotcella` |
-| Adatközpont fő elosztó | `/projektjeink/adatkozpont-fo-eloszto` |
-
-## Jogi oldalak
-| Oldal | URL |
-|---|---|
-| Adatvédelem | `/adatvedelem` |
-| ÁSZF | `/aszf` |
-| Impresszum | `/impresszum` |
-
-## Egyéb
-| Oldal | URL |
-|---|---|
-| 404 (nem létező oldal) | bármely ismeretlen URL |
-| Régi projekt-link (átirányít) | `/projekt` → `/projektjeink/bkv-etele-ter` |
+https://debaru.hu/ — Kezdőlap
+https://debaru.hu/rolunk — Rólunk
+https://debaru.hu/szolgaltatasok — Szolgáltatások
+https://debaru.hu/szolgaltatasok/automatizalas — Ipari automatizálás
+https://debaru.hu/szolgaltatasok/szekreny — Kapcsolószekrény-gyártás
+https://debaru.hu/szolgaltatasok/scada — SCADA & folyamatfelügyelet
+https://debaru.hu/szolgaltatasok/energetika — Villamos energetika
+https://debaru.hu/szolgaltatasok/kozlekedes — Közlekedési rendszerek
+https://debaru.hu/szolgaltatasok/szerviz — Üzemeltetés & szerviz
+https://debaru.hu/projektjeink — Projektjeink
+https://debaru.hu/projektjeink/bkv-etele-ter — BKV Etele téri villamos-végállomás
+https://debaru.hu/projektjeink/1-es-villamos — 1-es villamos — energiaellátás korszerűsítés
+https://debaru.hu/projektjeink/elelmiszeripari-csomagolosor — Élelmiszeripari csomagolósor integráció
+https://debaru.hu/projektjeink/logisztikai-park-betaplalas — Logisztikai park betáplálás
+https://debaru.hu/projektjeink/vezerloszekreny-sorozat — Vezérlőszekrény-sorozat gyártás
+https://debaru.hu/projektjeink/regionalis-vizmu-scada — Regionális vízmű SCADA
+https://debaru.hu/projektjeink/elektromosbusz-depo-toltes — Elektromosbusz-depó töltés
+https://debaru.hu/projektjeink/ipari-napelempark — Ipari napelempark csatlakozás
+https://debaru.hu/projektjeink/hegeszto-robotcella — Hegesztő robotcella integráció
+https://debaru.hu/projektjeink/adatkozpont-fo-eloszto — Adatközpont fő elosztó
+https://debaru.hu/kapcsolat — Kapcsolat
+https://debaru.hu/adatvedelem — Adatvédelem
+https://debaru.hu/aszf — ÁSZF
+https://debaru.hu/impresszum — Impresszum
