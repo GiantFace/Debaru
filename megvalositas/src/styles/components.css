@@ -459,6 +459,7 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
    a 80vh min-magasság mindig hagy elég tartalékot a felfelé tolásnak (nincs fekete csík) */
 .video-band .vb-iframe { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -46%); width: 100vw; height: 56.25vw; min-width: max(142.2vh, 890px); min-height: max(80vh, 500px); border: 0; pointer-events: none; }
 .video-band .vb-poster { position: absolute; inset: 0; background-size: cover; background-position: center; display: grid; place-items: center; }
+.video-band .vb-poster-bg { position: absolute; inset: 0; background-size: cover; background-position: center 42%; }
 .video-band .vb-play { width: 68px; height: 68px; border-radius: 50%; background: rgba(255, 255, 255, .92); display: grid; place-items: center; color: var(--accent-2); box-shadow: 0 10px 30px -8px rgba(0, 0, 0, .5); transition: transform .2s var(--ease); }
 .video-band .vb-poster:hover .vb-play { transform: scale(1.06); }
 .video-band .vb-play svg { width: 26px; height: 26px; margin-left: 3px; }
