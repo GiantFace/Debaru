@@ -3,7 +3,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom'
 import { useScrolled } from '../../hooks/useScrolled.js'
 import { useToast } from '../../hooks/useToast.jsx'
 import { Button } from '../ui/Button.jsx'
-import { Menu, Close, Arrow } from '../ui/Icons.jsx'
+import { Menu, Close, Arrow, infoIcons } from '../ui/Icons.jsx'
 import { nav, langs } from '../../data/content.js'
 
 const LOGO = '/assets/debaru_logo.png'
@@ -74,8 +74,8 @@ export function Navbar() {
           <div className="mm-foot">
             <Button to="/kapcsolat" arrow onClick={() => setMenuOpen(false)}>Ajánlatot kérek</Button>
             <div className="mm-contact">
-              <a href="tel:+3614454166">+36 1 445 4166</a>
-              <a href="mailto:info@debaru.hu">info@debaru.hu</a>
+              <a href="tel:+3614454166"><infoIcons.phone />+36 1 445 4166</a>
+              <a href="mailto:info@debaru.hu"><infoIcons.mail />info@debaru.hu</a>
             </div>
           </div>
         </div>

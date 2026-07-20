@@ -58,8 +58,9 @@ body.hero-light .nav:not(.scrolled) .langs button.on { background: var(--accent)
 .mm-foot { position: relative; z-index: 1; margin-top: 36px; }
 .mm-foot .btn { width: 100%; justify-content: center; background: #fff; color: #1c4a39; border-color: #fff; }
 .mm-foot .btn:hover { background: rgba(255, 255, 255, .9); color: #1c4a39; transform: translateY(-2px); }
-.mm-contact { display: flex; flex-direction: column; gap: 8px; margin-top: 22px; }
-.mm-contact a { color: rgba(255, 255, 255, .8); font-size: 15px; }
+.mm-contact { display: flex; flex-direction: column; gap: 4px; margin-top: 22px; }
+.mm-contact a { display: inline-flex; align-items: center; gap: 12px; width: fit-content; color: rgba(255, 255, 255, .85); font-size: 16px; padding: 7px 0; transition: color .15s var(--ease); }
+.mm-contact a svg { width: 19px; height: 19px; color: #7fd6ae; flex-shrink: 0; }
 .mm-contact a:hover { color: #fff; }
 
 /* ---------- gombok ---------- */
