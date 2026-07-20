@@ -85,6 +85,8 @@ export const footer = {
       { label: 'Kapcsolószekrény', to: '/szolgaltatasok/szekreny' },
       { label: 'SCADA', to: '/szolgaltatasok/scada' },
       { label: 'Energetika', to: '/szolgaltatasok/energetika' },
+      { label: 'Közlekedés', to: '/szolgaltatasok/kozlekedes' },
+      { label: 'Szerviz', to: '/szolgaltatasok/szerviz' },
     ] },
     { title: 'Kapcsolat', links: [
       { label: '+36 1 445 4166', href: 'tel:+3614454166' },
