@@ -549,4 +549,9 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
   .footer .foot-brand { grid-column: 1 / -1; margin-bottom: 4px; }
   .footer .foot-brand p { max-width: none; }
 }
-@media (max-width: 420px) { .footer .cols { grid-template-columns: 1fr; gap: 26px; } }
+@media (max-width: 560px) {
+  .footer .cols { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+  .footer .foot-brand img { margin-left: auto; margin-right: auto; }
+  .footer .foot-bottom { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+  .footer .foot-legal { justify-content: center; }
+}
