@@ -465,6 +465,10 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 .video-band .vb-play { width: 68px; height: 68px; border-radius: 50%; background: rgba(255, 255, 255, .92); display: grid; place-items: center; color: var(--accent-2); box-shadow: 0 10px 30px -8px rgba(0, 0, 0, .5); transition: transform .2s var(--ease); }
 .video-band .vb-poster:hover .vb-play { transform: scale(1.06); }
 .video-band .vb-play svg { width: 26px; height: 26px; margin-left: 3px; }
+/* diszkrét szüneteltető gomb (WCAG: a mozgás megállítható) */
+.video-band .vb-toggle { position: absolute; top: 18px; right: 18px; z-index: 3; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; color: #fff; background: rgba(16, 18, 22, .5); border: 1px solid rgba(255, 255, 255, .3); cursor: pointer; transition: background .2s var(--ease), transform .2s var(--ease); }
+.video-band .vb-toggle:hover { background: rgba(16, 18, 22, .72); transform: scale(1.06); }
+.video-band .vb-toggle svg { width: 18px; height: 18px; }
 .video-band .vb-scrim { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(16, 18, 22, .5) 0%, rgba(16, 18, 22, .2) 42%, rgba(16, 18, 22, .82) 100%); }
 .video-band .vb-inner { position: relative; width: 100%; padding-top: 48px; padding-bottom: 52px; }
 .video-band .vb-inner .eyebrow { color: rgba(255, 255, 255, .85); }

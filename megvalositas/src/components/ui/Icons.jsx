@@ -36,6 +36,11 @@ export const Play = (p) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...p}><path d="M8 5v14l11-7z" /></svg>
 )
 
+// Szünet — a háttérvideó szüneteltető gombjához.
+export const Pause = (p) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" {...p}><rect x="6" y="5" width="4" height="14" rx="1" /><rect x="14" y="5" width="4" height="14" rx="1" /></svg>
+)
+
 // Érték- és kapcsolat-ikonok (kártyafejlécek).
 const line = { viewBox: '0 0 24 24', strokeWidth: '1.7', ...stroke }
 export const infoIcons = {
