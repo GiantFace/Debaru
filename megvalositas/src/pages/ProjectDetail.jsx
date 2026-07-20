@@ -51,7 +51,7 @@ export default function ProjectDetail() {
                 {p.scope.map((it) => <CheckItem key={it}>{it}</CheckItem>)}
               </ul>
             </Reveal>
-            <ParallaxMedia reveal speed={0.08} style={{ height: 420 }} placeholder={p.placeholder} />
+            <ParallaxMedia reveal speed={0.15} style={{ height: 420 }} placeholder={p.placeholder} />
           </div>
         </div>
       </section>

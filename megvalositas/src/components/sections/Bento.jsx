@@ -43,7 +43,7 @@ export function Bento() {
           <Stat to={team.to} label={team.label} />
 
           <div className="b b-img b-2w">
-            <ParallaxImage className="pm-layer" speed={0.05} placeholder="Fotó — saját szekrénygyártó műhely" />
+            <ParallaxImage className="pm-layer" speed={0.12} placeholder="Fotó — saját szekrénygyártó műhely" />
             <div className="b-scrim" />
             <div className="b-cap">
               <h3 style={{ fontSize: '19px', margin: '0 0 4px' }}>Saját szekrénygyártó műhely</h3>

@@ -7,8 +7,8 @@ import { heroStats } from '../../data/content.js'
 
 // Full-bleed fotós hero — több rétegű parallax: fotó, lebegő stat, szövegblokk.
 export function Hero() {
-  const media = useParallax(0.08)   // háttérfotó (leglassabb réteg)
-  const inner = useParallax(0.03)   // szövegblokk (előtér, finoman elúszik)
+  const media = useParallax(0.16)   // háttérfotó (leglassabb réteg)
+  const inner = useParallax(0.05)   // szövegblokk (előtér, finoman elúszik)
   return (
     <section className="hero-full" id="top">
       <div className="hf-media" ref={media}>
@@ -17,7 +17,7 @@ export function Hero() {
       <div className="hf-scrim" />
       <div className="hf-accent" />
 
-      <ParallaxFade className="hf-stat" speed={0.06}>
+      <ParallaxFade className="hf-stat" speed={0.09}>
         <div className="hs-lbl">Élesben, folyamatosan</div>
         <div className="hs-row">
           {heroStats.map((s) => (

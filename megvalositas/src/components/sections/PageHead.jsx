@@ -8,7 +8,7 @@ export function PageHead({ placeholder, trail = [], tag, title, lede, children }
   const lines = Array.isArray(title) ? title : [title]
   return (
     <section className="phead-full">
-      <ParallaxImage className="pf-media" speed={0.08} placeholder={placeholder} />
+      <ParallaxImage className="pf-media" speed={0.16} placeholder={placeholder} />
       <div className="hf-scrim" />
       <div className="hf-accent" />
       <div className="wrap">

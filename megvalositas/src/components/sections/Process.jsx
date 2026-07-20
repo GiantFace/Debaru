@@ -7,7 +7,7 @@ export function Process() {
   return (
     <section className="section" id="folyamat">
       <div className="wrap">
-        <Parallax speed={0.05}>
+        <Parallax speed={0.09}>
           <Reveal className="eyebrow">Hogyan dolgozunk</Reveal>
           <Reveal as="h2" style={{ fontSize: 'clamp(30px,4vw,48px)', margin: '16px 0 56px', maxWidth: '16ch' }}>
             A koncepciótól a folyamatos üzemig

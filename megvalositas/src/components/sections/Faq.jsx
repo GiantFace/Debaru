@@ -10,7 +10,7 @@ export function Faq() {
   return (
     <section className="section" id="gyik">
       <div className="wrap">
-        <Parallax speed={0.05}>
+        <Parallax speed={0.09}>
           <Reveal className="eyebrow">GYIK</Reveal>
           <Reveal as="h2" style={{ fontSize: 'clamp(30px,4vw,48px)', margin: '16px 0 40px', maxWidth: '18ch' }}>
             Gyakori kérdések

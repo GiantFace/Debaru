@@ -34,7 +34,7 @@ export default function Services() {
                 <Button variant="ghost" to={`/szolgaltatasok/${s.slug}`} arrow>Részletek</Button>
               </div>
             </div>
-            <ParallaxImage className="svc-media media" speed={0.11} style={{ height: 380 }} placeholder={s.placeholder} />
+            <ParallaxImage className="svc-media media" speed={0.16} style={{ height: 380 }} placeholder={s.placeholder} />
           </Reveal>
         ))}
       </div>

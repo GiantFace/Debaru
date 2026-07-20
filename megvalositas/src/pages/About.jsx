@@ -18,7 +18,7 @@ export default function About() {
       {/* nagy fotó */}
       <section className="section" style={{ paddingTop: 32 }}>
         <div className="wrap">
-          <ParallaxMedia reveal speed={0.09} style={{ height: 440 }} placeholder={aboutHead.heroPlaceholder} />
+          <ParallaxMedia reveal speed={0.15} style={{ height: 440 }} placeholder={aboutHead.heroPlaceholder} />
         </div>
       </section>
 

@@ -45,7 +45,7 @@ export default function ServiceDetail() {
                 ))}
               </ul>
             </Reveal>
-            <ParallaxMedia reveal speed={0.08} style={{ height: 380 }} placeholder={svc.placeholder} />
+            <ParallaxMedia reveal speed={0.15} style={{ height: 380 }} placeholder={svc.placeholder} />
           </div>
         </div>
       </section>

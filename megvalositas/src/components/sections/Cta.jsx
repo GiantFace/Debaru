@@ -6,7 +6,7 @@ import { Button } from '../ui/Button.jsx'
 export function Cta() {
   return (
     <section className="section-sm" id="cta">
-      <Parallax className="wrap" speed={0.05}>
+      <Parallax className="wrap" speed={0.09}>
         <Reveal
           className="card"
           style={{ textAlign: 'center', padding: '72px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}
