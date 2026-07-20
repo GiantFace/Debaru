@@ -8,6 +8,29 @@ import { nav, langs } from '../../data/content.js'
 
 const LOGO = '/assets/debaru_logo.png'
 
+// Kis zászlók a nyelvekhez (inline SVG — nincs flag-könyvtár a főbundle-ben).
+const FLAGS = {
+  HU: (
+    <svg viewBox="0 0 20 14" className="flag" aria-hidden="true">
+      <rect width="20" height="14" fill="#fff" /><rect width="20" height="4.67" fill="#cd2a3e" /><rect y="9.33" width="20" height="4.67" fill="#436f4d" />
+    </svg>
+  ),
+  EN: (
+    <svg viewBox="0 0 60 30" className="flag" aria-hidden="true">
+      <rect width="60" height="30" fill="#012169" />
+      <path d="M0 0l60 30m0-30L0 30" stroke="#fff" strokeWidth="6" />
+      <path d="M0 0l60 30m0-30L0 30" stroke="#c8102e" strokeWidth="3" />
+      <path d="M30 0v30M0 15h60" stroke="#fff" strokeWidth="10" />
+      <path d="M30 0v30M0 15h60" stroke="#c8102e" strokeWidth="6" />
+    </svg>
+  ),
+  DE: (
+    <svg viewBox="0 0 20 14" className="flag" aria-hidden="true">
+      <rect width="20" height="4.67" fill="#000" /><rect y="4.67" width="20" height="4.66" fill="#d00" /><rect y="9.33" width="20" height="4.67" fill="#ffce00" />
+    </svg>
+  ),
+}
+
 // Nyelvválasztó legördülő (asztali nav). A tartalom jelenleg HU; EN/DE „hamarosan".
 function LangMenu({ lang, onPick }) {
   const [open, setOpen] = useState(false)
@@ -23,13 +46,13 @@ function LangMenu({ lang, onPick }) {
   return (
     <div className={`lang${open ? ' open' : ''}`} ref={ref}>
       <button className="lang-btn" onClick={() => setOpen((o) => !o)} aria-haspopup="listbox" aria-expanded={open} aria-label="Nyelvválasztó">
-        <span>{lang}</span>
+        {FLAGS[lang]}<span>{lang}</span>
         <svg className="lang-chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6" /></svg>
       </button>
       {open && (
         <ul className="lang-menu" role="listbox">
           {langs.map((l) => (
-            <li key={l}><button role="option" aria-selected={l === lang} className={l === lang ? 'on' : undefined} onClick={() => { onPick(l); setOpen(false) }}>{l}</button></li>
+            <li key={l}><button role="option" aria-selected={l === lang} className={l === lang ? 'on' : undefined} onClick={() => { onPick(l); setOpen(false) }}>{FLAGS[l]}<span>{l}</span></button></li>
           ))}
         </ul>
       )}
@@ -101,7 +124,7 @@ export function Navbar() {
             </div>
             <div className="mm-lang" role="group" aria-label="Nyelvválasztó">
               {langs.map((l) => (
-                <button key={l} className={lang === l ? 'on' : undefined} onClick={() => pickLang(l)}>{l}</button>
+                <button key={l} className={lang === l ? 'on' : undefined} onClick={() => pickLang(l)}>{FLAGS[l]}<span>{l}</span></button>
               ))}
             </div>
           </div>
