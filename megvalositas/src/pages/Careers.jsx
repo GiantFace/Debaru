@@ -196,8 +196,8 @@ export default function Careers() {
         <div className="wrap">
           <ParallaxFade speed={0.1} className="card" style={{ textAlign: 'center', padding: '72px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
             <h2 style={{ fontSize: 'clamp(26px,4vw,40px)', maxWidth: '22ch', margin: '0 auto 14px' }}>Nem találtad a pozíciód?</h2>
-            <p className="muted" style={{ margin: '0 auto 28px', maxWidth: '46ch' }}>Küldd el önéletrajzod spontán jelentkezésként — ha van hozzád illő feladat, keresünk!</p>
-            <Button href={`mailto:${applyEmail}?subject=${encodeURIComponent('Spontán jelentkezés — Debaru karrier')}`} arrow>Spontán jelentkezés</Button>
+            <p className="muted" style={{ margin: '0 auto 28px', maxWidth: '46ch' }}>Küldd el az önéletrajzod, és ha felmerül egy hozzád illő pozíció, keresünk!</p>
+            <Button href={`mailto:${applyEmail}?subject=${encodeURIComponent('Jelentkezés — Debaru karrier')}`} arrow>Küldöm az önéletrajzom</Button>
           </ParallaxFade>
         </div>
       </section>
