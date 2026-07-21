@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal, RevealStagger } from '../components/ui/Reveal.jsx'
+import { ParallaxFade } from '../components/ui/Parallax.jsx'
+import { ParallaxImage } from '../components/ui/ParallaxImage.jsx'
 import { StatBlock } from '../components/ui/StatBlock.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Arrow } from '../components/ui/Icons.jsx'
@@ -71,13 +73,13 @@ export default function Careers() {
                 <p key={i} className="muted" style={{ marginBottom: i < careerIntro.paragraphs.length - 1 ? 14 : 0 }}>{p}</p>
               ))}
             </Reveal>
-            <Reveal className="card" style={{ padding: '34px 30px' }}>
+            <ParallaxFade speed={0.14} className="card" style={{ padding: '34px 30px' }}>
               <div className="grid g-2" style={{ gap: 26 }}>
                 {cultureStats.map((s) => (
                   <StatBlock key={s.label} to={s.to} suffix={s.suffix} label={s.label} numSize={36} lblSize={13} />
                 ))}
               </div>
-            </Reveal>
+            </ParallaxFade>
           </div>
         </div>
       </section>
@@ -101,7 +103,15 @@ export default function Careers() {
         </div>
       </section>
 
-      <hr className="divider" />
+      {/* teljes szélességű parallax kép-sáv */}
+      <section className="career-band">
+        <ParallaxImage className="cb-media" speed={0.24} placeholder="Csapatfotó — mérnökök / helyszíni munka" />
+        <div className="cb-scrim" />
+        <div className="cb-inner wrap">
+          <Reveal className="eyebrow">Egy csapat, közös cél</Reveal>
+          <Reveal as="h2" delay={80}>A jövő infrastruktúráját<br />együtt építjük.</Reveal>
+        </div>
+      </section>
 
       {/* nyitott pozíciók */}
       <section className="section" id="poziciok">
@@ -182,11 +192,11 @@ export default function Careers() {
       {/* spontán jelentkezés CTA */}
       <section className="section-sm">
         <div className="wrap">
-          <Reveal className="card" style={{ textAlign: 'center', padding: '72px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
+          <ParallaxFade speed={0.1} className="card" style={{ textAlign: 'center', padding: '72px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
             <h2 style={{ fontSize: 'clamp(26px,4vw,40px)', maxWidth: '22ch', margin: '0 auto 14px' }}>Nem találtad a pozíciód?</h2>
             <p className="muted" style={{ margin: '0 auto 28px', maxWidth: '46ch' }}>Küldd el önéletrajzod spontán jelentkezésként — ha van hozzád illő feladat, keresünk!</p>
             <Button href={`mailto:${applyEmail}?subject=${encodeURIComponent('Spontán jelentkezés — Debaru karrier')}`} arrow>Spontán jelentkezés</Button>
-          </Reveal>
+          </ParallaxFade>
         </div>
       </section>
     </>

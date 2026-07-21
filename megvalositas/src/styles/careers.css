@@ -1,5 +1,15 @@
 /* ===== Karrier oldal ===== */
 
+/* teljes szélességű parallax kép-sáv (a mozgás a nagyméretű belső rétegen fut) */
+.career-band { position: relative; width: 100%; height: 52vh; min-height: 360px; max-height: 540px; overflow: hidden; display: flex; align-items: center; background: #101216; }
+.career-band .cb-media { position: absolute; top: -19%; left: 0; right: 0; height: 138%; }
+.career-band .cb-media .img-slot { width: 100%; height: 100%; }
+.career-band .cb-scrim { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, rgba(16, 18, 22, .84) 0%, rgba(16, 18, 22, .52) 52%, rgba(16, 18, 22, .34) 100%); }
+.career-band .cb-inner { position: relative; z-index: 2; width: 100%; }
+.career-band .cb-inner .eyebrow { color: rgba(255, 255, 255, .85); }
+.career-band .cb-inner .eyebrow::before { background: rgba(255, 255, 255, .5); }
+.career-band .cb-inner h2 { color: #fff; font-size: clamp(28px, 4.4vw, 50px); margin: 16px 0 0; max-width: 22ch; letter-spacing: -.02em; text-shadow: 0 2px 22px rgba(0, 0, 0, .4); }
+
 /* juttatás-kártya ikonköre */
 .benefit-ic { width: 48px; height: 48px; border-radius: 13px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent-2); margin-bottom: 16px; }
 .benefit-ic svg { width: 23px; height: 23px; }
