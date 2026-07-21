@@ -1,7 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
-import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
-import flags from 'react-phone-number-input/flags'
-import 'react-phone-number-input/style.css'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
+import { isValidPhoneNumber } from 'react-phone-number-input'
 import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal } from '../components/ui/Reveal.jsx'
 import { Button } from '../components/ui/Button.jsx'
@@ -12,6 +10,9 @@ import { Check, Close, Upload, Warn, infoIcons } from '../components/ui/Icons.js
 import { useToast } from '../hooks/useToast.jsx'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import { contactHead, contactAreas, contactCards, contactTrust, timelines, OTHER_AREA, MAP_EMBED } from '../data/contact.js'
+
+// A telefon-mező lazy chunkban (a nehéz lib + zászlók külön töltődnek)
+const PhoneField = lazy(() => import('../components/ui/PhoneField.jsx'))
 
 const MSG_MAX = 5000
 const OTHER_MAX = 100 // "Egyéb" pontosító mező max. hossza
@@ -139,7 +140,9 @@ export default function Contact() {
                   </Field>
                   {/* telefon: a zászló a beírt szám országkódjából jön (nem választható) */}
                   <Field id="tel" label="Telefon" error={showErr('tel')} filled={!!phone} always>
-                    <PhoneInput international defaultCountry="HU" flags={flags} value={phone} onChange={setPhone} onBlur={markTouched('tel')} numberInputProps={{ id: 'tel' }} placeholder="30 123 4567" />
+                    <Suspense fallback={<div className="phone-skeleton" aria-hidden="true" />}>
+                      <PhoneField value={phone} onChange={setPhone} onBlur={markTouched('tel')} numberInputProps={{ id: 'tel' }} placeholder="30 123 4567" />
+                    </Suspense>
                   </Field>
                 </div>
 
@@ -197,13 +200,13 @@ export default function Contact() {
                     <span className="box"><Check /></span>
                     <span>Elolvastam és elfogadom az <a href="/adatvedelem" target="_blank" rel="noopener noreferrer">adatvédelmi tájékoztatót</a>. *</span>
                   </label>
-                  {showErr('gdpr') && <span className="err"><Warn />{errors.gdpr}</span>}
+                  {showErr('gdpr') && <span className="err" role="alert"><Warn />{errors.gdpr}</span>}
                 </div>
 
                 {/* Cloudflare Turnstile CAPTCHA — a beküldés csak sikeres ellenőrzés után enged */}
                 <div className={`field group${touched.captcha && !captcha ? ' error' : ''}`} style={{ marginBottom: 18 }}>
                   <Turnstile key={captchaKey} onVerify={(t) => { setCaptcha(t); setTouched((s) => ({ ...s, captcha: true })) }} onExpire={() => setCaptcha('')} />
-                  {touched.captcha && !captcha && <span className="err"><Warn />Kérjük, igazolja, hogy nem robot.</span>}
+                  {touched.captcha && !captcha && <span className="err" role="alert"><Warn />Kérjük, igazolja, hogy nem robot.</span>}
                 </div>
 
                 <Button type="submit" arrow style={{ width: '100%', justifyContent: 'center' }}>Üzenet küldése</Button>

@@ -337,6 +337,8 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 .field .PhoneInputCountryIcon--border { box-shadow: none; background: transparent; }
 .field .PhoneInputInput { border: 0; background: transparent; padding: 13px 0; font: 400 15px/1.5 var(--body); color: var(--fg); width: 100%; }
 .field .PhoneInputInput:focus { outline: none; box-shadow: none; }
+/* helykitöltő a telefon-mező lazy betöltéséig (nincs elrendezés-ugrás) */
+.phone-skeleton { height: 46px; border-radius: 12px; background: var(--card-2); border: 1px solid var(--border); }
 .field .PhoneInputInput::placeholder { color: var(--faint); }
 
 /* lebegő címke: a label a mezőben ül, fókuszra/kitöltésre a keret bal-felső sarkába úszik */

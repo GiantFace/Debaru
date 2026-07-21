@@ -1,10 +1,11 @@
 import { lazy, Suspense, useEffect } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import { Background } from './Background.jsx'
 import { Navbar } from './Navbar.jsx'
 import { Footer } from './Footer.jsx'
 import { ScrollToTop } from './ScrollToTop.jsx'
 import { CustomScrollbar } from './CustomScrollbar.jsx'
+import { initAnalyticsIfConsented, trackPageview } from '../../lib/analytics.js'
 
 // Süti-sáv lazy-vel — nem blokkolja a kezdeti betöltést.
 const CookieBanner = lazy(() => import('../ui/CookieBanner.jsx'))
@@ -12,6 +13,12 @@ const CookieBanner = lazy(() => import('../ui/CookieBanner.jsx'))
 // Közös váz. A footer fixen alul van, a tartalom (page-shell) fölécsúszik és
 // görgetéskor feltárul — ezért a page-shell alsó margója = a footer magassága.
 export function Layout() {
+  const { pathname } = useLocation()
+
+  // analitika: ha korábban hozzájárult, indítsuk; majd útvonalváltásra lapletöltés
+  useEffect(() => { initAnalyticsIfConsented() }, [])
+  useEffect(() => { trackPageview(pathname) }, [pathname])
+
   useEffect(() => {
     const shell = document.querySelector('.page-shell')
     const footer = document.querySelector('.footer')
@@ -26,12 +33,13 @@ export function Layout() {
 
   return (
     <>
+      <a href="#main" className="skip-link">Ugrás a tartalomra</a>
       <ScrollToTop />
       <Navbar />
       <CustomScrollbar />
       <div className="page-shell">
         <Background />
-        <main>
+        <main id="main" tabIndex={-1}>
           <Suspense fallback={<div style={{ minHeight: '70vh' }} />}>
             <Outlet />
           </Suspense>

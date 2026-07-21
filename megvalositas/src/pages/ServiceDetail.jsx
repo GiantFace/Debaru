@@ -5,6 +5,7 @@ import { ParallaxMedia } from '../components/ui/ParallaxMedia.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Check, serviceIcons } from '../components/ui/Icons.jsx'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
+import { useJsonLd, breadcrumbLd } from '../hooks/useJsonLd.js'
 import { services, serviceBySlug } from '../data/services.js'
 
 // Egy szolgáltatás önálló, SEO-barát részletoldala (/szolgaltatasok/:slug).
@@ -12,6 +13,20 @@ export default function ServiceDetail() {
   const { slug } = useParams()
   const svc = serviceBySlug[slug]
   useDocumentTitle(svc?.title, svc?.lede)
+  useJsonLd(svc && breadcrumbLd([
+    { name: 'Debaru', url: '/' },
+    { name: 'Szolgáltatások', url: '/szolgaltatasok' },
+    { name: svc.title, url: `/szolgaltatasok/${svc.slug}` },
+  ]))
+  useJsonLd(svc && {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: svc.title,
+    description: svc.lede,
+    serviceType: svc.title,
+    areaServed: 'HU',
+    provider: { '@type': 'Organization', name: 'Debaru Kft.', url: 'https://debaru.hu' },
+  })
   if (!svc) return <Navigate to="/szolgaltatasok" replace />
 
   const Icon = serviceIcons[svc.slug]

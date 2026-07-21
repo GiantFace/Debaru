@@ -7,6 +7,7 @@ import { VideoGallery } from '../components/sections/VideoGallery.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Arrow, Check } from '../components/ui/Icons.jsx'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
+import { useJsonLd, breadcrumbLd } from '../hooks/useJsonLd.js'
 import { projects, projectBySlug } from '../data/projects.js'
 import { bkvVideos } from '../data/videos.js'
 
@@ -22,6 +23,11 @@ export default function ProjectDetail() {
   const { slug } = useParams()
   const p = projectBySlug[slug]
   useDocumentTitle(p?.title, p?.lede)
+  useJsonLd(p && breadcrumbLd([
+    { name: 'Debaru', url: '/' },
+    { name: 'Projektjeink', url: '/projektjeink' },
+    { name: p.title, url: `/projektjeink/${p.slug}` },
+  ]))
   if (!p) return <Navigate to="/projektjeink" replace />
 
   const related = projects.filter((x) => x.slug !== p.slug).slice(0, 5)

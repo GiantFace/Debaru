@@ -5,5 +5,10 @@ Thumbs.db
 .vscode/
 node_modules/
 
+# környezeti változók (pl. VITE_GA_ID, VITE_TURNSTILE_SITE_KEY) — sosem verzióba
+.env
+.env.*
+!.env.example
+
 # Markdown dokumentumok (belső munkadokumentumok, nem a webhelyhez tartoznak)
 *.md

@@ -1,8 +1,6 @@
-import { useEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { useParams, Navigate, Link } from 'react-router-dom'
-import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input'
-import flags from 'react-phone-number-input/flags'
-import 'react-phone-number-input/style.css'
+import { isValidPhoneNumber } from 'react-phone-number-input'
 import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal } from '../components/ui/Reveal.jsx'
 import { Button } from '../components/ui/Button.jsx'
@@ -13,6 +11,9 @@ import { useToast } from '../hooks/useToast.jsx'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import { jobBySlug } from '../data/careers.js'
 import '../styles/careers.css'
+
+// A telefon-mező lazy chunkban (a nehéz lib + zászlók külön töltődnek)
+const PhoneField = lazy(() => import('../components/ui/PhoneField.jsx'))
 
 const MAX_FILE = 10 * 1024 * 1024 // 10 MB / fájl
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -47,7 +48,7 @@ function FileDrop({ label, hint, accept, files, onAdd, onRemove, error }) {
           ))}
         </div>
       )}
-      {error && <span className="err"><Warn />{error}</span>}
+      {error && <span className="err" role="alert"><Warn />{error}</span>}
     </div>
   )
 }
@@ -189,7 +190,9 @@ export default function JobApply() {
 
                 <div className="grid g-2" style={{ gap: 18 }}>
                   <Field id="tel" label="Telefon" error={showErr('tel')} filled={!!phone} always>
-                    <PhoneInput international defaultCountry="HU" flags={flags} value={phone} onChange={setPhone} onBlur={markTouched('tel')} numberInputProps={{ id: 'tel' }} placeholder="30 123 4567" />
+                    <Suspense fallback={<div className="phone-skeleton" aria-hidden="true" />}>
+                      <PhoneField value={phone} onChange={setPhone} onBlur={markTouched('tel')} numberInputProps={{ id: 'tel' }} placeholder="30 123 4567" />
+                    </Suspense>
                   </Field>
                   <Field id="linkedin" label="LinkedIn / portfólió · opcionális" error={showErr('linkedin')} filled={!!form.linkedin}>
                     <input id="linkedin" value={form.linkedin} onChange={update('linkedin')} onBlur={markTouched('linkedin')} placeholder="https://linkedin.com/in/…" autoComplete="url" inputMode="url" aria-invalid={!!showErr('linkedin')} />
@@ -217,13 +220,13 @@ export default function JobApply() {
                     <span className="box"><Check /></span>
                     <span>Elolvastam és elfogadom az <a href="/adatvedelem" target="_blank" rel="noopener noreferrer">adatvédelmi tájékoztatót</a>, és hozzájárulok jelentkezésem elbírálásához. *</span>
                   </label>
-                  {showErr('gdpr') && <span className="err"><Warn />{errors.gdpr}</span>}
+                  {showErr('gdpr') && <span className="err" role="alert"><Warn />{errors.gdpr}</span>}
                 </div>
 
                 {/* Cloudflare Turnstile CAPTCHA — ugyanaz a védelem, mint a kapcsolati űrlapon */}
                 <div className={`field group${touched.captcha && !captcha ? ' error' : ''}`} style={{ marginBottom: 18 }}>
                   <Turnstile key={captchaKey} onVerify={(t) => { setCaptcha(t); setTouched((s) => ({ ...s, captcha: true })) }} onExpire={() => setCaptcha('')} />
-                  {touched.captcha && !captcha && <span className="err"><Warn />Kérjük, igazolja, hogy nem robot.</span>}
+                  {touched.captcha && !captcha && <span className="err" role="alert"><Warn />Kérjük, igazolja, hogy nem robot.</span>}
                 </div>
 
                 <Button type="submit" arrow style={{ width: '100%', justifyContent: 'center' }}>Jelentkezés elküldése</Button>

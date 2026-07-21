@@ -5,6 +5,7 @@ import { Reveal } from '../components/ui/Reveal.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Arrow, Check } from '../components/ui/Icons.jsx'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
+import { useJsonLd, breadcrumbLd } from '../hooks/useJsonLd.js'
 import { jobs, jobBySlug } from '../data/careers.js'
 import '../styles/careers.css'
 
@@ -48,6 +49,11 @@ export default function JobDetail() {
   const job = jobBySlug[slug]
   useDocumentTitle(job ? `${job.title} — Karrier` : undefined, job?.summary)
   useJobPostingJsonLd(job)
+  useJsonLd(job && breadcrumbLd([
+    { name: 'Debaru', url: '/' },
+    { name: 'Karrier', url: '/karrier' },
+    { name: job.title, url: `/karrier/${job.slug}` },
+  ]))
   if (!job) return <Navigate to="/karrier" replace />
 
   const related = jobs.filter((x) => x.slug !== job.slug).slice(0, 5)

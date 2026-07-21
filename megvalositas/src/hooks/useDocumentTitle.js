@@ -1,17 +1,17 @@
 import { useEffect } from 'react'
 
-// Oldalankénti SEO: <title> + meta description + canonical link beállítása.
+// Oldalankénti SEO: <title> + meta description + canonical + Open Graph/Twitter.
 // A description opcionális; ha nincs megadva, az index.html-beli alap marad.
 const SITE = 'Debaru Kft.'
 const ORIGIN = 'https://debaru.hu'
 
-// Meglévő <meta name="description"> tartalmának ideiglenes felülírása (elhagyáskor visszaáll).
-function applyDescription(desc) {
-  if (!desc) return null
-  const el = document.head.querySelector('meta[name="description"]')
+// Egy meglévő <meta> tartalmának ideiglenes felülírása (elhagyáskor visszaáll).
+function setMeta(selector, content) {
+  if (!content) return null
+  const el = document.head.querySelector(selector)
   if (!el) return null
   const prev = el.getAttribute('content')
-  el.setAttribute('content', desc)
+  el.setAttribute('content', content)
   return () => el.setAttribute('content', prev)
 }
 
@@ -28,13 +28,22 @@ function applyCanonical() {
 export function useDocumentTitle(title, description) {
   useEffect(() => {
     const prevTitle = document.title
-    document.title = title ? `${title} — ${SITE}` : SITE
-    const restoreDesc = applyDescription(description)
-    const restoreCanonical = applyCanonical()
+    const full = title ? `${title} — ${SITE}` : SITE
+    document.title = full
+    const url = ORIGIN + window.location.pathname
+    // oldalankénti meta + OG/Twitter felülírás (unmountra visszaáll az index.html-beli alap)
+    const restores = [
+      setMeta('meta[name="description"]', description),
+      setMeta('meta[property="og:title"]', full),
+      setMeta('meta[property="og:description"]', description),
+      setMeta('meta[property="og:url"]', url),
+      setMeta('meta[name="twitter:title"]', full),
+      setMeta('meta[name="twitter:description"]', description),
+      applyCanonical(),
+    ]
     return () => {
       document.title = prevTitle
-      restoreDesc?.()
-      restoreCanonical?.()
+      restores.forEach((r) => r && r())
     }
   }, [title, description])
 }

@@ -16,7 +16,7 @@ export function Field({ id, label, error, filled = false, always = false, footer
       </div>
       {(error || footer) && (
         <div className="row-end">
-          {error ? <span className="err"><Warn />{error}</span> : <span />}
+          {error ? <span className="err" role="alert"><Warn />{error}</span> : <span />}
           {footer}
         </div>
       )}

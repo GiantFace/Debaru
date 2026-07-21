@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { loadAnalytics } from '../../lib/analytics.js'
 
 const KEY = 'debaru-cookie-consent'
 
@@ -15,6 +16,7 @@ export default function CookieBanner() {
 
   const decide = (value) => () => {
     try { localStorage.setItem(KEY, value) } catch { /* pl. privát mód */ }
+    if (value === 'all') loadAnalytics() // hozzájárulás után indul az analitika (ha van GA-ID)
     setShow(false)
   }
 
@@ -24,7 +26,7 @@ export default function CookieBanner() {
       <strong>Sütik kezelése</strong>
       <p>
         Az oldal működéséhez és a spam elleni védelemhez (Cloudflare Turnstile) szükséges
-        sütiket használunk. Analitikai és marketing sütiket jelenleg nem alkalmazunk —
+        sütiket használunk. Anonim, forgalommérési célú sütiket csak az Ön hozzájárulásával —
         részletek az <Link to="/adatvedelem">Adatkezelési tájékoztatóban</Link>.
       </p>
       <div className="ck-actions">
