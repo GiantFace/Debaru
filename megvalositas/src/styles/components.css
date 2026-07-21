@@ -15,7 +15,7 @@
 .lite .nav.scrolled { background: rgba(251, 250, 248, .94); backdrop-filter: none; -webkit-backdrop-filter: none; }
 .nav .wrap { display: flex; align-items: center; gap: 28px; width: 100%; }
 .brand { display: inline-flex; align-items: center; gap: 12px; }
-.brand img { height: 22px; width: auto; }
+.brand img { height: 26px; width: auto; }
 .nav-links { display: flex; align-items: center; gap: 4px; margin-left: auto; }
 .nav-links a { position: relative; color: var(--fg); font-size: 14.5px; font-weight: 500; padding: 8px 14px; border-radius: 8px; transition: color .15s, background .15s; }
 .nav-links a:hover { color: var(--fg); background: var(--card); }
