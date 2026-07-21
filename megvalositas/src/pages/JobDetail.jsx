@@ -5,7 +5,7 @@ import { Reveal } from '../components/ui/Reveal.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Arrow, Check } from '../components/ui/Icons.jsx'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
-import { jobs, jobBySlug, applyEmail } from '../data/careers.js'
+import { jobs, jobBySlug } from '../data/careers.js'
 import '../styles/careers.css'
 
 // Közös checklist-elem.
@@ -51,7 +51,7 @@ export default function JobDetail() {
   if (!job) return <Navigate to="/karrier" replace />
 
   const related = jobs.filter((x) => x.slug !== job.slug).slice(0, 5)
-  const applyHref = `mailto:${applyEmail}?subject=${encodeURIComponent(`Jelentkezés — ${job.title}`)}`
+  const applyTo = `/karrier/${job.slug}/jelentkezes`
 
   return (
     <>
@@ -112,7 +112,7 @@ export default function JobDetail() {
                   ))}
                 </div>
                 <hr className="divider" style={{ margin: '22px 0' }} />
-                <Button href={applyHref} arrow className="job-apply">Jelentkezem</Button>
+                <Button to={applyTo} arrow className="job-apply">Jelentkezem</Button>
                 <p className="muted" style={{ fontSize: 12.5, marginTop: 12, textAlign: 'center' }}>Önéletrajzodat e-mailben várjuk.</p>
               </div>
             </Reveal>
@@ -140,7 +140,7 @@ export default function JobDetail() {
             <Reveal className="card" style={{ textAlign: 'center', padding: '56px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
               <h3 style={{ fontSize: 'clamp(22px,3vw,30px)', maxWidth: '18ch', margin: '0 auto 16px' }}>Érdekel a pozíció?</h3>
               <p className="muted" style={{ margin: '0 auto 26px', maxWidth: '34ch' }}>Küldd el önéletrajzod — pár mondat is elég arról, mi motivál.</p>
-              <Button href={applyHref} arrow>Jelentkezem erre a pozícióra</Button>
+              <Button to={applyTo} arrow>Jelentkezem erre a pozícióra</Button>
             </Reveal>
           </div>
         </div>
@@ -164,7 +164,7 @@ export default function JobDetail() {
         <div className="wrap">
           <Reveal style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
             <Button variant="ghost" to="/karrier"><Arrow style={{ transform: 'rotate(180deg)' }} />Összes pozíció</Button>
-            <Button href={applyHref} arrow>Jelentkezem</Button>
+            <Button to={applyTo} arrow>Jelentkezem</Button>
           </Reveal>
         </div>
       </section>

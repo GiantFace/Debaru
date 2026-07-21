@@ -64,6 +64,8 @@
   padding: 6px 12px; border-radius: 999px;
 }
 .job-badge.dept { color: var(--accent-2); background: var(--accent-soft); border-color: var(--accent-line); }
+.job-badge.foreign { color: #fff; background: var(--accent); border-color: var(--accent); }
+.job-badge.foreign svg { opacity: 1; }
 .job-badge svg { width: 13px; height: 13px; flex-shrink: 0; opacity: .85; }
 
 .job-card .jc-arrow {
@@ -80,6 +82,12 @@
 
 /* detail-oldal: adat-sáv "jelentkezés" gomb teljes szélességben */
 .job-apply { width: 100%; justify-content: center; }
+
+/* jelentkezési űrlap: melyik pozícióra jelentkezik (azonosító banner) */
+.apply-for { padding: 15px 18px; border-radius: 12px; background: var(--accent-soft); border: 1px solid var(--accent-line); margin-bottom: 26px; }
+.apply-for .af-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-2); }
+.apply-for .af-job { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 7px; }
+.apply-for .af-title { font-size: 18px; font-weight: 600; letter-spacing: -.01em; }
 
 @media (max-width: 640px) {
   .job-card { flex-wrap: wrap; gap: 16px 18px; padding: 22px 22px 24px; }

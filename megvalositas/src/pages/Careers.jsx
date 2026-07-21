@@ -31,6 +31,7 @@ const metaIcon = {
   location: <svg viewBox="0 0 24 24" {...S}><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z" /><circle cx="12" cy="10" r="2.5" /></svg>,
   time: <svg viewBox="0 0 24 24" {...S}><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>,
   arrangement: <svg viewBox="0 0 24 24" {...S}><path d="M3 21h18M6 21V7l6-4 6 4v14" /><path d="M10 21v-5h4v5" /></svg>,
+  globe: <svg viewBox="0 0 24 24" {...S}><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.4 3.8 5.6 3.8 9s-1.3 6.6-3.8 9c-2.5-2.4-3.8-5.6-3.8-9s1.3-6.6 3.8-9z" /></svg>,
 }
 
 // Szakterület-ikonok az állás-kártya csempéjéhez — mind villamos témájú (a `dept` kulcs alapján).
@@ -135,6 +136,7 @@ export default function Careers() {
                   <p className="jc-sum">{j.summary}</p>
                   <div className="job-meta">
                     <span className="job-badge dept">{j.department}</span>
+                    {j.foreign && <span className="job-badge foreign">{metaIcon.globe}Külföldi munka</span>}
                     <span className="job-badge">{metaIcon.location}{j.location}</span>
                     <span className="job-badge">{metaIcon.time}{j.type}</span>
                     <span className="job-badge">{metaIcon.arrangement}{j.arrangement}</span>
