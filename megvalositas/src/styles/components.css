@@ -314,9 +314,9 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 /* ---------- űrlapok ---------- */
 .field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
 .field label { font-size: 13.5px; color: var(--muted); font-weight: 500; }
-.field input, .field textarea, .field select { font: 400 15px/1.5 var(--body); color: var(--fg); background: var(--bg-2); border: 1px solid var(--border); border-radius: 12px; padding: 13px 15px; transition: background .15s, border-color .15s, box-shadow .15s; width: 100%; }
+.field input, .field textarea, .field select { font: 400 15px/1.5 var(--body); color: var(--fg); background: var(--card); border: 1px solid var(--border-2); border-radius: 12px; padding: 13px 15px; transition: border-color .15s, box-shadow .15s; width: 100%; }
 .field textarea { resize: vertical; min-height: 130px; }
-.field input:focus, .field textarea:focus, .field select:focus { outline: none; border-color: var(--accent); background: var(--card); box-shadow: 0 0 0 4px var(--accent-soft); }
+.field input:focus, .field textarea:focus, .field select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
 .field input::placeholder, .field textarea::placeholder { color: var(--faint); }
 
 /* validáció: hibaállapot + üzenet + karakterszámláló */
@@ -329,8 +329,8 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 .char-count.warn { color: var(--danger); font-weight: 600; }
 
 /* nemzetközi telefonmező: egy dobozban a (nem választható) zászló + a szám */
-.field .PhoneInput { display: flex; align-items: center; background: var(--bg-2); border: 1px solid var(--border); border-radius: 12px; padding: 0 14px; transition: background .15s, border-color .15s, box-shadow .15s; }
-.field .PhoneInput:focus-within { border-color: var(--accent); background: var(--card); box-shadow: 0 0 0 4px var(--accent-soft); }
+.field .PhoneInput { display: flex; align-items: center; background: var(--card); border: 1px solid var(--border-2); border-radius: 12px; padding: 0 14px; transition: border-color .15s, box-shadow .15s; }
+.field .PhoneInput:focus-within { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
 .field .PhoneInputCountry { margin: 0 10px 0 0; pointer-events: none; }         /* a zászló a számból jön, nem választható */
 .field .PhoneInputCountrySelect, .field .PhoneInputCountrySelectArrow { display: none; }
 .field .PhoneInputCountryIcon { width: 27px; height: 20px; box-shadow: none; }
@@ -338,7 +338,7 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 .field .PhoneInputInput { border: 0; background: transparent; padding: 13px 0; font: 400 15px/1.5 var(--body); color: var(--fg); width: 100%; }
 .field .PhoneInputInput:focus { outline: none; box-shadow: none; }
 /* helykitöltő a telefon-mező lazy betöltéséig (nincs elrendezés-ugrás) */
-.phone-skeleton { height: 46px; border-radius: 12px; background: var(--bg-2); border: 1px solid var(--border); }
+.phone-skeleton { height: 46px; border-radius: 12px; background: var(--card); border: 1px solid var(--border-2); }
 .field .PhoneInputInput::placeholder { color: var(--faint); }
 
 /* lebegő címke: a label a mezőben ül, fókuszra/kitöltésre a keret bal-felső sarkába úszik */
@@ -439,7 +439,7 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 .check.error .box { border-color: var(--danger); }
 
 /* fájl drag&drop */
-.dropzone { border: 1.5px dashed var(--border-2); border-radius: 12px; background: var(--bg-2); padding: 22px 20px; text-align: center; cursor: pointer; transition: border-color .2s var(--ease), background .2s var(--ease); color: var(--muted); font-size: 14px; }
+.dropzone { border: 1.5px dashed var(--border-2); border-radius: 12px; background: var(--card); padding: 22px 20px; text-align: center; cursor: pointer; transition: border-color .2s var(--ease), background .2s var(--ease); color: var(--muted); font-size: 14px; }
 .dropzone:hover, .dropzone.drag { border-color: var(--accent); background: var(--accent-soft); }
 .dropzone .dz-ico { width: 40px; height: 40px; padding: 9px; box-sizing: border-box; margin: 0 auto 8px; color: var(--accent-2); background: var(--accent-soft); border-radius: 50%; display: block; transition: background .2s var(--ease), color .2s var(--ease), transform .2s var(--ease); }
 .dropzone:hover .dz-ico, .dropzone.drag .dz-ico { background: var(--accent); color: #fff; transform: translateY(-2px); }
