@@ -83,6 +83,22 @@
 /* detail-oldal: adat-sáv "jelentkezés" gomb teljes szélességben */
 .job-apply { width: 100%; justify-content: center; }
 
+/* jelentkezési űrlap: csatolmányok (CV + motivációs levél) egymás mellett, letisztultan */
+.apply-files { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 6px 0 20px; align-items: start; }
+.apply-files .field.group { margin: 0; }
+.apply-files .grp-label { margin-bottom: 9px; }
+.apply-files .dropzone {
+  min-height: 132px; padding: 20px 16px; border-radius: 14px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+}
+.apply-files .dropzone .dz-ico {
+  width: 40px; height: 40px; padding: 9px; margin: 0 0 5px; border-radius: 50%; box-sizing: border-box;
+  background: var(--accent-soft); color: var(--accent-2);
+  transition: background .2s var(--ease), color .2s var(--ease), transform .2s var(--ease);
+}
+.apply-files .dropzone:hover .dz-ico, .apply-files .dropzone.drag .dz-ico { background: var(--accent); color: #fff; transform: translateY(-2px); }
+@media (max-width: 560px) { .apply-files { grid-template-columns: 1fr; } }
+
 /* jelentkezési űrlap: melyik pozícióra jelentkezik (azonosító banner) */
 .apply-for { padding: 15px 18px; border-radius: 12px; background: var(--accent-soft); border: 1px solid var(--accent-line); margin-bottom: 26px; }
 .apply-for .af-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-2); }

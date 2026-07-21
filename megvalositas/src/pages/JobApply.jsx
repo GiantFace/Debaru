@@ -32,7 +32,7 @@ function FileDrop({ label, hint, accept, files, onAdd, onRemove, error }) {
         onDragOver={(e) => { e.preventDefault(); setDrag(true) }} onDragLeave={(e) => { e.preventDefault(); setDrag(false) }} onDrop={onDrop}
       >
         <Upload className="dz-ico" />
-        <div><strong>Húzza ide a fájlt</strong>, vagy kattintson a tallózáshoz</div>
+        <div><strong>Húzza ide</strong> vagy tallózzon</div>
         <div className="dz-hint">{hint}</div>
         <input ref={ref} type="file" hidden accept={accept} onChange={(e) => { onAdd(e.target.files); e.target.value = '' }} />
       </div>
@@ -196,17 +196,19 @@ export default function JobApply() {
                   </Field>
                 </div>
 
-                {/* csatolmányok: önéletrajz + motivációs levél — mindkettő fájlként */}
-                <FileDrop
-                  label={<>Önéletrajz (CV) *<span className="opt"> · PDF vagy DOC — max. 10 MB</span></>}
-                  hint="PDF · DOC · DOCX" accept=".pdf,.doc,.docx"
-                  files={cv} onAdd={addTo(setCv, 'cv')} onRemove={removeFrom(setCv)} error={showErr('cv')}
-                />
-                <FileDrop
-                  label={<>Motivációs levél *<span className="opt"> · PDF vagy DOC — max. 10 MB</span></>}
-                  hint="PDF · DOC · DOCX" accept=".pdf,.doc,.docx"
-                  files={cover} onAdd={addTo(setCover, 'cover')} onRemove={removeFrom(setCover)} error={showErr('cover')}
-                />
+                {/* csatolmányok: önéletrajz + motivációs levél — mindkettő fájlként, egymás mellett */}
+                <div className="apply-files">
+                  <FileDrop
+                    label={<>Önéletrajz (CV) *<span className="opt"> · PDF/DOC</span></>}
+                    hint="PDF · DOC · DOCX" accept=".pdf,.doc,.docx"
+                    files={cv} onAdd={addTo(setCv, 'cv')} onRemove={removeFrom(setCv)} error={showErr('cv')}
+                  />
+                  <FileDrop
+                    label={<>Motivációs levél *<span className="opt"> · PDF/DOC</span></>}
+                    hint="PDF · DOC · DOCX" accept=".pdf,.doc,.docx"
+                    files={cover} onAdd={addTo(setCover, 'cover')} onRemove={removeFrom(setCover)} error={showErr('cover')}
+                  />
+                </div>
 
                 {/* GDPR */}
                 <div className={`field group${showErr('gdpr') ? ' error' : ''}`} style={{ marginTop: 4, marginBottom: 20 }}>
