@@ -1,12 +1,15 @@
 import { Children, cloneElement, isValidElement, useEffect, useState } from 'react'
 import { useInView } from '../../hooks/useInView.js'
-import { prefersReducedMotion } from '../../hooks/motion.js'
+import { prefersReducedMotion, liteMode } from '../../hooks/motion.js'
+
+// Reduced motion / lite mód → azonnal "beállt" állapot (nincs késleltetés).
+const instantReveal = prefersReducedMotion || liteMode
 
 // Egy elem belépő fade/translate animációja, ha a viewportba ér.
 // A belépés lefutása után a transition-delay-t töröljük, hogy a hover NE legyen lassú.
 export function Reveal({ as: Tag = 'div', delay = 0, children, className = '', style, ...rest }) {
   const [ref, inView] = useInView()
-  const [settled, setSettled] = useState(prefersReducedMotion)
+  const [settled, setSettled] = useState(instantReveal)
   useEffect(() => {
     if (!inView || !delay || settled) return
     const t = setTimeout(() => setSettled(true), delay + 700)
@@ -25,7 +28,7 @@ export function Reveal({ as: Tag = 'div', delay = 0, children, className = '', s
 // így a hover (pl. bento kártyák) azonnal reagál, nem várja ki a stagger-késleltetést.
 export function RevealStagger({ as: Tag = 'div', step = 90, children, className = '', ...rest }) {
   const [ref, inView] = useInView()
-  const [settled, setSettled] = useState(prefersReducedMotion)
+  const [settled, setSettled] = useState(instantReveal)
   const count = Children.count(children)
   useEffect(() => {
     if (!inView || settled) return
