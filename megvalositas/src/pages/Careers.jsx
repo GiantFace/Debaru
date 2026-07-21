@@ -31,6 +31,15 @@ const metaIcon = {
   arrangement: <svg viewBox="0 0 24 24" {...S}><path d="M3 21h18M6 21V7l6-4 6 4v14" /><path d="M10 21v-5h4v5" /></svg>,
 }
 
+// Szakterület-ikonok az állás-kártya csempéjéhez (a `dept` kulcs alapján).
+const deptIcon = {
+  tervezes: <svg viewBox="0 0 24 24" {...S}><path d="M4 20l3.5-.8 9.3-9.3-2.7-2.7L4.8 16.5 4 20z" /><path d="M13.5 5.7l2.7 2.7 1.9-1.9a1.4 1.4 0 0 0 0-2l-.7-.7a1.4 1.4 0 0 0-2 0l-1.9 1.9z" /></svg>,
+  automatizalas: <svg viewBox="0 0 24 24" {...S}><rect x="7" y="7" width="10" height="10" rx="1.5" /><path d="M10 7V4M14 7V4M10 20v-3M14 20v-3M7 10H4M7 14H4M20 10h-3M20 14h-3" /></svg>,
+  gyartas: <svg viewBox="0 0 24 24" {...S}><path d="M15 6.5a3.6 3.6 0 0 0-4.9 4.9L4 17.5 6.5 20l6.1-6.1a3.6 3.6 0 0 0 4.9-4.9l-2.3 2.3-2-2 2.3-2.3z" /></svg>,
+  kivitelezes: <svg viewBox="0 0 24 24" {...S}><path d="M3 19h18" /><path d="M5 19v-3a7 7 0 0 1 14 0v3" /><path d="M10 8.2V5.5a2 2 0 0 1 4 0v2.7" /></svg>,
+  gyakornok: <svg viewBox="0 0 24 24" {...S}><path d="M3 8l9-4 9 4-9 4-9-4z" /><path d="M7 10.5V15c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5v-4.5" /><path d="M21 8.5v4.5" /></svg>,
+}
+
 // Karrier oldal — adatvezérelt (data/careers.js). Nyitott pozíciók szűrhető listával.
 export default function Careers() {
   useDocumentTitle(careersHead.crumb, careersHead.lede)
@@ -102,8 +111,12 @@ export default function Careers() {
           <div className="job-list">
             {shown.map((j) => (
               <Link className="job-card" to={`/karrier/${j.slug}`} key={j.slug}>
+                <span className="jc-ic">{deptIcon[j.dept]}</span>
                 <div className="jc-main">
-                  <h3>{j.title}</h3>
+                  <div className="jc-top">
+                    <h3>{j.title}</h3>
+                    {j.level && <span className="jc-level">{j.level}</span>}
+                  </div>
                   <p className="jc-sum">{j.summary}</p>
                   <div className="job-meta">
                     <span className="job-badge dept">{j.department}</span>
