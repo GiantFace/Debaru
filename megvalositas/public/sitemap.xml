@@ -24,6 +24,14 @@
   <url><loc>https://debaru.hu/projektjeink/hegeszto-robotcella</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://debaru.hu/projektjeink/adatkozpont-fo-eloszto</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
+  <url><loc>https://debaru.hu/karrier</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://debaru.hu/karrier/villamos-tervezomernok</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://debaru.hu/karrier/plc-scada-mernok</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://debaru.hu/karrier/kapcsoloszekreny-szerelo</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://debaru.hu/karrier/villamos-projektvezeto</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://debaru.hu/karrier/helyszini-villanyszerelo</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://debaru.hu/karrier/mernok-gyakornok</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+
   <url><loc>https://debaru.hu/kapcsolat</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
   <url><loc>https://debaru.hu/adatvedelem</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://debaru.hu/aszf</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>

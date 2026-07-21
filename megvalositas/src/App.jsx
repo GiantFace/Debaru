@@ -10,6 +10,8 @@ const Services = lazy(() => import('./pages/Services.jsx'))
 const ServiceDetail = lazy(() => import('./pages/ServiceDetail.jsx'))
 const Projects = lazy(() => import('./pages/Projects.jsx'))
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail.jsx'))
+const Careers = lazy(() => import('./pages/Careers.jsx'))
+const JobDetail = lazy(() => import('./pages/JobDetail.jsx'))
 const Contact = lazy(() => import('./pages/Contact.jsx'))
 const Legal = lazy(() => import('./pages/Legal.jsx'))
 const NotFound = lazy(() => import('./pages/NotFound.jsx'))
@@ -27,6 +29,8 @@ export default function App() {
             <Route path="/szolgaltatasok/:slug" element={<ServiceDetail />} />
             <Route path="/projektjeink" element={<Projects />} />
             <Route path="/projektjeink/:slug" element={<ProjectDetail />} />
+            <Route path="/karrier" element={<Careers />} />
+            <Route path="/karrier/:slug" element={<JobDetail />} />
             {/* régi útvonal → a BKV esettanulmányra irányítjuk */}
             <Route path="/projekt" element={<Navigate to="/projektjeink/bkv-etele-ter" replace />} />
             <Route path="/kapcsolat" element={<Contact />} />

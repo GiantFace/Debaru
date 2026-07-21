@@ -78,6 +78,7 @@ export const footer = {
       { label: 'Rólunk', to: '/rolunk' },
       { label: 'Szolgáltatások', to: '/szolgaltatasok' },
       { label: 'Projektjeink', to: '/projektjeink' },
+      { label: 'Karrier', to: '/karrier' },
       { label: 'Kapcsolat', to: '/kapcsolat' },
       { label: 'GYIK', to: '/#gyik' },
     ] },
