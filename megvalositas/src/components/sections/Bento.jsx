@@ -54,7 +54,7 @@ export function Bento() {
           {services.map((s) => {
             const Icon = serviceIcons[s.slug]
             return (
-              <Link className="b" key={s.slug} to={`/szolgaltatasok/${s.slug}`}>
+              <Link className="b" key={s.slug} to={`/szolgaltatasok#${s.slug}`}>
                 <div className="b-ico"><Icon /></div>
                 <h3>{s.title}</h3>
                 <p>{s.short}</p>

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal } from '../components/ui/Reveal.jsx'
 import { ParallaxImage } from '../components/ui/ParallaxImage.jsx'
@@ -23,15 +22,13 @@ export default function Services() {
           <Reveal as="section" className="svc" id={s.slug} key={s.slug} style={i === services.length - 1 ? { borderBottom: '1px solid var(--border)' } : undefined}>
             <div>
               <span className="tag">{s.tag}</span>
-              <h2 style={{ fontSize: 'clamp(26px,3vw,36px)', margin: '16px 0 12px' }}>
-                <Link to={`/szolgaltatasok/${s.slug}`} style={{ color: 'inherit' }}>{s.title}</Link>
-              </h2>
+              <h2 style={{ fontSize: 'clamp(26px,3vw,36px)', margin: '16px 0 12px' }}>{s.title}</h2>
               <p className="muted">{s.desc}</p>
               <ul>
                 {s.items.map((it) => <li key={it}><Check />{it}</li>)}
               </ul>
               <div style={{ marginTop: 24 }}>
-                <Button variant="ghost" to={`/szolgaltatasok/${s.slug}`} arrow>Részletek</Button>
+                <Button to="/kapcsolat" arrow>Ajánlatot kérek</Button>
               </div>
             </div>
             <ParallaxImage className="svc-media media" speed={0.16} style={{ height: 380 }} placeholder={s.placeholder} />
