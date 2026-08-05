@@ -12,10 +12,10 @@ export function Cta() {
           style={{ textAlign: 'center', padding: '72px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}
         >
           <h2 style={{ fontSize: 'clamp(28px,4vw,44px)', maxWidth: '20ch', margin: '0 auto 18px' }}>
-            Van egy villamos vagy vezérlési kihívása?
+            Szeretne egy precíz, minőségi megoldást?
           </h2>
           <p className="lede" style={{ margin: '0 auto 32px', textAlign: 'center' }}>
-            Kérjen díjmentes szakmai konzultációt — mérnökeink 3 munkanapon belül visszajeleznek.
+            Kérjen díjmentes szakmai konzultációt — kollégáink 3 munkanapon belül visszajeleznek.
           </p>
           <Button to="/kapcsolat" arrow>Kapcsolatfelvétel</Button>
         </Reveal>

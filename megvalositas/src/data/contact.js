@@ -35,5 +35,4 @@ export const contactCards = [
     { label: '+36 1 445 4166', href: 'tel:+3614454166' },
     { label: 'info@debaru.hu', href: 'mailto:info@debaru.hu' },
   ] },
-  { icon: 'clock', title: 'Ügyelet', lines: ['Iroda: H–P 8:00–17:00', 'Hibaügyelet: 24/7'] },
 ]

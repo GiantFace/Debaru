@@ -30,7 +30,7 @@ export function Hero() {
         <div className="hf-inner" ref={inner}>
           <Reveal className="hf-eyebrow">Ipari automatizálás · PLC / SCADA · Áramellátás</Reveal>
           <Reveal as="h1" className="hf-title" delay={90}>
-            Megbízható rendszerek<br />kritikus infrastruktúrákhoz.
+            Megbízható rendszerek,<br />kritikus infrastruktúrákhoz.
           </Reveal>
           <Reveal className="hf-actions" delay={200}>
             <Button to="/projektjeink" arrow>Projektjeink</Button>

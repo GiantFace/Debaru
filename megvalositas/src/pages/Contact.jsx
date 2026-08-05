@@ -9,7 +9,7 @@ import { Turnstile } from '../components/ui/Turnstile.jsx'
 import { Check, Close, Upload, Warn, infoIcons } from '../components/ui/Icons.jsx'
 import { useToast } from '../hooks/useToast.jsx'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
-import { contactHead, contactAreas, contactCards, contactTrust, timelines, OTHER_AREA, MAP_EMBED } from '../data/contact.js'
+import { contactHead, contactAreas, contactCards, timelines, OTHER_AREA, MAP_EMBED } from '../data/contact.js'
 
 // A telefon-mező lazy chunkban (a nehéz lib + zászlók külön töltődnek)
 const PhoneField = lazy(() => import('../components/ui/PhoneField.jsx'))
@@ -231,15 +231,6 @@ export default function Contact() {
                   </div>
                 )
               })}
-
-              <div className="card contact-trust">
-                <h3>Miért a Debaru?</h3>
-                <ul>
-                  {contactTrust.map((t) => (
-                    <li key={t}><Check />{t}</li>
-                  ))}
-                </ul>
-              </div>
             </Reveal>
           </div>
         </div>

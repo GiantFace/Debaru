@@ -14,8 +14,7 @@ export const nav = [
 export const langs = ['HU', 'EN', 'DE']
 
 export const heroStats = [
-  { v: '15+', k: 'év' },
-  { v: '24/7', k: 'üzem' },
+  { v: '17+', k: 'év' },
   { v: 'SIL2', k: 'biztonság' },
 ]
 
@@ -23,10 +22,8 @@ export const references = ['MÁV', 'BKV', 'MOL', 'Paks II.', 'E.ON', 'Audi']
 
 // Bento — vezető stat és szolgáltatás-kártyák számlálókkal keverve.
 export const bentoStats = {
-  years: { to: 15, suffix: '+', label: 'év tapasztalat az iparban' },
-  team: { to: 45, label: 'mérnök és technikus' },
-  uptime: { to: 99.2, decimals: 1, suffix: '%', label: 'rendszer-rendelkezésre állás' },
-  support: { to: 24, suffix: '/7', label: 'ügyeleti terméktámogatás' },
+  years: { to: 17, suffix: '+', label: 'év tapasztalat az iparban' },
+  team: { to: 15, suffix: '+', label: 'mérnök és technikus' },
 }
 
 // A szolgáltatások adatai átkerültek a data/services.js-be (egységes forrás).
@@ -58,18 +55,18 @@ export const sectors = [
 ]
 
 export const processSteps = [
-  { n: '01', title: 'Felmérés & koncepció', desc: 'Helyszíni bejárás, igényfelmérés és megvalósíthatósági terv pontos költségkerettel.' },
-  { n: '02', title: 'Tervezés', desc: 'Villamos és vezérlési tervek, szekrény-dokumentáció, PLC-architektúra EPLAN-ban.' },
-  { n: '03', title: 'Gyártás & kivitelezés', desc: 'Szekrénygyártás saját műhelyben, helyszíni szerelés és üzembe helyezés.' },
-  { n: '04', title: 'Üzemeltetés', desc: 'Betanítás, dokumentációátadás és folyamatos karbantartás, 24/7 ügyelettel.' },
+  { n: '01', title: 'Felmérés & koncepció', desc: 'Helyszíni bejárás, igényfelmérés és megvalósíthatósági terv.' },
+  { n: '02', title: 'Tervezés és programozás', desc: 'ATEX tervezés, hardvertervezés, villamos tervezés, villámvédelmi tervezés és szoftverkészítés.' },
+  { n: '03', title: 'Gyártás & kivitelezés', desc: 'Berendezésgyártás saját műhelyben, nyomvonalépítés, kábelezés, helyszíni szerelés és üzembe helyezés.' },
+  { n: '04', title: 'Üzemeltetés', desc: 'Karbantartás és folyamatos szakmai támogatás.' },
 ]
 
 export const faq = [
-  { q: 'Hogyan kérhetek ajánlatot?', a: 'Töltse ki a kapcsolati űrlapot vagy hívjon minket — 3 munkanapon belül visszajelzünk egy első szakmai állásfoglalással és becsült költségkerettel.' },
-  { q: 'Vállalnak vidéki és külföldi munkát is?', a: 'Igen. Aktív projektjeink jelenleg négy országban futnak; a helyszíni kivitelezést és a távfelügyeletet egyaránt biztosítjuk.' },
+  { q: 'Hogyan kérhetek ajánlatot?', a: 'Töltse ki a kapcsolati űrlapot, kérjen e-mailben ajánlatot vagy hívjon minket — 3 munkanapon belül visszajelzünk egy első szakmai állásfoglalással.' },
+  { q: 'Vállalnak munkát vidéken és külföldön is?', a: 'Igen. Vállalatunk az ország bármely területén és külföldön is vállal munkát.' },
   { q: 'Mennyi idő egy kapcsolószekrény legyártása?', a: 'A komplexitástól függ, de egy egyedi vezérlőszekrény jellemzően 3–6 hét a jóváhagyott tervektől számítva, saját műhelyünkben gyártva.' },
-  { q: 'Van sürgősségi ügyelet?', a: 'Igen, 24/7 hibaelhárítási ügyeletet tartunk a karbantartási szerződéssel rendelkező ügyfeleink számára, garantált kiszállási idővel.' },
-  { q: 'Milyen platformokon dolgoznak?', a: 'Siemens TIA Portal, Schneider és B&R PLC/HMI vezérlés, EPLAN alapú tervezés és saját SCADA-integráció — a meglévő rendszereihez is illesztve.' },
+  { q: 'Van sürgősségi ügyelet?', a: 'Egyedi szerződés alapján hibaelhárítási ügyeletet tartunk a karbantartási szerződéssel rendelkező ügyfeleink számára, garantált kiszállási idővel.' },
+  { q: 'Milyen platformokon dolgoznak?', a: 'Siemens, SAIA, Qronox és Wago PLC-k szoftveres megoldása, EPLAN alapú villamostervezés, WSCAD és EPLAN alapú 3D tervezés, HMI-programozás és saját SCADA-integráció — meglévő rendszerekhez is illesztve.' },
 ]
 
 export const footer = {

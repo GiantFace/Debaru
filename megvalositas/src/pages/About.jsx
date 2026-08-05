@@ -35,7 +35,11 @@ export default function About() {
             </Reveal>
             <RevealStagger className="grid g-2" step={90} style={{ gap: 16 }}>
               {aboutStats.map((s) => (
-                <div className="card" key={s.label}><StatBlock to={s.to} suffix={s.suffix} label={s.label} numSize={44} /></div>
+                <div className="card" key={s.label}>
+                  {s.text
+                    ? <div className="stat"><div className="num" style={{ fontSize: 26 }}>{s.text}</div><div className="lbl">{s.label}</div></div>
+                    : <StatBlock to={s.to} suffix={s.suffix} label={s.label} numSize={44} />}
+                </div>
               ))}
             </RevealStagger>
           </div>
@@ -91,14 +95,13 @@ export default function About() {
       {/* csapat */}
       <section className="section">
         <div className="wrap">
-          <Reveal className="eyebrow">Vezetőség</Reveal>
-          <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 48px' }}>Akik a Debaru élén állnak</Reveal>
+          <Reveal as="h2" style={{ fontSize: 'clamp(30px,4.4vw,48px)', margin: '0 0 48px', textAlign: 'center' }}>Vezetőség</Reveal>
           <RevealStagger className="grid g-2" step={80}>
             {team.map((t) => (
-              <div key={t.name}>
-                <ParallaxMedia speed={0.06} style={{ height: 260, marginBottom: 16 }} placeholder="Portré" />
-                <h3 style={{ fontSize: 17 }}>{t.name}</h3>
-                <p className="muted" style={{ fontSize: 14 }}>{t.role}</p>
+              <div key={t.name} style={{ textAlign: 'center' }}>
+                <ParallaxMedia speed={0.06} style={{ height: 300, marginBottom: 16 }} placeholder="Portré" />
+                <h3 style={{ fontSize: 19 }}>{t.name}</h3>
+                <p className="muted" style={{ fontSize: 14.5 }}>{t.role}</p>
               </div>
             ))}
           </RevealStagger>
@@ -109,7 +112,7 @@ export default function About() {
       <section className="section-sm">
         <div className="wrap">
           <Reveal className="card" style={{ textAlign: 'center', padding: '72px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
-            <h2 style={{ fontSize: 'clamp(28px,4vw,44px)', maxWidth: '20ch', margin: '0 auto 18px' }}>Dolgozzunk együtt a következő rendszerén!</h2>
+            <h2 style={{ fontSize: 'clamp(28px,4vw,44px)', maxWidth: '20ch', margin: '0 auto 18px' }}>Legyen Ön a következő hosszútávú partnerünk!</h2>
             <Button to="/kapcsolat" arrow>Beszéljünk!</Button>
           </Reveal>
         </div>

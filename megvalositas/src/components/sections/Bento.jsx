@@ -19,7 +19,7 @@ function Stat({ to, decimals, suffix, label }) {
 
 // Bento rács: bevezető + szolgáltatások + számok, egy vizuális blokkban.
 export function Bento() {
-  const { years, team, uptime, support } = bentoStats
+  const { years, team } = bentoStats
   return (
     <section className="section" id="szolg">
       <div className="wrap">
@@ -43,11 +43,11 @@ export function Bento() {
           <Stat to={team.to} label={team.label} />
 
           <div className="b b-img b-2w">
-            <ParallaxImage className="pm-layer" speed={0.12} placeholder="Fotó — saját szekrénygyártó műhely" />
+            <ParallaxImage className="pm-layer" speed={0.12} placeholder="Fotó — saját berendezésgyártó műhely" />
             <div className="b-scrim" />
             <div className="b-cap">
-              <h3 style={{ fontSize: '19px', margin: '0 0 4px' }}>Saját szekrénygyártó műhely</h3>
-              <p style={{ fontSize: '14px', margin: 0 }}>1 200 m² gyártótér és mérőlabor a budafoki telephelyen.</p>
+              <h3 style={{ fontSize: '19px', margin: '0 0 4px' }}>Saját berendezésgyártó műhely</h3>
+              <p style={{ fontSize: '14px', margin: 0 }}>Automatika és energiaelosztó szekrények gyártása saját telephelyen.</p>
             </div>
           </div>
 
@@ -63,8 +63,6 @@ export function Bento() {
             )
           })}
 
-          <Stat to={uptime.to} decimals={uptime.decimals} suffix={uptime.suffix} label={uptime.label} />
-          <Stat to={support.to} suffix={support.suffix} label={support.label} />
         </RevealStagger>
       </div>
     </section>
