@@ -20,6 +20,16 @@ function Block({ b }) {
       ))}
     </dl>
   )
+  if (b.pdf) return (
+    <div style={{ margin: '4px 0 8px' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 18 }}>
+        <a className="btn btn-primary" href={b.pdf.hu} target="_blank" rel="noopener noreferrer">ÁSZF (magyar) — PDF</a>
+        {b.pdf.de && <a className="btn btn-ghost" href={b.pdf.de} target="_blank" rel="noopener noreferrer">AGB (Deutsch)</a>}
+        {b.pdf.en && <a className="btn btn-ghost" href={b.pdf.en} target="_blank" rel="noopener noreferrer">Terms (English)</a>}
+      </div>
+      <iframe src={b.pdf.hu} title="Általános Szerződési Feltételek (PDF)" loading="lazy" style={{ width: '100%', height: 640, border: '1px solid var(--border)', borderRadius: 12, display: 'block' }} />
+    </div>
+  )
   return null
 }
 

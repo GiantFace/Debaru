@@ -12,3 +12,6 @@ node_modules/
 
 # Markdown dokumentumok (belső munkadokumentumok, nem a webhelyhez tartoznak)
 *.md
+
+# kliens visszajelzés (belső munkaanyag: hibalista, referencialista, eredeti PDF-ek)
+megvalositas/visszajelzesek/

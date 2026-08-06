@@ -46,7 +46,7 @@ export const legalDocs = {
       ] },
       { id: 'megorzes', title: 'Az adatok megőrzési ideje', body: [
         { p: 'A kapcsolatfelvétel során megadott adatokat a megkeresés megválaszolásához, illetve — ha együttműködés jön létre — annak lezárásáig, azt követően a jogszabályi kötelezettségeknek megfelelő ideig őrizzük.' },
-        { p: 'Ha a megkeresésből nem jön létre együttműködés, az adatokat legkésőbb [SABLON: pl. 12 hónap] elteltével, illetve a hozzájárulás visszavonásakor töröljük.' },
+        { p: 'Ha a megkeresésből nem jön létre együttműködés, az adatokat legkésőbb 12 hónap elteltével, illetve a hozzájárulás visszavonásakor töröljük.' },
       ] },
       { id: 'adatfeldolgozok', title: 'Adatfeldolgozók és adattovábbítás', body: [
         { p: 'Az adatok kezeléséhez az alábbi adatfeldolgozók szolgáltatásait vesszük igénybe:' },
@@ -92,53 +92,26 @@ export const legalDocs = {
     crumb: 'ÁSZF',
     headPlaceholder: 'Általános Szerződési Feltételek',
     title: 'Általános Szerződési Feltételek',
-    updated: 'Hatályos: 2026. július 19.',
-    intro: 'A jelen Általános Szerződési Feltételek (ÁSZF) a Debaru Kft. mint szolgáltató és megrendelői közötti együttműködés általános kereteit rögzítik. Az egyedi szerződésben foglaltak eltérés esetén elsőbbséget élveznek.',
+    updated: 'Hatályos: 2026. május 28. napjától visszavonásig vagy módosításig.',
+    intro: 'A Debaru Kft. Általános Szerződési Feltételei a villamos, irányítástechnikai, automatizálási, berendezésgyártási, szoftverfejlesztési és helyszíni kivitelezési projektekre. A teljes, hatályos dokumentum alább letölthető és megtekinthető — magyar, német és angol nyelven.',
     sections: [
-      { id: 'bevezeto', title: '1. Bevezető rendelkezések', body: [
-        { p: 'A jelen ÁSZF a Debaru Kft. által nyújtott mérnöki, gyártási, kivitelezési és üzemeltetési szolgáltatásokra vonatkozik.' },
-        { p: 'Az ÁSZF-től eltérni kizárólag a felek közös, írásbeli megállapodásával lehet. Az esetleges eltérő egyedi feltételeket az adott projektre vonatkozó szerződés vagy megrendelés tartalmazza.' },
-      ] },
-      { id: 'szolgaltato', title: '2. A Szolgáltató adatai', body: [
+      { id: 'szolgaltato', title: 'A Szolgáltató adatai', body: [
         { rows: [
-          { label: 'Cégnév', value: COMPANY.name },
-          { label: 'Székhely', value: COMPANY.seat },
+          { label: 'Cégnév', value: 'Debaru Kft.' },
+          { label: 'Székhely', value: '1117 Budapest, Budafoki út 97.' },
+          { label: 'Adószám', value: '14277148-2-43 / HU14277148' },
+          { label: 'Cégjegyzékszám', value: '01-09-896759' },
           { label: 'E-mail', value: COMPANY.email, href: `mailto:${COMPANY.email}` },
           { label: 'Telefon', value: COMPANY.phone, href: `tel:${COMPANY.phone.replace(/\s/g, '')}` },
         ] },
-        { p: 'A további cégadatok (cégjegyzékszám, adószám, képviselő) az Impresszum oldalon érhetők el.' },
       ] },
-      { id: 'szolgaltatasok', title: '3. A szolgáltatások köre', body: [
-        { p: 'A Szolgáltató ipari automatizálást, kapcsolószekrény-gyártást, SCADA- és folyamatfelügyeleti rendszereket, villamos energetikai kivitelezést, közlekedési rendszereket, valamint üzemeltetési és szerviz szolgáltatásokat nyújt.' },
-        { p: 'A szolgáltatások pontos tartalmát, terjedelmét és műszaki paramétereit minden esetben az egyedi ajánlat és szerződés rögzíti.' },
-      ] },
-      { id: 'ajanlat', title: '4. Ajánlatkérés és szerződéskötés', body: [
-        { p: 'A megrendelő a weboldali űrlapon, e-mailben vagy telefonon kérhet ajánlatot. A beérkező megkeresést a Szolgáltató felméri, és — szükség esetén helyszíni bejárást követően — egyedi ajánlatot ad.' },
-        { p: 'A szerződés a felek egyező akaratnyilvánításával, az ajánlat írásbeli elfogadásával vagy a megrendelés Szolgáltató általi visszaigazolásával jön létre.' },
-      ] },
-      { id: 'arak', title: '5. Árak és fizetési feltételek', body: [
-        { p: 'A szolgáltatások díját az egyedi ajánlat és szerződés tartalmazza. Az árak — eltérő megjelölés hiányában — nettó árak, amelyekhez a mindenkori hatályos áfa hozzáadódik.' },
-        { p: 'A fizetési ütemezést és határidőket a szerződés rögzíti. Nagyobb projektek esetén a Szolgáltató előleget vagy részszámlázást alkalmazhat.' },
-      ] },
-      { id: 'teljesites', title: '6. Teljesítés és határidők', body: [
-        { p: 'A Szolgáltató a szerződésben vállalt határidőkre, a vonatkozó szabványok és biztonsági előírások betartásával teljesít.' },
-        { p: 'A megrendelő köteles a teljesítéshez szükséges feltételeket (helyszín, hozzáférés, adatok, közreműködés) biztosítani. Az ebből eredő késedelemért a Szolgáltató nem felel.' },
-      ] },
-      { id: 'szavatossag', title: '7. Szavatosság és jótállás', body: [
-        { p: 'A Szolgáltató az elvégzett munkára és a leszállított berendezésekre a jogszabályok és az egyedi szerződés szerinti szavatosságot, illetve jótállást vállalja.' },
-        { p: 'A jótállás nem terjed ki a nem rendeltetésszerű használatból, a megrendelő vagy harmadik fél beavatkozásából, illetve elháríthatatlan külső okból eredő hibákra.' },
-      ] },
-      { id: 'felelosseg', title: '8. Felelősség', body: [
-        { p: 'A Szolgáltató a szolgáltatás nyújtása során a tőle elvárható gondossággal jár el. Felelőssége — a jogszabály által kötelezően előírt körön túl — a szerződés szerinti díj mértékéig terjed.' },
-        { p: 'A Szolgáltató nem felel a közvetett károkért, elmaradt haszonért, valamint a megrendelő által szolgáltatott hibás adatokból eredő következményekért.' },
-      ] },
-      { id: 'panasz', title: '9. Panaszkezelés', body: [
-        { p: `A megrendelő az esetleges panaszát írásban, a(z) ${COMPANY.email} címen jelezheti. A Szolgáltató a panaszt kivizsgálja, és arra ésszerű határidőn belül érdemi választ ad.` },
-        { p: 'Fogyasztói jogvita esetén a megrendelő a lakóhelye szerinti békéltető testülethez, illetve bírósághoz fordulhat.' },
-      ] },
-      { id: 'zaro', title: '10. Vegyes és záró rendelkezések', body: [
-        { p: 'A jelen ÁSZF-ben nem szabályozott kérdésekben a Polgári Törvénykönyv és a vonatkozó magyar jogszabályok az irányadók.' },
-        { p: 'A Szolgáltató fenntartja a jogot az ÁSZF egyoldalú módosítására; a módosítás a közzététellel lép hatályba, a már megkötött szerződéseket nem érinti.' },
+      { id: 'dokumentum', title: 'A teljes ÁSZF dokumentum', body: [
+        { p: 'Vevői/értékesítési Általános Szerződési Feltételeink a villamos, automatizálási, berendezésgyártási, szoftver- és kivitelezési projektek egységes, átlátható és előre kalkulálható szerződéses szabályozását tartalmazzák. Az alábbiakban a hatályos, teljes dokumentum érhető el — töltse le, vagy olvassa el itt az oldalon.' },
+        { pdf: {
+          hu: '/dokumentumok/Debaru_ASZF_HU.pdf',
+          de: '/dokumentumok/Debaru_AGB_DE.pdf',
+          en: '/dokumentumok/Debaru_Terms_EN.pdf',
+        } },
       ] },
     ],
   },
@@ -165,7 +138,6 @@ export const legalDocs = {
           { label: 'E-mail', value: COMPANY.email, href: `mailto:${COMPANY.email}` },
           { label: 'Telefon', value: COMPANY.phone, href: `tel:${COMPANY.phone.replace(/\s/g, '')}` },
           { label: 'Ügyfélfogadás', value: 'Hétfő–Péntek 8:00–17:00' },
-          { label: 'Hibaügyelet', value: '24/7' },
         ] },
       ] },
       { id: 'tarhely', title: 'Tárhelyszolgáltató', body: [
