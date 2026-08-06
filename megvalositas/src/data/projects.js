@@ -7,7 +7,7 @@ export const projectsHead = {
   crumb: 'Projektjeink',
   headPlaceholder: 'Fotó — ipari projekt / helyszín',
   title: ['Referenciák, amelyek', 'üzemelnek.'],
-  lede: 'Több mint 320 átadott projekt az ipar, az energetika és a közlekedés területén. Íme egy válogatás azokból, amelyekre a legbüszkébbek vagyunk — mindegyikről részletes esettanulmánnyal.',
+  lede: 'Több mint 350 átadott projekt az ipar, az energetika és a közlekedés területén. Íme egy válogatás azokból, amelyekre a legbüszkébbek vagyunk.',
 }
 
 // Szűrő chip-ek (kategória-kulcsokkal).
