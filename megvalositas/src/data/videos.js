@@ -1,16 +1,17 @@
-// Debaru saját BKV-referenciavideói. A kártya a projektre (esettanulmány) linkel,
-// a play gomb a YouTube-videót nyitja lightboxban. A specs-ek a referencia paraméterei.
+// Debaru saját BKV-referenciavideói (az Etele téri / 1-es villamos munkáról).
+// A play gomb a YouTube-videót nyitja lightboxban; a specs-ek a referencia
+// valós paraméterei (a hivatalos referencialista alapján).
 export const bkvVideos = [
   {
-    id: 'QwBiXHysgeE', tag: 'Energetika', title: 'BKV Etele áramátalakító', href: '/projektjeink/bkv-etele-ter',
-    specs: ['600 V DC vontatási táplálás', '12-impulzusos egyenirányító', 'SIL 2 biztonsági szint'],
+    id: 'QwBiXHysgeE', tag: 'Energetika', title: 'BKV Etele — áramátalakító', href: '/projektjeink#kiemelt',
+    specs: ['600 V DC vontatási táplálás', 'Áramátalakító alállomás', 'Védelem-irányítástechnika'],
   },
   {
-    id: 'D8T7QD7JsII', tag: 'SCADA & felügyelet', title: 'BKV diszpécserközpont', href: '/projektjeink/bkv-etele-ter',
-    specs: ['Valós idejű SCADA-felügyelet', 'IEC 61850 kommunikáció', 'N+1 redundáns szerverek'],
+    id: 'D8T7QD7JsII', tag: 'SCADA & felügyelet', title: 'BKV áramellátás — diszpécserközpont', href: '/projektjeink#kiemelt',
+    specs: ['Központi SCADA-felügyelet', 'Távvezérlő rendszer', 'Valós idejű állapotkép'],
   },
   {
-    id: '5SEyZPixMFk', tag: 'Közlekedés', title: 'BKV Etele tér végállomás', href: '/projektjeink/bkv-etele-ter',
-    specs: ['Távvezérelt szakaszolók', 'Automatikus terheléselosztás', '24/7 diszpécser-felügyelet'],
+    id: '5SEyZPixMFk', tag: 'Közlekedés', title: 'Etele téri villamos-végállomás', href: '/projektjeink#kiemelt',
+    specs: ['SIL2 biztonsági vezérlés', 'Távvezérelt szakaszolók', 'Áramátalakítók üzembe helyezése'],
   },
 ]

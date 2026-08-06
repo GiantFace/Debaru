@@ -1,47 +1,60 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useMemo, useState } from 'react'
 import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal } from '../components/ui/Reveal.jsx'
 import { VideoGallery } from '../components/sections/VideoGallery.jsx'
 import { ImageSlot } from '../components/ui/ImageSlot.jsx'
 import { Button } from '../components/ui/Button.jsx'
-import { Arrow } from '../components/ui/Icons.jsx'
-import { projectsHead, projectFilters, projects } from '../data/projects.js'
+import { projectsHead, projectFilters, featuredProjects, referenceList } from '../data/projects.js'
 import { bkvVideos } from '../data/videos.js'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 
-// Projektjeink oldal — szűrhető bento rács (a terv projektjeink.html alapján).
+const catLabel = { kozlekedes: 'Közlekedés', villamos: 'Villamos', kf: 'K+F' }
+
+// A legkésőbbi évszám kiolvasása a „2018–2019” / „2011-” alakú mezőkből (rendezéshez).
+function latestYear(y) {
+  const nums = String(y).match(/\d{4}/g)
+  return nums ? Math.max(...nums.map(Number)) : 0
+}
+
+// Projektjeink oldal — kiemelt referencia-vitrin + teljes, szűrhető referencialista.
 export default function Projects() {
   useDocumentTitle(projectsHead.crumb, projectsHead.lede)
   const [filter, setFilter] = useState('all')
-  const shown = projects.filter((c) => filter === 'all' || c.cat === filter)
+
+  // teljes lista: legfrissebb elöl, majd kategória szerint szűrve
+  const sorted = useMemo(
+    () => [...referenceList].sort((a, b) => latestYear(b.y) - latestYear(a.y)),
+    [],
+  )
+  const shown = sorted.filter((r) => filter === 'all' || r.cat === filter)
 
   return (
     <>
-      <PageHead placeholder={projectsHead.headPlaceholder} trail={[{ label: projectsHead.crumb }]} title={projectsHead.title} lede={projectsHead.lede}>
-        <Reveal className="chips" delay={200}>
-          {projectFilters.map((f) => (
-            <button key={f.key} className={`chip${filter === f.key ? ' on' : ''}`} onClick={() => setFilter(f.key)}>{f.label}</button>
-          ))}
-        </Reveal>
-      </PageHead>
+      <PageHead placeholder={projectsHead.headPlaceholder} trail={[{ label: projectsHead.crumb }]} title={projectsHead.title} lede={projectsHead.lede} />
 
-      <section className="section" style={{ paddingTop: 16 }}>
+      {/* Kiemelt referenciák — csempés vitrin */}
+      <section className="section" style={{ paddingTop: 16 }} id="kiemelt">
         <div className="wrap">
-          <h2 className="sr-only">Projektek</h2>
+          <Reveal className="eyebrow">Kiemelt referenciák</Reveal>
+          <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 40px', maxWidth: '22ch' }}>
+            Rendszerek, amelyek nap mint nap dolgoznak
+          </Reveal>
           <div className="pgrid">
-            {shown.map((c) => (
-              <Link className={`pcard${c.feat ? ' feat' : ''}`} to={`/projektjeink/${c.slug}`} key={c.slug}>
-                <div className="pc-img"><ImageSlot placeholder={c.placeholder} /></div>
+            {featuredProjects.map((p) => (
+              <article className={`pcard${p.feat ? ' feat' : ''}`} key={p.id}>
+                <div className="pc-img"><ImageSlot placeholder={p.placeholder} /></div>
                 <div className="pc-scrim" />
-                <span className="pc-tag">{c.tag}</span>
-                <div className="pc-arrow"><Arrow /></div>
+                <span className="pc-tag">{p.tag}</span>
+                {p.foreign && <span className="pc-flag">Külföld</span>}
                 <div className="pc-body">
-                  <h3>{c.title}</h3>
-                  {c.desc && <p>{c.desc}</p>}
-                  <span className="pc-metric"><span className="m">{c.metric}</span><span className="l">{c.metricLabel}</span></span>
+                  <h3>{p.title}</h3>
+                  {p.desc && <p>{p.desc}</p>}
+                  <span className="pc-meta">
+                    <span className="y">{p.year}</span>
+                    <span className="c">{p.client}{p.via ? ` · ${p.via} megbízásából` : ''}</span>
+                  </span>
                 </div>
-              </Link>
+              </article>
             ))}
           </div>
         </div>
@@ -54,7 +67,46 @@ export default function Projects() {
           <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 40px', maxWidth: '20ch' }}>
             A BKV Etele téri projekt — élőben
           </Reveal>
-          <Reveal><VideoGallery videos={bkvVideos} projectLink /></Reveal>
+          <Reveal><VideoGallery videos={bkvVideos} /></Reveal>
+        </div>
+      </section>
+
+      {/* Teljes referencialista — szűrhető */}
+      <section className="section" style={{ paddingTop: 8 }} id="referencialista">
+        <div className="wrap">
+          <Reveal className="eyebrow">Teljes referencialista</Reveal>
+          <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 10px', maxWidth: '24ch' }}>
+            Több mint 100 projekt 2010 óta
+          </Reveal>
+          <Reveal as="p" className="muted" style={{ maxWidth: '60ch', margin: '0 0 28px' }}>
+            Válogatás nélkül, a hivatalos referencialistánk alapján — végfelhasználó, megrendelő és a konkrét feladat megjelölésével.
+          </Reveal>
+
+          <Reveal className="chips" style={{ marginBottom: 28 }}>
+            {projectFilters.map((f) => (
+              <button key={f.key} className={`chip${filter === f.key ? ' on' : ''}`} onClick={() => setFilter(f.key)}>{f.label}</button>
+            ))}
+          </Reveal>
+
+          <div className="reflist">
+            {shown.map((r, i) => {
+              const desc = [r.proj, r.fel].filter(Boolean).join(' — ')
+              return (
+                <article className="refrow" key={`${r.y}-${r.felh}-${i}`}>
+                  <div className="ref-y">{r.y}</div>
+                  <div className="ref-main">
+                    <h3 className="ref-felh">
+                      {r.felh}
+                      {r.megr && <span className="ref-via"> · {r.megr} megbízásából</span>}
+                    </h3>
+                    {desc && <p className="ref-desc">{desc}</p>}
+                  </div>
+                  <span className={`ref-cat ref-cat--${r.cat}`}>{catLabel[r.cat]}</span>
+                </article>
+              )
+            })}
+          </div>
+          {shown.length === 0 && <p className="muted">Ebben a kategóriában nincs találat.</p>}
         </div>
       </section>
 

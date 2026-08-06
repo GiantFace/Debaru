@@ -30,18 +30,18 @@ export const bentoStats = {
 
 export const projects = [
   {
-    tag: 'Közlekedés',
-    title: '1-es villamos — energiaellátás korszerűsítés',
-    desc: 'Felsővezeték-hálózat és két új egyenirányító alállomás kivitelezése a teljes vonalon, üzemszünet nélkül.',
-    placeholder: 'Projektfotó — villamos vonal / felsővezeték',
-    to: '/projektjeink/1-es-villamos',
+    tag: 'Közlekedés · BKV',
+    title: '1-es villamos — Etele téri végállomás',
+    desc: 'SIL2 biztonsági vezérlés, áramátalakítók és a teljes védelem-irányítástechnika a végállomáshoz — a Siemens Mobility megbízásából.',
+    placeholder: 'Projektfotó — Etele téri villamos-végállomás',
+    to: '/projektjeink#kiemelt',
   },
   {
-    tag: 'Automatizálás',
-    title: 'Élelmiszeripari csomagolósor integráció',
-    desc: 'Nyolc gépegység egységes PLC-vezérlés alá vonása és központi SCADA felügyelet kiépítése.',
-    placeholder: 'Projektfotó — gyártósor / automatizálás',
-    to: '/projektjeink/elelmiszeripari-csomagolosor',
+    tag: 'Tisztatér · ASML Berlin',
+    title: 'ASML Berlin — tisztatéri automatizálás',
+    desc: 'Félvezetőgyári tisztaterek épületgépészeti automatizálása: tervezés, szerelés, kábelezés, szoftver és üzembe helyezés — az ap-systems megbízásából.',
+    placeholder: 'Projektfotó — tisztatéri technológia',
+    to: '/projektjeink#kiemelt',
   },
 ]
 

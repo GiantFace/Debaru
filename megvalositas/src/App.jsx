@@ -8,7 +8,6 @@ const Home = lazy(() => import('./pages/Home.jsx'))
 const About = lazy(() => import('./pages/About.jsx'))
 const Services = lazy(() => import('./pages/Services.jsx'))
 const Projects = lazy(() => import('./pages/Projects.jsx'))
-const ProjectDetail = lazy(() => import('./pages/ProjectDetail.jsx'))
 const Careers = lazy(() => import('./pages/Careers.jsx'))
 const JobDetail = lazy(() => import('./pages/JobDetail.jsx'))
 const JobApply = lazy(() => import('./pages/JobApply.jsx'))
@@ -29,12 +28,13 @@ export default function App() {
             {/* régi szolgáltatás-aloldalak → az áttekintőre (a kliens kérésére nincs külön aloldal) */}
             <Route path="/szolgaltatasok/:slug" element={<Navigate to="/szolgaltatasok" replace />} />
             <Route path="/projektjeink" element={<Projects />} />
-            <Route path="/projektjeink/:slug" element={<ProjectDetail />} />
+            {/* régi projekt-aloldalak → az áttekintőre (a kliens kérésére nincs külön esettanulmány) */}
+            <Route path="/projektjeink/:slug" element={<Navigate to="/projektjeink" replace />} />
             <Route path="/karrier" element={<Careers />} />
             <Route path="/karrier/:slug" element={<JobDetail />} />
             <Route path="/karrier/:slug/jelentkezes" element={<JobApply />} />
-            {/* régi útvonal → a BKV esettanulmányra irányítjuk */}
-            <Route path="/projekt" element={<Navigate to="/projektjeink/bkv-etele-ter" replace />} />
+            {/* régi útvonal → a projektek áttekintőre */}
+            <Route path="/projekt" element={<Navigate to="/projektjeink" replace />} />
             <Route path="/kapcsolat" element={<Contact />} />
             <Route path="/adatvedelem" element={<Legal doc="privacy" />} />
             <Route path="/aszf" element={<Legal doc="terms" />} />
