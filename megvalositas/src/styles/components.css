@@ -421,6 +421,22 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 .legal-rows dt { color: var(--faint); font-size: 14px; }
 .legal-rows dd { margin: 0; color: var(--fg); font-size: 15px; }
 @media (max-width: 560px) { .legal-rows > div { grid-template-columns: 1fr; gap: 3px; } }
+
+/* jogi dokumentum-kártyák (ÁSZF letöltés HU/DE/EN) */
+.doc-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 8px 0 4px; }
+.doc-card { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border: 1px solid var(--border); border-radius: 14px; background: var(--card); text-decoration: none; transition: transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease); }
+.doc-card:hover { border-color: var(--accent-line); box-shadow: var(--shadow); transform: translateY(-2px); }
+.doc-card--primary { border-color: var(--accent-line); background: var(--card-hover); }
+.doc-ico { flex-shrink: 0; width: 44px; height: 44px; border-radius: 11px; display: grid; place-items: center; background: var(--accent); color: #fff; }
+.doc-ico svg { width: 22px; height: 22px; }
+.doc-txt { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.doc-lang { font-weight: 600; font-size: 15.5px; color: var(--fg); line-height: 1.2; }
+.doc-meta { font-size: 12.5px; color: var(--muted); }
+.doc-dl { flex-shrink: 0; color: var(--accent-2); opacity: .7; transition: opacity .2s var(--ease), transform .2s var(--ease); }
+.doc-dl svg { width: 20px; height: 20px; display: block; }
+.doc-card:hover .doc-dl { opacity: 1; transform: translateY(2px); }
+@media (max-width: 720px) { .doc-cards { grid-template-columns: 1fr; } }
+
 /* footer jogi linkek */
 /* egy sorban: felülírjuk a .footer a { display:block }-ot */
 .foot-legal { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 12px; }

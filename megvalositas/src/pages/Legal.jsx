@@ -20,17 +20,45 @@ function Block({ b }) {
       ))}
     </dl>
   )
-  if (b.pdf) return (
-    <div style={{ margin: '4px 0 8px' }}>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 18 }}>
-        <a className="btn btn-primary" href={b.pdf.hu} target="_blank" rel="noopener noreferrer">ÁSZF (magyar) — PDF</a>
-        {b.pdf.de && <a className="btn btn-ghost" href={b.pdf.de} target="_blank" rel="noopener noreferrer">AGB (Deutsch)</a>}
-        {b.pdf.en && <a className="btn btn-ghost" href={b.pdf.en} target="_blank" rel="noopener noreferrer">Terms (English)</a>}
+  if (b.pdf) {
+    const docs = [
+      { href: b.pdf.hu, lang: 'Magyar', kind: 'ÁSZF', primary: true },
+      { href: b.pdf.de, lang: 'Deutsch', kind: 'AGB' },
+      { href: b.pdf.en, lang: 'English', kind: 'Terms & Conditions' },
+    ].filter((d) => d.href)
+    return (
+      <div className="doc-cards">
+        {docs.map((d) => (
+          <a key={d.lang} className={`doc-card${d.primary ? ' doc-card--primary' : ''}`} href={d.href} target="_blank" rel="noopener noreferrer">
+            <span className="doc-ico" aria-hidden="true"><PdfGlyph /></span>
+            <span className="doc-txt">
+              <span className="doc-lang">{d.lang}</span>
+              <span className="doc-meta">{d.kind} · PDF</span>
+            </span>
+            <span className="doc-dl" aria-hidden="true"><DownloadGlyph /></span>
+          </a>
+        ))}
       </div>
-      <iframe src={b.pdf.hu} title="Általános Szerződési Feltételek (PDF)" loading="lazy" style={{ width: '100%', height: 640, border: '1px solid var(--border)', borderRadius: 12, display: 'block' }} />
-    </div>
-  )
+    )
+  }
   return null
+}
+
+// Dokumentum- és letöltés-ikon (beágyazott, hogy a jogi oldal önálló legyen).
+function PdfGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+      <path d="M14 3v5h5" />
+    </svg>
+  )
+}
+function DownloadGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 4v11" /><path d="m7 11 5 5 5-5" /><path d="M5 20h14" />
+    </svg>
+  )
 }
 
 // Jogi oldal (Adatvédelem / ÁSZF / Impresszum): bal 1/3 sticky tartalomjegyzék,

@@ -106,7 +106,7 @@ export const legalDocs = {
         ] },
       ] },
       { id: 'dokumentum', title: 'A teljes ÁSZF dokumentum', body: [
-        { p: 'Vevői/értékesítési Általános Szerződési Feltételeink a villamos, automatizálási, berendezésgyártási, szoftver- és kivitelezési projektek egységes, átlátható és előre kalkulálható szerződéses szabályozását tartalmazzák. Az alábbiakban a hatályos, teljes dokumentum érhető el — töltse le, vagy olvassa el itt az oldalon.' },
+        { p: 'Vevői/értékesítési Általános Szerződési Feltételeink a villamos, automatizálási, berendezésgyártási, szoftver- és kivitelezési projektek egységes, átlátható és előre kalkulálható szerződéses szabályozását tartalmazzák. A hatályos, teljes dokumentum az alábbi nyelveken tölthető le, illetve nyitható meg új lapon.' },
         { pdf: {
           hu: '/dokumentumok/Debaru_ASZF_HU.pdf',
           de: '/dokumentumok/Debaru_AGB_DE.pdf',
