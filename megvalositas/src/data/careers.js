@@ -52,7 +52,7 @@ export const benefits = [
 export const values = [
   { title: 'Biztonság mindenek előtt', desc: 'A villamos szakmában a biztonság nem szlogen. Szabványos munkavégzés, oktatás és fegyelem — magunkért és a megrendelőért.' },
   { title: 'Precizitás', desc: 'A rendezett terv és a tiszta szekrény évekre előre megtérül. Amit leszállítunk, arra büszkék vagyunk.' },
-  { title: 'Felelősség', desc: 'Amit átadunk, azért helytállunk. A 24/7 ügyelet nem véletlen — a megrendelő számíthat ránk.' },
+  { title: 'Felelősség', desc: 'Amit átadunk, azért helytállunk. Ha a megrendelőnek szüksége van ránk, számíthat ránk.' },
   { title: 'Csapatmunka', desc: 'Tervező, szerelő, üzemeltető együtt visz sikerre egy projektet. A jó ötlet bárhonnan jöhet.' },
 ]
 

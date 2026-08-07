@@ -64,7 +64,6 @@ export const processSteps = [
 export const faq = [
   { q: 'Hogyan kérhetek ajánlatot?', a: 'Töltse ki a kapcsolati űrlapot, kérjen e-mailben ajánlatot vagy hívjon minket — 3 munkanapon belül visszajelzünk egy első szakmai állásfoglalással.' },
   { q: 'Vállalnak munkát vidéken és külföldön is?', a: 'Igen. Vállalatunk az ország bármely területén és külföldön is vállal munkát.' },
-  { q: 'Mennyi idő egy kapcsolószekrény legyártása?', a: 'A komplexitástól függ, de egy egyedi vezérlőszekrény jellemzően 3–6 hét a jóváhagyott tervektől számítva, saját műhelyünkben gyártva.' },
   { q: 'Van sürgősségi ügyelet?', a: 'Egyedi szerződés alapján hibaelhárítási ügyeletet tartunk a karbantartási szerződéssel rendelkező ügyfeleink számára, garantált kiszállási idővel.' },
   { q: 'Milyen platformokon dolgoznak?', a: 'Siemens, SAIA, Qronox és Wago PLC-k szoftveres megoldása, EPLAN alapú villamostervezés, WSCAD és EPLAN alapú 3D tervezés, HMI-programozás és saját SCADA-integráció — meglévő rendszerekhez is illesztve.' },
 ]

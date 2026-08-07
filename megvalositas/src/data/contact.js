@@ -17,14 +17,6 @@ export const contactAreas = [
 // Opcionális gyors-választók (legördülő listák).
 export const timelines = ['Sürgős (< 1 hó)', '1–3 hónap', '3–6 hónap', 'Rugalmas']
 
-// Bizalmi pontok az űrlap melletti oszlopban.
-export const contactTrust = [
-  'Egy felelős partner — tervezés, gyártás, kivitelezés, üzemeltetés',
-  '320+ átadott projekt az ipar, az energetika és a közlekedés területén',
-  'Saját 1 200 m²-es gyártóműhely és mérnökcsapat',
-  'Valós referenciák, köztük a BKV Etele téri projekt',
-]
-
 // A telephely térkép-linkjei.
 export const MAP_EMBED = 'https://maps.google.com/maps?q=Budafoki%20%C3%BAt%2097%2C%201117%20Budapest&z=15&hl=hu&output=embed'
 export const MAP_DIRECTIONS = 'https://www.google.com/maps/dir/?api=1&destination=Budafoki%20%C3%BAt%2097%2C%201117%20Budapest'

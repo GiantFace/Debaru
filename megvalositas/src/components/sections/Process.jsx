@@ -9,8 +9,11 @@ export function Process() {
       <div className="wrap">
         <Parallax speed={0.09}>
           <Reveal className="eyebrow">Hogyan dolgozunk</Reveal>
-          <Reveal as="h2" style={{ fontSize: 'clamp(30px,4vw,48px)', margin: '16px 0 56px', maxWidth: '16ch' }}>
+          <Reveal as="h2" style={{ fontSize: 'clamp(30px,4vw,48px)', margin: '16px 0 16px', maxWidth: '16ch' }}>
             A koncepciótól a folyamatos üzemig
+          </Reveal>
+          <Reveal as="p" className="muted" style={{ fontSize: '16px', margin: '0 0 56px', maxWidth: '52ch' }}>
+            Főbb területeink: BMS, energiaellátás, karbantartás, kötöttpályás közlekedés és tisztatéri villamoskivitelezés.
           </Reveal>
         </Parallax>
 
