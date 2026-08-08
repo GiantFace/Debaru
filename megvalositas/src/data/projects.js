@@ -108,6 +108,9 @@ export const featuredProjects = [
   },
 ]
 
+// id → kiemelt projekt gyors lekérés (a részletoldalhoz).
+export const featuredById = Object.fromEntries(featuredProjects.map((p) => [p.id, p]))
+
 // Teljes referencialista (a hivatalos Referencialista alapján, 2010–2026).
 // Mezők: y = év(ek), cat = kategória, felh = végfelhasználó, megr = megrendelő,
 // proj = projekt megnevezése, fel = feladat.

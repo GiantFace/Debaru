@@ -1,9 +1,12 @@
 import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal } from '../components/ui/Reveal.jsx'
 import { VideoGallery } from '../components/sections/VideoGallery.jsx'
 import { ImageSlot } from '../components/ui/ImageSlot.jsx'
 import { Button } from '../components/ui/Button.jsx'
+import { Counter } from '../components/ui/Counter.jsx'
+import { Arrow } from '../components/ui/Icons.jsx'
 import { projectsHead, projectFilters, featuredProjects, referenceList } from '../data/projects.js'
 import { bkvVideos } from '../data/videos.js'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
@@ -34,6 +37,17 @@ export default function Projects() {
   }, [])
   const shownCount = referenceList.filter((r) => filter === 'all' || r.cat === filter).length
 
+  // összesített számok a statisztika-sávhoz (a valós listából)
+  const stats = useMemo(() => {
+    const ys = referenceList.map((r) => latestYear(r.y)).filter(Boolean)
+    return {
+      count: referenceList.length,
+      span: Math.max(...ys) - Math.min(...ys),
+      users: new Set(referenceList.map((r) => r.felh)).size,
+      clients: new Set(referenceList.map((r) => r.megr || r.felh)).size,
+    }
+  }, [])
+
   return (
     <>
       <PageHead placeholder={projectsHead.headPlaceholder} trail={[{ label: projectsHead.crumb }]} title={projectsHead.title} lede={projectsHead.lede} />
@@ -47,11 +61,12 @@ export default function Projects() {
           </Reveal>
           <div className="pgrid">
             {featuredProjects.map((p) => (
-              <article className={`pcard${p.feat ? ' feat' : ''}`} key={p.id}>
+              <Link className={`pcard${p.feat ? ' feat' : ''}`} to={`/projektjeink/${p.id}`} key={p.id}>
                 <div className="pc-img"><ImageSlot placeholder={p.placeholder} /></div>
                 <div className="pc-scrim" />
                 <span className="pc-tag">{p.tag}</span>
                 {p.foreign && <span className="pc-flag">Külföld</span>}
+                <div className="pc-arrow"><Arrow /></div>
                 <div className="pc-body">
                   <h3>{p.title}</h3>
                   <span className="pc-meta">
@@ -59,7 +74,7 @@ export default function Projects() {
                     <span className="c">{p.client}{p.via ? ` · ${p.via}` : ''}</span>
                   </span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
@@ -85,6 +100,13 @@ export default function Projects() {
           </Reveal>
           <Reveal as="p" className="muted" style={{ maxWidth: '60ch', margin: '0 0 28px' }}>
             Válogatás nélkül, a hivatalos referencialistánk alapján — végfelhasználó, megrendelő és a konkrét feladat megjelölésével.
+          </Reveal>
+
+          <Reveal className="pstats">
+            <div className="pstat"><span className="n"><Counter to={stats.count} suffix="+" /></span><span className="l">átadott projekt</span></div>
+            <div className="pstat"><span className="n"><Counter to={stats.span} suffix="+" /></span><span className="l">év, 2010 óta</span></div>
+            <div className="pstat"><span className="n"><Counter to={stats.users} suffix="+" /></span><span className="l">végfelhasználó</span></div>
+            <div className="pstat"><span className="n"><Counter to={stats.clients} suffix="+" /></span><span className="l">megrendelő és partner</span></div>
           </Reveal>
 
           <Reveal className="chips" style={{ marginBottom: 28 }}>

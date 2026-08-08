@@ -10,7 +10,7 @@
 // Ekkor minden kép-hely visszaáll az eredeti, feliratos helykitöltőre.
 // ---------------------------------------------------------------------------
 
-export const STOCK_PHOTOS_ENABLED = false
+export const STOCK_PHOTOS_ENABLED = true
 
 const B = 'https://upload.wikimedia.org/wikipedia/commons/'
 

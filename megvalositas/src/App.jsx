@@ -8,6 +8,7 @@ const Home = lazy(() => import('./pages/Home.jsx'))
 const About = lazy(() => import('./pages/About.jsx'))
 const Services = lazy(() => import('./pages/Services.jsx'))
 const Projects = lazy(() => import('./pages/Projects.jsx'))
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail.jsx'))
 const Careers = lazy(() => import('./pages/Careers.jsx'))
 const JobDetail = lazy(() => import('./pages/JobDetail.jsx'))
 const JobApply = lazy(() => import('./pages/JobApply.jsx'))
@@ -28,8 +29,7 @@ export default function App() {
             {/* régi szolgáltatás-aloldalak → az áttekintőre (a kliens kérésére nincs külön aloldal) */}
             <Route path="/szolgaltatasok/:slug" element={<Navigate to="/szolgaltatasok" replace />} />
             <Route path="/projektjeink" element={<Projects />} />
-            {/* régi projekt-aloldalak → az áttekintőre (a kliens kérésére nincs külön esettanulmány) */}
-            <Route path="/projektjeink/:slug" element={<Navigate to="/projektjeink" replace />} />
+            <Route path="/projektjeink/:slug" element={<ProjectDetail />} />
             <Route path="/karrier" element={<Careers />} />
             <Route path="/karrier/:slug" element={<JobDetail />} />
             <Route path="/karrier/:slug/jelentkezes" element={<JobApply />} />
