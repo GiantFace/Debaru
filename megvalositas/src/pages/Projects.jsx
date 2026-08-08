@@ -99,21 +99,22 @@ export default function Projects() {
               if (!items.length) return null
               return (
                 <div className="tl-group" key={g.year}>
-                  <div className="tl-year"><span>{g.year}</span></div>
+                  <div className="tl-year">
+                    <span className="y">{g.year}</span>
+                    <span className="c">{items.length} projekt</span>
+                  </div>
                   <div className="tl-items">
                     {items.map((r, i) => {
                       const desc = [r.proj, r.fel].filter(Boolean).join(' — ')
                       return (
-                        <article className="tl-item" key={`${r.felh}-${i}`}>
-                          <div className="tl-card">
-                            <div className="tl-head">
-                              <h3 className="tl-felh">{r.felh}</h3>
-                              <span className={`ref-cat ref-cat--${r.cat}`}>{catLabel[r.cat]}</span>
-                            </div>
-                            {r.megr && <span className="tl-via">{r.megr} megbízásából</span>}
-                            {desc && <p className="tl-desc">{desc}</p>}
-                            {String(g.year) !== r.y && <span className="tl-range">{r.y}</span>}
+                        <article className="tl-card" key={`${r.felh}-${i}`}>
+                          <div className="tl-head">
+                            <h3 className="tl-felh">{r.felh}</h3>
+                            <span className={`ref-cat ref-cat--${r.cat}`}>{catLabel[r.cat]}</span>
                           </div>
+                          {r.megr && <span className="tl-via">{r.megr} megbízásából</span>}
+                          {desc && <p className="tl-desc">{desc}</p>}
+                          {String(g.year) !== r.y && <span className="tl-range">{r.y}</span>}
                         </article>
                       )
                     })}

@@ -586,33 +586,40 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 .pcard.feat .pc-meta .y { font-size: 17px; }
 .pcard.feat .pc-meta .c { font-size: 13.5px; }
 
-/* teljes referencialista — idővonal ("utazás az időben") */
-.timeline { position: relative; padding-left: 34px; margin-top: 6px; }
-/* a gerinc: függőleges vonal balra, felül élénk akcent → alul halványuló */
-.timeline::before { content: ''; position: absolute; left: 9px; top: 8px; bottom: 8px; width: 2px; border-radius: 2px; background: linear-gradient(180deg, var(--accent), var(--accent-2) 55%, var(--border-2)); }
-.tl-group { position: relative; }
-.tl-year { position: relative; margin: 34px 0 16px; }
-.tl-group:first-child .tl-year { margin-top: 4px; }
-.tl-year span { display: inline-flex; align-items: center; font-family: var(--display); font-weight: 700; font-size: 20px; color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2)); padding: 5px 17px; border-radius: 999px; box-shadow: 0 6px 16px rgba(47, 128, 98, .28); }
-/* nagy csomópont a gerincen az évhez */
-.tl-year::before { content: ''; position: absolute; left: -26px; top: 50%; transform: translateY(-50%); width: 15px; height: 15px; border-radius: 50%; background: var(--accent); border: 3px solid var(--bg); box-shadow: 0 0 0 3px rgba(47, 128, 98, .22); }
-.tl-item { position: relative; margin-bottom: 10px; }
-/* kis csomópont a gerincen az egyes projektekhez */
-.tl-item::before { content: ''; position: absolute; left: -25px; top: 20px; width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent-2); z-index: 1; }
-.tl-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 13px 18px; transition: transform .18s var(--ease), box-shadow .18s var(--ease), border-color .18s var(--ease); }
-.tl-card:hover { border-color: var(--accent-line); box-shadow: var(--shadow); transform: translateX(3px); }
+/* teljes referencialista — idővonal ("utazás az időben")
+   Nagy, RAGADÓS (sticky) évszámok gradienssel: az év a képernyőn marad, míg az
+   adott év projektjei elgördülnek mellette — így a görgetés időutazásnak hat. */
+.timeline { position: relative; }
+.tl-group { display: grid; grid-template-columns: 132px 1fr; gap: 30px; align-items: start; }
+/* a bal oldali év-oszlop rögzül a görgetéskor */
+.tl-year { position: sticky; top: 96px; text-align: right; padding-top: 4px; z-index: 1; }
+.tl-year .y { display: block; font-family: var(--display); font-weight: 800; font-size: clamp(36px, 5vw, 58px); line-height: .9; letter-spacing: -.02em; background: linear-gradient(140deg, var(--accent) 15%, var(--accent-2) 85%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.tl-year .c { display: block; margin-top: 8px; font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); }
+/* a jobb oldali projektek gerincre fűzve (bal él = idővonal) */
+.tl-items { position: relative; display: grid; gap: 12px; border-left: 2px solid var(--border); padding: 4px 0 34px 32px; }
+.tl-group:last-child .tl-items { padding-bottom: 4px; }
+.tl-card { position: relative; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 15px 20px; transition: transform .18s var(--ease), box-shadow .18s var(--ease), border-color .18s var(--ease); }
+/* csomópont-pötty a gerincen minden projekthez */
+.tl-card::before { content: ''; position: absolute; left: -38px; top: 20px; width: 12px; height: 12px; border-radius: 50%; background: var(--card); border: 2.5px solid var(--accent-2); transition: background .18s var(--ease), transform .18s var(--ease); }
+.tl-card:hover { border-color: var(--accent-line); box-shadow: var(--shadow); transform: translateX(4px); }
+.tl-card:hover::before { background: var(--accent); border-color: var(--accent); transform: scale(1.18); }
 .tl-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
-.tl-felh { font-size: 15.5px; font-weight: 600; color: var(--fg); margin: 0; line-height: 1.3; }
-.tl-via { display: block; font-size: 13px; color: var(--muted); margin-top: 1px; }
-.tl-desc { font-size: 14px; line-height: 1.5; color: var(--muted); margin: 6px 0 0; }
-.tl-range { display: inline-block; margin-top: 6px; font-family: var(--display); font-size: 12px; font-weight: 600; color: var(--accent-2); }
+.tl-felh { font-size: 16px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.3; }
+.tl-via { display: block; font-size: 13px; color: var(--muted); margin-top: 2px; }
+.tl-desc { font-size: 14px; line-height: 1.55; color: var(--muted); margin: 8px 0 0; }
+.tl-range { display: inline-block; margin-top: 8px; font-family: var(--display); font-size: 12px; font-weight: 700; color: var(--accent-2); background: var(--card-hover); border: 1px solid var(--accent-line); padding: 2px 9px; border-radius: 999px; }
 .ref-cat { flex-shrink: 0; align-self: flex-start; font-size: 11.5px; font-weight: 600; letter-spacing: .02em; padding: 5px 12px; border-radius: 999px; white-space: nowrap; border: 1px solid var(--border-2); color: var(--muted); background: var(--bg-2); }
 .ref-cat--kozlekedes { color: #2f6bd6; border-color: #c3d4f2; background: #eef4ff; }
 .ref-cat--villamos { color: var(--accent-2); border-color: var(--accent-line); background: var(--card-hover); }
 .ref-cat--kf { color: #a4681a; border-color: #ecd9b8; background: #fbf3e5; }
-@media (max-width: 560px) {
-  .tl-head { flex-direction: column; gap: 6px; }
-  .tl-year span { font-size: 18px; }
+@media (max-width: 640px) {
+  .tl-group { grid-template-columns: 1fr; gap: 8px; }
+  .tl-year { position: static; text-align: left; padding-top: 18px; }
+  .tl-year .y { font-size: 32px; }
+  .tl-year .c { margin-top: 2px; }
+  .tl-items { padding: 2px 0 18px 22px; }
+  .tl-card::before { left: -28px; }
+  .tl-head { flex-direction: column-reverse; align-items: flex-start; gap: 6px; }
 }
 
 /* ---------- szolgáltatás-blokkok (váltakozó) ---------- */
