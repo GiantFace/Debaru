@@ -602,7 +602,11 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
    Nagy, RAGADÓS (sticky) évszámok gradienssel: az év a képernyőn marad, míg az
    adott év projektjei elgördülnek mellette — így a görgetés időutazásnak hat. */
 .timeline { position: relative; }
-.tl-group { display: grid; grid-template-columns: 132px 1fr; gap: 30px; align-items: start; }
+/* technós rácsháttér, ami a jobb szél felé erősödik (maszkolt) */
+.timeline::before { content: ''; position: absolute; inset: -10px 0; z-index: 0; pointer-events: none; background-image: linear-gradient(var(--border-2) 1px, transparent 1px), linear-gradient(90deg, var(--border-2) 1px, transparent 1px); background-size: 38px 38px; opacity: .55; -webkit-mask-image: linear-gradient(90deg, transparent 32%, #000 100%); mask-image: linear-gradient(90deg, transparent 32%, #000 100%); }
+.tl-group { position: relative; z-index: 1; display: grid; grid-template-columns: 148px 1fr; gap: 30px; align-items: start; }
+/* óriási, halvány "szellem-évszám" — a kártyák elé bújnak, a jobb oldalon dereng */
+.tl-ghost { position: absolute; top: -10px; right: 6px; z-index: 0; font-family: var(--display); font-weight: 800; font-size: clamp(72px, 12vw, 148px); line-height: .8; letter-spacing: -.03em; color: var(--accent); opacity: .06; pointer-events: none; user-select: none; }
 /* a bal oldali év-oszlop rögzül a görgetéskor */
 .tl-year { position: sticky; top: 96px; text-align: right; padding-top: 4px; z-index: 1; }
 .tl-year .y { display: block; font-family: var(--display); font-weight: 800; font-size: clamp(36px, 5vw, 58px); line-height: .9; letter-spacing: -.02em; background: linear-gradient(140deg, var(--accent) 15%, var(--accent-2) 85%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
@@ -610,7 +614,7 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 /* a jobb oldali projektek gerincre fűzve (bal él = idővonal) */
 .tl-items { position: relative; display: grid; gap: 12px; border-left: 2px solid var(--border); padding: 4px 0 34px 32px; }
 .tl-group:last-child .tl-items { padding-bottom: 4px; }
-.tl-card { position: relative; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 15px 20px; transition: transform .18s var(--ease), box-shadow .18s var(--ease), border-color .18s var(--ease); }
+.tl-card { position: relative; z-index: 1; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 15px 20px; transition: transform .18s var(--ease), box-shadow .18s var(--ease), border-color .18s var(--ease); }
 /* csomópont-pötty a gerincen minden projekthez */
 .tl-card::before { content: ''; position: absolute; left: -38px; top: 20px; width: 12px; height: 12px; border-radius: 50%; background: var(--card); border: 2.5px solid var(--accent-2); transition: background .18s var(--ease), transform .18s var(--ease); }
 .tl-card:hover { border-color: var(--accent-line); box-shadow: var(--shadow); transform: translateX(4px); }

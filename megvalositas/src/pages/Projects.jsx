@@ -126,6 +126,7 @@ export default function Projects() {
                     <span className="c">{items.length} projekt</span>
                   </div>
                   <div className="tl-items">
+                    <span className="tl-ghost" aria-hidden="true">{g.year}</span>
                     {items.map((r, i) => {
                       const desc = [r.proj, r.fel].filter(Boolean).join(' — ')
                       return (
