@@ -21,12 +21,18 @@ export default function Projects() {
   useDocumentTitle(projectsHead.crumb, projectsHead.lede)
   const [filter, setFilter] = useState('all')
 
-  // teljes lista: legfrissebb elöl, majd kategória szerint szűrve
-  const sorted = useMemo(
-    () => [...referenceList].sort((a, b) => latestYear(b.y) - latestYear(a.y)),
-    [],
-  )
-  const shown = sorted.filter((r) => filter === 'all' || r.cat === filter)
+  // teljes lista év szerint csoportosítva, legfrissebb évvel elöl (idővonalhoz)
+  const groups = useMemo(() => {
+    const sorted = [...referenceList].sort((a, b) => latestYear(b.y) - latestYear(a.y))
+    const map = new Map()
+    for (const r of sorted) {
+      const y = latestYear(r.y)
+      if (!map.has(y)) map.set(y, [])
+      map.get(y).push(r)
+    }
+    return [...map.entries()].map(([year, items]) => ({ year, items }))
+  }, [])
+  const shownCount = referenceList.filter((r) => filter === 'all' || r.cat === filter).length
 
   return (
     <>
@@ -87,25 +93,36 @@ export default function Projects() {
             ))}
           </Reveal>
 
-          <div className="reflist">
-            {shown.map((r, i) => {
-              const desc = [r.proj, r.fel].filter(Boolean).join(' — ')
+          <div className="timeline">
+            {groups.map((g) => {
+              const items = g.items.filter((r) => filter === 'all' || r.cat === filter)
+              if (!items.length) return null
               return (
-                <article className="refrow" key={`${r.y}-${r.felh}-${i}`}>
-                  <div className="ref-y">{r.y}</div>
-                  <div className="ref-main">
-                    <h3 className="ref-felh">
-                      {r.felh}
-                      {r.megr && <span className="ref-via"> · {r.megr} megbízásából</span>}
-                    </h3>
-                    {desc && <p className="ref-desc">{desc}</p>}
+                <div className="tl-group" key={g.year}>
+                  <div className="tl-year"><span>{g.year}</span></div>
+                  <div className="tl-items">
+                    {items.map((r, i) => {
+                      const desc = [r.proj, r.fel].filter(Boolean).join(' — ')
+                      return (
+                        <article className="tl-item" key={`${r.felh}-${i}`}>
+                          <div className="tl-card">
+                            <div className="tl-head">
+                              <h3 className="tl-felh">{r.felh}</h3>
+                              <span className={`ref-cat ref-cat--${r.cat}`}>{catLabel[r.cat]}</span>
+                            </div>
+                            {r.megr && <span className="tl-via">{r.megr} megbízásából</span>}
+                            {desc && <p className="tl-desc">{desc}</p>}
+                            {String(g.year) !== r.y && <span className="tl-range">{r.y}</span>}
+                          </div>
+                        </article>
+                      )
+                    })}
                   </div>
-                  <span className={`ref-cat ref-cat--${r.cat}`}>{catLabel[r.cat]}</span>
-                </article>
+                </div>
               )
             })}
           </div>
-          {shown.length === 0 && <p className="muted">Ebben a kategóriában nincs találat.</p>}
+          {shownCount === 0 && <p className="muted">Ebben a kategóriában nincs találat.</p>}
         </div>
       </section>
 
