@@ -48,10 +48,9 @@ export default function Projects() {
                 {p.foreign && <span className="pc-flag">Külföld</span>}
                 <div className="pc-body">
                   <h3>{p.title}</h3>
-                  {p.desc && <p>{p.desc}</p>}
                   <span className="pc-meta">
                     <span className="y">{p.year}</span>
-                    <span className="c">{p.client}{p.via ? ` · ${p.via} megbízásából` : ''}</span>
+                    <span className="c">{p.client}{p.via ? ` · ${p.via}` : ''}</span>
                   </span>
                 </div>
               </article>
