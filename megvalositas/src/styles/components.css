@@ -602,7 +602,19 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
    Nagy, RAGADÓS (sticky) évszámok gradienssel: az év a képernyőn marad, míg az
    adott év projektjei elgördülnek mellette — így a görgetés időutazásnak hat. */
 .timeline { position: relative; }
-.tl-group { display: grid; grid-template-columns: 132px 1fr; gap: 30px; align-items: start; }
+/* finom rács-textúra a háttérben — a hosszú lista görgetése így nem egyhangú
+   (a szélek felé lágyan elhalványul, hogy diszkrét maradjon) */
+.timeline::before {
+  content: ''; position: absolute; z-index: 0; pointer-events: none;
+  top: -24px; bottom: -24px; left: -20px; right: -20px;
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 30px 30px; opacity: .4;
+  -webkit-mask-image: radial-gradient(125% 78% at 50% 42%, #000 52%, transparent 100%);
+  mask-image: radial-gradient(125% 78% at 50% 42%, #000 52%, transparent 100%);
+}
+.tl-group { position: relative; z-index: 1; display: grid; grid-template-columns: 132px 1fr; gap: 30px; align-items: start; }
 /* a bal oldali év-oszlop rögzül a görgetéskor */
 .tl-year { position: sticky; top: 96px; text-align: right; padding-top: 4px; z-index: 1; }
 .tl-year .y { display: block; font-family: var(--display); font-weight: 800; font-size: clamp(36px, 5vw, 58px); line-height: .9; letter-spacing: -.02em; background: linear-gradient(140deg, var(--accent) 15%, var(--accent-2) 85%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
@@ -613,7 +625,15 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
 .tl-card { position: relative; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 15px 20px; transition: transform .18s var(--ease), box-shadow .18s var(--ease), border-color .18s var(--ease); }
 /* csomópont-pötty a gerincen minden projekthez */
 .tl-card::before { content: ''; position: absolute; left: -38px; top: 20px; width: 12px; height: 12px; border-radius: 50%; background: var(--card); border: 2.5px solid var(--accent-2); transition: background .18s var(--ease), transform .18s var(--ease); }
-.tl-card:hover { border-color: var(--accent-line); box-shadow: var(--shadow); transform: translateX(4px); }
+.tl-card:hover { border-color: var(--accent-line); box-shadow: var(--shadow); }
+/* görgetés-vezérelt belépő animáció: a kártyák finoman felúsznak, ahogy képbe
+   érnek — tiszta CSS, GPU-n; gyenge gépen (.lite) és reduced-motion esetén ki */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    html:not(.lite) .tl-card { animation: tlReveal linear both; animation-timeline: view(); animation-range: entry 0% entry 42%; }
+  }
+}
+@keyframes tlReveal { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 .tl-card:hover::before { background: var(--accent); border-color: var(--accent); transform: scale(1.18); }
 .tl-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
 .tl-felh { font-size: 16px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.3; }
