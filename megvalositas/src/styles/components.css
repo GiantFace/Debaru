@@ -606,13 +606,13 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
    (a szélek felé lágyan elhalványul, hogy diszkrét maradjon) */
 .timeline::before {
   content: ''; position: absolute; z-index: 0; pointer-events: none;
-  top: -24px; bottom: -24px; left: -20px; right: -20px;
+  top: -9%; bottom: -9%; left: -24px; right: -24px;
   background-image:
     linear-gradient(to right, var(--border) 1px, transparent 1px),
     linear-gradient(to bottom, var(--border) 1px, transparent 1px);
-  background-size: 30px 30px; opacity: .4;
-  -webkit-mask-image: radial-gradient(125% 78% at 50% 42%, #000 52%, transparent 100%);
-  mask-image: radial-gradient(125% 78% at 50% 42%, #000 52%, transparent 100%);
+  background-size: 30px 30px; opacity: .38;
+  -webkit-mask-image: radial-gradient(102% 60% at 52% 46%, #000 24%, transparent 82%);
+  mask-image: radial-gradient(102% 60% at 52% 46%, #000 24%, transparent 82%);
 }
 .tl-group { position: relative; z-index: 1; display: grid; grid-template-columns: 132px 1fr; gap: 30px; align-items: start; }
 /* a bal oldali év-oszlop rögzül a görgetéskor */
@@ -630,10 +630,16 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
    érnek — tiszta CSS, GPU-n; gyenge gépen (.lite) és reduced-motion esetén ki */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    html:not(.lite) .tl-card { animation: tlReveal linear both; animation-timeline: view(); animation-range: entry 0% entry 42%; }
+    html:not(.lite) .tl-card { animation: tlReveal linear both; animation-timeline: view(); animation-range: entry 0% entry 44%; }
+    /* évszám: csak opacity (a sticky-t nem töri) */
+    html:not(.lite) .tl-year { animation: tlFade linear both; animation-timeline: view(); animation-range: entry 0% entry 26%; }
+    /* rács finom parallaxa a szekció görgetése alatt → mélységérzet */
+    html:not(.lite) .timeline::before { animation: gridDrift linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
   }
 }
-@keyframes tlReveal { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes tlReveal { from { opacity: 0; transform: translateY(26px) scale(.985); } to { opacity: 1; transform: none; } }
+@keyframes tlFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes gridDrift { from { transform: translateY(-4%); } to { transform: translateY(4%); } }
 .tl-card:hover::before { background: var(--accent); border-color: var(--accent); transform: scale(1.18); }
 .tl-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
 .tl-felh { font-size: 16px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.3; }
