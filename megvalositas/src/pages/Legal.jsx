@@ -3,10 +3,12 @@ import { Navigate } from 'react-router-dom'
 import { PageHead } from '../components/sections/PageHead.jsx'
 import { Reveal } from '../components/ui/Reveal.jsx'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
-import { legalDocs } from '../data/legal.js'
+import { useT } from '../i18n/index.jsx'
+import { useContent } from '../i18n/content.js'
 
 // Egy tartalomblokk kirajzolása (bekezdés / alcím / lista / kulcs–érték sorok).
 function Block({ b }) {
+  const t = useT()
   if (b.p) return <p>{b.p}</p>
   if (b.h3) return <h3>{b.h3}</h3>
   if (b.ul) return <ul>{b.ul.map((li) => <li key={li}>{li}</li>)}</ul>
@@ -22,9 +24,9 @@ function Block({ b }) {
   )
   if (b.pdf) {
     const docs = [
-      { href: b.pdf.hu, lang: 'Magyar', kind: 'ÁSZF', primary: true },
-      { href: b.pdf.de, lang: 'Deutsch', kind: 'AGB' },
-      { href: b.pdf.en, lang: 'English', kind: 'Terms & Conditions' },
+      { href: b.pdf.hu, ...t('legal.docLabels.hu'), primary: true },
+      { href: b.pdf.de, ...t('legal.docLabels.de') },
+      { href: b.pdf.en, ...t('legal.docLabels.en') },
     ].filter((d) => d.href)
     return (
       <div className="doc-cards">
@@ -33,7 +35,7 @@ function Block({ b }) {
             <span className="doc-ico" aria-hidden="true"><PdfGlyph /></span>
             <span className="doc-txt">
               <span className="doc-lang">{d.lang}</span>
-              <span className="doc-meta">{d.kind} · PDF</span>
+              <span className="doc-meta">{d.kind} · {t('legal.pdfSuffix')}</span>
             </span>
             <span className="doc-dl" aria-hidden="true"><DownloadGlyph /></span>
           </a>
@@ -64,7 +66,9 @@ function DownloadGlyph() {
 // Jogi oldal (Adatvédelem / ÁSZF / Impresszum): bal 1/3 sticky tartalomjegyzék,
 // jobb 2/3 részletes leírás. A tartalomjegyzék görgetéskor kiemeli az aktív szekciót.
 export default function Legal({ doc }) {
-  const data = legalDocs[doc]
+  const t = useT()
+  const { legal } = useContent()
+  const data = legal[doc]
   useDocumentTitle(data?.title, data?.intro)
   const [active, setActive] = useState(data?.sections[0]?.id)
 
@@ -103,8 +107,8 @@ export default function Legal({ doc }) {
           <div className="legal-grid">
             {/* bal: sticky tartalomjegyzék */}
             <div className="legal-toc">
-              <div className="legal-toc-title">Tartalom</div>
-              <nav aria-label="Tartalomjegyzék">
+              <div className="legal-toc-title">{t('legal.toc')}</div>
+              <nav aria-label={t('legal.tocAria')}>
                 <ol>
                   {data.sections.map((s, i) => (
                     <li key={s.id}>

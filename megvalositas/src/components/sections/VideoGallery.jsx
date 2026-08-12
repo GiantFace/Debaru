@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom'
 import { Arrow, Play } from '../ui/Icons.jsx'
 import { VideoLightbox } from '../ui/VideoLightbox.jsx'
 import { useParallax } from '../../hooks/useParallax.js'
+import { useT } from '../../i18n/index.jsx'
 
 // Videó-borítókép erős, görgetés-vezérelt belső parallaxszal (a kép a keretén
 // belül mozog, mélységérzet). Külön komponens, mert a hookot nem lehet map-ben hívni.
 function VideoThumb({ v, onPlay }) {
+  const t = useT()
   const par = useParallax(0.11)
   return (
     <div className="vc-thumb">
@@ -18,7 +20,7 @@ function VideoThumb({ v, onPlay }) {
       </div>
       <span className="vc-scrim" />
       {v.tag && <span className="vc-tag">{v.tag}</span>}
-      <button className="vc-play" onClick={onPlay} aria-label={`${v.title}, videó lejátszása`}><Play /></button>
+      <button className="vc-play" onClick={onPlay} aria-label={t('videoGallery.playAria', { title: v.title })}><Play /></button>
     </div>
   )
 }
@@ -27,6 +29,7 @@ function VideoThumb({ v, onPlay }) {
 // a YouTube-videót nyitja lightboxban; a specs-ek a referencia paraméterei.
 // `projectLink=false` (pl. magán a projekt oldalon) → az egész kártya videót játszik.
 export function VideoGallery({ videos, projectLink = false }) {
+  const t = useT()
   const [active, setActive] = useState(null)
   return (
     <>
@@ -37,13 +40,13 @@ export function VideoGallery({ videos, projectLink = false }) {
             <div className="vc-info">
               <h3>{v.title}</h3>
               {v.specs && <ul className="vc-specs">{v.specs.map((s) => <li key={s}>{s}</li>)}</ul>}
-              {projectLink && <span className="vc-cta">Projekt megtekintése <Arrow /></span>}
+              {projectLink && <span className="vc-cta">{t('videoGallery.viewProject')} <Arrow /></span>}
             </div>
             {/* stretched link: az egész kártya a projektre visz (a play gomb fölötte marad),
                 a projekt oldalon viszont maga a kártya is videót játszik */}
             {projectLink
-              ? <Link to={v.href} className="vc-cover" aria-label={`${v.title}, projekt megtekintése`} />
-              : <button className="vc-cover" onClick={() => setActive(v.id)} aria-label={`${v.title}, videó lejátszása`} />}
+              ? <Link to={v.href} className="vc-cover" aria-label={t('videoGallery.projectAria', { title: v.title })} />
+              : <button className="vc-cover" onClick={() => setActive(v.id)} aria-label={t('videoGallery.playAria', { title: v.title })} />}
           </div>
         ))}
       </div>

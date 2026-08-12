@@ -7,7 +7,6 @@ import { ImageSlot } from '../components/ui/ImageSlot.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Counter } from '../components/ui/Counter.jsx'
 import { Arrow } from '../components/ui/Icons.jsx'
-import { bkvVideos } from '../data/videos.js'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import { useT } from '../i18n/index.jsx'
 import { useContent } from '../i18n/content.js'
@@ -21,7 +20,7 @@ function latestYear(y) {
 // Projektjeink oldal — kiemelt referencia-vitrin + teljes, szűrhető referencialista.
 export default function Projects() {
   const t = useT()
-  const { projects } = useContent()
+  const { projects, videos } = useContent()
   const { head, filters, featured, reference: referenceList, catLabel } = projects
   useDocumentTitle(head.crumb, head.lede)
   const [filter, setFilter] = useState('all')
@@ -89,7 +88,7 @@ export default function Projects() {
           <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 40px', maxWidth: '20ch' }}>
             {t('projects.videosHeading')}
           </Reveal>
-          <Reveal><VideoGallery videos={bkvVideos} /></Reveal>
+          <Reveal><VideoGallery videos={videos} /></Reveal>
         </div>
       </section>
 

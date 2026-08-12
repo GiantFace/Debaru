@@ -9,6 +9,7 @@ import { aboutStats, values as aboutValues, milestones as aboutMilestones, team 
 import { projectFilters as projectFilterStruct, featuredProjects as featuredStruct, referenceList as referenceStruct } from '../data/projects.js'
 import { cultureStats, benefits as careerBenefits, hiringSteps, departments as careerDepartments, jobs as jobStruct } from '../data/careers.js'
 import { contactCards as contactCardStruct } from '../data/contact.js'
+import { bkvVideos as videoStruct } from '../data/videos.js'
 
 // Szerkezet + index szerinti szöveg összefésülése (about.<key>[i]).
 const mergeByIndex = (t, struct, key) => struct.map((s, i) => ({ ...s, ...t(`${key}.${i}`) }))
@@ -67,6 +68,12 @@ export function buildContent(dict) {
       timelines: t('contact.timelines'),
       cards: contactCardStruct.map((c) => ({ ...c, title: t(c.titleKey) })),
     },
+
+    // Jogi dokumentumok (a teljes tartalom a szótárban — jogi fordítás külön)
+    legal: t('legal.docs'),
+
+    // BKV-videók: szerkezet (id/href) + szöveg (videos[i])
+    videos: videoStruct.map((v, i) => ({ ...v, ...t(`videos.${i}`) })),
   }
 }
 

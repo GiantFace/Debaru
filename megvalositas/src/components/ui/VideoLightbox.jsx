@@ -1,10 +1,12 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { Close } from './Icons.jsx'
+import { useT } from '../../i18n/index.jsx'
 
 // Videó-lightbox: teljes képernyős overlay, a YouTube-videó hanggal, vezérlőkkel.
 // Bezárás: háttérre kattintás, X, vagy Esc. Portál a body-ba (transform-safe).
 export function VideoLightbox({ videoId, onClose }) {
+  const t = useT()
   useEffect(() => {
     if (!videoId) return
     const onKey = (e) => { if (e.key === 'Escape') onClose() }
@@ -18,9 +20,9 @@ export function VideoLightbox({ videoId, onClose }) {
 
   return createPortal(
     <div className="lightbox" onClick={onClose} role="dialog" aria-modal="true">
-      <button className="lb-close" aria-label="Bezárás" onClick={onClose}><Close /></button>
+      <button className="lb-close" aria-label={t('videoLightbox.close')} onClick={onClose}><Close /></button>
       <div className="lb-frame" onClick={(e) => e.stopPropagation()}>
-        <iframe src={src} title="Debaru referenciavideó" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowFullScreen />
+        <iframe src={src} title={t('videoLightbox.title')} allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowFullScreen />
       </div>
     </div>,
     document.body,
