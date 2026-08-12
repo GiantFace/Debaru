@@ -607,7 +607,7 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
    (a szélek felé lágyan elhalványul, hogy diszkrét maradjon) */
 .timeline::before {
   content: ''; position: absolute; z-index: 0; pointer-events: none;
-  top: -9%; bottom: -9%; left: -24px; right: -24px;
+  top: 0; bottom: 0; left: -24px; right: -24px;
   background-image:
     linear-gradient(to right, var(--border) 1px, transparent 1px),
     linear-gradient(to bottom, var(--border) 1px, transparent 1px);
@@ -615,10 +615,10 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
   -webkit-mask-image: radial-gradient(102% 60% at 52% 46%, #000 24%, transparent 82%);
   mask-image: radial-gradient(102% 60% at 52% 46%, #000 24%, transparent 82%);
 }
-.tl-group { position: relative; z-index: 1; display: grid; grid-template-columns: 132px 1fr; gap: 30px; align-items: start; }
+.tl-group { position: relative; z-index: 1; display: grid; grid-template-columns: 156px 1fr; gap: 30px; align-items: start; }
 /* a bal oldali év-oszlop rögzül a görgetéskor */
-.tl-year { position: sticky; top: 96px; text-align: right; padding-top: 4px; z-index: 1; }
-.tl-year .y { display: block; font-family: var(--display); font-weight: 800; font-size: clamp(36px, 5vw, 58px); line-height: .9; letter-spacing: -.02em; background: linear-gradient(140deg, var(--accent) 15%, var(--accent-2) 85%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.tl-year { position: sticky; top: 96px; text-align: right; padding: 4px 3px 0 0; z-index: 1; }
+.tl-year .y { display: block; font-family: var(--display); font-weight: 800; font-size: clamp(34px, 4.2vw, 52px); line-height: .9; letter-spacing: -.02em; white-space: nowrap; background: linear-gradient(140deg, var(--accent) 15%, var(--accent-2) 85%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .tl-year .c { display: block; margin-top: 8px; font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); }
 /* a jobb oldali projektek gerincre fűzve (bal él = idővonal) */
 .tl-items { position: relative; display: grid; gap: 12px; border-left: 2px solid var(--border); padding: 4px 0 34px 32px; }
@@ -634,13 +634,16 @@ a.b:hover .arr { opacity: 1; transform: none; color: #fff; }
     html:not(.lite) .tl-items { animation: tlReveal linear both; animation-timeline: view(); animation-range: entry 0% entry 40%; }
     /* évszám: csak opacity (a sticky-t nem töri) */
     html:not(.lite) .tl-year { animation: tlFade linear both; animation-timeline: view(); animation-range: entry 0% entry 26%; }
-    /* rács finom parallaxa a szekció görgetése alatt → mélységérzet */
+    /* rács finom parallaxa a szekció görgetése alatt → mélységérzet.
+       FONTOS: background-position-t mozgatunk, nem transformot — így a
+       pszeudó soha nem nyúlik túl a timeline dobozán, és nem ad fantom
+       görgetési magasságot a lap aljára (különben elcsúszna az alsó rész). */
     html:not(.lite) .timeline::before { animation: gridDrift linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
   }
 }
 @keyframes tlReveal { from { opacity: 0; transform: translateY(26px) scale(.985); } to { opacity: 1; transform: none; } }
 @keyframes tlFade { from { opacity: 0; } to { opacity: 1; } }
-@keyframes gridDrift { from { transform: translateY(-4%); } to { transform: translateY(4%); } }
+@keyframes gridDrift { from { background-position: 0 -14px; } to { background-position: 0 14px; } }
 .tl-card:hover::before { background: var(--accent); border-color: var(--accent); transform: translateY(4px) scale(1.18); }
 .tl-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
 .tl-felh { font-size: 16px; font-weight: 700; color: var(--fg); margin: 0; line-height: 1.3; }
