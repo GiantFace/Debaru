@@ -159,6 +159,54 @@
       }
     }
   },
+  "about": {
+    "head": {
+      "crumb": "Rólunk",
+      "placeholder": "Fotó, mérnöki csapat / műhely",
+      "title": ["Komplett megoldások", "a tervezőasztaltól az üzembehelyezésig."],
+      "lede": "2008 óta tervezünk, gyártunk és üzemeltetünk villamos és automatizálási rendszereket. Kis mérnökirodából mára 15 fős, saját berendezésgyártó műhellyel rendelkező csapattá váltunk, de a hozzáállásunk nem változott: minden rendszert úgy építünk, mintha a sajátunk lenne.",
+      "heroPlaceholder": "Fotó, műhely / mérnöki csapat munka közben"
+    },
+    "story": {
+      "eyebrow": "A történetünk",
+      "title": "A tervezőasztaltól a kulcsrakész rendszerekig",
+      "paragraphs": [
+        "Vállalatunk története a kötöttpályás közlekedés területén kezdődött. Több mint 15 éve nyújtunk irányítástechnikai és energiaelosztási megoldásokat MÁV-, HÉV-, BKV- és SZKT-projektekben.",
+        "2023 óta az épület- és ipari automatizálás területén is aktívan jelen vagyunk. Tevékenységünk kiterjed a BMS-rendszerek teljes körű tervezésére és kivitelezésére, az ipari létesítmények energiaelosztására, a villamos karbantartásra és felülvizsgálatokra, valamint a speciális villanyszerelési munkákra – beleértve az alpintechnikával és FAM-technológiával végzett feladatokat is."
+      ]
+    },
+    "stats": [
+      { "label": "éve a piacon" },
+      { "label": "átadott projekt" },
+      { "label": "mérnök és technikus" },
+      { "text": "Belföld & külföld", "label": "aktív projektek" }
+    ],
+    "valuesTitle": { "eyebrow": "Amiben hiszünk", "title": "Négy elv, ami minden projektet vezet" },
+    "values": [
+      { "title": "Biztonság mindenek felett", "desc": "Minden rendszer szabvány szerint, bevizsgálva és dokumentálva készül, kompromisszum nélkül." },
+      { "title": "Határidőtartás", "desc": "Ipari környezetben az állásidő pénz. Reális ütemtervet adunk és be is tartjuk azt." },
+      { "title": "Átlátható működés", "desc": "Teljes dokumentáció, nyomon követhető döntések és tiszta kommunikáció a projekt minden fázisában." },
+      { "title": "Hosszú távú partnerség", "desc": "Nem projektet adunk át, hanem működő rendszert, és mellette maradunk az üzem teljes életében." }
+    ],
+    "milestonesTitle": { "eyebrow": "Mérföldkövek", "title": "A Debaru útja" },
+    "milestones": [
+      { "title": "Alapítás", "desc": "A Debaru elindul villamos- és irányítástechnikai megoldásokkal." },
+      { "title": "MÁV Zrt.", "desc": "Felsővezeték-építési projekt." },
+      { "title": "Audi Hungaria Zrt.", "desc": "Légkezelő rendszerhez kapcsolódó szoftverkészítés és üzembe helyezés." },
+      { "title": "BKV Zrt.", "desc": "BKV áramellátási diszpécserközpont, SCADA-rendszer fejlesztése, telepítése és üzembe helyezése." },
+      { "title": "MÁV Zrt.", "desc": "Váltófűtés és térvilágítás távvezérlő rendszer, valamint HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása és üzembe helyezése." },
+      { "title": "Hungrana Kft.", "desc": "22/0,4 kV-os transzformátor-alállomás, transzformátorcsere, 22 mezős elosztó tervezése, gyártása és cseréje." },
+      { "title": "AP-Systems GmbH", "desc": "ASML Berlin GmbH, 10 000 m²-nél nagyobb tisztatéri kivitelezés, teljes BMS-rendszer tervezése, gyártása és kivitelezése." }
+    ],
+    "teamTitle": "Vezetőség",
+    "teamPlaceholder": "Portré",
+    "team": [
+      { "role": "Ügyvezető" },
+      { "role": "Ügyvezető-helyettes" }
+    ],
+    "video": { "eyebrow": "Bepillantás", "title": "A műhely, ahol a rendszerek készülnek" },
+    "cta": { "title": "Legyen Ön a következő hosszútávú partnerünk!", "button": "Beszéljünk!" }
+  },
   "footer": {
     "tagline": "Ipari automatizálás, villamos energetika és vezérléstechnika, tervezéstől a folyamatos üzemig.",
     "rights": "Minden jog fenntartva.",

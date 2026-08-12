@@ -5,20 +5,24 @@ import { StatBlock } from '../components/ui/StatBlock.jsx'
 import { ParallaxMedia } from '../components/ui/ParallaxMedia.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { infoIcons } from '../components/ui/Icons.jsx'
-import { aboutHead, story, aboutStats, values, milestones, team } from '../data/about.js'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
+import { useT } from '../i18n/index.jsx'
+import { useContent } from '../i18n/content.js'
 
 // Rólunk oldal — a terv rolunk.html hű React változata.
 export default function About() {
-  useDocumentTitle(aboutHead.crumb, aboutHead.lede)
+  const t = useT()
+  const { about } = useContent()
+  const { head, story, stats, values, milestones, team } = about
+  useDocumentTitle(head.crumb, head.lede)
   return (
     <>
-      <PageHead placeholder={aboutHead.headPlaceholder} trail={[{ label: aboutHead.crumb }]} title={aboutHead.title} lede={aboutHead.lede} />
+      <PageHead placeholder={head.placeholder} trail={[{ label: head.crumb }]} title={head.title} lede={head.lede} />
 
       {/* nagy fotó */}
       <section className="section" style={{ paddingTop: 32 }}>
         <div className="wrap">
-          <ParallaxMedia reveal speed={0.15} style={{ height: 440 }} placeholder={aboutHead.heroPlaceholder} />
+          <ParallaxMedia reveal speed={0.15} style={{ height: 440 }} placeholder={head.heroPlaceholder} />
         </div>
       </section>
 
@@ -34,7 +38,7 @@ export default function About() {
               ))}
             </Reveal>
             <RevealStagger className="grid g-2" step={90} style={{ gap: 16 }}>
-              {aboutStats.map((s) => (
+              {stats.map((s) => (
                 <div className="card" key={s.label}>
                   {s.text
                     ? <div className="stat"><div className="num" style={{ fontSize: 26 }}>{s.text}</div><div className="lbl">{s.label}</div></div>
@@ -47,13 +51,13 @@ export default function About() {
       </section>
 
       {/* full-bleed háttérvideó */}
-      <VideoBand videoId="8t5K-FrwARQ" start={3} eyebrow="Bepillantás" title="A műhely, ahol a rendszerek készülnek" />
+      <VideoBand videoId="8t5K-FrwARQ" start={3} eyebrow={t('about.video.eyebrow')} title={t('about.video.title')} />
 
       {/* értékek */}
       <section className="section">
         <div className="wrap">
-          <Reveal className="eyebrow">Amiben hiszünk</Reveal>
-          <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 48px', maxWidth: '16ch' }}>Négy elv, ami minden projektet vezet</Reveal>
+          <Reveal className="eyebrow">{t('about.valuesTitle.eyebrow')}</Reveal>
+          <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 48px', maxWidth: '16ch' }}>{t('about.valuesTitle.title')}</Reveal>
           <RevealStagger className="grid g-4" step={90}>
             {values.map((v) => {
               const Icon = infoIcons[v.icon]
@@ -74,8 +78,8 @@ export default function About() {
       {/* mérföldkövek */}
       <section className="section">
         <div className="wrap">
-          <Reveal className="eyebrow">Mérföldkövek</Reveal>
-          <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 48px' }}>A Debaru útja</Reveal>
+          <Reveal className="eyebrow">{t('about.milestonesTitle.eyebrow')}</Reveal>
+          <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 48px' }}>{t('about.milestonesTitle.title')}</Reveal>
           <RevealStagger step={90}>
             {milestones.map((m, i) => (
               <div key={m.year} style={{ display: 'grid', gridTemplateColumns: '120px 1fr', gap: 28, padding: '22px 0', borderTop: '1px solid var(--border)', borderBottom: i === milestones.length - 1 ? '1px solid var(--border)' : undefined }}>
@@ -95,13 +99,13 @@ export default function About() {
       {/* csapat */}
       <section className="section">
         <div className="wrap">
-          <Reveal as="h2" style={{ fontSize: 'clamp(30px,4.4vw,48px)', margin: '0 0 48px', textAlign: 'center' }}>Vezetőség</Reveal>
+          <Reveal as="h2" style={{ fontSize: 'clamp(30px,4.4vw,48px)', margin: '0 0 48px', textAlign: 'center' }}>{t('about.teamTitle')}</Reveal>
           <RevealStagger className="grid g-2" step={80}>
-            {team.map((t) => (
-              <div key={t.name} style={{ textAlign: 'center' }}>
-                <ParallaxMedia speed={0.06} style={{ height: 300, marginBottom: 16 }} placeholder="Portré" />
-                <h3 style={{ fontSize: 19 }}>{t.name}</h3>
-                <p className="muted" style={{ fontSize: 14.5 }}>{t.role}</p>
+            {team.map((tm) => (
+              <div key={tm.name} style={{ textAlign: 'center' }}>
+                <ParallaxMedia speed={0.06} style={{ height: 300, marginBottom: 16 }} placeholder={t('about.teamPlaceholder')} />
+                <h3 style={{ fontSize: 19 }}>{tm.name}</h3>
+                <p className="muted" style={{ fontSize: 14.5 }}>{tm.role}</p>
               </div>
             ))}
           </RevealStagger>
@@ -112,8 +116,8 @@ export default function About() {
       <section className="section-sm">
         <div className="wrap">
           <Reveal className="card" style={{ textAlign: 'center', padding: '72px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
-            <h2 style={{ fontSize: 'clamp(28px,4vw,44px)', maxWidth: '20ch', margin: '0 auto 18px' }}>Legyen Ön a következő hosszútávú partnerünk!</h2>
-            <Button to="/kapcsolat" arrow>Beszéljünk!</Button>
+            <h2 style={{ fontSize: 'clamp(28px,4vw,44px)', maxWidth: '20ch', margin: '0 auto 18px' }}>{t('about.cta.title')}</h2>
+            <Button to="/kapcsolat" arrow>{t('about.cta.button')}</Button>
           </Reveal>
         </div>
       </section>
