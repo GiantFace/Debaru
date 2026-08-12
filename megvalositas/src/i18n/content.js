@@ -8,6 +8,7 @@ import { services as serviceStruct } from '../data/services.js'
 import { aboutStats, values as aboutValues, milestones as aboutMilestones, team as aboutTeam } from '../data/about.js'
 import { projectFilters as projectFilterStruct, featuredProjects as featuredStruct, referenceList as referenceStruct } from '../data/projects.js'
 import { cultureStats, benefits as careerBenefits, hiringSteps, departments as careerDepartments, jobs as jobStruct } from '../data/careers.js'
+import { contactCards as contactCardStruct } from '../data/contact.js'
 
 // Szerkezet + index szerinti szöveg összefésülése (about.<key>[i]).
 const mergeByIndex = (t, struct, key) => struct.map((s, i) => ({ ...s, ...t(`${key}.${i}`) }))
@@ -57,6 +58,14 @@ export function buildContent(dict) {
       departments: careerDepartments.map((d) => ({ key: d.key, label: t(`careers.departments.${d.key}`) })),
       jobs,
       jobBySlug: Object.fromEntries(jobs.map((j) => [j.slug, j])),
+    },
+
+    // Kapcsolat: fej + terület/határidő listák + elérhetőség-kártyák
+    contact: {
+      head: t('contact.head'),
+      areas: t('contact.areas'),
+      timelines: t('contact.timelines'),
+      cards: contactCardStruct.map((c) => ({ ...c, title: t(c.titleKey) })),
     },
   }
 }
