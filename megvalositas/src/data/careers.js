@@ -32,7 +32,7 @@ export const careerIntro = {
 
 // Számláló-statisztikák (a Rólunk/Home mintájára).
 export const cultureStats = [
-  { to: 45, label: 'mérnök és technikus' },
+  { to: 15, suffix: '+', label: 'mérnök és technikus' },
   { to: 15, suffix: '+', label: 'év a szakmában' },
   { to: 4, label: 'ország aktív projektjei' },
   { to: 24, suffix: '/7', label: 'ügyeleti csapat' },
@@ -43,7 +43,7 @@ export const benefits = [
   { icon: 'growth', title: 'Valódi szakmai fejlődés', desc: 'A kisfeszültségtől a SCADA-ig, tervezéstől a helyszíni üzembe helyezésig, nálunk a teljes vertikumot megismered, nem egy szűk résfeladatot.' },
   { icon: 'projects', title: 'Kézzelfogható projektek', desc: 'Városi közlekedés, energetika, ipari üzemek, adatközpontok. Olyan rendszereken dolgozol, amelyeket nap mint nap használnak.' },
   { icon: 'learning', title: 'Folyamatos képzés', desc: 'Gyártói tréningek és tanúsítványok: Siemens TIA Portal, Schneider, B&R, EPLAN. A fejlődésedbe befektetünk.' },
-  { icon: 'team', title: 'Erős mérnökcsapat', desc: '45 fős, tapasztalt csapat, ahol a tudásmegosztás alap. Mentorálás pályakezdőknek, szakmai kihívás a tapasztaltaknak.' },
+  { icon: 'team', title: 'Erős mérnökcsapat', desc: '15 fős, tapasztalt csapat, ahol a tudásmegosztás alap. Mentorálás pályakezdőknek, szakmai kihívás a tapasztaltaknak.' },
   { icon: 'stability', title: 'Stabil háttér', desc: '15+ év, hazai és nemzetközi referenciák, kiszámítható működés. Nem startup-hullámvasút, biztos alapokon álló cég.' },
   { icon: 'balance', title: 'Rugalmasság & korrektség', desc: 'Hibrid munkarend ott, ahol a pozíció engedi, korrekt túlóra- és kiszállás-elszámolás, minőségi eszközök és védőfelszerelés.' },
 ]

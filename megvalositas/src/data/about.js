@@ -4,7 +4,7 @@ export const aboutHead = {
   crumb: 'Rólunk',
   headPlaceholder: 'Fotó, mérnöki csapat / műhely',
   title: ['Komplett megoldások', 'a tervezőasztaltól az üzembehelyezésig.'],
-  lede: '2008 óta tervezünk, gyártunk és üzemeltetünk villamos és automatizálási rendszereket. Kis mérnökirodából mára 18 fős, saját berendezésgyártó műhellyel rendelkező csapattá váltunk, de a hozzáállásunk nem változott: minden rendszert úgy építünk, mintha a sajátunk lenne.',
+  lede: '2008 óta tervezünk, gyártunk és üzemeltetünk villamos és automatizálási rendszereket. Kis mérnökirodából mára 15 fős, saját berendezésgyártó műhellyel rendelkező csapattá váltunk, de a hozzáállásunk nem változott: minden rendszert úgy építünk, mintha a sajátunk lenne.',
   heroPlaceholder: 'Fotó, műhely / mérnöki csapat munka közben',
 }
 
@@ -19,8 +19,8 @@ export const story = {
 
 export const aboutStats = [
   { to: 17, suffix: '+', label: 'éve a piacon' },
-  { to: 350, suffix: '+', label: 'átadott projekt' },
-  { to: 18, label: 'mérnök és technikus' },
+  { to: 100, suffix: '+', label: 'átadott projekt' },
+  { to: 15, suffix: '+', label: 'mérnök és technikus' },
   { text: 'Belföld & külföld', label: 'aktív projektek' },
 ]
 

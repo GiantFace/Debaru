@@ -19,7 +19,7 @@ function Stat({ to, decimals, suffix, label }) {
 
 // Bento rács: bevezető + szolgáltatások + számok, egy vizuális blokkban.
 export function Bento() {
-  const { years, team } = bentoStats
+  const { years, projects } = bentoStats
   return (
     <section className="section" id="szolg">
       <div className="wrap">
@@ -40,7 +40,7 @@ export function Bento() {
           </div>
 
           <Stat to={years.to} suffix={years.suffix} label={years.label} />
-          <Stat to={team.to} label={team.label} />
+          <Stat to={projects.to} suffix={projects.suffix} label={projects.label} />
 
           <div className="b b-img b-2w">
             <ParallaxImage className="pm-layer" speed={0.12} placeholder="Fotó, saját berendezésgyártó műhely" />

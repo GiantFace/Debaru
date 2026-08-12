@@ -23,7 +23,7 @@ export const references = ['MÁV', 'BKV', 'MOL', 'Paks II.', 'E.ON', 'Audi']
 // Bento — vezető stat és szolgáltatás-kártyák számlálókkal keverve.
 export const bentoStats = {
   years: { to: 17, suffix: '+', label: 'év tapasztalat az iparban' },
-  team: { to: 15, suffix: '+', label: 'mérnök és technikus' },
+  projects: { to: 100, suffix: '+', label: 'átadott projekt' },
 }
 
 // A szolgáltatások adatai átkerültek a data/services.js-be (egységes forrás).
