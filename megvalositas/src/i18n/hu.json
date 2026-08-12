@@ -746,7 +746,10 @@
     "nameLabel": "Név *",
     "emailLabel": "E-mail *",
     "phoneLabel": "Telefon",
-    "gdprReq": "Az adatkezelési tájékoztató elfogadása kötelező."
+    "gdprReq": "Az adatkezelési tájékoztató elfogadása kötelező.",
+    "optional": " · opcionális",
+    "clear": "Nincs megadva",
+    "selectPlaceholder": "Válasszon…"
   },
   "contact": {
     "head": {
