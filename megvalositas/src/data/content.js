@@ -1,17 +1,14 @@
 // Az oldal teljes tartalma egy helyen — a komponensek innen renderelnek.
 // (Egyoldalas megvalósítás: a hivatkozások szekció-horgonyokra mutatnak.)
 
+// Főnavigáció — szerkezet (útvonal + kulcs); a felirat az i18n szótárból (nav.*).
 export const nav = [
-  { label: 'Kezdőlap', to: '/' },
-  { label: 'Rólunk', to: '/rolunk' },
-  { label: 'Szolgáltatások', to: '/szolgaltatasok' },
-  { label: 'Projektjeink', to: '/projektjeink' },
-  { label: 'Kapcsolat', to: '/kapcsolat' },
+  { key: 'home', to: '/' },
+  { key: 'about', to: '/rolunk' },
+  { key: 'services', to: '/szolgaltatasok' },
+  { key: 'projects', to: '/projektjeink' },
+  { key: 'contact', to: '/kapcsolat' },
 ]
-
-// Aktív nyelvek (a nyelvválasztó legördülőben). A tartalom jelenleg HU;
-// EN/DE választásakor „hamarosan" jelzés — valódi fordítás (i18n) később.
-export const langs = ['HU', 'EN', 'DE']
 
 export const heroStats = [
   { v: '17+', k: 'év' },
@@ -68,29 +65,31 @@ export const faq = [
   { q: 'Milyen platformokon dolgoznak?', a: 'Siemens, SAIA, Qronox és Wago PLC-k szoftveres megoldása, EPLAN alapú villamostervezés, WSCAD és EPLAN alapú 3D tervezés, HMI-programozás és saját SCADA-integráció, meglévő rendszerekhez is illesztve.' },
 ]
 
+// Lábléc — szerkezet (útvonal + kulcs); a feliratok az i18n szótárból.
+// A `labelKey` az i18n útvonal; a nyers `label` tulajdonnév (telefon/e-mail).
 export const footer = {
   columns: [
-    { title: 'Cég', links: [
-      { label: 'Rólunk', to: '/rolunk' },
-      { label: 'Szolgáltatások', to: '/szolgaltatasok' },
-      { label: 'Projektjeink', to: '/projektjeink' },
-      { label: 'Karrier', to: '/karrier' },
-      { label: 'Kapcsolat', to: '/kapcsolat' },
-      { label: 'GYIK', to: '/#gyik' },
+    { key: 'company', links: [
+      { labelKey: 'nav.about', to: '/rolunk' },
+      { labelKey: 'nav.services', to: '/szolgaltatasok' },
+      { labelKey: 'nav.projects', to: '/projektjeink' },
+      { labelKey: 'nav.careers', to: '/karrier' },
+      { labelKey: 'nav.contact', to: '/kapcsolat' },
+      { labelKey: 'nav.faq', to: '/#gyik' },
     ] },
-    { title: 'Szolgáltatás', links: [
-      { label: 'BMS', to: '/szolgaltatasok#bms' },
-      { label: 'Energiaellátás', to: '/szolgaltatasok#energiaellatas' },
-      { label: 'Berendezésgyártás', to: '/szolgaltatasok#berendezesgyartas' },
-      { label: 'Karbantartás', to: '/szolgaltatasok#karbantartas' },
-      { label: 'Kötöttpályás közlekedés', to: '/szolgaltatasok#kotottpalyas-kozlekedes' },
-      { label: 'Tisztatéri kivitelezés', to: '/szolgaltatasok#tisztateri-villamoskivitelezes' },
-      { label: 'SCADA', to: '/szolgaltatasok#scada' },
-      { label: 'KNX', to: '/szolgaltatasok#knx' },
+    { key: 'services', links: [
+      { labelKey: 'footer.services.bms', to: '/szolgaltatasok#bms' },
+      { labelKey: 'footer.services.energiaellatas', to: '/szolgaltatasok#energiaellatas' },
+      { labelKey: 'footer.services.berendezesgyartas', to: '/szolgaltatasok#berendezesgyartas' },
+      { labelKey: 'footer.services.karbantartas', to: '/szolgaltatasok#karbantartas' },
+      { labelKey: 'footer.services.kotottpalyas', to: '/szolgaltatasok#kotottpalyas-kozlekedes' },
+      { labelKey: 'footer.services.tisztateri', to: '/szolgaltatasok#tisztateri-villamoskivitelezes' },
+      { labelKey: 'footer.services.scada', to: '/szolgaltatasok#scada' },
+      { labelKey: 'footer.services.knx', to: '/szolgaltatasok#knx' },
     ] },
-    { title: 'Kapcsolat', links: [
+    { key: 'contact', links: [
       { label: '+36 1 445 4166', href: 'tel:+3614454166' },
       { label: 'info@debaru.hu', href: 'mailto:info@debaru.hu' },
-    ], address: '1117 Budapest,\nBudafoki út 97.' },
+    ], address: true },
   ],
 }

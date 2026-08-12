@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Kezdőlap",
+    "about": "Rólunk",
+    "services": "Szolgáltatások",
+    "projects": "Projektjeink",
+    "contact": "Kapcsolat",
+    "careers": "Karrier",
+    "faq": "GYIK"
+  },
+  "common": {
+    "quote": "Ajánlatot kérek"
+  },
+  "layout": {
+    "skip": "Ugrás a tartalomra"
+  },
+  "navAria": {
+    "brand": "Debaru kezdőlap",
+    "main": "Fő navigáció",
+    "lang": "Nyelvválasztó",
+    "menu": "Menü",
+    "menuClose": "Menü bezárása",
+    "mobileNav": "Mobil navigáció"
+  },
+  "footer": {
+    "tagline": "Ipari automatizálás, villamos energetika és vezérléstechnika, tervezéstől a folyamatos üzemig.",
+    "rights": "Minden jog fenntartva.",
+    "address": "1117 Budapest,\nBudafoki út 97.",
+    "brandAlt": "Debaru",
+    "title": {
+      "company": "Cég",
+      "services": "Szolgáltatás",
+      "contact": "Kapcsolat"
+    },
+    "services": {
+      "bms": "BMS",
+      "energiaellatas": "Energiaellátás",
+      "berendezesgyartas": "Berendezésgyártás",
+      "karbantartas": "Karbantartás",
+      "kotottpalyas": "Kötöttpályás közlekedés",
+      "tisztateri": "Tisztatéri kivitelezés",
+      "scada": "SCADA",
+      "knx": "KNX"
+    },
+    "legal": {
+      "privacy": "Adatvédelem",
+      "terms": "ÁSZF",
+      "imprint": "Impresszum"
+    }
+  },
+  "cookie": {
+    "aria": "Süti-beállítások",
+    "title": "Sütik kezelése",
+    "text": "Az oldal működéséhez és a spam elleni védelemhez (Cloudflare Turnstile) szükséges sütiket használunk. Anonim, forgalommérési célú sütiket csak az Ön hozzájárulásával, részletek az ",
+    "link": "Adatkezelési tájékoztatóban",
+    "necessary": "Csak a szükségesek",
+    "acceptAll": "Összes elfogadása"
+  }
+}

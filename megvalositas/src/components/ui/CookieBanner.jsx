@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { loadAnalytics } from '../../lib/analytics.js'
+import { useT } from '../../i18n/index.jsx'
 
 const KEY = 'debaru-cookie-consent'
 
@@ -8,6 +9,7 @@ const KEY = 'debaru-cookie-consent'
 // de a szabványos két gombot (összes / csak szükséges) kínáljuk — jövőálló, és
 // a döntést eltároljuk. Default export: a Layout lazy-vel tölti be.
 export default function CookieBanner() {
+  const t = useT()
   const [show, setShow] = useState(false)
 
   useEffect(() => {
@@ -22,16 +24,14 @@ export default function CookieBanner() {
 
   if (!show) return null
   return (
-    <div className="cookie-banner" role="region" aria-label="Süti-beállítások">
-      <strong>Sütik kezelése</strong>
+    <div className="cookie-banner" role="region" aria-label={t('cookie.aria')}>
+      <strong>{t('cookie.title')}</strong>
       <p>
-        Az oldal működéséhez és a spam elleni védelemhez (Cloudflare Turnstile) szükséges
-        sütiket használunk. Anonim, forgalommérési célú sütiket csak az Ön hozzájárulásával,
-        részletek az <Link to="/adatvedelem">Adatkezelési tájékoztatóban</Link>.
+        {t('cookie.text')}<Link to="/adatvedelem">{t('cookie.link')}</Link>.
       </p>
       <div className="ck-actions">
-        <button type="button" className="btn btn-ghost" onClick={decide('necessary')}>Csak a szükségesek</button>
-        <button type="button" className="btn btn-primary" onClick={decide('all')}>Összes elfogadása</button>
+        <button type="button" className="btn btn-ghost" onClick={decide('necessary')}>{t('cookie.necessary')}</button>
+        <button type="button" className="btn btn-primary" onClick={decide('all')}>{t('cookie.acceptAll')}</button>
       </div>
     </div>
   )

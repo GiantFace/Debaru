@@ -1,6 +1,7 @@
 import { lazy } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { ToastProvider } from './hooks/useToast.jsx'
+import { LanguageProvider } from './i18n/index.jsx'
 import { Layout } from './components/layout/Layout.jsx'
 
 // Route-onkénti code-splitting — így pl. a telefon-lib csak a Kapcsolat oldallal töltődik.
@@ -20,6 +21,7 @@ const NotFound = lazy(() => import('./pages/NotFound.jsx'))
 export default function App() {
   return (
     <ToastProvider>
+      <LanguageProvider>
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
@@ -43,6 +45,7 @@ export default function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      </LanguageProvider>
     </ToastProvider>
   )
 }
