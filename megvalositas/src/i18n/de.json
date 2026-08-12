@@ -9,1560 +9,1560 @@
     "faq": "FAQ"
   },
   "common": {
-    "quote": "Ajánlatot kérek"
+    "quote": "Angebot anfordern"
   },
   "layout": {
-    "skip": "Ugrás a tartalomra"
+    "skip": "Zum Inhalt springen"
   },
   "navAria": {
-    "brand": "Debaru kezdőlap",
-    "main": "Fő navigáció",
-    "lang": "Nyelvválasztó",
+    "brand": "Debaru Startseite",
+    "main": "Hauptnavigation",
+    "lang": "Sprachauswahl",
     "menu": "Menü",
-    "menuClose": "Menü bezárása",
-    "mobileNav": "Mobil navigáció"
+    "menuClose": "Menü schließen",
+    "mobileNav": "Mobile Navigation"
   },
   "home": {
     "meta": {
-      "title": "Ipari automatizálás és villamos rendszerek",
-      "desc": "Ipari automatizálás, villamos energetika és vezérléstechnika egy kézben, tervezés, kapcsolószekrény-gyártás, SCADA és kivitelezés a koncepciótól a folyamatos üzemig."
+      "title": "Industrieautomatisierung und elektrische Systeme",
+      "desc": "Industrieautomatisierung, elektrische Energietechnik und Steuerungstechnik aus einer Hand – Planung, Schaltschrankbau, SCADA und Bauausführung, vom Konzept bis zum laufenden Betrieb."
     },
     "video": {
-      "eyebrow": "Kiemelt referencia",
-      "title": "BKV Etele téri villamos-végállomás"
+      "eyebrow": "Ausgewählte Referenz",
+      "title": "BKV-Straßenbahn-Endstation Etele tér"
     }
   },
   "hero": {
-    "statsLabel": "Élesben, folyamatosan",
+    "statsLabel": "Im Live-Betrieb, rund um die Uhr",
     "stats": [
-      "év",
-      "biztonság"
+      "Jahre",
+      "im Betrieb"
     ],
-    "eyebrow": "Ipari automatizálás · PLC / SCADA · Áramellátás",
+    "eyebrow": "Industrieautomatisierung · PLC / SCADA · Stromversorgung",
     "title": [
-      "Megbízható rendszerek,",
-      "kritikus infrastruktúrákhoz."
+      "Zuverlässige Systeme",
+      "für kritische Infrastrukturen."
     ],
     "cta": {
-      "projects": "Projektjeink",
-      "contact": "Kapcsolat"
+      "projects": "Projekte",
+      "contact": "Kontakt"
     },
-    "placeholder": "Hero fotó, kapcsolószekrény / üzem / mérnöki munka"
+    "placeholder": "Hero-Foto: Schaltschrank / Anlage / Ingenieurarbeit"
   },
   "bento": {
-    "eyebrow": "Amit csinálunk",
-    "title": "Teljes villamos életciklus, egy partnerrel",
-    "text": "A koncepciótól a tervezésen és gyártáson át az üzemeltetésig, nem kell külön beszállítókat koordinálnia.",
-    "allServices": "Összes szolgáltatás",
+    "eyebrow": "Was wir tun",
+    "title": "Der komplette elektrische Lebenszyklus – mit einem Partner",
+    "text": "Vom Konzept über Planung und Fertigung bis zum Betrieb – Sie müssen keine separaten Lieferanten koordinieren.",
+    "allServices": "Alle Leistungen",
     "stats": {
-      "years": "év tapasztalat az iparban",
-      "projects": "átadott projekt"
+      "years": "Jahre Branchenerfahrung",
+      "projects": "übergebene Projekte"
     },
     "workshop": {
-      "placeholder": "Fotó, saját berendezésgyártó műhely",
-      "title": "Saját berendezésgyártó műhely",
-      "text": "Automatika és energiaelosztó szekrények gyártása saját telephelyen."
+      "placeholder": "Foto: eigene Gerätebau-Werkstatt",
+      "title": "Eigene Gerätebau-Werkstatt",
+      "text": "Fertigung von Automatisierungs- und Energieverteilerschränken am eigenen Standort."
     }
   },
   "process": {
-    "eyebrow": "Hogyan dolgozunk",
-    "title": "A koncepciótól a folyamatos üzemig",
-    "lede": "Főbb területeink: BMS, energiaellátás, karbantartás, kötöttpályás közlekedés és tisztatéri villamoskivitelezés.",
+    "eyebrow": "Wie wir arbeiten",
+    "title": "Vom Konzept bis zum laufenden Betrieb",
+    "lede": "Unsere Hauptbereiche: BMS, Stromversorgung, Wartung, schienengebundener Verkehr und Reinraum-Elektroinstallation.",
     "steps": [
       {
-        "title": "Felmérés & koncepció",
-        "desc": "Helyszíni bejárás, igényfelmérés és megvalósíthatósági terv."
+        "title": "Aufnahme & Konzept",
+        "desc": "Begehung vor Ort, Bedarfsermittlung und Machbarkeitsstudie."
       },
       {
-        "title": "Tervezés és programozás",
-        "desc": "ATEX tervezés, hardvertervezés, villamos tervezés, villámvédelmi tervezés és szoftverkészítés."
+        "title": "Planung und Programmierung",
+        "desc": "ATEX-Planung, Hardware-Entwurf, Elektroplanung, Blitzschutzplanung und Softwareentwicklung."
       },
       {
-        "title": "Gyártás & kivitelezés",
-        "desc": "Berendezésgyártás saját műhelyben, nyomvonalépítés, kábelezés, helyszíni szerelés és üzembe helyezés."
+        "title": "Fertigung & Montage",
+        "desc": "Gerätebau in eigener Werkstatt, Trassenbau, Verkabelung, Montage vor Ort und Inbetriebnahme."
       },
       {
-        "title": "Üzemeltetés",
-        "desc": "Karbantartás és folyamatos szakmai támogatás."
+        "title": "Betrieb",
+        "desc": "Wartung und laufende fachliche Unterstützung."
       }
     ]
   },
   "faq": {
-    "eyebrow": "GYIK",
-    "title": "Gyakori kérdések",
+    "eyebrow": "FAQ",
+    "title": "Häufige Fragen",
     "items": [
       {
-        "q": "Hogyan kérhetek ajánlatot?",
-        "a": "Töltse ki a kapcsolati űrlapot, kérjen e-mailben ajánlatot vagy hívjon minket. 3 munkanapon belül visszajelzünk egy első szakmai állásfoglalással."
+        "q": "Wie kann ich ein Angebot anfordern?",
+        "a": "Füllen Sie das Kontaktformular aus, fordern Sie per E-Mail ein Angebot an oder rufen Sie uns an. Wir melden uns innerhalb von 3 Arbeitstagen mit einer ersten fachlichen Einschätzung bei Ihnen."
       },
       {
-        "q": "Vállalnak munkát vidéken és külföldön is?",
-        "a": "Igen. Vállalatunk az ország bármely területén és külföldön is vállal munkát."
+        "q": "Übernehmen Sie Aufträge landesweit und im Ausland?",
+        "a": "Ja. Unser Unternehmen übernimmt Aufträge überall im Land und auch im Ausland."
       },
       {
-        "q": "Van sürgősségi ügyelet?",
-        "a": "Egyedi szerződés alapján hibaelhárítási ügyeletet tartunk a karbantartási szerződéssel rendelkező ügyfeleink számára, garantált kiszállási idővel."
+        "q": "Gibt es einen Notdienst?",
+        "a": "Auf Basis einer individuellen Vereinbarung bieten wir für Kunden mit Wartungsvertrag einen Störungs-Bereitschaftsdienst mit garantierter Anfahrtszeit."
       },
       {
-        "q": "Milyen platformokon dolgoznak?",
-        "a": "Siemens, SAIA, Qronox és Wago PLC-k szoftveres megoldása, EPLAN alapú villamostervezés, WSCAD és EPLAN alapú 3D tervezés, HMI-programozás és saját SCADA-integráció, meglévő rendszerekhez is illesztve."
+        "q": "Mit welchen Plattformen arbeiten Sie?",
+        "a": "Softwarelösungen für Siemens-, SAIA-, Qronox- und Wago-PLCs, EPLAN-basierte Elektroplanung, WSCAD- und EPLAN-basierte 3D-Planung, HMI-Programmierung und eigene SCADA-Integration, auch an bestehende Systeme angepasst."
       }
     ]
   },
   "cta": {
-    "title": "Szeretne egy precíz, minőségi megoldást?",
-    "text": "Kérjen díjmentes szakmai konzultációt. Kollégáink 3 munkanapon belül visszajeleznek.",
-    "button": "Kapcsolatfelvétel"
+    "title": "Wünschen Sie eine präzise, hochwertige Lösung?",
+    "text": "Fordern Sie eine kostenlose Fachberatung an. Unser Team meldet sich innerhalb von 3 Arbeitstagen bei Ihnen.",
+    "button": "Kontakt aufnehmen"
   },
   "refstrip": {
-    "label": "Partnereink",
-    "aria": "Partnereink és referenciáink"
+    "label": "Unsere Partner",
+    "aria": "Unsere Partner und Referenzen"
   },
   "videoband": {
-    "watch": "Teljes videó a YouTube-on",
-    "titleFallback": "Debaru bemutató videó",
-    "pause": "Videó szüneteltetése",
-    "play": "Videó lejátszása"
+    "watch": "Vollständiges Video auf YouTube",
+    "titleFallback": "Debaru Vorstellungsvideo",
+    "pause": "Video pausieren",
+    "play": "Video abspielen"
   },
   "services": {
     "head": {
-      "crumb": "Szolgáltatások",
-      "placeholder": "Fotó, üzem / technológia",
+      "crumb": "Leistungen",
+      "placeholder": "Foto, Anlage / Technologie",
       "title": [
-        "Teljes villamos szolgáltatás,",
-        "egy partnerrel."
+        "Komplette Elektroleistungen,",
+        "von einem Partner."
       ],
-      "lede": "A tervezéstől és szoftverkészítéstől a gyártáson és kivitelezésen át az üzembe helyezésig és karbantartásig, nem kell külön beszállítókat koordinálnia. Mindent egy kézben adunk."
+      "lede": "Von der Planung und Softwareentwicklung über die Fertigung und Montage bis zur Inbetriebnahme und Wartung müssen Sie keine separaten Lieferanten koordinieren. Wir liefern alles aus einer Hand."
     },
     "cta": {
-      "title": "Nem biztos, melyik szolgáltatás illik a feladatához?",
-      "text": "Írja le a kihívást, mérnökeink megmondják, mi a legjobb megoldás.",
-      "button": "Konzultációt kérek"
+      "title": "Sie sind sich nicht sicher, welche Leistung zu Ihrer Aufgabe passt?",
+      "text": "Beschreiben Sie Ihre Herausforderung, und unsere Ingenieure nennen Ihnen die beste Lösung.",
+      "button": "Beratung anfordern"
     },
     "items": {
       "bms": {
         "chip": "BMS",
         "tagLabel": "BMS",
         "title": "BMS",
-        "short": "Komplex épületfelügyeleti (BMS) rendszerek.",
-        "desc": "Komplex BMS-rendszerek tervezése, programozása és vizuális megjelenítése. Siemens, SAIA, Qronox és Wago PLC-k szoftveres megoldása, EPLAN-alapú villamostervezés, WSCAD- és EPLAN-alapú 3D tervezés, HMI-programozás és saját SCADA-integráció, meglévő rendszerekhez is illesztve.",
+        "short": "Komplexe Gebäudeleittechnik-Systeme (BMS).",
+        "desc": "Planung, Programmierung und Visualisierung komplexer BMS-Systeme. Softwarelösungen für Siemens-, SAIA-, Qronox- und Wago-PLCs, EPLAN-basierte Elektroplanung, WSCAD- und EPLAN-basierte 3D-Planung, HMI-Programmierung und eigene SCADA-Integration, auch an bestehende Systeme angepasst.",
         "items": [
-          "PLC-szoftver: Siemens, SAIA, Qronox, Wago",
-          "EPLAN-alapú villamostervezés, WSCAD/EPLAN 3D",
-          "HMI-programozás és SCADA-integráció"
+          "PLC-Software: Siemens, SAIA, Qronox, Wago",
+          "EPLAN-basierte Elektroplanung, WSCAD/EPLAN 3D",
+          "HMI-Programmierung und SCADA-Integration"
         ],
-        "placeholder": "Fotó, BMS / vezérlőterem"
+        "placeholder": "Foto, BMS / Leitwarte"
       },
       "energiaellatas": {
-        "chip": "Energiaellátás",
-        "tagLabel": "Energiaellátás",
-        "title": "Energiaellátás",
-        "short": "Kis- és középfeszültségű energiaellátás.",
-        "desc": "Komplex energiaellátási rendszerek tervezése, kivitelezése és felügyelete. Kis- és középfeszültségű transzformátorok, elosztórendszerek, kapcsoló- és vezérlőberendezések, szünetmentes tápegységek, aggregátoros rendszerek, valamint energiafelügyeleti és fogyasztásmérési megoldások, EPLAN-alapú tervezéssel, védelmi és vezérlési integrációval, hálózatkorszerűsítéssel.",
+        "chip": "Energieversorgung",
+        "tagLabel": "Energieversorgung",
+        "title": "Energieversorgung",
+        "short": "Nieder- und Mittelspannungs-Energieversorgung.",
+        "desc": "Planung, Bauausführung und Überwachung komplexer Energieversorgungssysteme. Nieder- und Mittelspannungstransformatoren, Verteilersysteme, Schalt- und Steuergeräte, unterbrechungsfreie Stromversorgungen (USV), Aggregat-Systeme sowie Energieüberwachungs- und Verbrauchsmesslösungen, mit EPLAN-basierter Planung, Schutz- und Steuerungsintegration sowie Netzmodernisierung.",
         "items": [
-          "Transzformátorok, elosztók, kapcsoló- és vezérlőberendezések",
-          "UPS, aggregátoros rendszerek, energiafelügyelet",
-          "EPLAN-tervezés, védelmi és vezérlési integráció"
+          "Transformatoren, Verteiler, Schalt- und Steuergeräte",
+          "USV, Aggregat-Systeme, Energieüberwachung",
+          "EPLAN-Planung, Schutz- und Steuerungsintegration"
         ],
-        "placeholder": "Fotó, transzformátor / elosztó"
+        "placeholder": "Foto, Transformator / Verteiler"
       },
       "berendezesgyartas": {
-        "chip": "Berendezésgyártás",
-        "tagLabel": "Gyártás",
-        "title": "Berendezésgyártás",
-        "short": "Egyedi és sorozatgyártott villamos berendezések.",
-        "desc": "Egyedi és sorozatgyártott villamos kapcsoló-, vezérlő- és elosztóberendezések komplett gyártása, szerelése és dokumentálása EPLAN- és WSCAD-dokumentáció alapján. Teljes körű huzalozás, készülékezés, jelölés, gyártásközi ellenőrzés, funkcionális tesztelés, helyszíni telepítés és üzembe helyezés.",
+        "chip": "Gerätebau",
+        "tagLabel": "Fertigung",
+        "title": "Gerätebau",
+        "short": "Individuelle und serienmäßig gefertigte elektrische Geräte.",
+        "desc": "Komplette Fertigung, Montage und Dokumentation individueller und serienmäßig gefertigter elektrischer Schalt-, Steuer- und Verteilergeräte auf Basis von EPLAN- und WSCAD-Dokumentation. Vollständige Verdrahtung, Bestückung, Kennzeichnung, fertigungsbegleitende Prüfung, Funktionsprüfung, Montage vor Ort und Inbetriebnahme.",
         "items": [
-          "Kapcsoló-, vezérlő- és elosztószekrények",
-          "EPLAN/WSCAD dokumentáció, gyártásközi ellenőrzés",
-          "Funkcionális tesztelés, telepítés, üzembe helyezés"
+          "Schalt-, Steuer- und Verteilerschränke",
+          "EPLAN/WSCAD-Dokumentation, fertigungsbegleitende Prüfung",
+          "Funktionsprüfung, Montage, Inbetriebnahme"
         ],
-        "placeholder": "Fotó, berendezésgyártó műhely"
+        "placeholder": "Foto, Gerätebau-Werkstatt"
       },
       "karbantartas": {
-        "chip": "Karbantartás",
-        "tagLabel": "Karbantartás",
-        "title": "Karbantartás",
-        "short": "Megelőző és hibaelhárító karbantartás.",
-        "desc": "BMS-rendszerek, energiaellátási hálózatok és villamos berendezések teljes körű, megelőző és hibaelhárító karbantartása. PLC-, HMI- és SCADA-rendszerek, kapcsoló- és vezérlőszekrények, elosztóberendezések, szünetmentes tápegységek és aggregátoros rendszerek felülvizsgálata, diagnosztikája és javítása, állapotfelméréssel, alkatrészcserével és korszerűsítéssel.",
+        "chip": "Wartung",
+        "tagLabel": "Wartung",
+        "title": "Wartung",
+        "short": "Vorbeugende und störungsbehebende Wartung.",
+        "desc": "Umfassende vorbeugende und störungsbehebende Wartung von BMS-Systemen, Energieversorgungsnetzen und elektrischen Geräten. Prüfung, Diagnose und Reparatur von PLC-, HMI- und SCADA-Systemen, Schalt- und Steuerschränken, Verteilergeräten, unterbrechungsfreien Stromversorgungen (USV) und Aggregat-Systemen, mit Zustandserfassung, Ersatzteilwechsel und Modernisierung.",
         "items": [
-          "Megelőző és hibaelhárító karbantartás",
-          "PLC/HMI/SCADA, szekrények, UPS diagnosztikája",
-          "Állapotfelmérés, alkatrészcsere, korszerűsítés"
+          "Vorbeugende und störungsbehebende Wartung",
+          "Diagnose von PLC/HMI/SCADA, Schränken, USV",
+          "Zustandserfassung, Ersatzteilwechsel, Modernisierung"
         ],
-        "placeholder": "Fotó, karbantartás / szerviz"
+        "placeholder": "Foto, Wartung / Service"
       },
       "kotottpalyas-kozlekedes": {
-        "chip": "Kötöttpályás közlekedés",
-        "tagLabel": "Közlekedés",
-        "title": "Kötöttpályás közlekedés",
-        "short": "Villamos- és vasúti energiaellátás, felsővezeték.",
-        "desc": "Villamos- és vasúti pályák energiaellátása, felsővezeték-hálózatok, váltó- és jelzőberendezések, fagymegelőző berendezések, valamint töltőinfrastruktúra tervezése és kivitelezése.",
+        "chip": "Schienengebundener Verkehr",
+        "tagLabel": "Verkehr",
+        "title": "Schienengebundener Verkehr",
+        "short": "Straßenbahn- und Eisenbahn-Energieversorgung, Oberleitung.",
+        "desc": "Planung und Bauausführung der Energieversorgung von Straßenbahn- und Eisenbahnstrecken, Oberleitungsnetzen, Weichen- und Signalanlagen, Frostschutzanlagen sowie Ladeinfrastruktur.",
         "items": [
-          "Felsővezeték és egyenirányító alállomások",
-          "Váltó- és jelzőberendezések",
-          "Depói töltő- és energiainfrastruktúra"
+          "Oberleitung und Gleichrichter-Unterwerke",
+          "Weichen- und Signalanlagen",
+          "Betriebshof-Lade- und Energieinfrastruktur"
         ],
-        "placeholder": "Fotó, villamos / felsővezeték"
+        "placeholder": "Foto, Straßenbahn / Oberleitung"
       },
       "tisztateri-villamoskivitelezes": {
-        "chip": "Tisztatéri kivitelezés",
-        "tagLabel": "Tisztatéri",
-        "title": "Tisztatéri villamoskivitelezés",
-        "short": "Tisztatéri villamos hálózatok és épületfelügyelet.",
-        "desc": "Komplex tisztatéri rendszerek tervezése, kivitelezése és a kapcsolódó épületfelügyeleti megoldások kialakítása. Tisztatéri elektromos hálózatok, vezérlések, gépészeti és technológiai rendszerek integrációja, valamint nyomás-, hőmérséklet-, páratartalom- és légtechnikai paraméterek folyamatos felügyelete PLC-, HMI- és SCADA-alapú BMS-megoldásokkal.",
+        "chip": "Reinraum-Bauausführung",
+        "tagLabel": "Reinraum",
+        "title": "Elektroinstallation im Reinraum",
+        "short": "Elektrische Netze im Reinraum und Gebäudeleittechnik.",
+        "desc": "Planung, Bauausführung komplexer Reinraumsysteme und Umsetzung der zugehörigen Gebäudeleittechnik-Lösungen. Elektrische Netze im Reinraum, Steuerungen, Integration maschinen- und verfahrenstechnischer Systeme sowie kontinuierliche Überwachung von Druck-, Temperatur-, Feuchte- und Lüftungsparametern mit PLC-, HMI- und SCADA-basierten BMS-Lösungen.",
         "items": [
-          "Tisztatéri elektromos hálózatok és vezérlések",
-          "Gépészeti és technológiai integráció",
-          "Nyomás/hőmérséklet/pára/légtechnika felügyelet"
+          "Elektrische Netze und Steuerungen im Reinraum",
+          "Maschinen- und verfahrenstechnische Integration",
+          "Überwachung von Druck/Temperatur/Feuchte/Lüftung"
         ],
-        "placeholder": "Fotó, tisztatéri kivitelezés"
+        "placeholder": "Foto, Reinraum-Bauausführung"
       },
       "scada": {
         "chip": "SCADA",
         "tagLabel": "SCADA",
-        "title": "SCADA & folyamatfelügyelet",
-        "short": "Valós idejű folyamatfelügyelet és adatgyűjtés.",
-        "desc": "Komplex SCADA- és folyamatfelügyeleti rendszerek tervezése, programozása és üzembe helyezése. Technológiai folyamatok valós idejű megjelenítése, vezérlése és felügyelete, mérési adatok gyűjtése, naplózása és kiértékelése, egyedi kezelőfelületekkel, riasztáskezeléssel, trendekkel, riportokkal és jogosultsági szintekkel, PLC-, HMI- és BMS-integrációval.",
+        "title": "SCADA & Prozessüberwachung",
+        "short": "Echtzeit-Prozessüberwachung und Datenerfassung.",
+        "desc": "Planung, Programmierung und Inbetriebnahme komplexer SCADA- und Prozessüberwachungssysteme. Echtzeit-Visualisierung, -Steuerung und -Überwachung technologischer Prozesse, Erfassung, Protokollierung und Auswertung von Messdaten, mit individuellen Bedienoberflächen, Alarmmanagement, Trends, Berichten und Berechtigungsebenen sowie PLC-, HMI- und BMS-Integration.",
         "items": [
-          "Valós idejű megjelenítés, vezérlés, felügyelet",
-          "Adatgyűjtés, naplózás, trendek, riportok",
-          "Riasztáskezelés, jogosultságok, PLC/HMI/BMS integráció"
+          "Echtzeit-Visualisierung, -Steuerung, -Überwachung",
+          "Datenerfassung, Protokollierung, Trends, Berichte",
+          "Alarmmanagement, Berechtigungen, PLC/HMI/BMS-Integration"
         ],
-        "placeholder": "Fotó, SCADA vezérlőpult"
+        "placeholder": "Foto, SCADA-Leitpult"
       },
       "knx": {
         "chip": "KNX",
         "tagLabel": "KNX",
-        "title": "KNX épületautomatizálás",
-        "short": "KNX-alapú épületautomatizálás.",
-        "desc": "Komplex KNX-alapú épületautomatizálási rendszerek tervezése, programozása és üzembe helyezése. Világítás-, árnyékolás-, fűtés-, hűtés- és helyiségszabályozási megoldások jelenlét- és időjárásfüggő vezérléssel, ETS-alapú konfigurációval, vizualizációval, energiafelügyelettel, távoli eléréssel és BMS-, SCADA-integrációval.",
+        "title": "KNX-Gebäudeautomation",
+        "short": "KNX-basierte Gebäudeautomation.",
+        "desc": "Planung, Programmierung und Inbetriebnahme komplexer KNX-basierter Gebäudeautomationssysteme. Lösungen für Beleuchtung, Beschattung, Heizung, Kühlung und Raumregelung mit präsenz- und wetterabhängiger Steuerung, ETS-basierter Konfiguration, Visualisierung, Energieüberwachung, Fernzugriff sowie BMS- und SCADA-Integration.",
         "items": [
-          "Világítás, árnyékolás, fűtés/hűtés, helyiségszabályozás",
-          "ETS-konfiguráció, vizualizáció, energiafelügyelet",
-          "Távoli elérés, BMS/SCADA-integráció"
+          "Beleuchtung, Beschattung, Heizung/Kühlung, Raumregelung",
+          "ETS-Konfiguration, Visualisierung, Energieüberwachung",
+          "Fernzugriff, BMS/SCADA-Integration"
         ],
-        "placeholder": "Fotó, KNX / épületautomatizálás"
+        "placeholder": "Foto, KNX / Gebäudeautomation"
       }
     }
   },
   "about": {
     "head": {
-      "crumb": "Rólunk",
-      "placeholder": "Fotó, mérnöki csapat / műhely",
+      "crumb": "Über uns",
+      "placeholder": "Foto, Ingenieurteam / Werkstatt",
       "title": [
-        "Komplett megoldások",
-        "a tervezőasztaltól az üzembehelyezésig."
+        "Komplettlösungen",
+        "vom Reißbrett bis zur Inbetriebnahme."
       ],
-      "lede": "2008 óta tervezünk, gyártunk és üzemeltetünk villamos és automatizálási rendszereket. Kis mérnökirodából mára 15 fős, saját berendezésgyártó műhellyel rendelkező csapattá váltunk, de a hozzáállásunk nem változott: minden rendszert úgy építünk, mintha a sajátunk lenne.",
-      "heroPlaceholder": "Fotó, műhely / mérnöki csapat munka közben"
+      "lede": "Seit 2008 planen, fertigen und betreiben wir elektrische und Automatisierungssysteme. Aus einem kleinen Ingenieurbüro sind wir zu einem 15-köpfigen Team mit eigener Gerätebau-Werkstatt gewachsen, doch unsere Haltung ist unverändert geblieben: Wir bauen jedes System, als wäre es unser eigenes.",
+      "heroPlaceholder": "Foto, Werkstatt / Ingenieurteam bei der Arbeit"
     },
     "story": {
-      "eyebrow": "A történetünk",
-      "title": "A tervezőasztaltól a kulcsrakész rendszerekig",
+      "eyebrow": "Unsere Geschichte",
+      "title": "Vom Reißbrett bis zu schlüsselfertigen Systemen",
       "paragraphs": [
-        "Vállalatunk története a kötöttpályás közlekedés területén kezdődött. Több mint 15 éve nyújtunk irányítástechnikai és energiaelosztási megoldásokat MÁV-, HÉV-, BKV- és SZKT-projektekben.",
-        "2023 óta az épület- és ipari automatizálás területén is aktívan jelen vagyunk. Tevékenységünk kiterjed a BMS-rendszerek teljes körű tervezésére és kivitelezésére, az ipari létesítmények energiaelosztására, a villamos karbantartásra és felülvizsgálatokra, valamint a speciális villanyszerelési munkákra – beleértve az alpintechnikával és FAM-technológiával végzett feladatokat is."
+        "Die Geschichte unseres Unternehmens begann im Bereich des schienengebundenen Verkehrs. Seit mehr als 15 Jahren liefern wir Leittechnik- und Energieverteilungslösungen in MÁV-, HÉV-, BKV- und SZKT-Projekten.",
+        "Seit 2023 sind wir auch im Bereich der Gebäude- und Industrieautomatisierung aktiv präsent. Unsere Tätigkeit umfasst die vollständige Planung und Ausführung von BMS-Systemen, die Energieverteilung industrieller Anlagen, die elektrische Wartung und Prüfungen sowie spezielle Elektroinstallationsarbeiten – einschließlich Aufgaben mit Höhenzugangstechnik und FAM-Technologie."
       ]
     },
     "stats": [
       {
-        "label": "éve a piacon"
+        "label": "Jahre am Markt"
       },
       {
-        "label": "átadott projekt"
+        "label": "übergebene Projekte"
       },
       {
-        "label": "mérnök és technikus"
+        "label": "Ingenieure und Techniker"
       },
       {
-        "text": "Belföld & külföld",
-        "label": "aktív projektek"
+        "text": "Inland & Ausland",
+        "label": "aktive Projekte"
       }
     ],
     "valuesTitle": {
-      "eyebrow": "Amiben hiszünk",
-      "title": "Négy elv, ami minden projektet vezet"
+      "eyebrow": "Woran wir glauben",
+      "title": "Vier Prinzipien, die jedes Projekt leiten"
     },
     "values": [
       {
-        "title": "Biztonság mindenek felett",
-        "desc": "Minden rendszer szabvány szerint, bevizsgálva és dokumentálva készül, kompromisszum nélkül."
+        "title": "Sicherheit über alles",
+        "desc": "Jedes System wird normgerecht, geprüft und dokumentiert gefertigt – ohne Kompromisse."
       },
       {
-        "title": "Határidőtartás",
-        "desc": "Ipari környezetben az állásidő pénz. Reális ütemtervet adunk és be is tartjuk azt."
+        "title": "Termintreue",
+        "desc": "In einer industriellen Umgebung ist Stillstand bares Geld. Wir geben einen realistischen Zeitplan vor und halten ihn auch ein."
       },
       {
-        "title": "Átlátható működés",
-        "desc": "Teljes dokumentáció, nyomon követhető döntések és tiszta kommunikáció a projekt minden fázisában."
+        "title": "Transparente Arbeitsweise",
+        "desc": "Vollständige Dokumentation, nachvollziehbare Entscheidungen und klare Kommunikation in jeder Projektphase."
       },
       {
-        "title": "Hosszú távú partnerség",
-        "desc": "Nem projektet adunk át, hanem működő rendszert, és mellette maradunk az üzem teljes életében."
+        "title": "Langfristige Partnerschaft",
+        "desc": "Wir übergeben nicht nur ein Projekt, sondern ein funktionierendes System – und begleiten Sie über die gesamte Betriebsdauer hinweg."
       }
     ],
     "milestonesTitle": {
-      "eyebrow": "Mérföldkövek",
-      "title": "A Debaru útja"
+      "eyebrow": "Meilensteine",
+      "title": "Der Weg von Debaru"
     },
     "milestones": [
       {
-        "title": "Alapítás",
-        "desc": "A Debaru elindul villamos- és irányítástechnikai megoldásokkal."
+        "title": "Gründung",
+        "desc": "Debaru startet mit Lösungen für Elektro- und Leittechnik."
       },
       {
         "title": "MÁV Zrt.",
-        "desc": "Felsővezeték-építési projekt."
+        "desc": "Oberleitungsbauprojekt."
       },
       {
         "title": "Audi Hungaria Zrt.",
-        "desc": "Légkezelő rendszerhez kapcsolódó szoftverkészítés és üzembe helyezés."
+        "desc": "Softwareentwicklung und Inbetriebnahme für eine Lüftungsanlage."
       },
       {
         "title": "BKV Zrt.",
-        "desc": "BKV áramellátási diszpécserközpont, SCADA-rendszer fejlesztése, telepítése és üzembe helyezése."
+        "desc": "BKV-Stromversorgungs-Leitstelle: Entwicklung, Installation und Inbetriebnahme des SCADA-Systems."
       },
       {
         "title": "MÁV Zrt.",
-        "desc": "Váltófűtés és térvilágítás távvezérlő rendszer, valamint HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása és üzembe helyezése."
+        "desc": "Entwicklung, Fertigung und Inbetriebnahme eines Fernsteuerungssystems für Weichenheizung und Platzbeleuchtung sowie des HETA-Oberleitungs-Fernsteuerungssystems."
       },
       {
         "title": "Hungrana Kft.",
-        "desc": "22/0,4 kV-os transzformátor-alállomás, transzformátorcsere, 22 mezős elosztó tervezése, gyártása és cseréje."
+        "desc": "22/0,4-kV-Transformator-Unterstation, Transformatoraustausch sowie Planung, Fertigung und Austausch eines 22-Felder-Verteilers."
       },
       {
         "title": "AP-Systems GmbH",
-        "desc": "ASML Berlin GmbH, 10 000 m²-nél nagyobb tisztatéri kivitelezés, teljes BMS-rendszer tervezése, gyártása és kivitelezése."
+        "desc": "ASML Berlin GmbH: Reinraum-Bauausführung von mehr als 10 000 m²; Planung, Fertigung und Ausführung des kompletten BMS-Systems."
       }
     ],
-    "teamTitle": "Vezetőség",
-    "teamPlaceholder": "Portré",
+    "teamTitle": "Geschäftsleitung",
+    "teamPlaceholder": "Porträt",
     "team": [
       {
-        "role": "Ügyvezető"
+        "role": "Geschäftsführer"
       },
       {
-        "role": "Ügyvezető-helyettes"
+        "role": "Stellvertretender Geschäftsführer"
       }
     ],
     "video": {
-      "eyebrow": "Bepillantás",
-      "title": "A műhely, ahol a rendszerek készülnek"
+      "eyebrow": "Ein Blick hinter die Kulissen",
+      "title": "Die Werkstatt, in der unsere Systeme entstehen"
     },
     "cta": {
-      "title": "Legyen Ön a következő hosszútávú partnerünk!",
-      "button": "Beszéljünk!"
+      "title": "Werden Sie unser nächster langfristiger Partner!",
+      "button": "Sprechen wir!"
     }
   },
   "projects": {
     "head": {
-      "crumb": "Projektjeink",
-      "placeholder": "Fotó, ipari projekt / helyszín",
+      "crumb": "Projekte",
+      "placeholder": "Foto, Industrieprojekt / Standort",
       "title": [
-        "Referenciák, amelyek",
-        "üzemelnek."
+        "Referenzen, die",
+        "in Betrieb sind."
       ],
-      "lede": "Több mint 100 dokumentált projekt 2010 óta, vasút és városi közlekedés, autóipari és félvezetőgyári automatizálás, energiaellátás és berendezésgyártás, itthon és Európa-szerte."
+      "lede": "Mehr als 100 dokumentierte Projekte seit 2010 – Eisenbahn und städtischer Verkehr, Automatisierung in der Automobil- und Halbleiterindustrie, Stromversorgung und Gerätebau, in Ungarn und europaweit."
     },
     "filters": {
-      "all": "Összes",
-      "kozlekedes": "Közlekedés",
-      "villamos": "Villamos / automatizálás",
-      "kf": "K+F / saját fejlesztés"
+      "all": "Alle",
+      "kozlekedes": "Verkehr",
+      "villamos": "Elektro / Automatisierung",
+      "kf": "F&E / Eigenentwicklung"
     },
     "catLabel": {
-      "kozlekedes": "Közlekedés",
-      "villamos": "Villamos",
-      "kf": "K+F"
+      "kozlekedes": "Verkehr",
+      "villamos": "Elektro",
+      "kf": "F&E"
     },
     "accentLabel": {
-      "kozlekedes": "Közlekedés",
-      "villamos": "Villamos / automatizálás",
-      "energetika": "Energetika"
+      "kozlekedes": "Verkehr",
+      "villamos": "Elektro / Automatisierung",
+      "energetika": "Energietechnik"
     },
-    "featuredEyebrow": "Kiemelt referenciák",
-    "featuredHeading": "Rendszerek, amelyek nap mint nap dolgoznak",
-    "foreignFlag": "Külföld",
-    "videosEyebrow": "Munkáink videón",
-    "videosHeading": "A BKV Etele téri projekt, élőben",
-    "listEyebrow": "Teljes referencialista",
-    "listHeading": "Több mint 100 projekt 2010 óta",
-    "listLede": "Válogatás nélkül, a hivatalos referencialistánk alapján, végfelhasználó, megrendelő és a konkrét feladat megjelölésével.",
+    "featuredEyebrow": "Ausgewählte Referenzen",
+    "featuredHeading": "Systeme, die Tag für Tag arbeiten",
+    "foreignFlag": "Ausland",
+    "videosEyebrow": "Unsere Arbeit im Video",
+    "videosHeading": "Das BKV-Projekt am Etele tér, live",
+    "listEyebrow": "Vollständige Referenzliste",
+    "listHeading": "Mehr als 100 Projekte seit 2010",
+    "listLede": "Ohne Auswahl, auf Grundlage unserer offiziellen Referenzliste, mit Angabe des Endnutzers, des Auftraggebers und der konkreten Aufgabe.",
     "stats": {
-      "count": "átadott projekt",
-      "span": "év, 2010 óta",
-      "users": "végfelhasználó",
-      "clients": "megrendelő és partner"
+      "count": "übergebene Projekte",
+      "span": "Jahre, seit 2010",
+      "users": "Endnutzer",
+      "clients": "Auftraggeber und Partner"
     },
-    "projectWord": "projekt",
-    "via": "{megr} megbízásából",
-    "empty": "Ebben a kategóriában nincs találat.",
-    "ctaTitle": "A következő referencia az Öné lehet!",
-    "ctaButton": "Beszéljünk a projektjéről!",
+    "projectWord": "Projekt",
+    "via": "im Auftrag von {megr}",
+    "empty": "Keine Ergebnisse in dieser Kategorie.",
+    "ctaTitle": "Die nächste Referenz könnte Ihre sein!",
+    "ctaButton": "Sprechen wir über Ihr Projekt!",
     "detail": {
-      "factsTitle": "A projekt adatai",
-      "factClient": "Megrendelő / végfelhasználó",
-      "factVia": "Fővállalkozó",
-      "factPeriod": "Időszak",
-      "factArea": "Terület",
-      "factLocation": "Helyszín",
-      "foreignValue": "Külföldi projekt",
-      "trailLabel": "Projektjeink",
-      "relatedEyebrow": "A hivatalos referencialistából",
-      "relatedHeading": "Kapcsolódó munkáink · {client}",
-      "ctaTitle": "Hasonló projektet tervez?",
-      "ctaButton": "Kérjen ajánlatot"
+      "factsTitle": "Projektdaten",
+      "factClient": "Auftraggeber / Endnutzer",
+      "factVia": "Generalunternehmer",
+      "factPeriod": "Zeitraum",
+      "factArea": "Bereich",
+      "factLocation": "Standort",
+      "foreignValue": "Projekt im Ausland",
+      "trailLabel": "Projekte",
+      "relatedEyebrow": "Aus der offiziellen Referenzliste",
+      "relatedHeading": "Verwandte Projekte · {client}",
+      "ctaTitle": "Planen Sie ein ähnliches Projekt?",
+      "ctaButton": "Angebot anfordern"
     },
     "featured": {
       "bkv-etele": {
-        "tag": "Villamos · SIL2",
-        "title": "1-es villamos, Etele téri végállomás",
-        "desc": "Az Etele téri villamos-végállomás SIL2 biztonsági vezérlésének tervezése és üzembe helyezése, áramátalakítókkal és a teljes védelem-irányítástechnikával, Budapest egyik legforgalmasabb csomópontjában.",
-        "placeholder": "Etele téri villamos-végállomás"
+        "tag": "Elektro · SIL2",
+        "title": "Straßenbahn 1, Endstation Etele tér",
+        "desc": "Planung und Inbetriebnahme der SIL2-Sicherheitssteuerung der Straßenbahn-Endstation Etele tér, mit Gleichrichter-Unterwerken und der gesamten Schutz- und Leittechnik, an einem der verkehrsreichsten Knotenpunkte Budapests.",
+        "placeholder": "Straßenbahn-Endstation Etele tér"
       },
       "mav-heta": {
-        "tag": "Vasút · Felsővezeték",
-        "title": "MÁV HETA felsővezetéki távvezérlés",
-        "desc": "Felsővezetéki távvezérlő (HETA) rendszerek fejlesztése, gyártása és üzembe helyezése több mint egy tucat vasúti vonalszakaszon, Kelenföldtől a Dél-Balatonig.",
-        "placeholder": "MÁV vasúti felsővezeték"
+        "tag": "Eisenbahn · Oberleitung",
+        "title": "MÁV HETA Oberleitungs-Fernsteuerung",
+        "desc": "Entwicklung, Fertigung und Inbetriebnahme von Oberleitungs-Fernsteuerungssystemen (HETA) auf mehr als einem Dutzend Bahnstreckenabschnitten, von Kelenföld bis zum Dél-Balaton.",
+        "placeholder": "MÁV Bahn-Oberleitung"
       },
       "bkv-m4": {
-        "tag": "Metró · Távvezérlés",
-        "title": "BKV M4 metró, távvezérlő rendszer",
-        "desc": "A 4-es metró áramellátásának távvezérlő rendszere: fejlesztés és üzembe helyezés Siemens S7-300 PLC alapokon.",
-        "placeholder": "BKV M4 metró, távvezérlés"
+        "tag": "Metro · Fernsteuerung",
+        "title": "BKV M4 Metro, Fernsteuerungssystem",
+        "desc": "Fernsteuerungssystem für die Stromversorgung der M4-Metro: Entwicklung und Inbetriebnahme auf Basis von Siemens S7-300 PLC.",
+        "placeholder": "BKV M4 Metro, Fernsteuerung"
       },
       "asml-berlin": {
-        "tag": "Tisztatér · Németország",
-        "title": "ASML Berlin, tisztatéri automatizálás",
-        "desc": "Félvezetőgyári tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése, szoftvere és üzembe helyezése (BER90, BER08).",
-        "placeholder": "ASML, tisztatéri technológia"
+        "tag": "Reinraum · Deutschland",
+        "title": "ASML Berlin, Reinraum-Automatisierung",
+        "desc": "Planung, Montage, Verkabelung, Software und Inbetriebnahme der Gebäudetechnik-Automatisierung für Reinräume in der Halbleiterfertigung (BER90, BER08).",
+        "placeholder": "ASML, Reinraumtechnik"
       },
       "hungrana": {
-        "tag": "Energetika · Berendezésgyártás",
-        "title": "Hungrana, 22/0,4 kV alállomás rekonstrukció",
-        "desc": "Transzformátorcsere és 22-mezős 0,4 kV-os elosztó tervezése, gyártása és cseréje, ATEX-környezetben végzett komplex villamos kivitelezéssel és biztonsági felülvizsgálatokkal.",
-        "placeholder": "Hungrana, 0,4 kV elosztó"
+        "tag": "Energietechnik · Gerätebau",
+        "title": "Hungrana, Umbau der Unterstation 22/0,4 kV",
+        "desc": "Transformatortausch sowie Planung, Fertigung und Austausch eines 0,4-kV-Verteilers mit 22 Feldern, mit komplexer Elektromontage im ATEX-Bereich und Sicherheitsprüfungen.",
+        "placeholder": "Hungrana, 0,4-kV-Verteiler"
       },
       "audi": {
-        "tag": "Autóipar · Épületautomatika",
-        "title": "Audi gyárak, épületautomatika",
-        "desc": "Motortesztelő elszívás, csarnok-vízhűtés és szállítószalag-vezérlő szoftverek fejlesztése és üzembe helyezése Siemens S7-300 PLC alapokon, több Audi-telephelyen.",
-        "placeholder": "Audi gyár, automatizálás"
+        "tag": "Automobilindustrie · Gebäudeautomation",
+        "title": "Audi-Werke, Gebäudeautomation",
+        "desc": "Entwicklung und Inbetriebnahme von Software für Motorprüf-Absaugung, Hallen-Wasserkühlung und Förderband-Steuerung auf Basis von Siemens S7-300 PLC, an mehreren Audi-Standorten.",
+        "placeholder": "Audi-Werk, Automatisierung"
       },
       "bkv-50-56": {
-        "tag": "Villamos · Váltóvezérlés",
-        "title": "50-es és 56-os villamosvonalak",
-        "desc": "Városi vasúti váltóvezérlő berendezés, SIL2 biztonsági vezérlés és váltófűtés tervezése és kivitelezése három helyszínen.",
-        "placeholder": "Villamosvonal, váltóvezérlés"
+        "tag": "Elektro · Weichensteuerung",
+        "title": "Straßenbahnlinien 50 und 56",
+        "desc": "Planung und Bauausführung von Weichensteuerungsanlagen für den städtischen Schienenverkehr, SIL2-Sicherheitssteuerung und Weichenheizung an drei Standorten.",
+        "placeholder": "Straßenbahnlinie, Weichensteuerung"
       },
       "mercedes": {
-        "tag": "Autóipar · Épületautomatika",
-        "title": "Mercedes-Benz Kecskemét, gyárépítés",
-        "desc": "A kecskeméti gyár építéséhez kapcsolódó épületautomatikai szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon.",
-        "placeholder": "Mercedes-Benz gyár"
+        "tag": "Automobilindustrie · Gebäudeautomation",
+        "title": "Mercedes-Benz Kecskemét, Werksbau",
+        "desc": "Erstellung und Inbetriebnahme von Gebäudeautomations-Software im Zusammenhang mit dem Bau des Werks in Kecskemét, auf Basis von Siemens S7-300 PLC.",
+        "placeholder": "Mercedes-Benz-Werk"
       },
       "mav-hev": {
-        "tag": "HÉV · Áramellátás",
-        "title": "H5, H6, H7, H8 HÉV-vonalak felújítása",
-        "desc": "A HÉV-vonalak áramellátásának és védelem-irányítástechnikai rendszereinek tervezése a vonalfelújításokhoz.",
-        "placeholder": "HÉV-vonal áramellátás"
+        "tag": "HÉV · Stromversorgung",
+        "title": "Sanierung der HÉV-Linien H5, H6, H7, H8",
+        "desc": "Planung der Stromversorgung und der Schutz- und Leittechnik der HÉV-Linien für die Streckensanierungen.",
+        "placeholder": "HÉV-Linie Stromversorgung"
       },
       "vw": {
-        "tag": "Autóipar · Németország",
-        "title": "Volkswagen, gyártósori automatizálás",
-        "desc": "Gyártósori vezérlők felügyeleti rendszerbe integrálása és gépészeti automatika szoftverek fejlesztése, üzembe helyezése VW-telephelyeken.",
-        "placeholder": "Volkswagen gyártósor"
+        "tag": "Automobilindustrie · Deutschland",
+        "title": "Volkswagen, Fertigungslinien-Automatisierung",
+        "desc": "Integration von Fertigungslinien-Steuerungen in das Leitsystem sowie Entwicklung und Inbetriebnahme von Software für die Maschinenautomatisierung an VW-Standorten.",
+        "placeholder": "Volkswagen Fertigungslinie"
       },
       "szeged-tram": {
-        "tag": "Tram-train · Energetika",
-        "title": "Szegedi tram-train áramellátás",
-        "desc": "Áramellátási szimuláció és a rendszer terhelhetőségének növelése párhuzamos táplálással, a szükséges védelmi-irányítástechnikai megoldásokkal.",
-        "placeholder": "Tram-train, Szeged"
+        "tag": "Tram-Train · Energietechnik",
+        "title": "Szeged Tram-Train-Stromversorgung",
+        "desc": "Simulation der Stromversorgung und Erhöhung der Belastbarkeit des Systems durch Parallelspeisung, mit den erforderlichen schutz- und leittechnischen Lösungen.",
+        "placeholder": "Tram-Train, Szeged"
       },
       "regor": {
-        "tag": "K+F · Saját termék",
-        "title": "Regor, saját PLC és SCADA rendszer",
-        "desc": "Lua-alapú PLC- és SCADA-rendszer saját fejlesztése és gyártása, a Debaru saját irányítástechnikai platformja.",
-        "placeholder": "Regor PLC / SCADA platform"
+        "tag": "F&E · Eigenprodukt",
+        "title": "Regor, eigenes PLC- und SCADA-System",
+        "desc": "Eigenentwicklung und Fertigung eines Lua-basierten PLC- und SCADA-Systems, die eigene Leittechnik-Plattform von Debaru.",
+        "placeholder": "Regor PLC- / SCADA-Plattform"
       }
     },
     "reference": [
       {
-        "proj": "Boba-Bajánsenye vasútvonal felújítása",
-        "fel": "Felsővezeték-építés projektmenedzsment"
+        "proj": "Sanierung der Bahnstrecke Boba-Bajánsenye",
+        "fel": "Projektmanagement für den Oberleitungsbau"
       },
       {
-        "fel": "Autódiagnosztikai rendszer fejlesztésében való részvétel"
+        "fel": "Mitwirkung an der Entwicklung eines Kfz-Diagnosesystems"
       },
       {
-        "fel": "Középfeszültségű védelmek üzembe helyezése"
+        "fel": "Inbetriebnahme der Mittelspannungs-Schutzeinrichtungen"
       },
       {
-        "proj": "M4 metró építése",
-        "fel": "Távvezérlő rendszer fejlesztése, üzembe helyezése Siemens S7-300 PLC alapokon."
+        "proj": "Bau der M4-Metro",
+        "fel": "Entwicklung und Inbetriebnahme des Fernsteuerungssystems auf Basis von Siemens S7-300 PLC."
       },
       {
-        "proj": "Kísérleti membrános szennyvíztisztító építése",
-        "fel": "Automatika, adatgyűjtő, Scada rendszer fejlesztése, üzembe helyezése."
+        "proj": "Bau einer experimentellen Membran-Kläranlage",
+        "fel": "Entwicklung und Inbetriebnahme des Automatisierungs-, Datenerfassungs- und SCADA-Systems."
       },
       {
-        "fel": "Webalapú EMS rendszer fejlesztése, telepítése, üzembe helyezése"
+        "fel": "Entwicklung, Installation und Inbetriebnahme eines webbasierten EMS-Systems"
       },
       {
-        "fel": "0.4kV áramellátó transzformátor cseréje"
+        "fel": "Austausch des 0.4kV-Stromversorgungstransformators"
       },
       {
-        "proj": "Szegedi városi tömegközlekedés fejlesztése",
-        "fel": "Izolációmérő berendezés fejlesztése trolibusz felsővezetéki rendszerhez, telepítés, üzembe helyezés"
+        "proj": "Entwicklung des öffentlichen Personennahverkehrs in Szeged",
+        "fel": "Entwicklung eines Isolationsmessgeräts für das Trolleybus-Oberleitungssystem, Installation, Inbetriebnahme"
       },
       {
-        "proj": "Gyárbővítés",
-        "fel": "Motortesztelő csarnok elszívás vezérlő szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+        "proj": "Werkserweiterung",
+        "fel": "Erstellung und Inbetriebnahme der Steuerungssoftware für die Absaugung der Motorprüfhalle auf Basis von Siemens S7-300 PLC."
       },
       {
-        "fel": "HÉV áramellátás távvezérlő szekrények fejlesztése, üzembe helyezése"
+        "fel": "Entwicklung und Inbetriebnahme der Fernsteuerungsschränke für die HÉV-Stromversorgung"
       },
       {
-        "fel": "Távvezérlő rendszer fejlesztése, üzembe helyezés, áramátalakítók üzembe helyezése"
+        "fel": "Entwicklung und Inbetriebnahme des Fernsteuerungssystems, Inbetriebnahme der Gleichrichter-Unterwerke"
       },
       {
-        "fel": "VÁC HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+        "fel": "VÁC – Entwicklung, Fertigung und Inbetriebnahme des HETA-Oberleitungs-Fernsteuerungssystems"
       },
       {
-        "proj": "Gyárbővítés",
-        "fel": "Vízhűtés irányítása csarnokokhoz - vezérlő szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+        "proj": "Werkserweiterung",
+        "fel": "Steuerung der Wasserkühlung für die Hallen – Erstellung und Inbetriebnahme der Steuerungssoftware auf Basis von Siemens S7-300 PLC."
       },
       {
-        "proj": "Lepsény-Szántód-Kőröshegy vasúti vonalszakasz felújítása",
-        "fel": "HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+        "proj": "Sanierung des Streckenabschnitts Lepsény-Szántód-Kőröshegy",
+        "fel": "Entwicklung, Fertigung und Inbetriebnahme des HETA-Oberleitungs-Fernsteuerungssystems"
       },
       {
-        "fel": "Vác vasútállomás előfűtő berendezés automatizálása, energiamérés PIN kódos azonosítással"
+        "fel": "Automatisierung der Vorheizanlage am Bahnhof Vác, Energiemessung mit PIN-Code-Identifikation"
       },
       {
-        "fel": "Épületautomatika szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+        "fel": "Erstellung und Inbetriebnahme von Gebäudeautomations-Software auf Basis von Siemens S7-300 PLC."
       },
       {
-        "fel": "BKV áramellátás diszpécser központ, Scada rendszer fejlesztése, telepítése, üzembe helyezése"
+        "fel": "Entwicklung, Installation und Inbetriebnahme der Leitstelle und des SCADA-Systems für die BKV-Stromversorgung"
       },
       {
-        "fel": "Székesfehérvár vasútállomás felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+        "fel": "Bahnhof Székesfehérvár – Entwicklung, Fertigung und Inbetriebnahme des Oberleitungs-Fernsteuerungssystems"
       },
       {
-        "proj": "Pécs-Dombóvár vonalszakasz felújítása",
-        "fel": "Váltófűtés, és térvilágítás távvezérlő rendszer, HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+        "proj": "Sanierung des Streckenabschnitts Pécs-Dombóvár",
+        "fel": "Entwicklung, Fertigung und Inbetriebnahme des Weichenheizungs- und Platzbeleuchtungs-Fernsteuerungssystems sowie des HETA-Oberleitungs-Fernsteuerungssystems"
       },
       {
-        "fel": "Épületautomatika szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+        "fel": "Erstellung und Inbetriebnahme von Gebäudeautomations-Software auf Basis von Siemens S7-300 PLC."
       },
       {
-        "fel": "Vízkezelő rendszer - szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+        "fel": "Wasseraufbereitungssystem – Erstellung und Inbetriebnahme der Software auf Basis von Siemens S7-300 PLC."
       },
       {
-        "fel": "35 kV-os légvezetékes hálózat bontása, földkábeles hálózat kiépítése"
+        "fel": "Rückbau des 35-kV-Freileitungsnetzes, Aufbau des Erdkabelnetzes"
       },
       {
-        "proj": "Kelenföld-Százhalombatta vasúti vonalszakasz felújítása",
-        "fel": "HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+        "proj": "Sanierung des Streckenabschnitts Kelenföld-Százhalombatta",
+        "fel": "Entwicklung, Fertigung und Inbetriebnahme des HETA-Oberleitungs-Fernsteuerungssystems"
       },
       {
-        "proj": "Göd-Dunakeszi vonalszakasz felújítása",
-        "fel": "HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+        "proj": "Sanierung des Streckenabschnitts Göd-Dunakeszi",
+        "fel": "Entwicklung, Fertigung und Inbetriebnahme des HETA-Oberleitungs-Fernsteuerungssystems"
       },
       {
-        "fel": "Dorog 120/25kV alállomás irányítástechnika szoftverek készítése, üzembe helyezése"
+        "fel": "Unterstation Dorog 120/25kV – Erstellung und Inbetriebnahme der Leittechnik-Software"
       },
       {
-        "proj": "Gyárbővítés",
-        "fel": "Motorszállító szalag vezérlő szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+        "proj": "Werkserweiterung",
+        "fel": "Erstellung und Inbetriebnahme der Steuerungssoftware für das Motorenförderband auf Basis von Siemens S7-300 PLC."
       },
       {
-        "proj": "Százhalombatta-Ercsi vonalszakasz felújítása",
-        "fel": "HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+        "proj": "Sanierung des Streckenabschnitts Százhalombatta-Ercsi",
+        "fel": "Entwicklung, Fertigung und Inbetriebnahme des HETA-Oberleitungs-Fernsteuerungssystems"
       },
       {
-        "proj": "Ercsi-Pusztaszabolcs vonalszakasz felújítása",
-        "fel": "HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+        "proj": "Sanierung des Streckenabschnitts Ercsi-Pusztaszabolcs",
+        "fel": "Entwicklung, Fertigung und Inbetriebnahme des HETA-Oberleitungs-Fernsteuerungssystems"
       },
       {
-        "proj": "Szabadbattyán-Balatonfüred vonalszakasz villamosítása",
-        "fel": "Térvilágítás távvezérlő rendszer, HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+        "proj": "Elektrifizierung des Streckenabschnitts Szabadbattyán-Balatonfüred",
+        "fel": "Entwicklung, Fertigung und Inbetriebnahme des Platzbeleuchtungs-Fernsteuerungssystems sowie des HETA-Oberleitungs-Fernsteuerungssystems"
       },
       {
-        "proj": "Érd összekötő",
-        "fel": "Váltófűtés rendszer, HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+        "proj": "Verbindungsbahn Érd",
+        "fel": "Entwicklung, Fertigung und Inbetriebnahme des Weichenheizungssystems sowie des HETA-Oberleitungs-Fernsteuerungssystems"
       },
       {
-        "proj": "Tramtrain",
-        "fel": "Áramellátási szimuláció, rendszer terhelhetőségének növelése párhuzamos táplálással. Ehhez szükséges védelmi-irányítástechnikai megoldások szoftveres kialakítása."
+        "proj": "Tram-Train",
+        "fel": "Simulation der Stromversorgung, Erhöhung der Belastbarkeit des Systems durch Parallelspeisung. Softwareseitige Umsetzung der dafür erforderlichen Schutz- und Leittechnik-Lösungen."
       },
       {
-        "proj": "50-es, 56-os villamosvonalak felújítása",
-        "fel": "Városi vasúti váltóvezérlő berendezés, SIL2 biztonsági vezérlés és váltófűtés tervezése, kivitelezése három helyszínen"
+        "proj": "Sanierung der Straßenbahnlinien 50 und 56",
+        "fel": "Planung und Ausführung der Weichensteuerung, SIL2-Sicherheitssteuerung und Weichenheizung für die Stadtbahn an drei Standorten"
       },
       {
-        "proj": "50-es, 56-os villamosvonalak felújítása",
-        "fel": "Áramátalakítók, védelem-irányítástechnika üzembe helyezése, távvezérlő rendszer fejlesztése, gyártása, üzembe helyezés"
+        "proj": "Sanierung der Straßenbahnlinien 50 und 56",
+        "fel": "Inbetriebnahme der Gleichrichter-Unterwerke und der Schutz- und Leittechnik; Entwicklung, Fertigung und Inbetriebnahme des Fernsteuerungssystems"
       },
       {
-        "fel": "Tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése"
+        "fel": "Planung, Montage und Verkabelung der Gebäudetechnik-Automatisierung für Reinräume"
       },
       {
-        "proj": "56-os villamosvonal felújítása",
-        "fel": "Városi vasúti váltóvezérlő berendezés, SIL2 biztonsági vezérlés tervezése, kivitelezése"
+        "proj": "Sanierung der Straßenbahnlinie 56",
+        "fel": "Planung und Ausführung der Weichensteuerung und SIL2-Sicherheitssteuerung für die Stadtbahn"
       },
       {
-        "fel": "Tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése"
+        "fel": "Planung, Montage und Verkabelung der Gebäudetechnik-Automatisierung für Reinräume"
       },
       {
-        "fel": "Tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése"
+        "fel": "Planung, Montage und Verkabelung der Gebäudetechnik-Automatisierung für Reinräume"
       },
       {
-        "fel": "Rákosrendező vasútállomáson FET és HETA rendszer kialakítása"
+        "fel": "Einrichtung des FET- und HETA-Systems am Bahnhof Rákosrendező"
       },
       {
-        "fel": "H8 Gödöllő HÉV vonal, Nagyicce áramátalakítóban az 1 kV-os elosztóberendezés komplex cseréjének tervezése"
+        "fel": "H8 HÉV-Linie Gödöllő – Planung des kompletten Austauschs der 1-kV-Verteilungsanlage im Gleichrichter-Unterwerk Nagyicce"
       },
       {
-        "proj": "Magasraktár anyagmozgató felújítás",
-        "fel": "Kasto anyagmozgató berendezés vezérlésének cseréje"
+        "proj": "Sanierung der Fördertechnik im Hochregallager",
+        "fel": "Austausch der Steuerung der Kasto-Fördertechnik"
       },
       {
-        "fel": "Tisztaterek épületgépészeti automatizálásának tervezése, szerelése"
+        "fel": "Planung und Montage der Gebäudetechnik-Automatisierung für Reinräume"
       },
       {
-        "fel": "Felügyeleti rendszer integráció meglévő gyártósori vezérlőkbe."
+        "fel": "Integration eines Überwachungssystems in bestehende Steuerungen der Fertigungslinie."
       },
       {
-        "fel": "BER90 Tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése, szoftver, üzembe helyezés"
+        "fel": "BER90 Planung, Montage, Verkabelung, Software und Inbetriebnahme der Gebäudetechnik-Automatisierung für Reinräume"
       },
       {
-        "fel": "Tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése"
+        "fel": "Planung, Montage und Verkabelung der Gebäudetechnik-Automatisierung für Reinräume"
       },
       {
-        "proj": "22/0,4kV alállomás rekonstrukció",
-        "fel": "Transzformátor csere, 21-mezős 0,4kV elosztó tervezése, gyártása, cseréje"
+        "proj": "Rekonstruktion der Unterstation 22/0,4kV",
+        "fel": "Transformatoraustausch; Planung, Fertigung und Austausch des 21-mezős 0,4kV-Verteilers"
       },
       {
-        "fel": "Karbantartási munkák folyamatos termelésű területen, üzemi környezetben"
+        "fel": "Wartungsarbeiten in einem Bereich mit kontinuierlicher Produktion, im Betriebsumfeld"
       },
       {
-        "fel": "Irányítástechnikai tervezés"
+        "fel": "Leittechnik-Planung"
       },
       {
-        "proj": "Elevátorok hasadópanel cseréjének irányítástechnikai tervezése",
-        "fel": "Elevátorok hasadópanel cseréjének irányítástechnikai tervezése, ATEX területen, teljes rendszer biztonsági felülvizsgálata VBF és ATEX tekintetében"
+        "proj": "Leittechnik-Planung für den Austausch der Berstscheiben der Becherwerke",
+        "fel": "Leittechnik-Planung für den Austausch der Berstscheiben der Becherwerke im ATEX-Bereich; sicherheitstechnische Prüfung des Gesamtsystems in Bezug auf VBF und ATEX"
       },
       {
-        "proj": "Trafó kamra szellőzés kialakítása",
-        "fel": "KÖF-KIF Transzformátor kamra szellőzésének kialakítása"
+        "proj": "Einrichtung der Belüftung der Transformatorkammer",
+        "fel": "KÖF-KIF – Einrichtung der Belüftung der Transformatorkammer"
       },
       {
-        "proj": "NC elosztó telepítése",
-        "fel": "Főelosztó cellasor tervezése, helyszíni cseréje"
+        "proj": "Installation des NC-Verteilers",
+        "fel": "Planung und Austausch der Schaltzellenreihe des Hauptverteilers vor Ort"
       },
       {
-        "proj": "Karbantartó műhely villamos kivitelezés",
-        "fel": "Műhelycsarnok komplett épületvillamossági kivitelezés, elosztószekrény tervezés, gyártás, helyszíni telepítés, épület betáp kábelének cseréje, nyomvonalépítés, épület villámvédelmi rendszerének felülvizsgálata, javítása, üzembehelyezés"
+        "proj": "Elektromontage der Wartungswerkstatt",
+        "fel": "Komplette Elektroinstallation der Werkstatthalle; Planung, Fertigung und Vor-Ort-Installation des Verteilerschranks; Austausch des Gebäudeeinspeisekabels; Trassenbau; Prüfung und Reparatur des Blitzschutzsystems des Gebäudes; Inbetriebnahme"
       },
       {
-        "proj": "Beruházási műhely villamos kivitelezés",
-        "fel": "Műhelycsarnok komplett épületvillamossági kivitelezés, elosztószekrény tervezés, gyártás, helyszíni telepítés, épület betáp kábelének cseréje, nyomvonalépítés, épület villámvédelmi rendszerének felülvizsgálata, javítása, üzembehelyezés"
+        "proj": "Elektromontage der Investitionswerkstatt",
+        "fel": "Komplette Elektroinstallation der Werkstatthalle; Planung, Fertigung und Vor-Ort-Installation des Verteilerschranks; Austausch des Gebäudeeinspeisekabels; Trassenbau; Prüfung und Reparatur des Blitzschutzsystems des Gebäudes; Inbetriebnahme"
       },
       {
-        "proj": "BSS bekeverés tervezése",
-        "fel": "Bekeverő üzem - kiépített érzékelőknek megfelelően tervezési módosítás módosítása"
+        "proj": "Planung der BSS-Mischung",
+        "fel": "Mischanlage – Überarbeitung der Planungsänderung entsprechend den installierten Sensoren"
       },
       {
-        "proj": "Kábelnyomvonal átalakítás"
+        "proj": "Umbau der Kabeltrasse"
       },
       {
-        "fel": "Tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése, szoftver, üzembe helyezés"
+        "fel": "Planung, Montage, Verkabelung, Software und Inbetriebnahme der Gebäudetechnik-Automatisierung für Reinräume"
       },
       {
-        "proj": "Magasraktár anyagmozgató felújítás",
-        "fel": "Kasto anyagmozgató berendezés kábelezésének, kezelőfelületeinek cseréje"
+        "proj": "Sanierung der Fördertechnik im Hochregallager",
+        "fel": "Austausch der Verkabelung und der Bedienoberflächen der Kasto-Fördertechnik"
       },
       {
-        "fel": "Karbantartási munkák folyamatos termelésű területen, üzemi környezetben"
+        "fel": "Wartungsarbeiten in einem Bereich mit kontinuierlicher Produktion, im Betriebsumfeld"
       },
       {
-        "proj": "BIO2 E-4116 hőcserélő - kivitelezés",
-        "fel": "Alkohol desztillációs üzem hőcserélőjéhez kapcsolódó új hőhasznosító kondenzátorának villamos integrálása - tervezés, nyomvonal építés, szekrénygyártás, telepítés, üzembehelyezés ATEX területen"
+        "proj": "BIO2 E-4116 Wärmetauscher - Ausführung",
+        "fel": "Elektrische Integration des neuen Wärmerückgewinnungskondensators am Wärmetauscher der Destillationsanlage - Planung, Trassenbau, Schrankfertigung, Installation, Inbetriebnahme im ATEX-Bereich"
       },
       {
-        "proj": "Overhaul of WWTP - phase II - Új iszapprésház telepítése - tervezés",
-        "fel": "Új üzemi területhez kapcsolódó villamos tervezés - épületvillamosság, villámvédelem, elosztószekrény"
+        "proj": "Overhaul of WWTP - phase II - Installation des neuen Schlammentwässerungsgebäudes - Planung",
+        "fel": "Elektroplanung für den neuen Betriebsbereich – Elektroinstallation (Gebäude), Blitzschutz, Verteilerschrank"
       },
       {
-        "proj": "B2505 BB1 Füstgázszűrő karbantartás - kivitelezés",
-        "fel": "Energiaüzemhez tartozó villamos motorok karbantartása"
+        "proj": "B2505 BB1 Rauchgasfilter-Wartung - Ausführung",
+        "fel": "Wartung der Elektromotoren der Energiezentrale"
       },
       {
-        "proj": "B2531-11 ADSEP gyantabetöltő rendszer - tervezés",
-        "fel": "Cukorüzem gyantabetöltő rendszeréhez kapcsolódó nyomásmérők integrációjának tervezése ATEX területen"
+        "proj": "B2531-11 ADSEP Harz-Befüllsystem - Planung",
+        "fel": "Planung der Integration der Druckmessumformer am Harz-Befüllsystem der Zuckerfabrik im ATEX-Bereich"
       },
       {
-        "proj": "B2531-11 ADSEP gyantabetöltő rendszer - kivitelezés",
-        "fel": "Cukorüzem gyantabetöltő rendszeréhez kapcsolódó nyomásmérők integrációjának kivitelezése ATEX területen"
+        "proj": "B2531-11 ADSEP Harz-Befüllsystem - Ausführung",
+        "fel": "Ausführung der Integration der Druckmessumformer am Harz-Befüllsystem der Zuckerfabrik im ATEX-Bereich"
       },
       {
-        "proj": "VBF, VV, RB mérések",
-        "fel": "Üzemi területek komplett Villamos Biztonsági Felülvizsgálata, Villámvédelmi felülvizsgálata, Robbanásbiztos Berendezések Felülvizsgálata"
+        "proj": "VBF-, VV-, RB-Prüfungen",
+        "fel": "Komplette Elektrosicherheitsprüfung, Blitzschutzprüfung und Prüfung explosionsgeschützter Betriebsmittel der Betriebsbereiche"
       },
       {
-        "proj": "B2531-13 KDX B2820-as tartály szintkapcsoló - kivitelezés",
-        "fel": "Cukorüzem termelési berendezéséhez kapcsolódó szintkapcsoló integrációjának tervezése ATEX területen"
+        "proj": "B2531-13 KDX Behälter B2820 Niveauschalter - Ausführung",
+        "fel": "Planung der Integration des Niveauschalters an der Produktionsanlage der Zuckerfabrik im ATEX-Bereich"
       },
       {
-        "proj": "B2531-12 P0811 zsomp szintkapcsoló - kivitelezés",
-        "fel": "Cukorüzem termelési berendezéséhez kapcsolódó szintkapcsoló integrációjának kivitelezése ATEX területen"
+        "proj": "B2531-12 P0811 Sumpf-Niveauschalter - Ausführung",
+        "fel": "Ausführung der Integration des Niveauschalters an der Produktionsanlage der Zuckerfabrik im ATEX-Bereich"
       },
       {
-        "proj": "Overhaul of WWTP - phase II - Új iszapprésház telepítése - kivitelezés",
-        "fel": "Új üzemi területhez kapcsolódó villamos kivitelezés - épületvillamosság, villámvédelem, elosztószekrény"
+        "proj": "Overhaul of WWTP - phase II - Installation des neuen Schlammentwässerungsgebäudes - Ausführung",
+        "fel": "Elektromontage für den neuen Betriebsbereich – Elektroinstallation (Gebäude), Blitzschutz, Verteilerschrank"
       },
       {
-        "proj": "Hűtőtorony installációs hálózat kiépítés",
-        "fel": "Alkoholüzemi hűtőtorony villamos installációs hálózatának tervezése és kivitelezése"
+        "proj": "Aufbau des Installationsnetzes des Kühlturms",
+        "fel": "Planung und Ausführung des elektrischen Installationsnetzes des Kühlturms der Destillationsanlage"
       },
       {
-        "proj": "H0015 Hasadó panel villamos kivitelezés",
-        "fel": "Elevátorok hasadópanel cseréjének irányítástechnikai tervezése, ATEX területen, teljes rendszer biztonsági felülvizsgálata VBF és ATEX tekintetében"
+        "proj": "H0015 Berstscheibe Elektromontage",
+        "fel": "Leittechnik-Planung für den Austausch der Berstscheiben der Becherwerke im ATEX-Bereich; sicherheitstechnische Prüfung des Gesamtsystems in Bezug auf VBF und ATEX"
       },
       {
-        "proj": "B2408 - H3012 Elevátor",
-        "fel": "Elevátorok hasadópanel cseréjének irányítástechnikai tervezése, ATEX területen, teljes rendszer biztonsági felülvizsgálata VBF és ATEX tekintetében"
+        "proj": "B2408 - H3012 Becherwerk",
+        "fel": "Leittechnik-Planung für den Austausch der Berstscheiben der Becherwerke im ATEX-Bereich; sicherheitstechnische Prüfung des Gesamtsystems in Bezug auf VBF und ATEX"
       },
       {
-        "proj": "B2408 - H3011 Elevátor kivitelezés",
-        "fel": "Elevátorok hasadópanel cseréjének irányítástechnikai tervezése, ATEX területen, teljes rendszer biztonsági felülvizsgálata VBF és ATEX tekintetében"
+        "proj": "B2408 - H3011 Becherwerk Ausführung",
+        "fel": "Leittechnik-Planung für den Austausch der Berstscheiben der Becherwerke im ATEX-Bereich; sicherheitstechnische Prüfung des Gesamtsystems in Bezug auf VBF und ATEX"
       },
       {
-        "proj": "BK088 Bio1 koncentráló hőm.beépítés",
-        "fel": "Alkohol finomító üzem új hőmérőjének integrációja meglévő rendszerben - ATEX területen tervezés és kivitelezés"
+        "proj": "BK088 Bio1 Konzentrator – Einbau des Temperaturfühlers",
+        "fel": "Integration des neuen Temperaturfühlers der Raffinerieanlage in das bestehende System - Planung und Ausführung im ATEX-Bereich"
       },
       {
-        "proj": "B2530-26 BIO2 Tömegárammérő beépítés - tervezés",
-        "fel": "Alkohol finomító üzem új tömegárammérőjének integrációja meglévő rendszerben - ATEX területen tervezés"
+        "proj": "B2530-26 BIO2 Massendurchflussmesser-Einbau - Planung",
+        "fel": "Integration des neuen Massendurchflussmessers der Raffinerieanlage in das bestehende System - Planung im ATEX-Bereich"
       },
       {
-        "proj": "B2530-24 BIO2 Hűtővíz szelep automatizálás - tervezés",
-        "fel": "Alkohol finomító üzem új tömegárammérőjének integrációja meglévő rendszerben - ATEX területen tervezés"
+        "proj": "B2530-24 BIO2 Kühlwasserventil-Automatisierung - Planung",
+        "fel": "Integration des neuen Massendurchflussmessers der Raffinerieanlage in das bestehende System - Planung im ATEX-Bereich"
       },
       {
-        "proj": "B2508 BIO1 CO2 scrubber - tervezés",
-        "fel": "Fermentáló üzem meglévő tartály cseréjéhez kapcsolódó hőmérséklet, nyomás és szintérzékelő integrálása meglévő rendszerbe - tervezés és kivitelezés"
+        "proj": "B2508 BIO1 CO2 scrubber - Planung",
+        "fel": "Integration der Temperatur-, Druck- und Niveausensoren im Zusammenhang mit dem Austausch des bestehenden Behälters der Fermentationsanlage in das bestehende System - Planung und Ausführung"
       },
       {
-        "proj": "B2502-21 Bio1 Flash gőz",
-        "fel": "Cukor finomító üzem új mennyiségmérőjének integrációja meglévő rendszerben - ATEX területen tervezés és kivitelezés"
+        "proj": "B2502-21 Bio1 Flashdampf",
+        "fel": "Integration des neuen Durchflussmessers der Zuckerraffinerie in das bestehende System - Planung und Ausführung im ATEX-Bereich"
       },
       {
-        "proj": "B2320 Szállítószalag torlódás érzékelők - tervezés",
-        "fel": "Kukorica szállítószalag torlódásérzékelőinek integrálása meglévő rendszerbe - ATEX területen tervezés és kivitelezés"
+        "proj": "B2320 Förderband-Stausensoren - Planung",
+        "fel": "Integration der Stausensoren des Mais-Förderbands in das bestehende System - Planung und Ausführung im ATEX-Bereich"
       },
       {
-        "proj": "VBF, VV, RB mérések",
-        "fel": "Üzemi területek komplett Villamos Biztonsági Felülvizsgálata, Villámvédelmi felülvizsgálata, Robbanásbiztos Berendezések Felülvizsgálata"
+        "proj": "VBF-, VV-, RB-Prüfungen",
+        "fel": "Komplette Elektrosicherheitsprüfung, Blitzschutzprüfung und Prüfung explosionsgeschützter Betriebsmittel der Betriebsbereiche"
       },
       {
-        "fel": "Karbantartási munkák folyamatos termelésű területen, üzemi környezetben"
+        "fel": "Wartungsarbeiten in einem Bereich mit kontinuierlicher Produktion, im Betriebsumfeld"
       },
       {
-        "proj": "Csőfűtés kialakítása",
-        "fel": "Meglévő ipari csőhálózat csőfűtésének tervezése és kivitelezése ATEX területen"
+        "proj": "Einrichtung der Rohrbegleitheizung",
+        "fel": "Planung und Ausführung der Rohrbegleitheizung für das bestehende industrielle Rohrnetz im ATEX-Bereich"
       },
       {
-        "proj": "22/0,4kV alállomás rekonstrukció",
-        "fel": "Transzformátor csere, 22-mezős 0,4kV elosztó tervezése, gyártása, cseréje"
+        "proj": "Rekonstruktion der Unterstation 22/0,4kV",
+        "fel": "Transformatoraustausch; Planung, Fertigung und Austausch des 22-mezős 0,4kV-Verteilers"
       },
       {
-        "proj": "Szelektív hulladékudvar betáplálása",
-        "fel": "Üzemhez kapcsolódó szelektív hulladékudvar épületvillamossági hálózatának tervezése és kivitelezése"
+        "proj": "Einspeisung des Wertstoffhofs",
+        "fel": "Planung und Ausführung des gebäudeelektrischen Netzes des zum Werk gehörenden Wertstoffhofs"
       },
       {
-        "proj": "Overhaul of cooling towers - Szörpös hűtőtornyok cseréje",
-        "fel": "Meglévő hűtőtorony villamos rendszeréhez kapcsolódó bontási munkálatok, új hűtőtorony villamos hálózatának kiépítése, elosztószekrény gyártása, telepítése, üzembehelyezése"
+        "proj": "Overhaul of cooling towers - Austausch der Sirup-Kühltürme",
+        "fel": "Rückbauarbeiten am elektrischen System des bestehenden Kühlturms, Aufbau des elektrischen Netzes des neuen Kühlturms, Fertigung, Installation und Inbetriebnahme des Verteilerschranks"
       },
       {
-        "proj": "Szegedi városi tömegközlekedés fejlesztése",
-        "fel": "Projektmenedzsment, üzembe helyezésben való részvétel."
+        "proj": "Entwicklung des öffentlichen Personennahverkehrs in Szeged",
+        "fel": "Projektmanagement, Mitwirkung an der Inbetriebnahme."
       },
       {
-        "proj": "Több projekt",
-        "fel": "Vasúti váltófűtés rendszer hardver és szoftver fejlesztése, gyártása."
+        "proj": "Mehrere Projekte",
+        "fel": "Hardware- und Software-Entwicklung und Fertigung des Eisenbahn-Weichenheizungssystems."
       },
       {
-        "proj": "Pusztaszabolcs - Pécs vasútvonal",
-        "fel": "Siemens Vicos P500 telemechanikai rendszer karbantartása és javítása"
+        "proj": "Bahnstrecke Pusztaszabolcs - Pécs",
+        "fel": "Wartung und Reparatur des Siemens Vicos P500 Telemechanik-Systems"
       },
       {
-        "proj": "Kecskeméti gyár építése",
-        "fel": "Épületautomatika szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+        "proj": "Bau des Werks Kecskemét",
+        "fel": "Erstellung und Inbetriebnahme von Gebäudeautomations-Software auf Basis von Siemens S7-300 PLC."
       },
       {
-        "fel": "Középfeszültségű BHTR tervezése, telepítése"
+        "fel": "Planung und Installation des Mittelspannungs-BHTR"
       },
       {
-        "fel": "Gyártásautomatizálás fejlesztése Omron PLC alapokon, karbantartás."
+        "fel": "Entwicklung der Produktionsautomatisierung auf Basis von Omron PLC, Wartung."
       },
       {
-        "proj": "Gyárbővítés",
-        "fel": "Épületautomatika és szállítószalag vezérlő szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+        "proj": "Werkserweiterung",
+        "fel": "Erstellung und Inbetriebnahme von Gebäudeautomations- und Förderband-Steuerungssoftware auf Basis von Siemens S7-300 PLC."
       },
       {
-        "proj": "1-es 3-as villamos felújítása",
-        "fel": "Áramátalakítók, védelem-irányítástechnika üzembe helyezése, távvezérlő rendszer fejlesztése, gyártása, üzembe helyezés"
+        "proj": "Sanierung der Straßenbahnlinien 1 und 3",
+        "fel": "Inbetriebnahme der Gleichrichter-Unterwerke und der Schutz- und Leittechnik; Entwicklung, Fertigung und Inbetriebnahme des Fernsteuerungssystems"
       },
       {
-        "fel": "600VDC feszültségfigyelő fejlesztése, gyártása"
+        "fel": "Entwicklung und Fertigung der 600VDC-Spannungsüberwachung"
       },
       {
-        "proj": "Dél-Balaton vasútvonal",
-        "fel": "Siemens Vicos P500 telemechanikai rendszer karbantartása és javítása"
+        "proj": "Bahnstrecke Dél-Balaton",
+        "fel": "Wartung und Reparatur des Siemens Vicos P500 Telemechanik-Systems"
       },
       {
-        "proj": "Budai fonódó villamosok",
-        "fel": "Áramátalakítók, védelem-irányítástechnika üzembe helyezése, távvezérlő rendszer fejlesztése, gyártása, üzembe helyezés"
+        "proj": "Straßenbahnen Budai fonódó",
+        "fel": "Inbetriebnahme der Gleichrichter-Unterwerke und der Schutz- und Leittechnik; Entwicklung, Fertigung und Inbetriebnahme des Fernsteuerungssystems"
       },
       {
-        "fel": "Alumíniumcsiszoló kabinok gépészeti automatika szoftver készítése, üzembe helyezése Siemens S7-300 PLC alapokon."
+        "fel": "Erstellung und Inbetriebnahme der maschinentechnischen Automatisierungssoftware für die Aluminiumschleifkabinen auf Basis von Siemens S7-300 PLC."
       },
       {
-        "proj": "Belső fejlesztés",
-        "fel": "24V túlfeszültséglevezető fejlesztése, gyártása"
+        "proj": "Interne Entwicklung",
+        "fel": "Entwicklung und Fertigung des 24V-Überspannungsableiters"
       },
       {
-        "proj": "Belső fejlesztés",
-        "fel": "Regor Lua alapú PLC és Scada rendszer fejlesztése, gyártása"
+        "proj": "Interne Entwicklung",
+        "fel": "Entwicklung und Fertigung des Regor Lua-basierten PLC- und SCADA-Systems"
       },
       {
-        "proj": "Szántód-Kőröshegy-Balatonszentgyörgy vasúti vonalszakasz felújítása",
-        "fel": "HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+        "proj": "Sanierung des Streckenabschnitts Szántód-Kőröshegy-Balatonszentgyörgy",
+        "fel": "Entwicklung, Fertigung und Inbetriebnahme des HETA-Oberleitungs-Fernsteuerungssystems"
       },
       {
-        "proj": "Rákosrendező-Esztergom vasúti vonalszakasz felújítása",
-        "fel": "HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+        "proj": "Sanierung des Streckenabschnitts Rákosrendező-Esztergom",
+        "fel": "Entwicklung, Fertigung und Inbetriebnahme des HETA-Oberleitungs-Fernsteuerungssystems"
       },
       {
-        "proj": "1-es villamos meghosszabbítása az Etele térig",
-        "fel": "Áramátalakítók, védelem-irányítástechnika üzembe helyezése, távvezérlő rendszer fejlesztése, gyártása, üzembe helyezés"
+        "proj": "Verlängerung der Straßenbahnlinie 1 bis Etele tér",
+        "fel": "Inbetriebnahme der Gleichrichter-Unterwerke und der Schutz- und Leittechnik; Entwicklung, Fertigung und Inbetriebnahme des Fernsteuerungssystems"
       },
       {
-        "proj": "1-es villamos meghosszabbítása az Etele térig",
-        "fel": "Etele téri végállomás SIL2 biztonsági vezérlés tervezése, fejlesztése, üzembe helyezése"
+        "proj": "Verlängerung der Straßenbahnlinie 1 bis Etele tér",
+        "fel": "Planung, Entwicklung und Inbetriebnahme der SIL2-Sicherheitssteuerung für die Endstation Etele tér"
       },
       {
-        "proj": "BKV M3 metró felújítása",
-        "fel": "Áramátalakítók, védelem-irányítástechnika üzembe helyezése, távvezérlő rendszer fejlesztése, gyártása, üzembe helyezés"
+        "proj": "Sanierung der BKV M3-Metro",
+        "fel": "Inbetriebnahme der Gleichrichter-Unterwerke und der Schutz- und Leittechnik; Entwicklung, Fertigung und Inbetriebnahme des Fernsteuerungssystems"
       },
       {
-        "proj": "Dombóvár-Pusztaszabolcs vonalszakasz felújítása",
-        "fel": "Váltófűtés, és térvilágítás távvezérlő rendszer, HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+        "proj": "Sanierung des Streckenabschnitts Dombóvár-Pusztaszabolcs",
+        "fel": "Entwicklung, Fertigung und Inbetriebnahme des Weichenheizungs- und Platzbeleuchtungs-Fernsteuerungssystems sowie des HETA-Oberleitungs-Fernsteuerungssystems"
       },
       {
-        "fel": "Keleti pályaudvar HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+        "fel": "Keleti pályaudvar – Entwicklung, Fertigung und Inbetriebnahme des HETA-Oberleitungs-Fernsteuerungssystems"
       },
       {
-        "fel": "H6/H7 HÉV felújítás, áramellátás, védelem-irányítástechnikai rendszerek tervezése"
+        "fel": "H6/H7 HÉV-Sanierung – Planung der Stromversorgung sowie der Schutz- und Leittechnik"
       },
       {
-        "fel": "H5 HÉV felújítás, áramellátás, védelem-irányítástechnikai rendszerek tervezése"
+        "fel": "H5 HÉV-Sanierung – Planung der Stromversorgung sowie der Schutz- und Leittechnik"
       },
       {
-        "fel": "BER08 Tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése, szoftver, üzembe helyezés"
+        "fel": "BER08 Planung, Montage, Verkabelung, Software und Inbetriebnahme der Gebäudetechnik-Automatisierung für Reinräume"
       }
     ]
   },
   "forms": {
-    "nameReq": "Kérjük, adja meg a nevét.",
-    "nameShort": "A név túl rövid, legalább 2 karakter.",
-    "emailReq": "Kérjük, adja meg az e-mail címét.",
-    "emailInvalid": "Érvénytelen e-mail cím, ellenőrizze a formátumot (pl. nev@ceg.hu).",
-    "phoneInvalid": "A telefonszám érvénytelen a kiválasztott országhoz.",
-    "fileTooBig": "Néhány fájl túl nagy, max. 10 MB fájlonként.",
-    "fixErrors": "Kérjük, javítsa a pirossal jelölt mezőket.",
-    "captcha": "Kérjük, igazolja, hogy nem robot.",
-    "remove": "Eltávolítás",
-    "honeypot": "Ne töltse ki ezt a mezőt",
-    "namePlaceholder": "Kovács János",
+    "nameReq": "Bitte geben Sie Ihren Namen ein.",
+    "nameShort": "Der Name ist zu kurz, mindestens 2 Zeichen.",
+    "emailReq": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
+    "emailInvalid": "Ungültige E-Mail-Adresse, bitte prüfen Sie das Format (z. B. max@firma.de).",
+    "phoneInvalid": "Die Telefonnummer ist für das ausgewählte Land ungültig.",
+    "fileTooBig": "Einige Dateien sind zu groß, max. 10 MB pro Datei.",
+    "fixErrors": "Bitte korrigieren Sie die rot markierten Felder.",
+    "captcha": "Bitte bestätigen Sie, dass Sie kein Roboter sind.",
+    "remove": "Entfernen",
+    "honeypot": "Füllen Sie dieses Feld nicht aus",
+    "namePlaceholder": "Max Mustermann",
     "phonePlaceholder": "30 123 4567",
-    "gdprLink": "adatvédelmi tájékoztatót",
-    "nameLabel": "Név *",
-    "emailLabel": "E-mail *",
+    "gdprLink": "Datenschutzerklärung",
+    "nameLabel": "Name *",
+    "emailLabel": "E-Mail *",
     "phoneLabel": "Telefon",
-    "gdprReq": "Az adatkezelési tájékoztató elfogadása kötelező.",
-    "optional": " · opcionális",
-    "clear": "Nincs megadva",
-    "selectPlaceholder": "Válasszon…"
+    "gdprReq": "Die Annahme der Datenschutzerklärung ist erforderlich.",
+    "optional": " · optional",
+    "clear": "Nicht angegeben",
+    "selectPlaceholder": "Bitte wählen…"
   },
   "contact": {
     "head": {
-      "crumb": "Kapcsolat",
-      "placeholder": "Fotó, iroda / telephely",
+      "crumb": "Kontakt",
+      "placeholder": "Foto, Büro / Standort",
       "title": [
-        "Beszéljünk a",
-        "projektjéről!"
+        "Sprechen wir über Ihr",
+        "Projekt!"
       ],
-      "lede": "Írja le röviden a feladatot, és mérnökeink 3 munkanapon belül visszajeleznek egy első szakmai állásfoglalással. A konzultáció díjmentes."
+      "lede": "Beschreiben Sie kurz die Aufgabe, und unsere Ingenieure melden sich innerhalb von 3 Werktagen mit einer ersten fachlichen Einschätzung zurück. Die Beratung ist kostenlos."
     },
     "areas": [
-      "Ipari automatizálás",
-      "Kapcsolószekrény-gyártás",
-      "SCADA & felügyelet",
-      "Villamos energetika",
-      "Közlekedési rendszerek",
-      "Üzemeltetés & szerviz",
-      "Egyéb / nem tudom még"
+      "Industrieautomatisierung",
+      "Schaltschrankbau",
+      "SCADA & Überwachung",
+      "Elektrische Energietechnik",
+      "Verkehrssysteme",
+      "Betrieb & Service",
+      "Sonstiges / noch unklar"
     ],
     "timelines": [
-      "Sürgős (< 1 hó)",
-      "1–3 hónap",
-      "3–6 hónap",
-      "Rugalmas"
+      "Dringend (< 1 Mon.)",
+      "1–3 Monate",
+      "3–6 Monate",
+      "Flexibel"
     ],
-    "srHeading": "Kapcsolatfelvétel",
-    "cegLabel": "Cég",
-    "cegPlaceholder": "Cég neve",
-    "emailPlaceholder": "janos@ceg.hu",
-    "areaLabel": "Terület",
-    "areaPlaceholder": "Válasszon területet…",
-    "timelineLabel": "Határidő",
-    "timelinePlaceholder": "Válasszon határidőt…",
-    "otherLabel": "Miben segíthetünk? · opcionális",
-    "otherPlaceholder": "Röviden, milyen feladatról van szó…",
-    "messageLabel": "Üzenet *",
-    "messagePlaceholder": "Néhány mondat a feladatról, a helyszínről és a tervezett ütemezésről…",
-    "attachLabel": "Csatolmány",
-    "attachOpt": " · tervrajz, PDF, kép, max. 10 MB",
-    "dropzoneStrong": "Húzza ide a fájlokat",
-    "dropzoneRest": ", vagy kattintson a tallózáshoz",
+    "srHeading": "Kontaktaufnahme",
+    "cegLabel": "Firma",
+    "cegPlaceholder": "Firmenname",
+    "emailPlaceholder": "max@firma.de",
+    "areaLabel": "Bereich",
+    "areaPlaceholder": "Bereich wählen…",
+    "timelineLabel": "Zeitrahmen",
+    "timelinePlaceholder": "Zeitrahmen wählen…",
+    "otherLabel": "Wie können wir Ihnen helfen? · optional",
+    "otherPlaceholder": "Kurz, worum geht es bei der Aufgabe…",
+    "messageLabel": "Nachricht *",
+    "messagePlaceholder": "Ein paar Sätze zur Aufgabe, zum Standort und zum geplanten Zeitplan…",
+    "attachLabel": "Anhang",
+    "attachOpt": " · Zeichnung, PDF, Bild, max. 10 MB",
+    "dropzoneStrong": "Ziehen Sie die Dateien hierher",
+    "dropzoneRest": ", oder klicken Sie zum Durchsuchen",
     "dropzoneHint": "PDF · PNG · JPG · DWG · ZIP",
-    "gdpr1": "Elolvastam és elfogadom az ",
-    "gdpr2": ". *",
-    "submit": "Üzenet küldése",
+    "gdpr1": "Ich habe die ",
+    "gdpr2": " gelesen und akzeptiere sie. *",
+    "submit": "Nachricht senden",
     "cards": {
-      "location": "Telephely",
-      "phone": "Telefon & e-mail"
+      "location": "Standort",
+      "phone": "Telefon & E-Mail"
     },
     "mapTitle": "Debaru Kft., Budafoki út 97., Budapest",
     "errors": {
-      "messageReq": "Kérjük, írja le röviden a feladatot.",
-      "messageMax": "Az üzenet legfeljebb {n} karakter lehet."
+      "messageReq": "Bitte beschreiben Sie kurz die Aufgabe.",
+      "messageMax": "Die Nachricht darf höchstens {n} Zeichen lang sein."
     },
     "toasts": {
-      "success": "Köszönjük! Üzenetét megkaptuk, hamarosan jelentkezünk."
+      "success": "Vielen Dank! Wir haben Ihre Nachricht erhalten und melden uns in Kürze."
     }
   },
   "careers": {
     "head": {
-      "crumb": "Karrier",
+      "crumb": "Karriere",
       "title": [
-        "Építsd velünk",
-        "a kritikus infrastruktúrát!"
+        "Bau mit uns",
+        "die kritische Infrastruktur!"
       ],
-      "lede": "Villamosmérnökök, automatizálók és szerelők csapata vagyunk, akik olyan rendszereket építenek, amelyek városokat, üzemeket és közműveket tartanak működésben. Ha te is kézzelfogható munkát keresel, itt a helyed.",
-      "placeholder": "Karrier, mérnöki csapat / helyszíni munka"
+      "lede": "Wir sind ein Team aus Elektroingenieuren, Automatisierern und Monteuren, die Systeme bauen, die Städte, Anlagen und Versorgungsnetze am Laufen halten. Wenn auch du greifbare Arbeit suchst, bist du hier richtig.",
+      "placeholder": "Karriere, Ingenieurteam / Arbeit vor Ort"
     },
     "intro": {
-      "eyebrow": "Miért a Debaru",
-      "title": "Nem irodai szoftvert fejlesztünk, valós rendszereket építünk.",
+      "eyebrow": "Warum Debaru",
+      "title": "Wir entwickeln keine Bürosoftware, wir bauen reale Systeme.",
       "paragraphs": [
-        "Nálunk a munkád eredménye kézzelfogható: egy felújított villamos-végállomás, egy hibátlanul induló gyártósor, egy szünetmentesen működő adatközpont. A tervezőasztaltól az üzembe helyezésig végigkíséred a projekteket, és látod, ahogy életre kelnek.",
-        "Kis-közepes, de erős mérnökcsapat vagyunk, ahol nincs elveszve az ember a hierarchiában. Van kitől tanulni, van felelősség, és van tér a fejlődésre, junior szerelőtől a senior projektvezetőig."
+        "Bei uns ist das Ergebnis deiner Arbeit greifbar: eine sanierte Straßenbahn-Endstation, eine fehlerfrei anlaufende Fertigungslinie, ein unterbrechungsfrei laufendes Rechenzentrum. Vom Reißbrett bis zur Inbetriebnahme begleitest du die Projekte durchgehend und siehst, wie sie zum Leben erwachen.",
+        "Wir sind ein kleines bis mittelgroßes, aber starkes Ingenieurteam, in dem niemand in der Hierarchie verloren geht. Es gibt jemanden, von dem du lernen kannst, es gibt Verantwortung, und es gibt Raum zur Entwicklung – vom Junior-Monteur bis zum Senior-Projektleiter."
       ]
     },
     "cultureStats": [
       {
-        "label": "mérnök és technikus"
+        "label": "Ingenieure und Techniker"
       },
       {
-        "label": "év a szakmában"
+        "label": "Jahre in der Branche"
       },
       {
-        "label": "ország aktív projektjei"
+        "label": "Länder mit aktiven Projekten"
       },
       {
-        "label": "ügyeleti csapat"
+        "label": "Bereitschaftsteam"
       }
     ],
     "benefits": [
       {
-        "title": "Valódi szakmai fejlődés",
-        "desc": "A kisfeszültségtől a SCADA-ig, tervezéstől a helyszíni üzembe helyezésig, nálunk a teljes vertikumot megismered, nem egy szűk résfeladatot."
+        "title": "Echte fachliche Entwicklung",
+        "desc": "Von der Niederspannung bis zu SCADA, vom Entwurf bis zur Inbetriebnahme vor Ort – bei uns lernst du das gesamte Spektrum kennen, nicht nur eine enge Nischenaufgabe."
       },
       {
-        "title": "Kézzelfogható projektek",
-        "desc": "Városi közlekedés, energetika, ipari üzemek, adatközpontok. Olyan rendszereken dolgozol, amelyeket nap mint nap használnak."
+        "title": "Greifbare Projekte",
+        "desc": "Städtischer Verkehr, Energietechnik, Industrieanlagen, Rechenzentren. Du arbeitest an Systemen, die Tag für Tag genutzt werden."
       },
       {
-        "title": "Folyamatos képzés",
-        "desc": "Gyártói tréningek és tanúsítványok: Siemens TIA Portal, Schneider, B&R, EPLAN. A fejlődésedbe befektetünk."
+        "title": "Kontinuierliche Weiterbildung",
+        "desc": "Herstellerschulungen und Zertifizierungen: Siemens TIA Portal, Schneider, B&R, EPLAN. Wir investieren in deine Entwicklung."
       },
       {
-        "title": "Erős mérnökcsapat",
-        "desc": "15 fős, tapasztalt csapat, ahol a tudásmegosztás alap. Mentorálás pályakezdőknek, szakmai kihívás a tapasztaltaknak."
+        "title": "Starkes Ingenieurteam",
+        "desc": "Ein 15-köpfiges, erfahrenes Team, in dem Wissensaustausch selbstverständlich ist. Mentoring für Berufseinsteiger, fachliche Herausforderung für die Erfahrenen."
       },
       {
-        "title": "Stabil háttér",
-        "desc": "15+ év, hazai és nemzetközi referenciák, kiszámítható működés. Nem startup-hullámvasút, biztos alapokon álló cég."
+        "title": "Solides Fundament",
+        "desc": "15+ Jahre, nationale und internationale Referenzen, planbarer Betrieb. Keine Startup-Achterbahn, sondern ein Unternehmen auf soliden Grundlagen."
       },
       {
-        "title": "Rugalmasság & korrektség",
-        "desc": "Hibrid munkarend ott, ahol a pozíció engedi, korrekt túlóra- és kiszállás-elszámolás, minőségi eszközök és védőfelszerelés."
+        "title": "Flexibilität & Fairness",
+        "desc": "Hybrides Arbeitsmodell dort, wo die Position es zulässt, faire Abrechnung von Überstunden und Einsätzen, hochwertige Werkzeuge und Schutzausrüstung."
       }
     ],
     "values": [
       {
-        "title": "Biztonság mindenek előtt",
-        "desc": "A villamos szakmában a biztonság nem szlogen. Szabványos munkavégzés, oktatás és fegyelem, magunkért és a megrendelőért."
+        "title": "Sicherheit geht vor",
+        "desc": "In der Elektrobranche ist Sicherheit kein Slogan. Normgerechtes Arbeiten, Schulung und Disziplin – für uns selbst und für den Auftraggeber."
       },
       {
-        "title": "Precizitás",
-        "desc": "A rendezett terv és a tiszta szekrény évekre előre megtérül. Amit leszállítunk, arra büszkék vagyunk."
+        "title": "Präzision",
+        "desc": "Ein sauber strukturierter Plan und ein aufgeräumter Schaltschrank zahlen sich über Jahre aus. Auf das, was wir liefern, sind wir stolz."
       },
       {
-        "title": "Felelősség",
-        "desc": "Amit átadunk, azért helytállunk. Ha a megrendelőnek szüksége van ránk, számíthat ránk."
+        "title": "Verantwortung",
+        "desc": "Für das, was wir übergeben, stehen wir gerade. Wenn der Auftraggeber uns braucht, kann er sich auf uns verlassen."
       },
       {
-        "title": "Csapatmunka",
-        "desc": "Tervező, szerelő, üzemeltető együtt visz sikerre egy projektet. A jó ötlet bárhonnan jöhet."
+        "title": "Teamarbeit",
+        "desc": "Planer, Monteur und Betreiber führen ein Projekt gemeinsam zum Erfolg. Eine gute Idee kann von überall kommen."
       }
     ],
     "hiringSteps": [
       {
-        "title": "Jelentkezés",
-        "desc": "Küldd el önéletrajzod (és ha van, referenciamunkáid), pár mondat is elég arról, mi érdekel."
+        "title": "Bewerbung",
+        "desc": "Schick uns deinen Lebenslauf (und, falls vorhanden, deine Referenzarbeiten) – ein paar Sätze dazu, was dich interessiert, genügen."
       },
       {
-        "title": "Szakmai beszélgetés",
-        "desc": "Kötetlen beszélgetés a leendő csapatvezetővel: tapasztalat, elvárások, a konkrét feladatok."
+        "title": "Fachgespräch",
+        "desc": "Ein zwangloses Gespräch mit deiner künftigen Teamleitung: Erfahrung, Erwartungen, die konkreten Aufgaben."
       },
       {
-        "title": "Gyakorlati kép",
-        "desc": "A pozíciótól függően rövid szakmai feladat vagy műhely-/helyszíni bejárás, hogy mindkét fél lássa a valóságot."
+        "title": "Praktischer Einblick",
+        "desc": "Je nach Position eine kurze fachliche Aufgabe oder eine Werkstatt-/Baustellenbegehung, damit beide Seiten die Realität sehen."
       },
       {
-        "title": "Ajánlat",
-        "desc": "Konkrét ajánlat, tiszta feltételekkel. Döntés után egyeztetjük a beilleszkedés menetét."
+        "title": "Angebot",
+        "desc": "Ein konkretes Angebot mit klaren Konditionen. Nach deiner Entscheidung stimmen wir den Ablauf deiner Einarbeitung ab."
       }
     ],
     "departments": {
-      "all": "Összes",
-      "tervezes": "Tervezés",
-      "automatizalas": "Automatizálás",
-      "gyartas": "Gyártás",
-      "kivitelezes": "Kivitelezés",
-      "gyakornok": "Gyakornoki"
+      "all": "Alle",
+      "tervezes": "Planung",
+      "automatizalas": "Automatisierung",
+      "gyartas": "Fertigung",
+      "kivitelezes": "Montage",
+      "gyakornok": "Praktikum"
     },
-    "benefitsEyebrow": "Amit kínálunk",
-    "benefitsHeading": "Miért jó nálunk dolgozni?",
-    "cultureHeroPlaceholder": "Csapatfotó, mérnökök / helyszíni munka",
-    "bandEyebrow": "Egy csapat, közös cél",
+    "benefitsEyebrow": "Was wir bieten",
+    "benefitsHeading": "Warum bei uns arbeiten?",
+    "cultureHeroPlaceholder": "Teamfoto, Ingenieure / Arbeit vor Ort",
+    "bandEyebrow": "Ein Team, ein Ziel",
     "bandHeading": [
-      "A jövő infrastruktúráját",
-      "együtt építjük."
+      "Die Infrastruktur von morgen",
+      "bauen wir gemeinsam."
     ],
-    "openEyebrow": "Nyitott pozíciók",
-    "openHeading": "Csatlakozz a csapathoz!",
-    "foreignBadge": "Külföldi munka",
-    "empty": "Ebben a kategóriában jelenleg nincs nyitott pozíció, de a spontán jelentkezést mindig várjuk!",
-    "valuesEyebrow": "A kultúránk",
-    "valuesHeading": "Ahogy dolgozunk",
-    "processEyebrow": "A jelentkezés menete",
-    "processHeading": "Négy lépés, semmi hercehurca",
-    "ctaTitle": "Nem találtad a pozíciód?",
-    "ctaText": "Küldd el az önéletrajzod, és ha felmerül egy hozzád illő pozíció, keresünk!",
-    "applySubject": "Jelentkezés, Debaru karrier",
-    "ctaButton": "Küldöm az önéletrajzom",
+    "openEyebrow": "Offene Stellen",
+    "openHeading": "Werde Teil des Teams!",
+    "foreignBadge": "Auslandseinsatz",
+    "empty": "In dieser Kategorie gibt es derzeit keine offenen Stellen, aber über eine Initiativbewerbung freuen wir uns immer!",
+    "valuesEyebrow": "Unsere Kultur",
+    "valuesHeading": "Wie wir arbeiten",
+    "processEyebrow": "Der Bewerbungsprozess",
+    "processHeading": "Vier Schritte, kein Trara",
+    "ctaTitle": "Deine Position nicht gefunden?",
+    "ctaText": "Schick uns deinen Lebenslauf, und wenn eine passende Position auftaucht, melden wir uns bei dir!",
+    "applySubject": "Bewerbung – Debaru Karriere",
+    "ctaButton": "Meinen Lebenslauf senden",
     "detail": {
-      "docTitleSuffix": "Karrier",
-      "trailLabel": "Karrier",
-      "aboutEyebrow": "A pozícióról",
-      "overviewHeading": "Áttekintés",
-      "respEyebrow": "Főbb feladatok",
-      "reqEyebrow": "Amit elvárunk",
-      "niceEyebrow": "Előnyt jelent",
-      "factsHeading": "Pozíció adatai",
-      "applyBtn": "Jelentkezem",
-      "applyNote": "Önéletrajzodat e-mailben várjuk.",
-      "offerEyebrow": "Amit kínálunk",
-      "offerHeading": "Miért érdemes csatlakozni?",
-      "ctaTitle": "Érdekel a pozíció?",
-      "ctaText": "Küldd el önéletrajzod, pár mondat is elég arról, mi motivál.",
-      "ctaButton": "Jelentkezem erre a pozícióra",
-      "moreEyebrow": "További pozíciók",
-      "allBtn": "Összes pozíció"
+      "docTitleSuffix": "Karriere",
+      "trailLabel": "Karriere",
+      "aboutEyebrow": "Über die Position",
+      "overviewHeading": "Überblick",
+      "respEyebrow": "Hauptaufgaben",
+      "reqEyebrow": "Was wir erwarten",
+      "niceEyebrow": "Von Vorteil",
+      "factsHeading": "Eckdaten der Position",
+      "applyBtn": "Jetzt bewerben",
+      "applyNote": "Wir freuen uns auf deinen Lebenslauf per E-Mail.",
+      "offerEyebrow": "Was wir bieten",
+      "offerHeading": "Warum sich der Einstieg lohnt?",
+      "ctaTitle": "Interesse an der Position?",
+      "ctaText": "Schick uns deinen Lebenslauf – ein paar Sätze dazu, was dich motiviert, genügen.",
+      "ctaButton": "Für diese Position bewerben",
+      "moreEyebrow": "Weitere Stellen",
+      "allBtn": "Alle Stellen"
     },
     "apply": {
-      "docTitlePrefix": "Jelentkezés",
-      "trailLabel": "Karrier",
-      "trailApply": "Jelentkezés",
-      "title": "Jelentkezés",
-      "lede": "{title}, töltse ki az űrlapot, és pár perc alatt jelentkezhet.",
-      "forLabel": "Jelentkezés erre a pozícióra",
-      "nameLabel": "Név *",
-      "emailLabel": "E-mail *",
-      "emailPlaceholder": "janos@pelda.hu",
+      "docTitlePrefix": "Bewerbung",
+      "trailLabel": "Karriere",
+      "trailApply": "Bewerbung",
+      "title": "Bewerbung",
+      "lede": "{title} – fülle das Formular aus und bewirb dich in wenigen Minuten.",
+      "forLabel": "Bewerbung für diese Position",
+      "nameLabel": "Name *",
+      "emailLabel": "E-Mail *",
+      "emailPlaceholder": "max@beispiel.de",
       "phoneLabel": "Telefon",
-      "linkedinLabel": "LinkedIn / portfólió · opcionális",
+      "linkedinLabel": "LinkedIn / Portfolio · optional",
       "linkedinPlaceholder": "https://linkedin.com/in/…",
-      "cvLabel": "Önéletrajz (CV) *",
-      "coverLabel": "Motivációs levél *",
+      "cvLabel": "Lebenslauf *",
+      "coverLabel": "Motivationsschreiben *",
       "fileOpt": " · PDF/DOC",
       "fileHint": "PDF · DOC · DOCX",
-      "dropzoneStrong": "Húzza ide",
-      "dropzoneRest": " vagy tallózzon",
-      "gdpr1": "Elolvastam és elfogadom az ",
-      "gdpr2": ", és hozzájárulok jelentkezésem elbírálásához. *",
-      "submit": "Jelentkezés elküldése",
-      "sidebarHeading": "A pozícióról",
-      "backBtn": "Teljes álláshirdetés",
+      "dropzoneStrong": "Hierher ziehen",
+      "dropzoneRest": " oder durchsuchen",
+      "gdpr1": "Ich habe die ",
+      "gdpr2": " gelesen und akzeptiere sie und willige in die Bearbeitung meiner Bewerbung ein. *",
+      "submit": "Bewerbung absenden",
+      "sidebarHeading": "Über die Position",
+      "backBtn": "Vollständige Stellenanzeige",
       "errors": {
-        "cvReq": "Kérjük, csatolja az önéletrajzát (PDF vagy DOC).",
-        "coverReq": "Kérjük, csatolja a motivációs levelét (PDF vagy DOC).",
-        "linkedinInvalid": "Teljes linket adjon meg (https://…).",
-        "gdprReq": "Az adatkezelési tájékoztató elfogadása kötelező."
+        "cvReq": "Bitte füge deinen Lebenslauf bei (PDF oder DOC).",
+        "coverReq": "Bitte füge dein Motivationsschreiben bei (PDF oder DOC).",
+        "linkedinInvalid": "Bitte gib einen vollständigen Link ein (https://…).",
+        "gdprReq": "Die Zustimmung zur Datenschutzerklärung ist erforderlich."
       },
       "toasts": {
-        "success": "Köszönjük a jelentkezését! Hamarosan felvesszük Önnel a kapcsolatot."
+        "success": "Danke für deine Bewerbung! Wir melden uns bald bei dir."
       }
     },
     "jobs": {
       "villamos-tervezomernok": {
-        "title": "Villamos tervezőmérnök",
-        "department": "Tervezés",
+        "title": "Elektrokonstrukteur",
+        "department": "Planung",
         "location": "Budapest",
-        "type": "Teljes munkaidő",
-        "arrangement": "Hibrid",
-        "level": "Medior / Senior",
-        "placeholder": "Tervezőmérnök, EPLAN / villamos tervek",
-        "summary": "Kisfeszültségű elosztó- és vezérlőrendszerek villamos tervezése EPLAN-ban, a koncepciótól a gyártási dokumentációig.",
+        "type": "Vollzeit",
+        "arrangement": "Hybrid",
+        "level": "Mid-Level / Senior",
+        "placeholder": "Konstrukteur, EPLAN / Elektropläne",
+        "summary": "Elektroplanung von Niederspannungs-Verteil- und Steuerungssystemen in EPLAN, vom Konzept bis zur Fertigungsdokumentation.",
         "overview": [
-          "Tervezőcsapatunk a projektek szíve: itt születnek meg a kapcsolószekrények, elosztók és vezérlések tervei, amelyek alapján a műhely gyárt és a helyszíni csapat kivitelez. Az elképzeléstől a kész, gyártásra kész dokumentációig kíséred végig a munkát.",
-          "Sokféle iparágban dolgozunk (közlekedés, energetika, gyártás, adatközpontok), így változatos, technikailag igényes feladatok várnak, valós felelősséggel."
+          "Unser Konstruktionsteam ist das Herz jedes Projekts: Hier entstehen die Pläne für Schaltschränke, Verteiler und Steuerungen, nach denen die Werkstatt fertigt und das Team vor Ort montiert. Von der ersten Idee bis zur fertigen, produktionsreifen Dokumentation begleitest du die Arbeit.",
+          "Wir arbeiten in vielen Branchen (Verkehr, Energie, Fertigung, Rechenzentren), sodass dich abwechslungsreiche, technisch anspruchsvolle Aufgaben mit echter Verantwortung erwarten."
         ],
         "responsibilities": [
-          "Kisfeszültségű elosztók és vezérlőszekrények villamos tervezése EPLAN Electric P8-ban",
-          "Kapcsolási rajzok, elrendezési tervek, sorkapocs- és kábellisták készítése",
-          "Készülékkiválasztás, méretezés és a vonatkozó szabványok (IEC 61439, MSZ HD 60364) betartása",
-          "Együttműködés a gyártással és a helyszíni csapattal a kivitelezhetőségért",
-          "Dokumentáció karbantartása, revíziók kezelése a projekt teljes életciklusában"
+          "Elektroplanung von Niederspannungs-Verteilern und Steuerschränken in EPLAN Electric P8",
+          "Erstellung von Stromlaufplänen, Anordnungsplänen, Reihenklemmen- und Kabellisten",
+          "Geräteauswahl, Auslegung und Einhaltung der einschlägigen Normen (IEC 61439, MSZ HD 60364)",
+          "Zusammenarbeit mit der Fertigung und dem Team vor Ort für die Umsetzbarkeit",
+          "Pflege der Dokumentation und Verwaltung von Revisionen über den gesamten Projektlebenszyklus"
         ],
         "requirements": [
-          "Villamosmérnöki végzettség (BSc/MSc) vagy egyenértékű szakmai tapasztalat",
-          "Legalább 2–3 év villamos tervezői tapasztalat",
-          "Magabiztos EPLAN Electric P8 ismeret",
-          "Kisfeszültségű elosztás és a vonatkozó szabványok ismerete",
-          "Önálló, precíz munkavégzés és jó együttműködési készség"
+          "Abschluss als Elektroingenieur (BSc/MSc) oder gleichwertige Berufserfahrung",
+          "Mindestens 2–3 Jahre Erfahrung in der Elektroplanung",
+          "Sichere Kenntnisse in EPLAN Electric P8",
+          "Kenntnis der Niederspannungsverteilung und der einschlägigen Normen",
+          "Selbstständige, präzise Arbeitsweise und gute Kooperationsfähigkeit"
         ],
         "niceToHave": [
-          "PLC/automatizálási alapismeretek (Siemens, Schneider)",
-          "Tapasztalat közlekedési vagy energetikai projektekben",
-          "Angol vagy német nyelvtudás"
+          "Grundkenntnisse in PLC/Automatisierung (Siemens, Schneider)",
+          "Erfahrung in Verkehrs- oder Energieprojekten",
+          "Englisch- oder Deutschkenntnisse"
         ],
         "offer": [
-          "Változatos, technikailag igényes projektek valós felelősséggel",
-          "EPLAN- és gyártói tréningek, tanúsítványok",
-          "Hibrid munkarend, korszerű eszközök",
-          "Stabil, kiszámítható háttér és erős mérnökcsapat"
+          "Abwechslungsreiche, technisch anspruchsvolle Projekte mit echter Verantwortung",
+          "EPLAN- und Herstellerschulungen, Zertifizierungen",
+          "Hybrides Arbeitsmodell, moderne Arbeitsmittel",
+          "Ein stabiles, verlässliches Umfeld und ein starkes Ingenieurteam"
         ],
         "facts": [
           {
-            "label": "Terület",
-            "value": "Tervezés"
+            "label": "Bereich",
+            "value": "Planung"
           },
           {
-            "label": "Helyszín",
+            "label": "Standort",
             "value": "Budapest"
           },
           {
-            "label": "Munkaidő",
-            "value": "Teljes munkaidő"
+            "label": "Arbeitszeit",
+            "value": "Vollzeit"
           },
           {
-            "label": "Munkarend",
-            "value": "Hibrid"
+            "label": "Arbeitsmodell",
+            "value": "Hybrid"
           },
           {
-            "label": "Tapasztalat",
-            "value": "2+ év"
+            "label": "Erfahrung",
+            "value": "2+ Jahre"
           }
         ]
       },
       "plc-scada-mernok": {
-        "title": "PLC / SCADA automatizálási mérnök",
-        "department": "Automatizálás",
-        "location": "Budapest + helyszíni",
-        "type": "Teljes munkaidő",
-        "arrangement": "Helyszíni / Hibrid",
-        "level": "Medior",
-        "placeholder": "Automatizálási mérnök, PLC / SCADA / HMI",
-        "summary": "PLC- és SCADA-rendszerek programozása, üzembe helyezése és integrációja gyártósorokon és közmű-infrastruktúrán.",
+        "title": "PLC-/SCADA-Automatisierungsingenieur",
+        "department": "Automatisierung",
+        "location": "Budapest + vor Ort",
+        "type": "Vollzeit",
+        "arrangement": "Vor Ort / Hybrid",
+        "level": "Mid-Level",
+        "placeholder": "Automatisierungsingenieur, PLC / SCADA / HMI",
+        "summary": "Programmierung, Inbetriebnahme und Integration von PLC- und SCADA-Systemen an Fertigungslinien und in der Versorgungsinfrastruktur.",
         "overview": [
-          "Az automatizálási csapatban a rendszerek \"eszét\" építed: PLC-programot írsz, HMI/SCADA felületet fejlesztesz, majd a helyszínen életre kelted a berendezést. A tervezőasztaltól az üzembe helyezésig végigviszed a feladatot.",
-          "Munkád nyomán gyártósorok, szivattyútelepek és alállomások indulnak el és működnek megbízhatóan, kézzelfogható, azonnal látható eredménnyel."
+          "Im Automatisierungsteam baust du das \"Gehirn\" der Anlagen: Du schreibst das PLC-Programm, entwickelst die HMI-/SCADA-Oberfläche und erweckst die Anlage anschließend vor Ort zum Leben. Vom Reißbrett bis zur Inbetriebnahme führst du die Aufgabe durch.",
+          "Dank deiner Arbeit gehen Fertigungslinien, Pumpstationen und Unterstationen in Betrieb und laufen zuverlässig, mit greifbaren, sofort sichtbaren Ergebnissen."
         ],
         "responsibilities": [
-          "PLC-programozás (Siemens TIA Portal, Schneider, B&R)",
-          "HMI és SCADA felületek fejlesztése és integrációja",
-          "Helyszíni üzembe helyezés, bekötés-ellenőrzés, éles indítás",
-          "Meglévő rendszerek bővítése, hibakeresés és optimalizálás",
-          "Dokumentáció és betanítás a megrendelő üzemeltetőinek"
+          "PLC-Programmierung (Siemens TIA Portal, Schneider, B&R)",
+          "Entwicklung und Integration von HMI- und SCADA-Oberflächen",
+          "Inbetriebnahme vor Ort, Anschlussprüfung, Live-Start",
+          "Erweiterung bestehender Systeme, Fehlersuche und Optimierung",
+          "Dokumentation und Einweisung für die Betreiber des Kunden"
         ],
         "requirements": [
-          "Villamosmérnöki / mechatronikai végzettség vagy erős szakmai tapasztalat",
-          "Legalább 2 év PLC-programozási tapasztalat (lehetőleg Siemens TIA)",
-          "SCADA/HMI rendszerek ismerete",
-          "Helyszíni munkára és alkalmankénti utazásra való nyitottság",
-          "B kategóriás jogosítvány"
+          "Abschluss in Elektrotechnik / Mechatronik oder fundierte Berufserfahrung",
+          "Mindestens 2 Jahre Erfahrung in der PLC-Programmierung (vorzugsweise Siemens TIA)",
+          "Kenntnis von SCADA-/HMI-Systemen",
+          "Bereitschaft zu Arbeit vor Ort und gelegentlichen Reisen",
+          "Führerschein Klasse B"
         ],
         "niceToHave": [
-          "Hajtástechnika (frekvenciaváltók) tapasztalat",
-          "Ipari hálózatok (Profinet, Modbus, OPC UA) ismerete",
-          "Angol vagy német nyelvtudás"
+          "Erfahrung in Antriebstechnik (Frequenzumrichter)",
+          "Kenntnis industrieller Netzwerke (Profinet, Modbus, OPC UA)",
+          "Englisch- oder Deutschkenntnisse"
         ],
         "offer": [
-          "Teljes projektek a koncepciótól az éles indításig",
-          "Gyártói tréningek (Siemens, Schneider, B&R)",
-          "Korrekt kiszállás-elszámolás, minőségi eszközök",
-          "Változatos iparágak, folyamatos szakmai kihívás"
+          "Komplette Projekte vom Konzept bis zum Go-live",
+          "Herstellerschulungen (Siemens, Schneider, B&R)",
+          "Faire Abrechnung von Einsätzen vor Ort, hochwertige Arbeitsmittel",
+          "Abwechslungsreiche Branchen, kontinuierliche fachliche Herausforderung"
         ],
         "facts": [
           {
-            "label": "Terület",
-            "value": "Automatizálás"
+            "label": "Bereich",
+            "value": "Automatisierung"
           },
           {
-            "label": "Helyszín",
-            "value": "Budapest + helyszíni"
+            "label": "Standort",
+            "value": "Budapest + vor Ort"
           },
           {
-            "label": "Munkaidő",
-            "value": "Teljes munkaidő"
+            "label": "Arbeitszeit",
+            "value": "Vollzeit"
           },
           {
-            "label": "Munkarend",
-            "value": "Helyszíni / Hibrid"
+            "label": "Arbeitsmodell",
+            "value": "Vor Ort / Hybrid"
           },
           {
-            "label": "Tapasztalat",
-            "value": "2+ év"
+            "label": "Erfahrung",
+            "value": "2+ Jahre"
           }
         ]
       },
       "kapcsoloszekreny-szerelo": {
-        "title": "Kapcsolószekrény-szerelő",
-        "department": "Gyártás",
-        "location": "Budapest (műhely)",
-        "type": "Teljes munkaidő",
-        "arrangement": "Helyszíni",
-        "level": "Pályakezdő is",
-        "placeholder": "Szekrényszerelő, műhely / kábelezés",
-        "summary": "Egyedi vezérlő- és elosztószekrények szerelése saját műhelyünkben, tervek alapján, precíz kivitelben.",
+        "title": "Schaltschrankmonteur",
+        "department": "Fertigung",
+        "location": "Budapest (Werkstatt)",
+        "type": "Vollzeit",
+        "arrangement": "Vor Ort",
+        "level": "Auch Berufseinsteiger",
+        "placeholder": "Schrankmonteur, Werkstatt / Verkabelung",
+        "summary": "Montage von individuellen Steuer- und Verteilerschränken in unserer eigenen Werkstatt, nach Plänen und in präziser Ausführung.",
         "overview": [
-          "A műhelyünkben készülnek azok a szekrények, amelyek később üzemek és közművek szívében dolgoznak. A tervező rajzai alapján te építed meg őket: készülékek felszerelése, kábelezés, bekötés, ellenőrzés.",
-          "Ha szereted a rendezett, precíz kézi munkát és fontos számodra, hogy amit csinálsz, az látványos és tartós legyen, itt a helyed. Pályakezdőket is szívesen betanítunk."
+          "In unserer Werkstatt entstehen die Schränke, die später im Herzen von Anlagen und Versorgungsbetrieben arbeiten. Nach den Zeichnungen des Konstrukteurs baust du sie auf: Geräte montieren, verkabeln, anschließen, prüfen.",
+          "Wenn du saubere, präzise Handarbeit magst und dir wichtig ist, dass das, was du machst, ansehnlich und langlebig ist, bist du hier richtig. Auch Berufseinsteiger lernen wir gerne an."
         ],
         "responsibilities": [
-          "Vezérlő- és elosztószekrények szerelése kapcsolási rajz alapján",
-          "Készülékek felszerelése, sorkapcsok, kábelcsatornák kiépítése",
-          "Vezetékezés, bekötés, jelölés és a kivitel precíz kidolgozása",
-          "Szemrevételezés és alap villamos ellenőrzések a kiszállítás előtt",
-          "Rend és a minőségi elvárások betartása a műhelyben"
+          "Montage von Steuer- und Verteilerschränken nach Stromlaufplan",
+          "Montage von Geräten, Einbau von Reihenklemmen und Kabelkanälen",
+          "Verdrahtung, Anschluss, Kennzeichnung und präzise Ausarbeitung der Ausführung",
+          "Sichtprüfung und grundlegende elektrische Prüfungen vor der Auslieferung",
+          "Einhaltung von Ordnung und Qualitätsanforderungen in der Werkstatt"
         ],
         "requirements": [
-          "Villanyszerelő / erősáramú szakképzettség",
-          "Kapcsolási rajz olvasásának ismerete",
-          "Precíz, igényes kézi munkavégzés",
-          "Megbízhatóság és csapatszellem"
+          "Ausbildung als Elektriker / Starkstromtechnik",
+          "Fähigkeit, Stromlaufpläne zu lesen",
+          "Präzise, anspruchsvolle Handarbeit",
+          "Zuverlässigkeit und Teamgeist"
         ],
         "niceToHave": [
-          "Szekrényszerelési tapasztalat",
-          "Kisfeszültségű készülékek (megszakítók, relék) ismerete"
+          "Erfahrung im Schrankbau",
+          "Kenntnis von Niederspannungsgeräten (Leistungsschalter, Relais)"
         ],
         "offer": [
-          "Tiszta, jól felszerelt műhely és minőségi szerszámok",
-          "Betanítás és szakmai fejlődés a pályakezdőknek is",
-          "Kiszámítható munkarend, elsősorban műhelymunka",
-          "Hosszú távú, stabil munkalehetőség"
+          "Eine saubere, gut ausgestattete Werkstatt und hochwertiges Werkzeug",
+          "Einarbeitung und fachliche Weiterentwicklung, auch für Berufseinsteiger",
+          "Ein planbares Arbeitsmodell, überwiegend Werkstattarbeit",
+          "Eine langfristige, stabile Anstellung"
         ],
         "facts": [
           {
-            "label": "Terület",
-            "value": "Gyártás"
+            "label": "Bereich",
+            "value": "Fertigung"
           },
           {
-            "label": "Helyszín",
-            "value": "Budapest (műhely)"
+            "label": "Standort",
+            "value": "Budapest (Werkstatt)"
           },
           {
-            "label": "Munkaidő",
-            "value": "Teljes munkaidő"
+            "label": "Arbeitszeit",
+            "value": "Vollzeit"
           },
           {
-            "label": "Munkarend",
-            "value": "Helyszíni"
+            "label": "Arbeitsmodell",
+            "value": "Vor Ort"
           },
           {
-            "label": "Tapasztalat",
-            "value": "Pályakezdő is"
+            "label": "Erfahrung",
+            "value": "Auch Berufseinsteiger"
           }
         ]
       },
       "villamos-projektvezeto": {
-        "title": "Villamos kivitelezési projektvezető",
-        "department": "Kivitelezés",
-        "location": "Budapest + országos",
-        "type": "Teljes munkaidő",
-        "arrangement": "Helyszíni",
+        "title": "Projektleiter Elektromontage",
+        "department": "Montage",
+        "location": "Budapest + landesweit",
+        "type": "Vollzeit",
+        "arrangement": "Vor Ort",
         "level": "Senior",
-        "placeholder": "Projektvezető, helyszíni villamos kivitelezés",
-        "summary": "Villamos kivitelezési projektek felelős vezetése a szerződéstől az átadásig, határidő, költség, minőség és biztonság kézben tartásával.",
+        "placeholder": "Projektleiter, Elektromontage vor Ort",
+        "summary": "Verantwortliche Leitung von Elektromontage-Projekten vom Vertrag bis zur Übergabe, mit Termin, Kosten, Qualität und Sicherheit im Griff.",
         "overview": [
-          "Projektvezetőként a kivitelezés karmestere vagy: te fogod össze a tervezőt, a műhelyt, a helyszíni csapatot és az alvállalkozókat, hogy a projekt időben, a kereten belül és hibátlan minőségben készüljön el.",
-          "Nagy volumenű, szakmailag igényes projektjeink valós döntési felelősséget és láthatóságot adnak. A jó munkádnak közvetlen, mérhető eredménye lesz."
+          "Als Projektleiter bist du der Dirigent der Montage: Du bringst den Konstrukteur, die Werkstatt, das Team vor Ort und die Nachunternehmer zusammen, damit das Projekt termingerecht, im Budget und in einwandfreier Qualität fertiggestellt wird.",
+          "Unsere großvolumigen, fachlich anspruchsvollen Projekte geben dir echte Entscheidungsverantwortung und Sichtbarkeit. Deine gute Arbeit hat einen direkten, messbaren Effekt."
         ],
         "responsibilities": [
-          "Villamos kivitelezési projektek teljes körű vezetése (határidő, költség, minőség)",
-          "Erőforrás- és ütemterv készítése, a helyszíni csapatok koordinálása",
-          "Kapcsolattartás a megrendelővel, tervezővel és alvállalkozókkal",
-          "Munkavédelmi és minőségi előírások betartatása a helyszínen",
-          "Előrehaladás, elszámolás és dokumentáció felügyelete"
+          "Umfassende Leitung von Elektromontage-Projekten (Termin, Kosten, Qualität)",
+          "Erstellung von Ressourcen- und Terminplänen, Koordination der Teams vor Ort",
+          "Abstimmung mit Kunde, Konstrukteur und Nachunternehmern",
+          "Durchsetzung von Arbeitsschutz- und Qualitätsvorschriften vor Ort",
+          "Überwachung von Fortschritt, Abrechnung und Dokumentation"
         ],
         "requirements": [
-          "Villamosmérnöki végzettség",
-          "Legalább 4–5 év villamos kivitelezési tapasztalat, ebből vezetői gyakorlat",
-          "Kivitelezési folyamatok, szabványok és munkavédelem ismerete",
-          "Határozott, jó szervező- és kommunikációs készség",
-          "B kategóriás jogosítvány"
+          "Abschluss als Elektroingenieur",
+          "Mindestens 4–5 Jahre Erfahrung in der Elektromontage, davon in leitender Funktion",
+          "Kenntnis von Bauabläufen, Normen und Arbeitsschutz",
+          "Durchsetzungsstark, mit guten Organisations- und Kommunikationsfähigkeiten",
+          "Führerschein Klasse B"
         ],
         "niceToHave": [
-          "Felelős műszaki vezetői (FMV) jogosultság",
-          "Tapasztalat közlekedési vagy energetikai projektekben",
-          "Angol vagy német nyelvtudás"
+          "Qualifikation als verantwortlicher technischer Leiter (FMV)",
+          "Erfahrung in Verkehrs- oder Energieprojekten",
+          "Englisch- oder Deutschkenntnisse"
         ],
         "offer": [
-          "Nagy, referenciaértékű projektek valós felelősséggel",
-          "Versenyképes juttatás és céges autó/eszközök",
-          "Erős háttércsapat (tervezés, gyártás, üzemeltetés)",
-          "Hosszú távú, kiszámítható együttműködés"
+          "Große, referenzträchtige Projekte mit echter Verantwortung",
+          "Wettbewerbsfähige Vergütung sowie Firmenwagen/-ausstattung",
+          "Ein starkes Team im Hintergrund (Konstruktion, Fertigung, Betrieb)",
+          "Eine langfristige, verlässliche Zusammenarbeit"
         ],
         "facts": [
           {
-            "label": "Terület",
-            "value": "Kivitelezés"
+            "label": "Bereich",
+            "value": "Montage"
           },
           {
-            "label": "Helyszín",
-            "value": "Budapest + országos"
+            "label": "Standort",
+            "value": "Budapest + landesweit"
           },
           {
-            "label": "Munkaidő",
-            "value": "Teljes munkaidő"
+            "label": "Arbeitszeit",
+            "value": "Vollzeit"
           },
           {
-            "label": "Munkarend",
-            "value": "Helyszíni"
+            "label": "Arbeitsmodell",
+            "value": "Vor Ort"
           },
           {
-            "label": "Tapasztalat",
-            "value": "4+ év"
+            "label": "Erfahrung",
+            "value": "4+ Jahre"
           }
         ]
       },
       "helyszini-villanyszerelo": {
-        "title": "Helyszíni villanyszerelő",
-        "department": "Kivitelezés",
-        "location": "Országos",
-        "type": "Teljes munkaidő",
-        "arrangement": "Helyszíni",
-        "level": "Tapasztalt",
-        "placeholder": "Villanyszerelő, helyszíni kivitelezés",
-        "summary": "Villamos rendszerek helyszíni szerelése és üzembe helyezése ipari és közlekedési projekteken, tapasztalt csapatban.",
+        "title": "Elektromonteur (Baustelle)",
+        "department": "Montage",
+        "location": "Landesweit",
+        "type": "Vollzeit",
+        "arrangement": "Vor Ort",
+        "level": "Erfahren",
+        "placeholder": "Elektromonteur, Montage vor Ort",
+        "summary": "Montage und Inbetriebnahme elektrischer Systeme vor Ort bei Industrie- und Verkehrsprojekten, in einem erfahrenen Team.",
         "overview": [
-          "A helyszíni csapat viszi véghez, amit a tervező megálmodott és a műhely legyártott: kábelezés, bekötés, szerelés, majd az éles indítás. Változatos helyszíneken, valódi, látható eredménnyel dolgozol.",
-          "Megbecsült szakmunkás-csapat vagyunk, minőségi eszközökkel és korrekt feltételekkel. A szakértelmed itt tényleg számít."
+          "Das Team vor Ort setzt um, was der Konstrukteur erdacht und die Werkstatt gefertigt hat: Verkabelung, Anschluss, Montage und dann der Live-Start. Du arbeitest an abwechslungsreichen Standorten mit echten, sichtbaren Ergebnissen.",
+          "Wir sind ein geschätztes Team von Fachkräften, mit hochwertigen Arbeitsmitteln und fairen Bedingungen. Dein Fachwissen zählt hier wirklich."
         ],
         "responsibilities": [
-          "Kis- és középfeszültségű rendszerek helyszíni szerelése, kábelezése",
-          "Szekrények, elosztók telepítése és bekötése tervek alapján",
-          "Mérések, ellenőrzések, közreműködés az üzembe helyezésben",
-          "Munkavédelmi előírások betartása a helyszínen",
-          "Együttműködés a projektvezetővel és a mérnökcsapattal"
+          "Montage und Verkabelung von Nieder- und Mittelspannungssystemen vor Ort",
+          "Installation und Anschluss von Schränken und Verteilern nach Plänen",
+          "Messungen, Prüfungen und Mitwirkung bei der Inbetriebnahme",
+          "Einhaltung der Arbeitsschutzvorschriften vor Ort",
+          "Zusammenarbeit mit dem Projektleiter und dem Ingenieurteam"
         ],
         "requirements": [
-          "Villanyszerelő / erősáramú szakképzettség",
-          "Legalább 2–3 év helyszíni szerelési tapasztalat",
-          "Kapcsolási és elrendezési rajzok magabiztos olvasása",
-          "Utazásra való nyitottság (országos projektek)",
-          "B kategóriás jogosítvány"
+          "Ausbildung als Elektriker / Starkstromtechnik",
+          "Mindestens 2–3 Jahre Erfahrung in der Montage vor Ort",
+          "Sicheres Lesen von Stromlauf- und Anordnungsplänen",
+          "Reisebereitschaft (landesweite Projekte)",
+          "Führerschein Klasse B"
         ],
         "niceToHave": [
-          "Kisfeszültségű felülvizsgálói (ÉV) jogosultság",
-          "Középfeszültségű vagy közlekedési tapasztalat"
+          "Prüferberechtigung Niederspannung (ÉV)",
+          "Erfahrung im Bereich Mittelspannung oder Verkehr"
         ],
         "offer": [
-          "Minőségi szerszámok, védőfelszerelés, céges szállás/kiszállás korrekt elszámolással",
-          "Változatos, érdekes helyszínek és projektek",
-          "Megbecsült szakmunkás-csapat, stabil háttér",
-          "Szakmai továbbképzés, jogosultságok megszerzésének támogatása"
+          "Hochwertiges Werkzeug, Schutzausrüstung, Firmenunterkunft/Einsätze mit fairer Abrechnung",
+          "Abwechslungsreiche, interessante Standorte und Projekte",
+          "Ein geschätztes Team von Fachkräften, ein stabiles Umfeld",
+          "Fachliche Weiterbildung und Unterstützung beim Erwerb von Berechtigungen"
         ],
         "facts": [
           {
-            "label": "Terület",
-            "value": "Kivitelezés"
+            "label": "Bereich",
+            "value": "Montage"
           },
           {
-            "label": "Helyszín",
-            "value": "Országos"
+            "label": "Standort",
+            "value": "Landesweit"
           },
           {
-            "label": "Munkaidő",
-            "value": "Teljes munkaidő"
+            "label": "Arbeitszeit",
+            "value": "Vollzeit"
           },
           {
-            "label": "Munkarend",
-            "value": "Helyszíni"
+            "label": "Arbeitsmodell",
+            "value": "Vor Ort"
           },
           {
-            "label": "Tapasztalat",
-            "value": "2+ év"
+            "label": "Erfahrung",
+            "value": "2+ Jahre"
           }
         ]
       },
       "kulfoldi-villamos-szerelo": {
-        "title": "Villamos szerelő, külföldi projektek (DE/HU)",
-        "department": "Kivitelezés",
-        "location": "Németország + Magyarország",
-        "type": "Teljes munkaidő",
-        "arrangement": "Helyszíni · kiküldetés",
-        "level": "Tapasztalt",
-        "placeholder": "Külföldi villamos kivitelezés, helyszíni munka",
-        "summary": "Villamos rendszerek helyszíni szerelése hazai és németországi projekteken, kiemelt juttatással a külföldi munkavégzésért.",
+        "title": "Elektromonteur, Auslandsprojekte (DE/HU)",
+        "department": "Montage",
+        "location": "Deutschland + Ungarn",
+        "type": "Vollzeit",
+        "arrangement": "Vor Ort · Entsendung",
+        "level": "Erfahren",
+        "placeholder": "Elektromontage im Ausland, Arbeit vor Ort",
+        "summary": "Montage elektrischer Systeme vor Ort bei Projekten in Ungarn und Deutschland, mit einer besonderen Vergütung für die Arbeit im Ausland.",
         "overview": [
-          "Nemzetközi projektjeink egyre bővülnek: a hazai munkák mellett Németországban is dolgozunk, ahol a magyar csapat szakértelmére komoly igény van. Ebben a pozícióban felváltva veszel részt hazai és külföldi kivitelezésekben, kiküldetés keretében.",
-          "A külföldi munka külön elismerést kap, a kiemelt juttatás mellett a szállást és az utazást is biztosítjuk, hogy csak a szakmára kelljen figyelned."
+          "Unsere internationalen Projekte wachsen stetig: Neben den Arbeiten in Ungarn sind wir auch in Deutschland tätig, wo das Fachwissen des ungarischen Teams stark gefragt ist. In dieser Position wirkst du abwechselnd an Projekten in Ungarn und im Ausland mit, im Rahmen einer Entsendung.",
+          "Die Arbeit im Ausland wird besonders honoriert: Zusätzlich zur besonderen Vergütung stellen wir auch Unterkunft und Anreise, damit du dich nur auf dein Fach konzentrieren musst."
         ],
         "responsibilities": [
-          "Kis- és középfeszültségű rendszerek helyszíni szerelése, kábelezése hazai és németországi helyszíneken",
-          "Szekrények, elosztók telepítése és bekötése tervek alapján",
-          "Mérések, ellenőrzések, közreműködés az üzembe helyezésben",
-          "Munkavédelmi előírások betartása a hazai és a német szabályok szerint",
-          "Együttműködés a helyi és a magyar csapattal"
+          "Montage und Verkabelung von Nieder- und Mittelspannungssystemen vor Ort an Standorten in Ungarn und Deutschland",
+          "Installation und Anschluss von Schränken und Verteilern nach Plänen",
+          "Messungen, Prüfungen und Mitwirkung bei der Inbetriebnahme",
+          "Einhaltung der Arbeitsschutzvorschriften nach ungarischen und deutschen Regeln",
+          "Zusammenarbeit mit dem lokalen und dem ungarischen Team"
         ],
         "requirements": [
-          "Villanyszerelő / erősáramú szakképzettség",
-          "Legalább 3 év helyszíni szerelési tapasztalat",
-          "Kommunikációképes német VAGY angol nyelvtudás (a külföldi munkához szükséges)",
-          "Rendszeres külföldi kiküldetés vállalása",
-          "B kategóriás jogosítvány"
+          "Ausbildung als Elektriker / Starkstromtechnik",
+          "Mindestens 3 Jahre Erfahrung in der Montage vor Ort",
+          "Deutsch- ODER Englischkenntnisse, verhandlungssicher genug (für die Arbeit im Ausland erforderlich)",
+          "Bereitschaft zu regelmäßigen Entsendungen ins Ausland",
+          "Führerschein Klasse B"
         ],
         "niceToHave": [
-          "Középfeszültségű vagy ipari tapasztalat",
-          "Korábbi külföldi munkatapasztalat",
-          "Erős német nyelvtudás"
+          "Erfahrung im Bereich Mittelspannung oder Industrie",
+          "Frühere Berufserfahrung im Ausland",
+          "Sehr gute Deutschkenntnisse"
         ],
         "offer": [
-          "Kiemelt juttatás a külföldi munkavégzésért (kiküldetési díj a hazai béren felül)",
-          "Biztosított szállás és utazás a külföldi projekteknél",
-          "Vegyes hazai–külföldi projektek, változatos feladatok",
-          "Stabil háttér, minőségi eszközök és védőfelszerelés"
+          "Eine besondere Vergütung für die Arbeit im Ausland (Entsendungszulage zusätzlich zum Inlandsgehalt)",
+          "Gestellte Unterkunft und Anreise bei Auslandsprojekten",
+          "Eine Mischung aus Projekten im In- und Ausland, abwechslungsreiche Aufgaben",
+          "Ein stabiles Umfeld, hochwertige Arbeitsmittel und Schutzausrüstung"
         ],
         "facts": [
           {
-            "label": "Terület",
-            "value": "Kivitelezés"
+            "label": "Bereich",
+            "value": "Montage"
           },
           {
-            "label": "Helyszín",
-            "value": "Németország + Magyarország"
+            "label": "Standort",
+            "value": "Deutschland + Ungarn"
           },
           {
-            "label": "Munkaidő",
-            "value": "Teljes munkaidő"
+            "label": "Arbeitszeit",
+            "value": "Vollzeit"
           },
           {
-            "label": "Munkarend",
-            "value": "Helyszíni · kiküldetés"
+            "label": "Arbeitsmodell",
+            "value": "Vor Ort · Entsendung"
           },
           {
-            "label": "Nyelv",
-            "value": "Német vagy angol (kommunikációképes)"
+            "label": "Sprache",
+            "value": "Deutsch oder Englisch (verhandlungssicher genug)"
           },
           {
-            "label": "Tapasztalat",
-            "value": "3+ év"
+            "label": "Erfahrung",
+            "value": "3+ Jahre"
           }
         ]
       },
       "mernok-gyakornok": {
-        "title": "Mérnök gyakornok (villamos)",
-        "department": "Gyakornoki",
+        "title": "Ingenieurpraktikant (Elektro)",
+        "department": "Praktikum",
         "location": "Budapest",
-        "type": "Részmunkaidő",
-        "arrangement": "Hibrid",
-        "level": "Gyakornok",
-        "placeholder": "Gyakornok, villamosmérnök hallgató",
-        "summary": "Villamosmérnök-hallgatóként éles projektekbe kapcsolódsz be a tervezés és az automatizálás mellett, mentor támogatásával.",
+        "type": "Teilzeit",
+        "arrangement": "Hybrid",
+        "level": "Praktikant",
+        "placeholder": "Praktikant, Student der Elektrotechnik",
+        "summary": "Als Student der Elektrotechnik steigst du in echte Projekte in Konstruktion und Automatisierung ein, mit Unterstützung eines Mentors.",
         "overview": [
-          "Nem kávéfőzés és fénymásolás: valódi projektekbe kapcsolódsz be, tapasztalt mérnökök mellett. Belelátsz a tervezésbe, az automatizálásba és a kivitelezésbe, és a végén tényleg tudsz majd valamit.",
-          "Rugalmas, a tanulmányaidhoz igazított munkarend, és reális esély a végzés utáni belépésre, sok kollégánk így kezdte."
+          "Kein Kaffeekochen und Kopieren: Du steigst in echte Projekte ein, an der Seite erfahrener Ingenieure. Du bekommst Einblick in Konstruktion, Automatisierung und Montage und kannst am Ende wirklich etwas.",
+          "Ein flexibles, an dein Studium angepasstes Arbeitsmodell und eine realistische Chance auf einen Einstieg nach dem Abschluss, viele unserer Kollegen haben so angefangen."
         ],
         "responsibilities": [
-          "Közreműködés villamos tervezési feladatokban (EPLAN) mentor mellett",
-          "Segítés a dokumentáció, listák és mérési jegyzőkönyvek készítésében",
-          "Bekapcsolódás automatizálási / üzembe helyezési feladatokba",
-          "Tanulás a valós projektek folyamatából"
+          "Mitwirkung bei Aufgaben der Elektroplanung (EPLAN) an der Seite eines Mentors",
+          "Unterstützung bei der Erstellung von Dokumentation, Listen und Messprotokollen",
+          "Einbindung in Aufgaben der Automatisierung / Inbetriebnahme",
+          "Lernen aus dem Ablauf echter Projekte"
         ],
         "requirements": [
-          "Aktív villamosmérnök / mechatronikai hallgatói jogviszony",
-          "Alapvető villamosságtani ismeretek",
-          "Érdeklődés a tervezés vagy az automatizálás iránt",
-          "Heti 20–30 óra elérhetőség"
+          "Aktiver Studierendenstatus in Elektrotechnik / Mechatronik",
+          "Grundkenntnisse der Elektrotechnik",
+          "Interesse an Konstruktion oder Automatisierung",
+          "Verfügbarkeit von 20–30 Stunden pro Woche"
         ],
         "niceToHave": [
-          "EPLAN vagy PLC alapismeretek",
-          "Saját, iskolai vagy hobbiprojekt"
+          "Grundkenntnisse in EPLAN oder PLC",
+          "Ein eigenes, schulisches oder Hobby-Projekt"
         ],
         "offer": [
-          "Valós projektek és tapasztalt mentor",
-          "Rugalmas, tanulmányokhoz igazított munkarend",
-          "Reális esély a végzés utáni belépésre",
-          "Betekintés a teljes mérnöki folyamatba"
+          "Echte Projekte und ein erfahrener Mentor",
+          "Ein flexibles, an das Studium angepasstes Arbeitsmodell",
+          "Eine realistische Chance auf einen Einstieg nach dem Abschluss",
+          "Einblick in den gesamten Ingenieurprozess"
         ],
         "facts": [
           {
-            "label": "Terület",
-            "value": "Gyakornoki"
+            "label": "Bereich",
+            "value": "Praktikum"
           },
           {
-            "label": "Helyszín",
+            "label": "Standort",
             "value": "Budapest"
           },
           {
-            "label": "Munkaidő",
-            "value": "Részmunkaidő (heti 20–30 óra)"
+            "label": "Arbeitszeit",
+            "value": "Teilzeit (20–30 Std./Woche)"
           },
           {
-            "label": "Munkarend",
-            "value": "Hibrid"
+            "label": "Arbeitsmodell",
+            "value": "Hybrid"
           },
           {
-            "label": "Tapasztalat",
-            "value": "Nem szükséges"
+            "label": "Erfahrung",
+            "value": "Nicht erforderlich"
           }
         ]
       }
     }
   },
   "legal": {
-    "toc": "Tartalom",
-    "tocAria": "Tartalomjegyzék",
+    "toc": "Inhalt",
+    "tocAria": "Inhaltsverzeichnis",
     "pdfSuffix": "PDF",
     "docLabels": {
       "hu": {
@@ -1580,31 +1580,31 @@
     },
     "docs": {
       "privacy": {
-        "crumb": "Adatvédelem",
-        "headPlaceholder": "Adatkezelési tájékoztató",
-        "title": "Adatkezelési tájékoztató",
-        "updated": "Hatályos: 2026. július 19.",
-        "intro": "Ez a tájékoztató a Debaru Kft. által a weboldalon és a kapcsolatfelvétel során kezelt személyes adatok kezeléséről ad tájékoztatást, az EU 2016/679 rendelete (GDPR) és a hatályos magyar jogszabályok szerint.",
+        "crumb": "Datenschutz",
+        "headPlaceholder": "Datenschutzerklärung",
+        "title": "Datenschutzerklärung",
+        "updated": "Gültig: 19. Juli 2026",
+        "intro": "Diese Erklärung informiert über die Verarbeitung personenbezogener Daten durch die Debaru Kft. auf der Website und im Rahmen der Kontaktaufnahme, gemäß der Verordnung (EU) 2016/679 (DSGVO) und den geltenden ungarischen Rechtsvorschriften.",
         "sections": [
           {
             "id": "adatkezelo",
-            "title": "Az adatkezelő",
+            "title": "Der Verantwortliche",
             "body": [
               {
-                "p": "A személyes adatok kezelője:"
+                "p": "Der Verantwortliche für die personenbezogenen Daten:"
               },
               {
                 "rows": [
                   {
-                    "label": "Cégnév",
+                    "label": "Firmenname",
                     "value": "Debaru Kft."
                   },
                   {
-                    "label": "Székhely",
+                    "label": "Sitz",
                     "value": "1117 Budapest, Budafoki út 97."
                   },
                   {
-                    "label": "E-mail",
+                    "label": "E-Mail",
                     "value": "info@debaru.hu",
                     "href": "mailto:info@debaru.hu"
                   },
@@ -1619,135 +1619,135 @@
           },
           {
             "id": "kezelt-adatok",
-            "title": "A kezelt adatok köre",
+            "title": "Umfang der verarbeiteten Daten",
             "body": [
               {
-                "p": "A kapcsolatfelvételi űrlap kitöltésekor az alábbi adatokat kezeljük:"
+                "p": "Beim Ausfüllen des Kontaktformulars verarbeiten wir die folgenden Daten:"
               },
               {
                 "ul": [
-                  "Név (kötelező), a megkeresés azonosításához és a megszólításhoz.",
-                  "E-mail cím (kötelező), a válaszadáshoz.",
-                  "Cégnév (opcionális), az igény pontosabb megértéséhez.",
-                  "Telefonszám (opcionális), a gyorsabb egyeztetéshez.",
-                  "Az üzenet szövege és az esetleg csatolt fájlok, a feladat felméréséhez."
+                  "Name (Pflichtangabe), zur Identifizierung der Anfrage und zur Anrede.",
+                  "E-Mail-Adresse (Pflichtangabe), zur Beantwortung.",
+                  "Firmenname (optional), zum besseren Verständnis des Anliegens.",
+                  "Telefonnummer (optional), zur schnelleren Abstimmung.",
+                  "Der Nachrichtentext und etwaige angehängte Dateien, zur Einschätzung der Aufgabe."
                 ]
               },
               {
-                "p": "A weboldal működéséhez kapcsolódóan a rendszer technikai adatokat (pl. IP-cím) is kezelhet a visszaélések megelőzése érdekében."
+                "p": "Im Zusammenhang mit dem Betrieb der Website kann das System auch technische Daten (z. B. IP-Adresse) verarbeiten, um Missbrauch zu verhindern."
               }
             ]
           },
           {
             "id": "cel-jogalap",
-            "title": "Az adatkezelés célja és jogalapja",
+            "title": "Zweck und Rechtsgrundlage der Verarbeitung",
             "body": [
               {
-                "p": "A megkeresés megválaszolásának és a szakmai konzultációnak a célja a kapcsolatfelvétel és az ajánlatadás előkészítése."
+                "p": "Der Zweck der Beantwortung der Anfrage und der fachlichen Beratung besteht in der Kontaktaufnahme und der Vorbereitung eines Angebots."
               },
               {
-                "p": "Jogalap: az érintett hozzájárulása (GDPR 6. cikk (1) a) pont), amelyet az űrlap elküldésével és az adatkezelési tájékoztató elfogadásával ad meg; szerződéskötési szándék esetén a szerződés megkötését megelőző lépések megtétele (GDPR 6. cikk (1) b) pont)."
+                "p": "Rechtsgrundlage: die Einwilligung der betroffenen Person (Art. 6 Abs. 1 lit. a DSGVO), die durch das Absenden des Formulars und die Annahme der Datenschutzerklärung erteilt wird; bei Vertragsabschlussabsicht die Durchführung vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO)."
               },
               {
-                "p": "A visszaélések (spam, automatizált beküldés) megelőzéséhez fűződő jogos érdek (GDPR 6. cikk (1) f) pont) alapján CAPTCHA-védelmet alkalmazunk."
+                "p": "Auf Grundlage des berechtigten Interesses an der Verhinderung von Missbrauch (Spam, automatisierte Übermittlungen) (Art. 6 Abs. 1 lit. f DSGVO) setzen wir einen CAPTCHA-Schutz ein."
               }
             ]
           },
           {
             "id": "megorzes",
-            "title": "Az adatok megőrzési ideje",
+            "title": "Speicherdauer der Daten",
             "body": [
               {
-                "p": "A kapcsolatfelvétel során megadott adatokat a megkeresés megválaszolásához, illetve, ha együttműködés jön létre, annak lezárásáig, azt követően a jogszabályi kötelezettségeknek megfelelő ideig őrizzük."
+                "p": "Die im Rahmen der Kontaktaufnahme angegebenen Daten bewahren wir zur Beantwortung der Anfrage bzw., sofern eine Zusammenarbeit zustande kommt, bis zu deren Abschluss und danach für die nach den gesetzlichen Verpflichtungen erforderliche Dauer auf."
               },
               {
-                "p": "Ha a megkeresésből nem jön létre együttműködés, az adatokat legkésőbb 12 hónap elteltével, illetve a hozzájárulás visszavonásakor töröljük."
+                "p": "Kommt aus der Anfrage keine Zusammenarbeit zustande, löschen wir die Daten spätestens nach Ablauf von 12 Monaten bzw. bei Widerruf der Einwilligung."
               }
             ]
           },
           {
             "id": "adatfeldolgozok",
-            "title": "Adatfeldolgozók és adattovábbítás",
+            "title": "Auftragsverarbeiter und Datenübermittlung",
             "body": [
               {
-                "p": "Az adatok kezeléséhez az alábbi adatfeldolgozók szolgáltatásait vesszük igénybe:"
+                "p": "Für die Verarbeitung der Daten nehmen wir die Dienste der folgenden Auftragsverarbeiter in Anspruch:"
               },
               {
                 "rows": [
                   {
-                    "label": "Tárhely / CDN",
+                    "label": "Hosting / CDN",
                     "value": "Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, USA)"
                   },
                   {
-                    "label": "Botvédelem (CAPTCHA)",
+                    "label": "Bot-Schutz (CAPTCHA)",
                     "value": "Cloudflare Turnstile"
                   }
                 ]
               },
               {
-                "p": "Az adatokat harmadik félnek, a fenti adatfeldolgozókon és a jogszabályi kötelezettségeken túl, nem adjuk át, és marketing célból nem használjuk fel."
+                "p": "Wir geben die Daten über die oben genannten Auftragsverarbeiter und die gesetzlichen Verpflichtungen hinaus nicht an Dritte weiter und verwenden sie nicht zu Marketingzwecken."
               }
             ]
           },
           {
             "id": "sutik",
-            "title": "Sütik (cookies)",
+            "title": "Cookies",
             "body": [
               {
-                "p": "A weboldal a működéséhez szükséges sütiket használ. A CAPTCHA-védelem (Cloudflare Turnstile) a visszaélések megelőzéséhez technikai sütit / azonosítót helyezhet el."
+                "p": "Die Website verwendet für ihren Betrieb notwendige Cookies. Der CAPTCHA-Schutz (Cloudflare Turnstile) kann zur Verhinderung von Missbrauch ein technisches Cookie / eine Kennung setzen."
               },
               {
-                "p": "A böngésző beállításaiban a sütik bármikor törölhetők vagy letilthatók; ez azonban egyes funkciók működését korlátozhatja."
+                "p": "In den Browsereinstellungen können Cookies jederzeit gelöscht oder deaktiviert werden; dies kann jedoch die Nutzung einzelner Funktionen einschränken."
               }
             ]
           },
           {
             "id": "jogok",
-            "title": "Az Ön jogai",
+            "title": "Ihre Rechte",
             "body": [
               {
-                "p": "A vonatkozó jogszabályok szerint Önt az alábbi jogok illetik meg a személyes adataival kapcsolatban:"
+                "p": "Nach den einschlägigen Rechtsvorschriften stehen Ihnen in Bezug auf Ihre personenbezogenen Daten die folgenden Rechte zu:"
               },
               {
                 "ul": [
-                  "Hozzáférés a kezelt adatokhoz és tájékoztatás az adatkezelésről.",
-                  "Helyesbítés, pontatlan adatok kijavítása.",
-                  "Törlés („az elfeledtetéshez való jog”).",
-                  "Az adatkezelés korlátozása.",
-                  "Tiltakozás az adatkezelés ellen.",
-                  "Adathordozhatóság.",
-                  "A hozzájárulás bármikori, díjmentes visszavonása (a visszavonás a korábbi adatkezelés jogszerűségét nem érinti)."
+                  "Zugang zu den verarbeiteten Daten und Auskunft über die Verarbeitung.",
+                  "Berichtigung, Korrektur unrichtiger Daten.",
+                  "Löschung („Recht auf Vergessenwerden“).",
+                  "Einschränkung der Verarbeitung.",
+                  "Widerspruch gegen die Verarbeitung.",
+                  "Datenübertragbarkeit.",
+                  "Jederzeitiger, kostenloser Widerruf der Einwilligung (der Widerruf berührt nicht die Rechtmäßigkeit der bisherigen Verarbeitung)."
                 ]
               },
               {
-                "p": "A jogai gyakorlásához írjon a(z) info@debaru.hu címre."
+                "p": "Zur Ausübung Ihrer Rechte schreiben Sie bitte an info@debaru.hu."
               }
             ]
           },
           {
             "id": "adatbiztonsag",
-            "title": "Adatbiztonság",
+            "title": "Datensicherheit",
             "body": [
               {
-                "p": "Az adatokat titkosított kapcsolaton (HTTPS) keresztül továbbítjuk és megfelelő technikai, valamint szervezési intézkedésekkel védjük a jogosulatlan hozzáférés, módosítás és megsemmisítés ellen."
+                "p": "Wir übermitteln die Daten über eine verschlüsselte Verbindung (HTTPS) und schützen sie durch geeignete technische und organisatorische Maßnahmen gegen unbefugten Zugriff, Veränderung und Vernichtung."
               }
             ]
           },
           {
             "id": "jogorvoslat",
-            "title": "Jogorvoslat",
+            "title": "Rechtsbehelf",
             "body": [
               {
-                "p": "Ha úgy érzi, hogy adatkezelésünk sérti a jogait, kérjük, először forduljon hozzánk. Panaszával a felügyeleti hatósághoz is fordulhat:"
+                "p": "Wenn Sie der Ansicht sind, dass unsere Datenverarbeitung Ihre Rechte verletzt, wenden Sie sich bitte zunächst an uns. Mit Ihrer Beschwerde können Sie sich auch an die Aufsichtsbehörde wenden:"
               },
               {
                 "rows": [
                   {
-                    "label": "Hatóság",
-                    "value": "Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)"
+                    "label": "Behörde",
+                    "value": "Ungarische Nationale Behörde für Datenschutz und Informationsfreiheit (NAIH)"
                   },
                   {
-                    "label": "Cím",
+                    "label": "Anschrift",
                     "value": "1055 Budapest, Falk Miksa utca 9–11."
                   },
                   {
@@ -1758,43 +1758,43 @@
                 ]
               },
               {
-                "p": "Jogsérelem esetén bírósághoz is fordulhat."
+                "p": "Im Falle einer Rechtsverletzung können Sie sich auch an ein Gericht wenden."
               }
             ]
           }
         ]
       },
       "terms": {
-        "crumb": "ÁSZF",
-        "headPlaceholder": "Általános Szerződési Feltételek",
-        "title": "Általános Szerződési Feltételek",
-        "updated": "Hatályos: 2026. május 28. napjától visszavonásig vagy módosításig.",
-        "intro": "A Debaru Kft. Általános Szerződési Feltételei a villamos, irányítástechnikai, automatizálási, berendezésgyártási, szoftverfejlesztési és helyszíni kivitelezési projektekre. A teljes, hatályos dokumentum alább letölthető és megtekinthető, magyar, német és angol nyelven.",
+        "crumb": "AGB",
+        "headPlaceholder": "Allgemeine Geschäftsbedingungen",
+        "title": "Allgemeine Geschäftsbedingungen",
+        "updated": "Gültig ab 28. Mai 2026 bis auf Widerruf oder Änderung.",
+        "intro": "Die Allgemeinen Geschäftsbedingungen der Debaru Kft. für Projekte in den Bereichen Elektrotechnik, Leittechnik, Automatisierung, Gerätebau, Softwareentwicklung und Bauausführung vor Ort. Das vollständige, geltende Dokument kann unten in ungarischer, deutscher und englischer Sprache heruntergeladen und angesehen werden.",
         "sections": [
           {
             "id": "szolgaltato",
-            "title": "A Szolgáltató adatai",
+            "title": "Angaben zum Dienstleister",
             "body": [
               {
                 "rows": [
                   {
-                    "label": "Cégnév",
+                    "label": "Firmenname",
                     "value": "Debaru Kft."
                   },
                   {
-                    "label": "Székhely",
+                    "label": "Sitz",
                     "value": "1117 Budapest, Budafoki út 97."
                   },
                   {
-                    "label": "Adószám",
+                    "label": "Steuernummer",
                     "value": "14277148-2-43 / HU14277148"
                   },
                   {
-                    "label": "Cégjegyzékszám",
+                    "label": "Handelsregisternummer",
                     "value": "01-09-896759"
                   },
                   {
-                    "label": "E-mail",
+                    "label": "E-Mail",
                     "value": "info@debaru.hu",
                     "href": "mailto:info@debaru.hu"
                   },
@@ -1809,10 +1809,10 @@
           },
           {
             "id": "dokumentum",
-            "title": "A teljes ÁSZF dokumentum",
+            "title": "Das vollständige AGB-Dokument",
             "body": [
               {
-                "p": "Vevői/értékesítési Általános Szerződési Feltételeink a villamos, automatizálási, berendezésgyártási, szoftver- és kivitelezési projektek egységes, átlátható és előre kalkulálható szerződéses szabályozását tartalmazzák. A hatályos, teljes dokumentum az alábbi nyelveken tölthető le, illetve nyitható meg új lapon."
+                "p": "Unsere Einkaufs-/Verkaufs-AGB enthalten eine einheitliche, transparente und im Voraus kalkulierbare vertragliche Regelung für Projekte in den Bereichen Elektrotechnik, Automatisierung, Gerätebau, Software und Bauausführung. Das geltende, vollständige Dokument kann in den folgenden Sprachen heruntergeladen bzw. in einem neuen Tab geöffnet werden."
               },
               {
                 "pdf": {
@@ -1826,41 +1826,41 @@
         ]
       },
       "imprint": {
-        "crumb": "Impresszum",
-        "headPlaceholder": "Impresszum",
-        "title": "Impresszum",
-        "updated": "Utolsó frissítés: 2026. július 19.",
-        "intro": "A weboldal üzemeltetőjének és a szolgáltató cég adatai, a tárhelyszolgáltató, valamint a felügyeleti szervek elérhetőségei.",
+        "crumb": "Impressum",
+        "headPlaceholder": "Impressum",
+        "title": "Impressum",
+        "updated": "Zuletzt aktualisiert: 19. Juli 2026",
+        "intro": "Die Angaben des Website-Betreibers und des dienstleistenden Unternehmens, des Hosting-Anbieters sowie die Kontaktdaten der Aufsichtsbehörden.",
         "sections": [
           {
             "id": "cegadatok",
-            "title": "Cégadatok",
+            "title": "Unternehmensangaben",
             "body": [
               {
                 "rows": [
                   {
-                    "label": "Cégnév",
+                    "label": "Firmenname",
                     "value": "Debaru Kft."
                   },
                   {
-                    "label": "Székhely",
+                    "label": "Sitz",
                     "value": "1117 Budapest, Budafoki út 97."
                   },
                   {
-                    "label": "Cégjegyzékszám",
+                    "label": "Handelsregisternummer",
                     "value": "01-09-896759"
                   },
                   {
-                    "label": "Adószám",
+                    "label": "Steuernummer",
                     "value": "14277148-2-43"
                   },
                   {
-                    "label": "Nyilvántartó bíróság",
-                    "value": "Fővárosi Törvényszék Cégbírósága"
+                    "label": "Registergericht",
+                    "value": "Registergericht des Hauptstädtischen Gerichtshofs"
                   },
                   {
-                    "label": "Képviselő",
-                    "value": "Takács Gergő ügyvezető"
+                    "label": "Vertreter",
+                    "value": "Takács Gergő, Geschäftsführer"
                   }
                 ]
               }
@@ -1868,12 +1868,12 @@
           },
           {
             "id": "elerhetoseg",
-            "title": "Elérhetőség",
+            "title": "Kontakt",
             "body": [
               {
                 "rows": [
                   {
-                    "label": "E-mail",
+                    "label": "E-Mail",
                     "value": "info@debaru.hu",
                     "href": "mailto:info@debaru.hu"
                   },
@@ -1883,8 +1883,8 @@
                     "href": "tel:+3614454166"
                   },
                   {
-                    "label": "Ügyfélfogadás",
-                    "value": "Hétfő–Péntek 8:00–17:00"
+                    "label": "Sprechzeiten",
+                    "value": "Montag–Freitag 8:00–17:00"
                   }
                 ]
               }
@@ -1892,19 +1892,19 @@
           },
           {
             "id": "tarhely",
-            "title": "Tárhelyszolgáltató",
+            "title": "Hosting-Anbieter",
             "body": [
               {
-                "p": "A weboldal a Cloudflare infrastruktúráján érhető el."
+                "p": "Die Website wird über die Infrastruktur von Cloudflare bereitgestellt."
               },
               {
                 "rows": [
                   {
-                    "label": "Név",
+                    "label": "Name",
                     "value": "Cloudflare, Inc."
                   },
                   {
-                    "label": "Cím",
+                    "label": "Anschrift",
                     "value": "101 Townsend Street, San Francisco, CA 94107, USA"
                   },
                   {
@@ -1918,30 +1918,30 @@
           },
           {
             "id": "felugyelet",
-            "title": "Felügyeleti szervek és jogorvoslat",
+            "title": "Aufsichtsbehörden und Rechtsbehelf",
             "body": [
               {
-                "p": "A tevékenységgel kapcsolatos fogyasztói, adatvédelmi vagy egyéb panasz esetén az alábbi szervekhez lehet fordulni:"
+                "p": "Bei einer verbraucherrechtlichen, datenschutzrechtlichen oder sonstigen Beschwerde im Zusammenhang mit der Tätigkeit können die folgenden Stellen kontaktiert werden:"
               },
               {
                 "rows": [
                   {
-                    "label": "Adatvédelem",
-                    "value": "Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH), naih.hu",
+                    "label": "Datenschutz",
+                    "value": "Ungarische Nationale Behörde für Datenschutz und Informationsfreiheit (NAIH), naih.hu",
                     "href": "https://naih.hu"
                   },
                   {
-                    "label": "Fogyasztóvédelem",
-                    "value": "Területileg illetékes kormányhivatal fogyasztóvédelmi hatósága"
+                    "label": "Verbraucherschutz",
+                    "value": "Die örtlich zuständige Verbraucherschutzbehörde der Regierungsbehörde"
                   },
                   {
-                    "label": "Békéltető testület",
-                    "value": "A székhely szerint illetékes békéltető testület"
+                    "label": "Schlichtungsstelle",
+                    "value": "Die für den Sitz zuständige Schlichtungsstelle"
                   }
                 ]
               },
               {
-                "p": "Az adatkezelés részleteit az Adatkezelési tájékoztató, az együttműködés feltételeit az ÁSZF tartalmazza."
+                "p": "Die Einzelheiten der Datenverarbeitung sind in der Datenschutzerklärung, die Bedingungen der Zusammenarbeit in den AGB festgelegt."
               }
             ]
           }
@@ -1950,86 +1950,86 @@
     }
   },
   "notFound": {
-    "docTitle": "404 · Az oldal nem található",
-    "pill": "Hiba 404 · Keresett oldal nem létezik",
+    "docTitle": "404 · Seite nicht gefunden",
+    "pill": "Fehler 404 · Die gesuchte Seite existiert nicht",
     "heading": [
-      "Úgy tűnik, ez a vezeték",
-      "sehová sem vezet."
+      "Diese Leitung führt",
+      "offenbar ins Nichts."
     ],
-    "lede": "A keresett oldal áthelyeződött, megszűnt, vagy sosem létezett. Ne aggódjon, a rendszer többi része hibátlanul üzemel. Innen visszatalál a fő áramkörre.",
-    "home": "Vissza a kezdőlapra",
-    "popular": "Népszerű oldalak"
+    "lede": "Die gesuchte Seite wurde verschoben, entfernt oder hat nie existiert. Keine Sorge – der Rest des Systems läuft einwandfrei. Von hier finden Sie zurück zum Hauptstromkreis.",
+    "home": "Zurück zur Startseite",
+    "popular": "Beliebte Seiten"
   },
   "videos": [
     {
-      "tag": "Energetika",
-      "title": "BKV Etele, áramátalakító",
+      "tag": "Energietechnik",
+      "title": "BKV Etele, Gleichrichter-Unterwerk",
       "specs": [
-        "600 V DC vontatási táplálás",
-        "Áramátalakító alállomás",
-        "Védelem-irányítástechnika"
+        "600 V DC Fahrstromversorgung",
+        "Gleichrichter-Unterwerk",
+        "Schutz- und Leittechnik"
       ]
     },
     {
-      "tag": "SCADA & felügyelet",
-      "title": "BKV áramellátás, diszpécserközpont",
+      "tag": "SCADA & Überwachung",
+      "title": "BKV Stromversorgung, Leitstelle",
       "specs": [
-        "Központi SCADA-felügyelet",
-        "Távvezérlő rendszer",
-        "Valós idejű állapotkép"
+        "Zentrale SCADA-Überwachung",
+        "Fernsteuerungssystem",
+        "Echtzeit-Zustandsübersicht"
       ]
     },
     {
-      "tag": "Közlekedés",
-      "title": "Etele téri villamos-végállomás",
+      "tag": "Verkehr",
+      "title": "Straßenbahn-Endstation Etele tér",
       "specs": [
-        "SIL2 biztonsági vezérlés",
-        "Távvezérelt szakaszolók",
-        "Áramátalakítók üzembe helyezése"
+        "SIL2-Sicherheitssteuerung",
+        "Ferngesteuerte Streckentrennschalter",
+        "Inbetriebnahme der Gleichrichter-Unterwerke"
       ]
     }
   ],
   "videoGallery": {
-    "viewProject": "Projekt megtekintése",
-    "playAria": "{title}, videó lejátszása",
-    "projectAria": "{title}, projekt megtekintése"
+    "viewProject": "Projekt ansehen",
+    "playAria": "{title}, Video abspielen",
+    "projectAria": "{title}, Projekt ansehen"
   },
   "videoLightbox": {
-    "close": "Bezárás",
-    "title": "Debaru referenciavideó"
+    "close": "Schließen",
+    "title": "Debaru Referenzvideo"
   },
   "footer": {
-    "tagline": "Ipari automatizálás, villamos energetika és vezérléstechnika, tervezéstől a folyamatos üzemig.",
-    "rights": "Minden jog fenntartva.",
+    "tagline": "Industrieautomatisierung, elektrische Energietechnik und Steuerungstechnik – vom Entwurf bis zum Dauerbetrieb.",
+    "rights": "Alle Rechte vorbehalten.",
     "address": "1117 Budapest,\nBudafoki út 97.",
     "brandAlt": "Debaru",
     "title": {
-      "company": "Cég",
-      "services": "Szolgáltatás",
-      "contact": "Kapcsolat"
+      "company": "Unternehmen",
+      "services": "Leistungen",
+      "contact": "Kontakt"
     },
     "services": {
       "bms": "BMS",
-      "energiaellatas": "Energiaellátás",
-      "berendezesgyartas": "Berendezésgyártás",
-      "karbantartas": "Karbantartás",
-      "kotottpalyas": "Kötöttpályás közlekedés",
-      "tisztateri": "Tisztatéri kivitelezés",
+      "energiaellatas": "Energieversorgung",
+      "berendezesgyartas": "Gerätebau",
+      "karbantartas": "Wartung",
+      "kotottpalyas": "Schienenverkehr",
+      "tisztateri": "Reinraum-Ausführung",
       "scada": "SCADA",
       "knx": "KNX"
     },
     "legal": {
-      "privacy": "Adatvédelem",
-      "terms": "ÁSZF",
-      "imprint": "Impresszum"
+      "privacy": "Datenschutz",
+      "terms": "AGB",
+      "imprint": "Impressum"
     }
   },
   "cookie": {
-    "aria": "Süti-beállítások",
-    "title": "Sütik kezelése",
-    "text": "Az oldal működéséhez és a spam elleni védelemhez (Cloudflare Turnstile) szükséges sütiket használunk. Anonim, forgalommérési célú sütiket csak az Ön hozzájárulásával, részletek az ",
-    "link": "Adatkezelési tájékoztatóban",
-    "necessary": "Csak a szükségesek",
-    "acceptAll": "Összes elfogadása"
+    "aria": "Cookie-Einstellungen",
+    "title": "Cookies verwalten",
+    "text": "Wir verwenden Cookies, die für den Betrieb der Website und den Schutz vor Spam (Cloudflare Turnstile) erforderlich sind. Anonyme Cookies zur Reichweitenmessung nur mit Ihrer Einwilligung; Einzelheiten in der ",
+    "link": "Datenschutzerklärung",
+    "necessary": "Nur notwendige",
+    "acceptAll": "Alle akzeptieren"
   }
 }

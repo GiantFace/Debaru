@@ -9,9 +9,9 @@ import { Turnstile } from '../components/ui/Turnstile.jsx'
 import { Check, Close, Upload, Warn, infoIcons } from '../components/ui/Icons.jsx'
 import { useToast } from '../hooks/useToast.jsx'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
-import { useT } from '../i18n/index.jsx'
+import { useT, useLang } from '../i18n/index.jsx'
 import { useContent } from '../i18n/content.js'
-import { MAP_EMBED } from '../data/contact.js'
+import { mapEmbed } from '../data/contact.js'
 
 // A telefon-mező lazy chunkban (a nehéz lib + zászlók külön töltődnek)
 const PhoneField = lazy(() => import('../components/ui/PhoneField.jsx'))
@@ -49,6 +49,7 @@ const loadDraft = () => { try { return JSON.parse(localStorage.getItem(DRAFT_KEY
 
 export default function Contact() {
   const t = useT()
+  const { lang } = useLang()
   const { contact } = useContent()
   const { head, areas, timelines, cards } = contact
   const OTHER_AREA = areas[areas.length - 1]
@@ -248,7 +249,7 @@ export default function Contact() {
           <Reveal className="media" style={{ height: 420 }}>
             <iframe
               title={t('contact.mapTitle')}
-              src={MAP_EMBED} width="100%" height="100%" style={{ border: 0, display: 'block' }}
+              src={mapEmbed(lang)} width="100%" height="100%" style={{ border: 0, display: 'block' }}
               loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen
             />
             <div className="map-badge"><img src="/assets/debaru_logo.png" alt="Debaru" /></div>
