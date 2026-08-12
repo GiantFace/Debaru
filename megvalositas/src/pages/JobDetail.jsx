@@ -6,7 +6,8 @@ import { Button } from '../components/ui/Button.jsx'
 import { Arrow, Check } from '../components/ui/Icons.jsx'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 import { useJsonLd, breadcrumbLd } from '../hooks/useJsonLd.js'
-import { jobs, jobBySlug } from '../data/careers.js'
+import { useT } from '../i18n/index.jsx'
+import { useContent } from '../i18n/content.js'
 import '../styles/careers.css'
 
 // Közös checklist-elem.
@@ -45,13 +46,16 @@ function useJobPostingJsonLd(job) {
 
 // Egy állás önálló, SEO-barát oldala (/karrier/:slug) — a Projekt-detail mintájára.
 export default function JobDetail() {
+  const t = useT()
+  const { careers } = useContent()
+  const { jobs, jobBySlug } = careers
   const { slug } = useParams()
   const job = jobBySlug[slug]
-  useDocumentTitle(job ? `${job.title} · Karrier` : undefined, job?.summary)
+  useDocumentTitle(job ? `${job.title} · ${t('careers.detail.docTitleSuffix')}` : undefined, job?.summary)
   useJobPostingJsonLd(job)
   useJsonLd(job && breadcrumbLd([
     { name: 'Debaru', url: '/' },
-    { name: 'Karrier', url: '/karrier' },
+    { name: t('careers.detail.trailLabel'), url: '/karrier' },
     { name: job.title, url: `/karrier/${job.slug}` },
   ]))
   if (!job) return <Navigate to="/karrier" replace />
@@ -63,7 +67,7 @@ export default function JobDetail() {
     <>
       <PageHead
         placeholder={job.placeholder}
-        trail={[{ label: 'Karrier', to: '/karrier' }, { label: job.title }]}
+        trail={[{ label: t('careers.detail.trailLabel'), to: '/karrier' }, { label: job.title }]}
         tag={job.department}
         title={job.title}
         lede={job.summary}
@@ -75,22 +79,22 @@ export default function JobDetail() {
           <div className="split" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: 64, alignItems: 'stretch' }}>
             <div>
               <Reveal>
-                <div className="eyebrow">A pozícióról</div>
-                <h2 style={{ fontSize: 'clamp(24px,3vw,32px)', margin: '16px 0 16px' }}>Áttekintés</h2>
+                <div className="eyebrow">{t('careers.detail.aboutEyebrow')}</div>
+                <h2 style={{ fontSize: 'clamp(24px,3vw,32px)', margin: '16px 0 16px' }}>{t('careers.detail.overviewHeading')}</h2>
                 {job.overview.map((par, i) => (
                   <p key={i} className="muted" style={{ marginBottom: i < job.overview.length - 1 ? 14 : 0 }}>{par}</p>
                 ))}
               </Reveal>
 
               <Reveal style={{ marginTop: 34 }}>
-                <div className="eyebrow" style={{ marginBottom: 14 }}>Főbb feladatok</div>
+                <div className="eyebrow" style={{ marginBottom: 14 }}>{t('careers.detail.respEyebrow')}</div>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
                   {job.responsibilities.map((it) => <CheckItem key={it}>{it}</CheckItem>)}
                 </ul>
               </Reveal>
 
               <Reveal style={{ marginTop: 34 }}>
-                <div className="eyebrow" style={{ marginBottom: 14 }}>Amit elvárunk</div>
+                <div className="eyebrow" style={{ marginBottom: 14 }}>{t('careers.detail.reqEyebrow')}</div>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
                   {job.requirements.map((it) => <CheckItem key={it}>{it}</CheckItem>)}
                 </ul>
@@ -98,7 +102,7 @@ export default function JobDetail() {
 
               {job.niceToHave && job.niceToHave.length > 0 && (
                 <Reveal style={{ marginTop: 34 }}>
-                  <div className="eyebrow" style={{ marginBottom: 14 }}>Előnyt jelent</div>
+                  <div className="eyebrow" style={{ marginBottom: 14 }}>{t('careers.detail.niceEyebrow')}</div>
                   <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
                     {job.niceToHave.map((it) => <CheckItem key={it}>{it}</CheckItem>)}
                   </ul>
@@ -108,7 +112,7 @@ export default function JobDetail() {
 
             <Reveal as="div">
               <div className="card" style={{ position: 'sticky', top: 96 }}>
-                <h3 style={{ fontFamily: 'var(--body)', fontSize: 12.5, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 18 }}>Pozíció adatai</h3>
+                <h3 style={{ fontFamily: 'var(--body)', fontSize: 12.5, letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--faint)', marginBottom: 18 }}>{t('careers.detail.factsHeading')}</h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                   {job.facts.map((f) => (
                     <div key={f.label}>
@@ -118,8 +122,8 @@ export default function JobDetail() {
                   ))}
                 </div>
                 <hr className="divider" style={{ margin: '22px 0' }} />
-                <Button to={applyTo} arrow className="job-apply">Jelentkezem</Button>
-                <p className="muted" style={{ fontSize: 12.5, marginTop: 12, textAlign: 'center' }}>Önéletrajzodat e-mailben várjuk.</p>
+                <Button to={applyTo} arrow className="job-apply">{t('careers.detail.applyBtn')}</Button>
+                <p className="muted" style={{ fontSize: 12.5, marginTop: 12, textAlign: 'center' }}>{t('careers.detail.applyNote')}</p>
               </div>
             </Reveal>
           </div>
@@ -133,8 +137,8 @@ export default function JobDetail() {
         <div className="wrap">
           <div className="split" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, alignItems: 'center' }}>
             <Reveal>
-              <div className="eyebrow">Amit kínálunk</div>
-              <h2 style={{ fontSize: 'clamp(24px,3vw,34px)', margin: '16px 0 22px', maxWidth: '16ch' }}>Miért érdemes csatlakozni?</h2>
+              <div className="eyebrow">{t('careers.detail.offerEyebrow')}</div>
+              <h2 style={{ fontSize: 'clamp(24px,3vw,34px)', margin: '16px 0 22px', maxWidth: '16ch' }}>{t('careers.detail.offerHeading')}</h2>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 14 }}>
                 {job.offer.map((o) => (
                   <li key={o} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', fontSize: 16 }}>
@@ -144,9 +148,9 @@ export default function JobDetail() {
               </ul>
             </Reveal>
             <Reveal className="card" style={{ textAlign: 'center', padding: '56px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
-              <h3 style={{ fontSize: 'clamp(22px,3vw,30px)', maxWidth: '18ch', margin: '0 auto 16px' }}>Érdekel a pozíció?</h3>
-              <p className="muted" style={{ margin: '0 auto 26px', maxWidth: '34ch' }}>Küldd el önéletrajzod, pár mondat is elég arról, mi motivál.</p>
-              <Button to={applyTo} arrow>Jelentkezem erre a pozícióra</Button>
+              <h3 style={{ fontSize: 'clamp(22px,3vw,30px)', maxWidth: '18ch', margin: '0 auto 16px' }}>{t('careers.detail.ctaTitle')}</h3>
+              <p className="muted" style={{ margin: '0 auto 26px', maxWidth: '34ch' }}>{t('careers.detail.ctaText')}</p>
+              <Button to={applyTo} arrow>{t('careers.detail.ctaButton')}</Button>
             </Reveal>
           </div>
         </div>
@@ -157,7 +161,7 @@ export default function JobDetail() {
       {/* további pozíciók */}
       <section className="section-sm">
         <div className="wrap">
-          <Reveal className="eyebrow">További pozíciók</Reveal>
+          <Reveal className="eyebrow">{t('careers.detail.moreEyebrow')}</Reveal>
           <Reveal as="div" className="chips" style={{ marginTop: 18 }}>
             {related.map((x) => (
               <Link key={x.slug} className="chip" to={`/karrier/${x.slug}`}>{x.title}</Link>
@@ -169,8 +173,8 @@ export default function JobDetail() {
       <section className="section-sm" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <Reveal style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 24, flexWrap: 'wrap' }}>
-            <Button variant="ghost" to="/karrier"><Arrow style={{ transform: 'rotate(180deg)' }} />Összes pozíció</Button>
-            <Button to={applyTo} arrow>Jelentkezem</Button>
+            <Button variant="ghost" to="/karrier"><Arrow style={{ transform: 'rotate(180deg)' }} />{t('careers.detail.allBtn')}</Button>
+            <Button to={applyTo} arrow>{t('careers.detail.applyBtn')}</Button>
           </Reveal>
         </div>
       </section>

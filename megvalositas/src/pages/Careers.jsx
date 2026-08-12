@@ -8,10 +8,9 @@ import { StatBlock } from '../components/ui/StatBlock.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Arrow } from '../components/ui/Icons.jsx'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
-import {
-  careersHead, careerIntro, cultureStats, benefits, values,
-  hiringSteps, departments, jobs, applyEmail,
-} from '../data/careers.js'
+import { useT } from '../i18n/index.jsx'
+import { useContent } from '../i18n/content.js'
+import { applyEmail } from '../data/careers.js'
 import '../styles/careers.css'
 
 const S = { fill: 'none', stroke: 'currentColor', strokeWidth: 1.7, strokeLinecap: 'round', strokeLinejoin: 'round' }
@@ -50,17 +49,20 @@ const deptIcon = {
 
 // Karrier oldal — adatvezérelt (data/careers.js). Nyitott pozíciók szűrhető listával.
 export default function Careers() {
-  useDocumentTitle(careersHead.crumb, careersHead.lede)
+  const t = useT()
+  const { careers } = useContent()
+  const { head, intro, cultureStats, benefits, values, hiringSteps, departments, jobs } = careers
+  useDocumentTitle(head.crumb, head.lede)
   const [filter, setFilter] = useState('all')
   const shown = jobs.filter((j) => filter === 'all' || j.dept === filter)
 
   return (
     <>
       <PageHead
-        placeholder={careersHead.headPlaceholder}
-        trail={[{ label: careersHead.crumb }]}
-        title={careersHead.title}
-        lede={careersHead.lede}
+        placeholder={head.placeholder}
+        trail={[{ label: head.crumb }]}
+        title={head.title}
+        lede={head.lede}
       />
 
       {/* intro + kultúra-statisztikák */}
@@ -68,10 +70,10 @@ export default function Careers() {
         <div className="wrap">
           <div className="split" style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: 56, alignItems: 'center' }}>
             <Reveal>
-              <div className="eyebrow">{careerIntro.eyebrow}</div>
-              <h2 style={{ fontSize: 'clamp(24px,3.4vw,36px)', margin: '16px 0 18px', maxWidth: '20ch' }}>{careerIntro.title}</h2>
-              {careerIntro.paragraphs.map((p, i) => (
-                <p key={i} className="muted" style={{ marginBottom: i < careerIntro.paragraphs.length - 1 ? 14 : 0 }}>{p}</p>
+              <div className="eyebrow">{intro.eyebrow}</div>
+              <h2 style={{ fontSize: 'clamp(24px,3.4vw,36px)', margin: '16px 0 18px', maxWidth: '20ch' }}>{intro.title}</h2>
+              {intro.paragraphs.map((p, i) => (
+                <p key={i} className="muted" style={{ marginBottom: i < intro.paragraphs.length - 1 ? 14 : 0 }}>{p}</p>
               ))}
             </Reveal>
             <ParallaxFade speed={0.14} className="card" style={{ padding: '34px 30px' }}>
@@ -90,8 +92,8 @@ export default function Careers() {
       {/* juttatások */}
       <section className="section">
         <div className="wrap">
-          <Reveal className="eyebrow">Amit kínálunk</Reveal>
-          <Reveal as="h2" style={{ fontSize: 'clamp(26px,4vw,40px)', margin: '16px 0 44px', maxWidth: '18ch' }}>Miért jó nálunk dolgozni?</Reveal>
+          <Reveal className="eyebrow">{t('careers.benefitsEyebrow')}</Reveal>
+          <Reveal as="h2" style={{ fontSize: 'clamp(26px,4vw,40px)', margin: '16px 0 44px', maxWidth: '18ch' }}>{t('careers.benefitsHeading')}</Reveal>
           <RevealStagger className="grid g-3" step={80}>
             {benefits.map((b) => (
               <div className="card" key={b.title}>
@@ -106,19 +108,19 @@ export default function Careers() {
 
       {/* teljes szélességű parallax kép-sáv */}
       <section className="career-band">
-        <ParallaxImage className="cb-media" speed={0.24} placeholder="Csapatfotó, mérnökök / helyszíni munka" />
+        <ParallaxImage className="cb-media" speed={0.24} placeholder={t('careers.cultureHeroPlaceholder')} />
         <div className="cb-scrim" />
         <div className="cb-inner wrap">
-          <Reveal className="eyebrow">Egy csapat, közös cél</Reveal>
-          <Reveal as="h2" delay={80}>A jövő infrastruktúráját<br />együtt építjük.</Reveal>
+          <Reveal className="eyebrow">{t('careers.bandEyebrow')}</Reveal>
+          <Reveal as="h2" delay={80}>{t('careers.bandHeading.0')}<br />{t('careers.bandHeading.1')}</Reveal>
         </div>
       </section>
 
       {/* nyitott pozíciók */}
       <section className="section" id="poziciok">
         <div className="wrap">
-          <Reveal className="eyebrow">Nyitott pozíciók</Reveal>
-          <Reveal as="h2" style={{ fontSize: 'clamp(26px,4vw,40px)', margin: '16px 0 26px', maxWidth: '18ch' }}>Csatlakozz a csapathoz!</Reveal>
+          <Reveal className="eyebrow">{t('careers.openEyebrow')}</Reveal>
+          <Reveal as="h2" style={{ fontSize: 'clamp(26px,4vw,40px)', margin: '16px 0 26px', maxWidth: '18ch' }}>{t('careers.openHeading')}</Reveal>
           <Reveal className="chips" style={{ marginBottom: 30 }}>
             {departments.map((d) => (
               <button key={d.key} className={`chip${filter === d.key ? ' on' : ''}`} onClick={() => setFilter(d.key)}>{d.label}</button>
@@ -136,7 +138,7 @@ export default function Careers() {
                   <p className="jc-sum">{j.summary}</p>
                   <div className="job-meta">
                     <span className="job-badge dept">{j.department}</span>
-                    {j.foreign && <span className="job-badge foreign">{metaIcon.globe}Külföldi munka</span>}
+                    {j.foreign && <span className="job-badge foreign">{metaIcon.globe}{t('careers.foreignBadge')}</span>}
                     <span className="job-badge">{metaIcon.location}{j.location}</span>
                     <span className="job-badge">{metaIcon.time}{j.type}</span>
                     <span className="job-badge">{metaIcon.arrangement}{j.arrangement}</span>
@@ -146,7 +148,7 @@ export default function Careers() {
               </Link>
             ))}
             {shown.length === 0 && (
-              <div className="job-empty">Ebben a kategóriában jelenleg nincs nyitott pozíció, de a spontán jelentkezést mindig várjuk!</div>
+              <div className="job-empty">{t('careers.empty')}</div>
             )}
           </div>
         </div>
@@ -157,8 +159,8 @@ export default function Careers() {
       {/* értékek / kultúra */}
       <section className="section">
         <div className="wrap">
-          <Reveal className="eyebrow">A kultúránk</Reveal>
-          <Reveal as="h2" style={{ fontSize: 'clamp(26px,4vw,40px)', margin: '16px 0 44px', maxWidth: '16ch' }}>Ahogy dolgozunk</Reveal>
+          <Reveal className="eyebrow">{t('careers.valuesEyebrow')}</Reveal>
+          <Reveal as="h2" style={{ fontSize: 'clamp(26px,4vw,40px)', margin: '16px 0 44px', maxWidth: '16ch' }}>{t('careers.valuesHeading')}</Reveal>
           <RevealStagger className="grid g-2" step={80}>
             {values.map((v) => (
               <div className="card" key={v.title}>
@@ -175,8 +177,8 @@ export default function Careers() {
       {/* jelentkezési folyamat */}
       <section className="section">
         <div className="wrap">
-          <Reveal className="eyebrow">A jelentkezés menete</Reveal>
-          <Reveal as="h2" style={{ fontSize: 'clamp(26px,4vw,40px)', margin: '16px 0 48px', maxWidth: '16ch' }}>Négy lépés, semmi hercehurca</Reveal>
+          <Reveal className="eyebrow">{t('careers.processEyebrow')}</Reveal>
+          <Reveal as="h2" style={{ fontSize: 'clamp(26px,4vw,40px)', margin: '16px 0 48px', maxWidth: '16ch' }}>{t('careers.processHeading')}</Reveal>
           <RevealStagger className="grid g-4" step={90}>
             {hiringSteps.map((s) => (
               <div key={s.n}>
@@ -195,9 +197,9 @@ export default function Careers() {
       <section className="section-sm">
         <div className="wrap">
           <ParallaxFade speed={0.1} className="card" style={{ textAlign: 'center', padding: '72px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
-            <h2 style={{ fontSize: 'clamp(26px,4vw,40px)', maxWidth: '22ch', margin: '0 auto 14px' }}>Nem találtad a pozíciód?</h2>
-            <p className="muted" style={{ margin: '0 auto 28px', maxWidth: '46ch' }}>Küldd el az önéletrajzod, és ha felmerül egy hozzád illő pozíció, keresünk!</p>
-            <Button href={`mailto:${applyEmail}?subject=${encodeURIComponent('Jelentkezés, Debaru karrier')}`} arrow>Küldöm az önéletrajzom</Button>
+            <h2 style={{ fontSize: 'clamp(26px,4vw,40px)', maxWidth: '22ch', margin: '0 auto 14px' }}>{t('careers.ctaTitle')}</h2>
+            <p className="muted" style={{ margin: '0 auto 28px', maxWidth: '46ch' }}>{t('careers.ctaText')}</p>
+            <Button href={`mailto:${applyEmail}?subject=${encodeURIComponent(t('careers.applySubject'))}`} arrow>{t('careers.ctaButton')}</Button>
           </ParallaxFade>
         </div>
       </section>

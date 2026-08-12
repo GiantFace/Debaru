@@ -7,6 +7,7 @@ import { useDict, makeT } from './index.jsx'
 import { services as serviceStruct } from '../data/services.js'
 import { aboutStats, values as aboutValues, milestones as aboutMilestones, team as aboutTeam } from '../data/about.js'
 import { projectFilters as projectFilterStruct, featuredProjects as featuredStruct, referenceList as referenceStruct } from '../data/projects.js'
+import { cultureStats, benefits as careerBenefits, hiringSteps, departments as careerDepartments, jobs as jobStruct } from '../data/careers.js'
 
 // Szerkezet + index szerinti szöveg összefésülése (about.<key>[i]).
 const mergeByIndex = (t, struct, key) => struct.map((s, i) => ({ ...s, ...t(`${key}.${i}`) }))
@@ -16,6 +17,8 @@ export function buildContent(dict) {
 
   // Kiemelt projektek: szerkezet (id/év/cégnév) + szöveg (projects.featured.<id>)
   const featured = featuredStruct.map((p) => ({ ...p, ...t(`projects.featured.${p.id}`) }))
+  // Állások: szerkezet (slug/dept/JSON-LD) + szöveg (careers.jobs.<slug>)
+  const jobs = jobStruct.map((j) => ({ ...j, ...t(`careers.jobs.${j.slug}`) }))
 
   return {
     // Szolgáltatások: slug + sorszám (szerkezet) + szöveg (services.items.<slug>)
@@ -41,6 +44,19 @@ export function buildContent(dict) {
       featured,
       featuredById: Object.fromEntries(featured.map((p) => [p.id, p])),
       reference: referenceStruct.map((r, i) => ({ ...r, ...t(`projects.reference.${i}`) })),
+    },
+
+    // Karrier: fej/intro + index szerint fésült listák + állások (slug szerint)
+    careers: {
+      head: t('careers.head'),
+      intro: t('careers.intro'),
+      cultureStats: mergeByIndex(t, cultureStats, 'careers.cultureStats'),
+      benefits: mergeByIndex(t, careerBenefits, 'careers.benefits'),
+      values: t('careers.values'),
+      hiringSteps: mergeByIndex(t, hiringSteps, 'careers.hiringSteps'),
+      departments: careerDepartments.map((d) => ({ key: d.key, label: t(`careers.departments.${d.key}`) })),
+      jobs,
+      jobBySlug: Object.fromEntries(jobs.map((j) => [j.slug, j])),
     },
   }
 }

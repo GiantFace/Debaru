@@ -729,6 +729,624 @@
       }
     ]
   },
+  "forms": {
+    "nameReq": "Kérjük, adja meg a nevét.",
+    "nameShort": "A név túl rövid, legalább 2 karakter.",
+    "emailReq": "Kérjük, adja meg az e-mail címét.",
+    "emailInvalid": "Érvénytelen e-mail cím, ellenőrizze a formátumot (pl. nev@ceg.hu).",
+    "phoneInvalid": "A telefonszám érvénytelen a kiválasztott országhoz.",
+    "fileTooBig": "Néhány fájl túl nagy, max. 10 MB fájlonként.",
+    "fixErrors": "Kérjük, javítsa a pirossal jelölt mezőket.",
+    "captcha": "Kérjük, igazolja, hogy nem robot.",
+    "remove": "Eltávolítás",
+    "honeypot": "Ne töltse ki ezt a mezőt",
+    "namePlaceholder": "Kovács János",
+    "phonePlaceholder": "30 123 4567",
+    "gdprLink": "adatvédelmi tájékoztatót"
+  },
+  "careers": {
+    "head": {
+      "crumb": "Karrier",
+      "title": [
+        "Építsd velünk",
+        "a kritikus infrastruktúrát!"
+      ],
+      "lede": "Villamosmérnökök, automatizálók és szerelők csapata vagyunk, akik olyan rendszereket építenek, amelyek városokat, üzemeket és közműveket tartanak működésben. Ha te is kézzelfogható munkát keresel, itt a helyed.",
+      "placeholder": "Karrier, mérnöki csapat / helyszíni munka"
+    },
+    "intro": {
+      "eyebrow": "Miért a Debaru",
+      "title": "Nem irodai szoftvert fejlesztünk, valós rendszereket építünk.",
+      "paragraphs": [
+        "Nálunk a munkád eredménye kézzelfogható: egy felújított villamos-végállomás, egy hibátlanul induló gyártósor, egy szünetmentesen működő adatközpont. A tervezőasztaltól az üzembe helyezésig végigkíséred a projekteket, és látod, ahogy életre kelnek.",
+        "Kis-közepes, de erős mérnökcsapat vagyunk, ahol nincs elveszve az ember a hierarchiában. Van kitől tanulni, van felelősség, és van tér a fejlődésre, junior szerelőtől a senior projektvezetőig."
+      ]
+    },
+    "cultureStats": [
+      {
+        "label": "mérnök és technikus"
+      },
+      {
+        "label": "év a szakmában"
+      },
+      {
+        "label": "ország aktív projektjei"
+      },
+      {
+        "label": "ügyeleti csapat"
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Valódi szakmai fejlődés",
+        "desc": "A kisfeszültségtől a SCADA-ig, tervezéstől a helyszíni üzembe helyezésig, nálunk a teljes vertikumot megismered, nem egy szűk résfeladatot."
+      },
+      {
+        "title": "Kézzelfogható projektek",
+        "desc": "Városi közlekedés, energetika, ipari üzemek, adatközpontok. Olyan rendszereken dolgozol, amelyeket nap mint nap használnak."
+      },
+      {
+        "title": "Folyamatos képzés",
+        "desc": "Gyártói tréningek és tanúsítványok: Siemens TIA Portal, Schneider, B&R, EPLAN. A fejlődésedbe befektetünk."
+      },
+      {
+        "title": "Erős mérnökcsapat",
+        "desc": "15 fős, tapasztalt csapat, ahol a tudásmegosztás alap. Mentorálás pályakezdőknek, szakmai kihívás a tapasztaltaknak."
+      },
+      {
+        "title": "Stabil háttér",
+        "desc": "15+ év, hazai és nemzetközi referenciák, kiszámítható működés. Nem startup-hullámvasút, biztos alapokon álló cég."
+      },
+      {
+        "title": "Rugalmasság & korrektség",
+        "desc": "Hibrid munkarend ott, ahol a pozíció engedi, korrekt túlóra- és kiszállás-elszámolás, minőségi eszközök és védőfelszerelés."
+      }
+    ],
+    "values": [
+      {
+        "title": "Biztonság mindenek előtt",
+        "desc": "A villamos szakmában a biztonság nem szlogen. Szabványos munkavégzés, oktatás és fegyelem, magunkért és a megrendelőért."
+      },
+      {
+        "title": "Precizitás",
+        "desc": "A rendezett terv és a tiszta szekrény évekre előre megtérül. Amit leszállítunk, arra büszkék vagyunk."
+      },
+      {
+        "title": "Felelősség",
+        "desc": "Amit átadunk, azért helytállunk. Ha a megrendelőnek szüksége van ránk, számíthat ránk."
+      },
+      {
+        "title": "Csapatmunka",
+        "desc": "Tervező, szerelő, üzemeltető együtt visz sikerre egy projektet. A jó ötlet bárhonnan jöhet."
+      }
+    ],
+    "hiringSteps": [
+      {
+        "title": "Jelentkezés",
+        "desc": "Küldd el önéletrajzod (és ha van, referenciamunkáid), pár mondat is elég arról, mi érdekel."
+      },
+      {
+        "title": "Szakmai beszélgetés",
+        "desc": "Kötetlen beszélgetés a leendő csapatvezetővel: tapasztalat, elvárások, a konkrét feladatok."
+      },
+      {
+        "title": "Gyakorlati kép",
+        "desc": "A pozíciótól függően rövid szakmai feladat vagy műhely-/helyszíni bejárás, hogy mindkét fél lássa a valóságot."
+      },
+      {
+        "title": "Ajánlat",
+        "desc": "Konkrét ajánlat, tiszta feltételekkel. Döntés után egyeztetjük a beilleszkedés menetét."
+      }
+    ],
+    "departments": {
+      "all": "Összes",
+      "tervezes": "Tervezés",
+      "automatizalas": "Automatizálás",
+      "gyartas": "Gyártás",
+      "kivitelezes": "Kivitelezés",
+      "gyakornok": "Gyakornoki"
+    },
+    "benefitsEyebrow": "Amit kínálunk",
+    "benefitsHeading": "Miért jó nálunk dolgozni?",
+    "cultureHeroPlaceholder": "Csapatfotó, mérnökök / helyszíni munka",
+    "bandEyebrow": "Egy csapat, közös cél",
+    "bandHeading": [
+      "A jövő infrastruktúráját",
+      "együtt építjük."
+    ],
+    "openEyebrow": "Nyitott pozíciók",
+    "openHeading": "Csatlakozz a csapathoz!",
+    "foreignBadge": "Külföldi munka",
+    "empty": "Ebben a kategóriában jelenleg nincs nyitott pozíció, de a spontán jelentkezést mindig várjuk!",
+    "valuesEyebrow": "A kultúránk",
+    "valuesHeading": "Ahogy dolgozunk",
+    "processEyebrow": "A jelentkezés menete",
+    "processHeading": "Négy lépés, semmi hercehurca",
+    "ctaTitle": "Nem találtad a pozíciód?",
+    "ctaText": "Küldd el az önéletrajzod, és ha felmerül egy hozzád illő pozíció, keresünk!",
+    "applySubject": "Jelentkezés, Debaru karrier",
+    "ctaButton": "Küldöm az önéletrajzom",
+    "detail": {
+      "docTitleSuffix": "Karrier",
+      "trailLabel": "Karrier",
+      "aboutEyebrow": "A pozícióról",
+      "overviewHeading": "Áttekintés",
+      "respEyebrow": "Főbb feladatok",
+      "reqEyebrow": "Amit elvárunk",
+      "niceEyebrow": "Előnyt jelent",
+      "factsHeading": "Pozíció adatai",
+      "applyBtn": "Jelentkezem",
+      "applyNote": "Önéletrajzodat e-mailben várjuk.",
+      "offerEyebrow": "Amit kínálunk",
+      "offerHeading": "Miért érdemes csatlakozni?",
+      "ctaTitle": "Érdekel a pozíció?",
+      "ctaText": "Küldd el önéletrajzod, pár mondat is elég arról, mi motivál.",
+      "ctaButton": "Jelentkezem erre a pozícióra",
+      "moreEyebrow": "További pozíciók",
+      "allBtn": "Összes pozíció"
+    },
+    "apply": {
+      "docTitlePrefix": "Jelentkezés",
+      "trailLabel": "Karrier",
+      "trailApply": "Jelentkezés",
+      "title": "Jelentkezés",
+      "lede": "{title}, töltse ki az űrlapot, és pár perc alatt jelentkezhet.",
+      "forLabel": "Jelentkezés erre a pozícióra",
+      "nameLabel": "Név *",
+      "emailLabel": "E-mail *",
+      "emailPlaceholder": "janos@pelda.hu",
+      "phoneLabel": "Telefon",
+      "linkedinLabel": "LinkedIn / portfólió · opcionális",
+      "linkedinPlaceholder": "https://linkedin.com/in/…",
+      "cvLabel": "Önéletrajz (CV) *",
+      "coverLabel": "Motivációs levél *",
+      "fileOpt": " · PDF/DOC",
+      "fileHint": "PDF · DOC · DOCX",
+      "dropzoneStrong": "Húzza ide",
+      "dropzoneRest": " vagy tallózzon",
+      "gdpr1": "Elolvastam és elfogadom az ",
+      "gdpr2": ", és hozzájárulok jelentkezésem elbírálásához. *",
+      "submit": "Jelentkezés elküldése",
+      "sidebarHeading": "A pozícióról",
+      "backBtn": "Teljes álláshirdetés",
+      "errors": {
+        "cvReq": "Kérjük, csatolja az önéletrajzát (PDF vagy DOC).",
+        "coverReq": "Kérjük, csatolja a motivációs levelét (PDF vagy DOC).",
+        "linkedinInvalid": "Teljes linket adjon meg (https://…).",
+        "gdprReq": "Az adatkezelési tájékoztató elfogadása kötelező."
+      },
+      "toasts": {
+        "success": "Köszönjük a jelentkezését! Hamarosan felvesszük Önnel a kapcsolatot."
+      }
+    },
+    "jobs": {
+      "villamos-tervezomernok": {
+        "title": "Villamos tervezőmérnök",
+        "department": "Tervezés",
+        "location": "Budapest",
+        "type": "Teljes munkaidő",
+        "arrangement": "Hibrid",
+        "level": "Medior / Senior",
+        "placeholder": "Tervezőmérnök, EPLAN / villamos tervek",
+        "summary": "Kisfeszültségű elosztó- és vezérlőrendszerek villamos tervezése EPLAN-ban, a koncepciótól a gyártási dokumentációig.",
+        "overview": [
+          "Tervezőcsapatunk a projektek szíve: itt születnek meg a kapcsolószekrények, elosztók és vezérlések tervei, amelyek alapján a műhely gyárt és a helyszíni csapat kivitelez. Az elképzeléstől a kész, gyártásra kész dokumentációig kíséred végig a munkát.",
+          "Sokféle iparágban dolgozunk (közlekedés, energetika, gyártás, adatközpontok), így változatos, technikailag igényes feladatok várnak, valós felelősséggel."
+        ],
+        "responsibilities": [
+          "Kisfeszültségű elosztók és vezérlőszekrények villamos tervezése EPLAN Electric P8-ban",
+          "Kapcsolási rajzok, elrendezési tervek, sorkapocs- és kábellisták készítése",
+          "Készülékkiválasztás, méretezés és a vonatkozó szabványok (IEC 61439, MSZ HD 60364) betartása",
+          "Együttműködés a gyártással és a helyszíni csapattal a kivitelezhetőségért",
+          "Dokumentáció karbantartása, revíziók kezelése a projekt teljes életciklusában"
+        ],
+        "requirements": [
+          "Villamosmérnöki végzettség (BSc/MSc) vagy egyenértékű szakmai tapasztalat",
+          "Legalább 2–3 év villamos tervezői tapasztalat",
+          "Magabiztos EPLAN Electric P8 ismeret",
+          "Kisfeszültségű elosztás és a vonatkozó szabványok ismerete",
+          "Önálló, precíz munkavégzés és jó együttműködési készség"
+        ],
+        "niceToHave": [
+          "PLC/automatizálási alapismeretek (Siemens, Schneider)",
+          "Tapasztalat közlekedési vagy energetikai projektekben",
+          "Angol vagy német nyelvtudás"
+        ],
+        "offer": [
+          "Változatos, technikailag igényes projektek valós felelősséggel",
+          "EPLAN- és gyártói tréningek, tanúsítványok",
+          "Hibrid munkarend, korszerű eszközök",
+          "Stabil, kiszámítható háttér és erős mérnökcsapat"
+        ],
+        "facts": [
+          {
+            "label": "Terület",
+            "value": "Tervezés"
+          },
+          {
+            "label": "Helyszín",
+            "value": "Budapest"
+          },
+          {
+            "label": "Munkaidő",
+            "value": "Teljes munkaidő"
+          },
+          {
+            "label": "Munkarend",
+            "value": "Hibrid"
+          },
+          {
+            "label": "Tapasztalat",
+            "value": "2+ év"
+          }
+        ]
+      },
+      "plc-scada-mernok": {
+        "title": "PLC / SCADA automatizálási mérnök",
+        "department": "Automatizálás",
+        "location": "Budapest + helyszíni",
+        "type": "Teljes munkaidő",
+        "arrangement": "Helyszíni / Hibrid",
+        "level": "Medior",
+        "placeholder": "Automatizálási mérnök, PLC / SCADA / HMI",
+        "summary": "PLC- és SCADA-rendszerek programozása, üzembe helyezése és integrációja gyártósorokon és közmű-infrastruktúrán.",
+        "overview": [
+          "Az automatizálási csapatban a rendszerek \"eszét\" építed: PLC-programot írsz, HMI/SCADA felületet fejlesztesz, majd a helyszínen életre kelted a berendezést. A tervezőasztaltól az üzembe helyezésig végigviszed a feladatot.",
+          "Munkád nyomán gyártósorok, szivattyútelepek és alállomások indulnak el és működnek megbízhatóan, kézzelfogható, azonnal látható eredménnyel."
+        ],
+        "responsibilities": [
+          "PLC-programozás (Siemens TIA Portal, Schneider, B&R)",
+          "HMI és SCADA felületek fejlesztése és integrációja",
+          "Helyszíni üzembe helyezés, bekötés-ellenőrzés, éles indítás",
+          "Meglévő rendszerek bővítése, hibakeresés és optimalizálás",
+          "Dokumentáció és betanítás a megrendelő üzemeltetőinek"
+        ],
+        "requirements": [
+          "Villamosmérnöki / mechatronikai végzettség vagy erős szakmai tapasztalat",
+          "Legalább 2 év PLC-programozási tapasztalat (lehetőleg Siemens TIA)",
+          "SCADA/HMI rendszerek ismerete",
+          "Helyszíni munkára és alkalmankénti utazásra való nyitottság",
+          "B kategóriás jogosítvány"
+        ],
+        "niceToHave": [
+          "Hajtástechnika (frekvenciaváltók) tapasztalat",
+          "Ipari hálózatok (Profinet, Modbus, OPC UA) ismerete",
+          "Angol vagy német nyelvtudás"
+        ],
+        "offer": [
+          "Teljes projektek a koncepciótól az éles indításig",
+          "Gyártói tréningek (Siemens, Schneider, B&R)",
+          "Korrekt kiszállás-elszámolás, minőségi eszközök",
+          "Változatos iparágak, folyamatos szakmai kihívás"
+        ],
+        "facts": [
+          {
+            "label": "Terület",
+            "value": "Automatizálás"
+          },
+          {
+            "label": "Helyszín",
+            "value": "Budapest + helyszíni"
+          },
+          {
+            "label": "Munkaidő",
+            "value": "Teljes munkaidő"
+          },
+          {
+            "label": "Munkarend",
+            "value": "Helyszíni / Hibrid"
+          },
+          {
+            "label": "Tapasztalat",
+            "value": "2+ év"
+          }
+        ]
+      },
+      "kapcsoloszekreny-szerelo": {
+        "title": "Kapcsolószekrény-szerelő",
+        "department": "Gyártás",
+        "location": "Budapest (műhely)",
+        "type": "Teljes munkaidő",
+        "arrangement": "Helyszíni",
+        "level": "Pályakezdő is",
+        "placeholder": "Szekrényszerelő, műhely / kábelezés",
+        "summary": "Egyedi vezérlő- és elosztószekrények szerelése saját műhelyünkben, tervek alapján, precíz kivitelben.",
+        "overview": [
+          "A műhelyünkben készülnek azok a szekrények, amelyek később üzemek és közművek szívében dolgoznak. A tervező rajzai alapján te építed meg őket: készülékek felszerelése, kábelezés, bekötés, ellenőrzés.",
+          "Ha szereted a rendezett, precíz kézi munkát és fontos számodra, hogy amit csinálsz, az látványos és tartós legyen, itt a helyed. Pályakezdőket is szívesen betanítunk."
+        ],
+        "responsibilities": [
+          "Vezérlő- és elosztószekrények szerelése kapcsolási rajz alapján",
+          "Készülékek felszerelése, sorkapcsok, kábelcsatornák kiépítése",
+          "Vezetékezés, bekötés, jelölés és a kivitel precíz kidolgozása",
+          "Szemrevételezés és alap villamos ellenőrzések a kiszállítás előtt",
+          "Rend és a minőségi elvárások betartása a műhelyben"
+        ],
+        "requirements": [
+          "Villanyszerelő / erősáramú szakképzettség",
+          "Kapcsolási rajz olvasásának ismerete",
+          "Precíz, igényes kézi munkavégzés",
+          "Megbízhatóság és csapatszellem"
+        ],
+        "niceToHave": [
+          "Szekrényszerelési tapasztalat",
+          "Kisfeszültségű készülékek (megszakítók, relék) ismerete"
+        ],
+        "offer": [
+          "Tiszta, jól felszerelt műhely és minőségi szerszámok",
+          "Betanítás és szakmai fejlődés a pályakezdőknek is",
+          "Kiszámítható munkarend, elsősorban műhelymunka",
+          "Hosszú távú, stabil munkalehetőség"
+        ],
+        "facts": [
+          {
+            "label": "Terület",
+            "value": "Gyártás"
+          },
+          {
+            "label": "Helyszín",
+            "value": "Budapest (műhely)"
+          },
+          {
+            "label": "Munkaidő",
+            "value": "Teljes munkaidő"
+          },
+          {
+            "label": "Munkarend",
+            "value": "Helyszíni"
+          },
+          {
+            "label": "Tapasztalat",
+            "value": "Pályakezdő is"
+          }
+        ]
+      },
+      "villamos-projektvezeto": {
+        "title": "Villamos kivitelezési projektvezető",
+        "department": "Kivitelezés",
+        "location": "Budapest + országos",
+        "type": "Teljes munkaidő",
+        "arrangement": "Helyszíni",
+        "level": "Senior",
+        "placeholder": "Projektvezető, helyszíni villamos kivitelezés",
+        "summary": "Villamos kivitelezési projektek felelős vezetése a szerződéstől az átadásig, határidő, költség, minőség és biztonság kézben tartásával.",
+        "overview": [
+          "Projektvezetőként a kivitelezés karmestere vagy: te fogod össze a tervezőt, a műhelyt, a helyszíni csapatot és az alvállalkozókat, hogy a projekt időben, a kereten belül és hibátlan minőségben készüljön el.",
+          "Nagy volumenű, szakmailag igényes projektjeink valós döntési felelősséget és láthatóságot adnak. A jó munkádnak közvetlen, mérhető eredménye lesz."
+        ],
+        "responsibilities": [
+          "Villamos kivitelezési projektek teljes körű vezetése (határidő, költség, minőség)",
+          "Erőforrás- és ütemterv készítése, a helyszíni csapatok koordinálása",
+          "Kapcsolattartás a megrendelővel, tervezővel és alvállalkozókkal",
+          "Munkavédelmi és minőségi előírások betartatása a helyszínen",
+          "Előrehaladás, elszámolás és dokumentáció felügyelete"
+        ],
+        "requirements": [
+          "Villamosmérnöki végzettség",
+          "Legalább 4–5 év villamos kivitelezési tapasztalat, ebből vezetői gyakorlat",
+          "Kivitelezési folyamatok, szabványok és munkavédelem ismerete",
+          "Határozott, jó szervező- és kommunikációs készség",
+          "B kategóriás jogosítvány"
+        ],
+        "niceToHave": [
+          "Felelős műszaki vezetői (FMV) jogosultság",
+          "Tapasztalat közlekedési vagy energetikai projektekben",
+          "Angol vagy német nyelvtudás"
+        ],
+        "offer": [
+          "Nagy, referenciaértékű projektek valós felelősséggel",
+          "Versenyképes juttatás és céges autó/eszközök",
+          "Erős háttércsapat (tervezés, gyártás, üzemeltetés)",
+          "Hosszú távú, kiszámítható együttműködés"
+        ],
+        "facts": [
+          {
+            "label": "Terület",
+            "value": "Kivitelezés"
+          },
+          {
+            "label": "Helyszín",
+            "value": "Budapest + országos"
+          },
+          {
+            "label": "Munkaidő",
+            "value": "Teljes munkaidő"
+          },
+          {
+            "label": "Munkarend",
+            "value": "Helyszíni"
+          },
+          {
+            "label": "Tapasztalat",
+            "value": "4+ év"
+          }
+        ]
+      },
+      "helyszini-villanyszerelo": {
+        "title": "Helyszíni villanyszerelő",
+        "department": "Kivitelezés",
+        "location": "Országos",
+        "type": "Teljes munkaidő",
+        "arrangement": "Helyszíni",
+        "level": "Tapasztalt",
+        "placeholder": "Villanyszerelő, helyszíni kivitelezés",
+        "summary": "Villamos rendszerek helyszíni szerelése és üzembe helyezése ipari és közlekedési projekteken, tapasztalt csapatban.",
+        "overview": [
+          "A helyszíni csapat viszi véghez, amit a tervező megálmodott és a műhely legyártott: kábelezés, bekötés, szerelés, majd az éles indítás. Változatos helyszíneken, valódi, látható eredménnyel dolgozol.",
+          "Megbecsült szakmunkás-csapat vagyunk, minőségi eszközökkel és korrekt feltételekkel. A szakértelmed itt tényleg számít."
+        ],
+        "responsibilities": [
+          "Kis- és középfeszültségű rendszerek helyszíni szerelése, kábelezése",
+          "Szekrények, elosztók telepítése és bekötése tervek alapján",
+          "Mérések, ellenőrzések, közreműködés az üzembe helyezésben",
+          "Munkavédelmi előírások betartása a helyszínen",
+          "Együttműködés a projektvezetővel és a mérnökcsapattal"
+        ],
+        "requirements": [
+          "Villanyszerelő / erősáramú szakképzettség",
+          "Legalább 2–3 év helyszíni szerelési tapasztalat",
+          "Kapcsolási és elrendezési rajzok magabiztos olvasása",
+          "Utazásra való nyitottság (országos projektek)",
+          "B kategóriás jogosítvány"
+        ],
+        "niceToHave": [
+          "Kisfeszültségű felülvizsgálói (ÉV) jogosultság",
+          "Középfeszültségű vagy közlekedési tapasztalat"
+        ],
+        "offer": [
+          "Minőségi szerszámok, védőfelszerelés, céges szállás/kiszállás korrekt elszámolással",
+          "Változatos, érdekes helyszínek és projektek",
+          "Megbecsült szakmunkás-csapat, stabil háttér",
+          "Szakmai továbbképzés, jogosultságok megszerzésének támogatása"
+        ],
+        "facts": [
+          {
+            "label": "Terület",
+            "value": "Kivitelezés"
+          },
+          {
+            "label": "Helyszín",
+            "value": "Országos"
+          },
+          {
+            "label": "Munkaidő",
+            "value": "Teljes munkaidő"
+          },
+          {
+            "label": "Munkarend",
+            "value": "Helyszíni"
+          },
+          {
+            "label": "Tapasztalat",
+            "value": "2+ év"
+          }
+        ]
+      },
+      "kulfoldi-villamos-szerelo": {
+        "title": "Villamos szerelő, külföldi projektek (DE/HU)",
+        "department": "Kivitelezés",
+        "location": "Németország + Magyarország",
+        "type": "Teljes munkaidő",
+        "arrangement": "Helyszíni · kiküldetés",
+        "level": "Tapasztalt",
+        "placeholder": "Külföldi villamos kivitelezés, helyszíni munka",
+        "summary": "Villamos rendszerek helyszíni szerelése hazai és németországi projekteken, kiemelt juttatással a külföldi munkavégzésért.",
+        "overview": [
+          "Nemzetközi projektjeink egyre bővülnek: a hazai munkák mellett Németországban is dolgozunk, ahol a magyar csapat szakértelmére komoly igény van. Ebben a pozícióban felváltva veszel részt hazai és külföldi kivitelezésekben, kiküldetés keretében.",
+          "A külföldi munka külön elismerést kap, a kiemelt juttatás mellett a szállást és az utazást is biztosítjuk, hogy csak a szakmára kelljen figyelned."
+        ],
+        "responsibilities": [
+          "Kis- és középfeszültségű rendszerek helyszíni szerelése, kábelezése hazai és németországi helyszíneken",
+          "Szekrények, elosztók telepítése és bekötése tervek alapján",
+          "Mérések, ellenőrzések, közreműködés az üzembe helyezésben",
+          "Munkavédelmi előírások betartása a hazai és a német szabályok szerint",
+          "Együttműködés a helyi és a magyar csapattal"
+        ],
+        "requirements": [
+          "Villanyszerelő / erősáramú szakképzettség",
+          "Legalább 3 év helyszíni szerelési tapasztalat",
+          "Kommunikációképes német VAGY angol nyelvtudás (a külföldi munkához szükséges)",
+          "Rendszeres külföldi kiküldetés vállalása",
+          "B kategóriás jogosítvány"
+        ],
+        "niceToHave": [
+          "Középfeszültségű vagy ipari tapasztalat",
+          "Korábbi külföldi munkatapasztalat",
+          "Erős német nyelvtudás"
+        ],
+        "offer": [
+          "Kiemelt juttatás a külföldi munkavégzésért (kiküldetési díj a hazai béren felül)",
+          "Biztosított szállás és utazás a külföldi projekteknél",
+          "Vegyes hazai–külföldi projektek, változatos feladatok",
+          "Stabil háttér, minőségi eszközök és védőfelszerelés"
+        ],
+        "facts": [
+          {
+            "label": "Terület",
+            "value": "Kivitelezés"
+          },
+          {
+            "label": "Helyszín",
+            "value": "Németország + Magyarország"
+          },
+          {
+            "label": "Munkaidő",
+            "value": "Teljes munkaidő"
+          },
+          {
+            "label": "Munkarend",
+            "value": "Helyszíni · kiküldetés"
+          },
+          {
+            "label": "Nyelv",
+            "value": "Német vagy angol (kommunikációképes)"
+          },
+          {
+            "label": "Tapasztalat",
+            "value": "3+ év"
+          }
+        ]
+      },
+      "mernok-gyakornok": {
+        "title": "Mérnök gyakornok (villamos)",
+        "department": "Gyakornoki",
+        "location": "Budapest",
+        "type": "Részmunkaidő",
+        "arrangement": "Hibrid",
+        "level": "Gyakornok",
+        "placeholder": "Gyakornok, villamosmérnök hallgató",
+        "summary": "Villamosmérnök-hallgatóként éles projektekbe kapcsolódsz be a tervezés és az automatizálás mellett, mentor támogatásával.",
+        "overview": [
+          "Nem kávéfőzés és fénymásolás: valódi projektekbe kapcsolódsz be, tapasztalt mérnökök mellett. Belelátsz a tervezésbe, az automatizálásba és a kivitelezésbe, és a végén tényleg tudsz majd valamit.",
+          "Rugalmas, a tanulmányaidhoz igazított munkarend, és reális esély a végzés utáni belépésre, sok kollégánk így kezdte."
+        ],
+        "responsibilities": [
+          "Közreműködés villamos tervezési feladatokban (EPLAN) mentor mellett",
+          "Segítés a dokumentáció, listák és mérési jegyzőkönyvek készítésében",
+          "Bekapcsolódás automatizálási / üzembe helyezési feladatokba",
+          "Tanulás a valós projektek folyamatából"
+        ],
+        "requirements": [
+          "Aktív villamosmérnök / mechatronikai hallgatói jogviszony",
+          "Alapvető villamosságtani ismeretek",
+          "Érdeklődés a tervezés vagy az automatizálás iránt",
+          "Heti 20–30 óra elérhetőség"
+        ],
+        "niceToHave": [
+          "EPLAN vagy PLC alapismeretek",
+          "Saját, iskolai vagy hobbiprojekt"
+        ],
+        "offer": [
+          "Valós projektek és tapasztalt mentor",
+          "Rugalmas, tanulmányokhoz igazított munkarend",
+          "Reális esély a végzés utáni belépésre",
+          "Betekintés a teljes mérnöki folyamatba"
+        ],
+        "facts": [
+          {
+            "label": "Terület",
+            "value": "Gyakornoki"
+          },
+          {
+            "label": "Helyszín",
+            "value": "Budapest"
+          },
+          {
+            "label": "Munkaidő",
+            "value": "Részmunkaidő (heti 20–30 óra)"
+          },
+          {
+            "label": "Munkarend",
+            "value": "Hibrid"
+          },
+          {
+            "label": "Tapasztalat",
+            "value": "Nem szükséges"
+          }
+        ]
+      }
+    }
+  },
   "footer": {
     "tagline": "Ipari automatizálás, villamos energetika és vezérléstechnika, tervezéstől a folyamatos üzemig.",
     "rights": "Minden jog fenntartva.",
