@@ -207,6 +207,528 @@
     "video": { "eyebrow": "Bepillantás", "title": "A műhely, ahol a rendszerek készülnek" },
     "cta": { "title": "Legyen Ön a következő hosszútávú partnerünk!", "button": "Beszéljünk!" }
   },
+  "projects": {
+    "head": {
+      "crumb": "Projektjeink",
+      "placeholder": "Fotó, ipari projekt / helyszín",
+      "title": [
+        "Referenciák, amelyek",
+        "üzemelnek."
+      ],
+      "lede": "Több mint 100 dokumentált projekt 2010 óta, vasút és városi közlekedés, autóipari és félvezetőgyári automatizálás, energiaellátás és berendezésgyártás, itthon és Európa-szerte."
+    },
+    "filters": {
+      "all": "Összes",
+      "kozlekedes": "Közlekedés",
+      "villamos": "Villamos / automatizálás",
+      "kf": "K+F / saját fejlesztés"
+    },
+    "catLabel": {
+      "kozlekedes": "Közlekedés",
+      "villamos": "Villamos",
+      "kf": "K+F"
+    },
+    "accentLabel": {
+      "kozlekedes": "Közlekedés",
+      "villamos": "Villamos / automatizálás",
+      "energetika": "Energetika"
+    },
+    "featuredEyebrow": "Kiemelt referenciák",
+    "featuredHeading": "Rendszerek, amelyek nap mint nap dolgoznak",
+    "foreignFlag": "Külföld",
+    "videosEyebrow": "Munkáink videón",
+    "videosHeading": "A BKV Etele téri projekt, élőben",
+    "listEyebrow": "Teljes referencialista",
+    "listHeading": "Több mint 100 projekt 2010 óta",
+    "listLede": "Válogatás nélkül, a hivatalos referencialistánk alapján, végfelhasználó, megrendelő és a konkrét feladat megjelölésével.",
+    "stats": {
+      "count": "átadott projekt",
+      "span": "év, 2010 óta",
+      "users": "végfelhasználó",
+      "clients": "megrendelő és partner"
+    },
+    "projectWord": "projekt",
+    "via": "{megr} megbízásából",
+    "empty": "Ebben a kategóriában nincs találat.",
+    "ctaTitle": "A következő referencia az Öné lehet!",
+    "ctaButton": "Beszéljünk a projektjéről!",
+    "detail": {
+      "factsTitle": "A projekt adatai",
+      "factClient": "Megrendelő / végfelhasználó",
+      "factVia": "Fővállalkozó",
+      "factPeriod": "Időszak",
+      "factArea": "Terület",
+      "factLocation": "Helyszín",
+      "foreignValue": "Külföldi projekt",
+      "trailLabel": "Projektjeink",
+      "relatedEyebrow": "A hivatalos referencialistából",
+      "relatedHeading": "Kapcsolódó munkáink · {client}",
+      "ctaTitle": "Hasonló projektet tervez?",
+      "ctaButton": "Kérjen ajánlatot"
+    },
+    "featured": {
+      "bkv-etele": {
+        "tag": "Villamos · SIL2",
+        "title": "1-es villamos, Etele téri végállomás",
+        "desc": "Az Etele téri villamos-végállomás SIL2 biztonsági vezérlésének tervezése és üzembe helyezése, áramátalakítókkal és a teljes védelem-irányítástechnikával, Budapest egyik legforgalmasabb csomópontjában.",
+        "placeholder": "Etele téri villamos-végállomás"
+      },
+      "mav-heta": {
+        "tag": "Vasút · Felsővezeték",
+        "title": "MÁV HETA felsővezetéki távvezérlés",
+        "desc": "Felsővezetéki távvezérlő (HETA) rendszerek fejlesztése, gyártása és üzembe helyezése több mint egy tucat vasúti vonalszakaszon, Kelenföldtől a Dél-Balatonig.",
+        "placeholder": "MÁV vasúti felsővezeték"
+      },
+      "bkv-m4": {
+        "tag": "Metró · Távvezérlés",
+        "title": "BKV M4 metró, távvezérlő rendszer",
+        "desc": "A 4-es metró áramellátásának távvezérlő rendszere: fejlesztés és üzembe helyezés Siemens S7-300 PLC alapokon.",
+        "placeholder": "BKV M4 metró, távvezérlés"
+      },
+      "asml-berlin": {
+        "tag": "Tisztatér · Németország",
+        "title": "ASML Berlin, tisztatéri automatizálás",
+        "desc": "Félvezetőgyári tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése, szoftvere és üzembe helyezése (BER90, BER08).",
+        "placeholder": "ASML, tisztatéri technológia"
+      },
+      "hungrana": {
+        "tag": "Energetika · Berendezésgyártás",
+        "title": "Hungrana, 22/0,4 kV alállomás rekonstrukció",
+        "desc": "Transzformátorcsere és 22-mezős 0,4 kV-os elosztó tervezése, gyártása és cseréje, ATEX-környezetben végzett komplex villamos kivitelezéssel és biztonsági felülvizsgálatokkal.",
+        "placeholder": "Hungrana, 0,4 kV elosztó"
+      },
+      "audi": {
+        "tag": "Autóipar · Épületautomatika",
+        "title": "Audi gyárak, épületautomatika",
+        "desc": "Motortesztelő elszívás, csarnok-vízhűtés és szállítószalag-vezérlő szoftverek fejlesztése és üzembe helyezése Siemens S7-300 PLC alapokon, több Audi-telephelyen.",
+        "placeholder": "Audi gyár, automatizálás"
+      },
+      "bkv-50-56": {
+        "tag": "Villamos · Váltóvezérlés",
+        "title": "50-es és 56-os villamosvonalak",
+        "desc": "Városi vasúti váltóvezérlő berendezés, SIL2 biztonsági vezérlés és váltófűtés tervezése és kivitelezése három helyszínen.",
+        "placeholder": "Villamosvonal, váltóvezérlés"
+      },
+      "mercedes": {
+        "tag": "Autóipar · Épületautomatika",
+        "title": "Mercedes-Benz Kecskemét, gyárépítés",
+        "desc": "A kecskeméti gyár építéséhez kapcsolódó épületautomatikai szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon.",
+        "placeholder": "Mercedes-Benz gyár"
+      },
+      "mav-hev": {
+        "tag": "HÉV · Áramellátás",
+        "title": "H5, H6, H7, H8 HÉV-vonalak felújítása",
+        "desc": "A HÉV-vonalak áramellátásának és védelem-irányítástechnikai rendszereinek tervezése a vonalfelújításokhoz.",
+        "placeholder": "HÉV-vonal áramellátás"
+      },
+      "vw": {
+        "tag": "Autóipar · Németország",
+        "title": "Volkswagen, gyártósori automatizálás",
+        "desc": "Gyártósori vezérlők felügyeleti rendszerbe integrálása és gépészeti automatika szoftverek fejlesztése, üzembe helyezése VW-telephelyeken.",
+        "placeholder": "Volkswagen gyártósor"
+      },
+      "szeged-tram": {
+        "tag": "Tram-train · Energetika",
+        "title": "Szegedi tram-train áramellátás",
+        "desc": "Áramellátási szimuláció és a rendszer terhelhetőségének növelése párhuzamos táplálással, a szükséges védelmi-irányítástechnikai megoldásokkal.",
+        "placeholder": "Tram-train, Szeged"
+      },
+      "regor": {
+        "tag": "K+F · Saját termék",
+        "title": "Regor, saját PLC és SCADA rendszer",
+        "desc": "Lua-alapú PLC- és SCADA-rendszer saját fejlesztése és gyártása, a Debaru saját irányítástechnikai platformja.",
+        "placeholder": "Regor PLC / SCADA platform"
+      }
+    },
+    "reference": [
+      {
+        "proj": "Boba-Bajánsenye vasútvonal felújítása",
+        "fel": "Felsővezeték-építés projektmenedzsment"
+      },
+      {
+        "fel": "Autódiagnosztikai rendszer fejlesztésében való részvétel"
+      },
+      {
+        "fel": "Középfeszültségű védelmek üzembe helyezése"
+      },
+      {
+        "proj": "M4 metró építése",
+        "fel": "Távvezérlő rendszer fejlesztése, üzembe helyezése Siemens S7-300 PLC alapokon."
+      },
+      {
+        "proj": "Kísérleti membrános szennyvíztisztító építése",
+        "fel": "Automatika, adatgyűjtő, Scada rendszer fejlesztése, üzembe helyezése."
+      },
+      {
+        "fel": "Webalapú EMS rendszer fejlesztése, telepítése, üzembe helyezése"
+      },
+      {
+        "fel": "0.4kV áramellátó transzformátor cseréje"
+      },
+      {
+        "proj": "Szegedi városi tömegközlekedés fejlesztése",
+        "fel": "Izolációmérő berendezés fejlesztése trolibusz felsővezetéki rendszerhez, telepítés, üzembe helyezés"
+      },
+      {
+        "proj": "Gyárbővítés",
+        "fel": "Motortesztelő csarnok elszívás vezérlő szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+      },
+      {
+        "fel": "HÉV áramellátás távvezérlő szekrények fejlesztése, üzembe helyezése"
+      },
+      {
+        "fel": "Távvezérlő rendszer fejlesztése, üzembe helyezés, áramátalakítók üzembe helyezése"
+      },
+      {
+        "fel": "VÁC HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+      },
+      {
+        "proj": "Gyárbővítés",
+        "fel": "Vízhűtés irányítása csarnokokhoz - vezérlő szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+      },
+      {
+        "proj": "Lepsény-Szántód-Kőröshegy vasúti vonalszakasz felújítása",
+        "fel": "HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+      },
+      {
+        "fel": "Vác vasútállomás előfűtő berendezés automatizálása, energiamérés PIN kódos azonosítással"
+      },
+      {
+        "fel": "Épületautomatika szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+      },
+      {
+        "fel": "BKV áramellátás diszpécser központ, Scada rendszer fejlesztése, telepítése, üzembe helyezése"
+      },
+      {
+        "fel": "Székesfehérvár vasútállomás felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+      },
+      {
+        "proj": "Pécs-Dombóvár vonalszakasz felújítása",
+        "fel": "Váltófűtés, és térvilágítás távvezérlő rendszer, HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+      },
+      {
+        "fel": "Épületautomatika szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+      },
+      {
+        "fel": "Vízkezelő rendszer - szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+      },
+      {
+        "fel": "35 kV-os légvezetékes hálózat bontása, földkábeles hálózat kiépítése"
+      },
+      {
+        "proj": "Kelenföld-Százhalombatta vasúti vonalszakasz felújítása",
+        "fel": "HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+      },
+      {
+        "proj": "Göd-Dunakeszi vonalszakasz felújítása",
+        "fel": "HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+      },
+      {
+        "fel": "Dorog 120/25kV alállomás irányítástechnika szoftverek készítése, üzembe helyezése"
+      },
+      {
+        "proj": "Gyárbővítés",
+        "fel": "Motorszállító szalag vezérlő szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+      },
+      {
+        "proj": "Százhalombatta-Ercsi vonalszakasz felújítása",
+        "fel": "HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+      },
+      {
+        "proj": "Ercsi-Pusztaszabolcs vonalszakasz felújítása",
+        "fel": "HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+      },
+      {
+        "proj": "Szabadbattyán-Balatonfüred vonalszakasz villamosítása",
+        "fel": "Térvilágítás távvezérlő rendszer, HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+      },
+      {
+        "proj": "Érd összekötő",
+        "fel": "Váltófűtés rendszer, HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+      },
+      {
+        "proj": "Tramtrain",
+        "fel": "Áramellátási szimuláció, rendszer terhelhetőségének növelése párhuzamos táplálással. Ehhez szükséges védelmi-irányítástechnikai megoldások szoftveres kialakítása."
+      },
+      {
+        "proj": "50-es, 56-os villamosvonalak felújítása",
+        "fel": "Városi vasúti váltóvezérlő berendezés, SIL2 biztonsági vezérlés és váltófűtés tervezése, kivitelezése három helyszínen"
+      },
+      {
+        "proj": "50-es, 56-os villamosvonalak felújítása",
+        "fel": "Áramátalakítók, védelem-irányítástechnika üzembe helyezése, távvezérlő rendszer fejlesztése, gyártása, üzembe helyezés"
+      },
+      {
+        "fel": "Tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése"
+      },
+      {
+        "proj": "56-os villamosvonal felújítása",
+        "fel": "Városi vasúti váltóvezérlő berendezés, SIL2 biztonsági vezérlés tervezése, kivitelezése"
+      },
+      {
+        "fel": "Tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése"
+      },
+      {
+        "fel": "Tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése"
+      },
+      {
+        "fel": "Rákosrendező vasútállomáson FET és HETA rendszer kialakítása"
+      },
+      {
+        "fel": "H8 Gödöllő HÉV vonal, Nagyicce áramátalakítóban az 1 kV-os elosztóberendezés komplex cseréjének tervezése"
+      },
+      {
+        "proj": "Magasraktár anyagmozgató felújítás",
+        "fel": "Kasto anyagmozgató berendezés vezérlésének cseréje"
+      },
+      {
+        "fel": "Tisztaterek épületgépészeti automatizálásának tervezése, szerelése"
+      },
+      {
+        "fel": "Felügyeleti rendszer integráció meglévő gyártósori vezérlőkbe."
+      },
+      {
+        "fel": "BER90 Tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése, szoftver, üzembe helyezés"
+      },
+      {
+        "fel": "Tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése"
+      },
+      {
+        "proj": "22/0,4kV alállomás rekonstrukció",
+        "fel": "Transzformátor csere, 21-mezős 0,4kV elosztó tervezése, gyártása, cseréje"
+      },
+      {
+        "fel": "Karbantartási munkák folyamatos termelésű területen, üzemi környezetben"
+      },
+      {
+        "fel": "Irányítástechnikai tervezés"
+      },
+      {
+        "proj": "Elevátorok hasadópanel cseréjének irányítástechnikai tervezése",
+        "fel": "Elevátorok hasadópanel cseréjének irányítástechnikai tervezése, ATEX területen, teljes rendszer biztonsági felülvizsgálata VBF és ATEX tekintetében"
+      },
+      {
+        "proj": "Trafó kamra szellőzés kialakítása",
+        "fel": "KÖF-KIF Transzformátor kamra szellőzésének kialakítása"
+      },
+      {
+        "proj": "NC elosztó telepítése",
+        "fel": "Főelosztó cellasor tervezése, helyszíni cseréje"
+      },
+      {
+        "proj": "Karbantartó műhely villamos kivitelezés",
+        "fel": "Műhelycsarnok komplett épületvillamossági kivitelezés, elosztószekrény tervezés, gyártás, helyszíni telepítés, épület betáp kábelének cseréje, nyomvonalépítés, épület villámvédelmi rendszerének felülvizsgálata, javítása, üzembehelyezés"
+      },
+      {
+        "proj": "Beruházási műhely villamos kivitelezés",
+        "fel": "Műhelycsarnok komplett épületvillamossági kivitelezés, elosztószekrény tervezés, gyártás, helyszíni telepítés, épület betáp kábelének cseréje, nyomvonalépítés, épület villámvédelmi rendszerének felülvizsgálata, javítása, üzembehelyezés"
+      },
+      {
+        "proj": "BSS bekeverés tervezése",
+        "fel": "Bekeverő üzem - kiépített érzékelőknek megfelelően tervezési módosítás módosítása"
+      },
+      {
+        "proj": "Kábelnyomvonal átalakítás"
+      },
+      {
+        "fel": "Tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése, szoftver, üzembe helyezés"
+      },
+      {
+        "proj": "Magasraktár anyagmozgató felújítás",
+        "fel": "Kasto anyagmozgató berendezés kábelezésének, kezelőfelületeinek cseréje"
+      },
+      {
+        "fel": "Karbantartási munkák folyamatos termelésű területen, üzemi környezetben"
+      },
+      {
+        "proj": "BIO2 E-4116 hőcserélő - kivitelezés",
+        "fel": "Alkohol desztillációs üzem hőcserélőjéhez kapcsolódó új hőhasznosító kondenzátorának villamos integrálása - tervezés, nyomvonal építés, szekrénygyártás, telepítés, üzembehelyezés ATEX területen"
+      },
+      {
+        "proj": "Overhaul of WWTP - phase II - Új iszapprésház telepítése - tervezés",
+        "fel": "Új üzemi területhez kapcsolódó villamos tervezés - épületvillamosság, villámvédelem, elosztószekrény"
+      },
+      {
+        "proj": "B2505 BB1 Füstgázszűrő karbantartás - kivitelezés",
+        "fel": "Energiaüzemhez tartozó villamos motorok karbantartása"
+      },
+      {
+        "proj": "B2531-11 ADSEP gyantabetöltő rendszer - tervezés",
+        "fel": "Cukorüzem gyantabetöltő rendszeréhez kapcsolódó nyomásmérők integrációjának tervezése ATEX területen"
+      },
+      {
+        "proj": "B2531-11 ADSEP gyantabetöltő rendszer - kivitelezés",
+        "fel": "Cukorüzem gyantabetöltő rendszeréhez kapcsolódó nyomásmérők integrációjának kivitelezése ATEX területen"
+      },
+      {
+        "proj": "VBF, VV, RB mérések",
+        "fel": "Üzemi területek komplett Villamos Biztonsági Felülvizsgálata, Villámvédelmi felülvizsgálata, Robbanásbiztos Berendezések Felülvizsgálata"
+      },
+      {
+        "proj": "B2531-13 KDX B2820-as tartály szintkapcsoló - kivitelezés",
+        "fel": "Cukorüzem termelési berendezéséhez kapcsolódó szintkapcsoló integrációjának tervezése ATEX területen"
+      },
+      {
+        "proj": "B2531-12 P0811 zsomp szintkapcsoló - kivitelezés",
+        "fel": "Cukorüzem termelési berendezéséhez kapcsolódó szintkapcsoló integrációjának kivitelezése ATEX területen"
+      },
+      {
+        "proj": "Overhaul of WWTP - phase II - Új iszapprésház telepítése - kivitelezés",
+        "fel": "Új üzemi területhez kapcsolódó villamos kivitelezés - épületvillamosság, villámvédelem, elosztószekrény"
+      },
+      {
+        "proj": "Hűtőtorony installációs hálózat kiépítés",
+        "fel": "Alkoholüzemi hűtőtorony villamos installációs hálózatának tervezése és kivitelezése"
+      },
+      {
+        "proj": "H0015 Hasadó panel villamos kivitelezés",
+        "fel": "Elevátorok hasadópanel cseréjének irányítástechnikai tervezése, ATEX területen, teljes rendszer biztonsági felülvizsgálata VBF és ATEX tekintetében"
+      },
+      {
+        "proj": "B2408 - H3012 Elevátor",
+        "fel": "Elevátorok hasadópanel cseréjének irányítástechnikai tervezése, ATEX területen, teljes rendszer biztonsági felülvizsgálata VBF és ATEX tekintetében"
+      },
+      {
+        "proj": "B2408 - H3011 Elevátor kivitelezés",
+        "fel": "Elevátorok hasadópanel cseréjének irányítástechnikai tervezése, ATEX területen, teljes rendszer biztonsági felülvizsgálata VBF és ATEX tekintetében"
+      },
+      {
+        "proj": "BK088 Bio1 koncentráló hőm.beépítés",
+        "fel": "Alkohol finomító üzem új hőmérőjének integrációja meglévő rendszerben - ATEX területen tervezés és kivitelezés"
+      },
+      {
+        "proj": "B2530-26 BIO2 Tömegárammérő beépítés - tervezés",
+        "fel": "Alkohol finomító üzem új tömegárammérőjének integrációja meglévő rendszerben - ATEX területen tervezés"
+      },
+      {
+        "proj": "B2530-24 BIO2 Hűtővíz szelep automatizálás - tervezés",
+        "fel": "Alkohol finomító üzem új tömegárammérőjének integrációja meglévő rendszerben - ATEX területen tervezés"
+      },
+      {
+        "proj": "B2508 BIO1 CO2 scrubber - tervezés",
+        "fel": "Fermentáló üzem meglévő tartály cseréjéhez kapcsolódó hőmérséklet, nyomás és szintérzékelő integrálása meglévő rendszerbe - tervezés és kivitelezés"
+      },
+      {
+        "proj": "B2502-21 Bio1 Flash gőz",
+        "fel": "Cukor finomító üzem új mennyiségmérőjének integrációja meglévő rendszerben - ATEX területen tervezés és kivitelezés"
+      },
+      {
+        "proj": "B2320 Szállítószalag torlódás érzékelők - tervezés",
+        "fel": "Kukorica szállítószalag torlódásérzékelőinek integrálása meglévő rendszerbe - ATEX területen tervezés és kivitelezés"
+      },
+      {
+        "proj": "VBF, VV, RB mérések",
+        "fel": "Üzemi területek komplett Villamos Biztonsági Felülvizsgálata, Villámvédelmi felülvizsgálata, Robbanásbiztos Berendezések Felülvizsgálata"
+      },
+      {
+        "fel": "Karbantartási munkák folyamatos termelésű területen, üzemi környezetben"
+      },
+      {
+        "proj": "Csőfűtés kialakítása",
+        "fel": "Meglévő ipari csőhálózat csőfűtésének tervezése és kivitelezése ATEX területen"
+      },
+      {
+        "proj": "22/0,4kV alállomás rekonstrukció",
+        "fel": "Transzformátor csere, 22-mezős 0,4kV elosztó tervezése, gyártása, cseréje"
+      },
+      {
+        "proj": "Szelektív hulladékudvar betáplálása",
+        "fel": "Üzemhez kapcsolódó szelektív hulladékudvar épületvillamossági hálózatának tervezése és kivitelezése"
+      },
+      {
+        "proj": "Overhaul of cooling towers - Szörpös hűtőtornyok cseréje",
+        "fel": "Meglévő hűtőtorony villamos rendszeréhez kapcsolódó bontási munkálatok, új hűtőtorony villamos hálózatának kiépítése, elosztószekrény gyártása, telepítése, üzembehelyezése"
+      },
+      {
+        "proj": "Szegedi városi tömegközlekedés fejlesztése",
+        "fel": "Projektmenedzsment, üzembe helyezésben való részvétel."
+      },
+      {
+        "proj": "Több projekt",
+        "fel": "Vasúti váltófűtés rendszer hardver és szoftver fejlesztése, gyártása."
+      },
+      {
+        "proj": "Pusztaszabolcs - Pécs vasútvonal",
+        "fel": "Siemens Vicos P500 telemechanikai rendszer karbantartása és javítása"
+      },
+      {
+        "proj": "Kecskeméti gyár építése",
+        "fel": "Épületautomatika szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+      },
+      {
+        "fel": "Középfeszültségű BHTR tervezése, telepítése"
+      },
+      {
+        "fel": "Gyártásautomatizálás fejlesztése Omron PLC alapokon, karbantartás."
+      },
+      {
+        "proj": "Gyárbővítés",
+        "fel": "Épületautomatika és szállítószalag vezérlő szoftverek készítése és üzembe helyezése Siemens S7-300 PLC alapokon."
+      },
+      {
+        "proj": "1-es 3-as villamos felújítása",
+        "fel": "Áramátalakítók, védelem-irányítástechnika üzembe helyezése, távvezérlő rendszer fejlesztése, gyártása, üzembe helyezés"
+      },
+      {
+        "fel": "600VDC feszültségfigyelő fejlesztése, gyártása"
+      },
+      {
+        "proj": "Dél-Balaton vasútvonal",
+        "fel": "Siemens Vicos P500 telemechanikai rendszer karbantartása és javítása"
+      },
+      {
+        "proj": "Budai fonódó villamosok",
+        "fel": "Áramátalakítók, védelem-irányítástechnika üzembe helyezése, távvezérlő rendszer fejlesztése, gyártása, üzembe helyezés"
+      },
+      {
+        "fel": "Alumíniumcsiszoló kabinok gépészeti automatika szoftver készítése, üzembe helyezése Siemens S7-300 PLC alapokon."
+      },
+      {
+        "proj": "Belső fejlesztés",
+        "fel": "24V túlfeszültséglevezető fejlesztése, gyártása"
+      },
+      {
+        "proj": "Belső fejlesztés",
+        "fel": "Regor Lua alapú PLC és Scada rendszer fejlesztése, gyártása"
+      },
+      {
+        "proj": "Szántód-Kőröshegy-Balatonszentgyörgy vasúti vonalszakasz felújítása",
+        "fel": "HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+      },
+      {
+        "proj": "Rákosrendező-Esztergom vasúti vonalszakasz felújítása",
+        "fel": "HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+      },
+      {
+        "proj": "1-es villamos meghosszabbítása az Etele térig",
+        "fel": "Áramátalakítók, védelem-irányítástechnika üzembe helyezése, távvezérlő rendszer fejlesztése, gyártása, üzembe helyezés"
+      },
+      {
+        "proj": "1-es villamos meghosszabbítása az Etele térig",
+        "fel": "Etele téri végállomás SIL2 biztonsági vezérlés tervezése, fejlesztése, üzembe helyezése"
+      },
+      {
+        "proj": "BKV M3 metró felújítása",
+        "fel": "Áramátalakítók, védelem-irányítástechnika üzembe helyezése, távvezérlő rendszer fejlesztése, gyártása, üzembe helyezés"
+      },
+      {
+        "proj": "Dombóvár-Pusztaszabolcs vonalszakasz felújítása",
+        "fel": "Váltófűtés, és térvilágítás távvezérlő rendszer, HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+      },
+      {
+        "fel": "Keleti pályaudvar HETA felsővezetéki távvezérlő rendszer fejlesztése, gyártása, üzembe helyezése"
+      },
+      {
+        "fel": "H6/H7 HÉV felújítás, áramellátás, védelem-irányítástechnikai rendszerek tervezése"
+      },
+      {
+        "fel": "H5 HÉV felújítás, áramellátás, védelem-irányítástechnikai rendszerek tervezése"
+      },
+      {
+        "fel": "BER08 Tisztaterek épületgépészeti automatizálásának tervezése, szerelése, kábelezése, szoftver, üzembe helyezés"
+      }
+    ]
+  },
   "footer": {
     "tagline": "Ipari automatizálás, villamos energetika és vezérléstechnika, tervezéstől a folyamatos üzemig.",
     "rights": "Minden jog fenntartva.",

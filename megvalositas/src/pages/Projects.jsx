@@ -7,11 +7,10 @@ import { ImageSlot } from '../components/ui/ImageSlot.jsx'
 import { Button } from '../components/ui/Button.jsx'
 import { Counter } from '../components/ui/Counter.jsx'
 import { Arrow } from '../components/ui/Icons.jsx'
-import { projectsHead, projectFilters, featuredProjects, referenceList } from '../data/projects.js'
 import { bkvVideos } from '../data/videos.js'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
-
-const catLabel = { kozlekedes: 'Közlekedés', villamos: 'Villamos', kf: 'K+F' }
+import { useT } from '../i18n/index.jsx'
+import { useContent } from '../i18n/content.js'
 
 // A legkésőbbi évszám kiolvasása a „2018–2019” / „2011-” alakú mezőkből (rendezéshez).
 function latestYear(y) {
@@ -21,7 +20,10 @@ function latestYear(y) {
 
 // Projektjeink oldal — kiemelt referencia-vitrin + teljes, szűrhető referencialista.
 export default function Projects() {
-  useDocumentTitle(projectsHead.crumb, projectsHead.lede)
+  const t = useT()
+  const { projects } = useContent()
+  const { head, filters, featured, reference: referenceList, catLabel } = projects
+  useDocumentTitle(head.crumb, head.lede)
   const [filter, setFilter] = useState('all')
 
   // teljes lista év szerint csoportosítva, legfrissebb évvel elöl (idővonalhoz)
@@ -34,7 +36,7 @@ export default function Projects() {
       map.get(y).push(r)
     }
     return [...map.entries()].map(([year, items]) => ({ year, items }))
-  }, [])
+  }, [referenceList])
   const shownCount = referenceList.filter((r) => filter === 'all' || r.cat === filter).length
 
   // összesített számok a statisztika-sávhoz (a valós listából)
@@ -46,26 +48,26 @@ export default function Projects() {
       users: new Set(referenceList.map((r) => r.felh)).size,
       clients: new Set(referenceList.map((r) => r.megr || r.felh)).size,
     }
-  }, [])
+  }, [referenceList])
 
   return (
     <>
-      <PageHead placeholder={projectsHead.headPlaceholder} trail={[{ label: projectsHead.crumb }]} title={projectsHead.title} lede={projectsHead.lede} />
+      <PageHead placeholder={head.placeholder} trail={[{ label: head.crumb }]} title={head.title} lede={head.lede} />
 
       {/* Kiemelt referenciák — csempés vitrin */}
       <section className="section" style={{ paddingTop: 16 }} id="kiemelt">
         <div className="wrap">
-          <Reveal className="eyebrow">Kiemelt referenciák</Reveal>
+          <Reveal className="eyebrow">{t('projects.featuredEyebrow')}</Reveal>
           <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 40px', maxWidth: '22ch' }}>
-            Rendszerek, amelyek nap mint nap dolgoznak
+            {t('projects.featuredHeading')}
           </Reveal>
           <div className="pgrid">
-            {featuredProjects.map((p) => (
+            {featured.map((p) => (
               <Link className={`pcard${p.feat ? ' feat' : ''}`} to={`/projektjeink/${p.id}`} key={p.id}>
                 <div className="pc-img"><ImageSlot placeholder={p.placeholder} /></div>
                 <div className="pc-scrim" />
                 <span className="pc-tag">{p.tag}</span>
-                {p.foreign && <span className="pc-flag">Külföld</span>}
+                {p.foreign && <span className="pc-flag">{t('projects.foreignFlag')}</span>}
                 <div className="pc-arrow"><Arrow /></div>
                 <div className="pc-body">
                   <h3>{p.title}</h3>
@@ -83,9 +85,9 @@ export default function Projects() {
       {/* referenciavideók — a BKV Etele téri munkáról */}
       <section className="section" style={{ paddingTop: 0 }} id="videok">
         <div className="wrap">
-          <Reveal className="eyebrow">Munkáink videón</Reveal>
+          <Reveal className="eyebrow">{t('projects.videosEyebrow')}</Reveal>
           <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 40px', maxWidth: '20ch' }}>
-            A BKV Etele téri projekt, élőben
+            {t('projects.videosHeading')}
           </Reveal>
           <Reveal><VideoGallery videos={bkvVideos} /></Reveal>
         </div>
@@ -94,23 +96,23 @@ export default function Projects() {
       {/* Teljes referencialista — szűrhető */}
       <section className="section" style={{ paddingTop: 8 }} id="referencialista">
         <div className="wrap">
-          <Reveal className="eyebrow">Teljes referencialista</Reveal>
+          <Reveal className="eyebrow">{t('projects.listEyebrow')}</Reveal>
           <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 10px', maxWidth: '24ch' }}>
-            Több mint 100 projekt 2010 óta
+            {t('projects.listHeading')}
           </Reveal>
           <Reveal as="p" className="muted" style={{ maxWidth: '60ch', margin: '0 0 28px' }}>
-            Válogatás nélkül, a hivatalos referencialistánk alapján, végfelhasználó, megrendelő és a konkrét feladat megjelölésével.
+            {t('projects.listLede')}
           </Reveal>
 
           <Reveal className="pstats">
-            <div className="pstat"><span className="n"><Counter to={stats.count} suffix="+" /></span><span className="l">átadott projekt</span></div>
-            <div className="pstat"><span className="n"><Counter to={stats.span} suffix="+" /></span><span className="l">év, 2010 óta</span></div>
-            <div className="pstat"><span className="n"><Counter to={stats.users} suffix="+" /></span><span className="l">végfelhasználó</span></div>
-            <div className="pstat"><span className="n"><Counter to={stats.clients} suffix="+" /></span><span className="l">megrendelő és partner</span></div>
+            <div className="pstat"><span className="n"><Counter to={stats.count} suffix="+" /></span><span className="l">{t('projects.stats.count')}</span></div>
+            <div className="pstat"><span className="n"><Counter to={stats.span} suffix="+" /></span><span className="l">{t('projects.stats.span')}</span></div>
+            <div className="pstat"><span className="n"><Counter to={stats.users} suffix="+" /></span><span className="l">{t('projects.stats.users')}</span></div>
+            <div className="pstat"><span className="n"><Counter to={stats.clients} suffix="+" /></span><span className="l">{t('projects.stats.clients')}</span></div>
           </Reveal>
 
           <Reveal className="chips" style={{ marginBottom: 28 }}>
-            {projectFilters.map((f) => (
+            {filters.map((f) => (
               <button key={f.key} className={`chip${filter === f.key ? ' on' : ''}`} onClick={() => setFilter(f.key)}>{f.label}</button>
             ))}
           </Reveal>
@@ -123,7 +125,7 @@ export default function Projects() {
                 <div className="tl-group" key={g.year}>
                   <div className="tl-year">
                     <span className="y">{g.year}</span>
-                    <span className="c">{items.length} projekt</span>
+                    <span className="c">{items.length} {t('projects.projectWord')}</span>
                   </div>
                   <div className="tl-items">
                     {items.map((r, i) => {
@@ -134,7 +136,7 @@ export default function Projects() {
                             <h3 className="tl-felh">{r.felh}</h3>
                             <span className={`ref-cat ref-cat--${r.cat}`}>{catLabel[r.cat]}</span>
                           </div>
-                          {r.megr && <span className="tl-via">{r.megr} megbízásából</span>}
+                          {r.megr && <span className="tl-via">{t('projects.via', { megr: r.megr })}</span>}
                           {desc && <p className="tl-desc">{desc}</p>}
                           {String(g.year) !== r.y && <span className="tl-range">{r.y}</span>}
                         </article>
@@ -145,15 +147,15 @@ export default function Projects() {
               )
             })}
           </div>
-          {shownCount === 0 && <p className="muted">Ebben a kategóriában nincs találat.</p>}
+          {shownCount === 0 && <p className="muted">{t('projects.empty')}</p>}
         </div>
       </section>
 
       <section className="section-sm">
         <div className="wrap">
           <Reveal className="card" style={{ textAlign: 'center', padding: '72px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
-            <h2 style={{ fontSize: 'clamp(28px,4vw,44px)', maxWidth: '20ch', margin: '0 auto 18px' }}>A következő referencia az Öné lehet!</h2>
-            <Button to="/kapcsolat" arrow>Beszéljünk a projektjéről!</Button>
+            <h2 style={{ fontSize: 'clamp(28px,4vw,44px)', maxWidth: '20ch', margin: '0 auto 18px' }}>{t('projects.ctaTitle')}</h2>
+            <Button to="/kapcsolat" arrow>{t('projects.ctaButton')}</Button>
           </Reveal>
         </div>
       </section>
