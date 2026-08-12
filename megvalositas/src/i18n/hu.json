@@ -22,6 +22,72 @@
     "menuClose": "Menü bezárása",
     "mobileNav": "Mobil navigáció"
   },
+  "home": {
+    "meta": {
+      "title": "Ipari automatizálás és villamos rendszerek",
+      "desc": "Ipari automatizálás, villamos energetika és vezérléstechnika egy kézben, tervezés, kapcsolószekrény-gyártás, SCADA és kivitelezés a koncepciótól a folyamatos üzemig."
+    },
+    "video": {
+      "eyebrow": "Kiemelt referencia",
+      "title": "BKV Etele téri villamos-végállomás"
+    }
+  },
+  "hero": {
+    "statsLabel": "Élesben, folyamatosan",
+    "stats": ["év", "biztonság"],
+    "eyebrow": "Ipari automatizálás · PLC / SCADA · Áramellátás",
+    "title": ["Megbízható rendszerek,", "kritikus infrastruktúrákhoz."],
+    "cta": { "projects": "Projektjeink", "contact": "Kapcsolat" },
+    "placeholder": "Hero fotó, kapcsolószekrény / üzem / mérnöki munka"
+  },
+  "bento": {
+    "eyebrow": "Amit csinálunk",
+    "title": "Teljes villamos életciklus, egy partnerrel",
+    "text": "A koncepciótól a tervezésen és gyártáson át az üzemeltetésig, nem kell külön beszállítókat koordinálnia.",
+    "allServices": "Összes szolgáltatás",
+    "stats": { "years": "év tapasztalat az iparban", "projects": "átadott projekt" },
+    "workshop": {
+      "placeholder": "Fotó, saját berendezésgyártó műhely",
+      "title": "Saját berendezésgyártó műhely",
+      "text": "Automatika és energiaelosztó szekrények gyártása saját telephelyen."
+    }
+  },
+  "process": {
+    "eyebrow": "Hogyan dolgozunk",
+    "title": "A koncepciótól a folyamatos üzemig",
+    "lede": "Főbb területeink: BMS, energiaellátás, karbantartás, kötöttpályás közlekedés és tisztatéri villamoskivitelezés.",
+    "steps": [
+      { "title": "Felmérés & koncepció", "desc": "Helyszíni bejárás, igényfelmérés és megvalósíthatósági terv." },
+      { "title": "Tervezés és programozás", "desc": "ATEX tervezés, hardvertervezés, villamos tervezés, villámvédelmi tervezés és szoftverkészítés." },
+      { "title": "Gyártás & kivitelezés", "desc": "Berendezésgyártás saját műhelyben, nyomvonalépítés, kábelezés, helyszíni szerelés és üzembe helyezés." },
+      { "title": "Üzemeltetés", "desc": "Karbantartás és folyamatos szakmai támogatás." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "GYIK",
+    "title": "Gyakori kérdések",
+    "items": [
+      { "q": "Hogyan kérhetek ajánlatot?", "a": "Töltse ki a kapcsolati űrlapot, kérjen e-mailben ajánlatot vagy hívjon minket. 3 munkanapon belül visszajelzünk egy első szakmai állásfoglalással." },
+      { "q": "Vállalnak munkát vidéken és külföldön is?", "a": "Igen. Vállalatunk az ország bármely területén és külföldön is vállal munkát." },
+      { "q": "Van sürgősségi ügyelet?", "a": "Egyedi szerződés alapján hibaelhárítási ügyeletet tartunk a karbantartási szerződéssel rendelkező ügyfeleink számára, garantált kiszállási idővel." },
+      { "q": "Milyen platformokon dolgoznak?", "a": "Siemens, SAIA, Qronox és Wago PLC-k szoftveres megoldása, EPLAN alapú villamostervezés, WSCAD és EPLAN alapú 3D tervezés, HMI-programozás és saját SCADA-integráció, meglévő rendszerekhez is illesztve." }
+    ]
+  },
+  "cta": {
+    "title": "Szeretne egy precíz, minőségi megoldást?",
+    "text": "Kérjen díjmentes szakmai konzultációt. Kollégáink 3 munkanapon belül visszajeleznek.",
+    "button": "Kapcsolatfelvétel"
+  },
+  "refstrip": {
+    "label": "Partnereink",
+    "aria": "Partnereink és referenciáink"
+  },
+  "videoband": {
+    "watch": "Teljes videó a YouTube-on",
+    "titleFallback": "Debaru bemutató videó",
+    "pause": "Videó szüneteltetése",
+    "play": "Videó lejátszása"
+  },
   "footer": {
     "tagline": "Ipari automatizálás, villamos energetika és vezérléstechnika, tervezéstől a folyamatos üzemig.",
     "rights": "Minden jog fenntartva.",

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Reveal } from '../ui/Reveal.jsx'
 import { Arrow, Play, Pause } from '../ui/Icons.jsx'
+import { useT } from '../../i18n/index.jsx'
 
 // Háttérvideó paraméterek: némán, automatikusan, loopolva, vezérlők nélkül.
 // enablejsapi=1 → a saját szüneteltető gombunk postMessage-dzsel vezérli a lejátszást.
@@ -10,7 +11,9 @@ const BG = 'autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&playsinline=1&di
 // YouTube-iframe (~900KB) CSAK akkor töltődik, amikor a sáv a nézetbe ér — így
 // nem terheli a kezdeti oldalbetöltést. A néma videó "csökkentett mozgás" esetén is
 // elindul, de kézzel szüneteltethető (WCAG 2.2.2 — a mozgás megállítható).
-export function VideoBand({ videoId, start = 0, eyebrow, title, watchLabel = 'Teljes videó a YouTube-on' }) {
+export function VideoBand({ videoId, start = 0, eyebrow, title, watchLabel }) {
+  const t = useT()
+  const watchText = watchLabel || t('videoband.watch')
   const watch = `https://www.youtube.com/watch?v=${videoId}`
   const src = `https://www.youtube-nocookie.com/embed/${videoId}?${BG}&loop=1&playlist=${videoId}${start ? `&start=${start}` : ''}`
   const thumb = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
@@ -48,13 +51,13 @@ export function VideoBand({ videoId, start = 0, eyebrow, title, watchLabel = 'Te
           ref={iframeRef}
           className="vb-iframe"
           src={src}
-          title={title || 'Debaru bemutató videó'}
+          title={title || t('videoband.titleFallback')}
           allow="autoplay; encrypted-media; picture-in-picture"
         />
       )}
       <div className="vb-scrim" />
       {load && (
-        <button type="button" className="vb-toggle" onClick={toggle} aria-label={playing ? 'Videó szüneteltetése' : 'Videó lejátszása'}>
+        <button type="button" className="vb-toggle" onClick={toggle} aria-label={playing ? t('videoband.pause') : t('videoband.play')}>
           {playing ? <Pause /> : <Play />}
         </button>
       )}
@@ -62,7 +65,7 @@ export function VideoBand({ videoId, start = 0, eyebrow, title, watchLabel = 'Te
         {eyebrow && <Reveal className="eyebrow">{eyebrow}</Reveal>}
         {title && <Reveal as="h2" delay={80}>{title}</Reveal>}
         <Reveal delay={160}>
-          <a className="btn btn-outline-light btn-arrow" href={watch} target="_blank" rel="noopener noreferrer">{watchLabel}<Arrow /></a>
+          <a className="btn btn-outline-light btn-arrow" href={watch} target="_blank" rel="noopener noreferrer">{watchText}<Arrow /></a>
         </Reveal>
       </div>
     </section>

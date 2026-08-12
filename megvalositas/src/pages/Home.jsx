@@ -6,16 +6,18 @@ import { Process } from '../components/sections/Process.jsx'
 import { Faq } from '../components/sections/Faq.jsx'
 import { Cta } from '../components/sections/Cta.jsx'
 import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
+import { useT } from '../i18n/index.jsx'
 
 // Kezdőlap — a szekciók az eredeti index.html sorrendjét követik.
 export default function Home() {
-  useDocumentTitle('Ipari automatizálás és villamos rendszerek', 'Ipari automatizálás, villamos energetika és vezérléstechnika egy kézben, tervezés, kapcsolószekrény-gyártás, SCADA és kivitelezés a koncepciótól a folyamatos üzemig.')
+  const t = useT()
+  useDocumentTitle(t('home.meta.title'), t('home.meta.desc'))
   return (
     <>
       <Hero />
       <RefStrip />
       <Bento />
-      <VideoBand videoId="5SEyZPixMFk" eyebrow="Kiemelt referencia" title="BKV Etele téri villamos-végállomás" />
+      <VideoBand videoId="5SEyZPixMFk" eyebrow={t('home.video.eyebrow')} title={t('home.video.title')} />
       <hr className="divider" />
       <Process />
       <hr className="divider" />

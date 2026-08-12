@@ -1,5 +1,6 @@
 import LogoLoop from '../ui/LogoLoop.jsx'
 import { partners } from '../../data/partners.js'
+import { useT } from '../../i18n/index.jsx'
 
 // Egy logó + hoverre megjelenő teljes név (a LogoLoop renderItem-jén keresztül).
 const renderPartner = (item) => (
@@ -11,10 +12,11 @@ const renderPartner = (item) => (
 
 // Partner-/referencia-sáv a hero alatt — végtelenített, mozgó logó-marquee.
 export function RefStrip() {
+  const t = useT()
   return (
     <section className="refstrip">
       <div className="wrap">
-        <span className="rs-lbl">Partnereink</span>
+        <span className="rs-lbl">{t('refstrip.label')}</span>
         <div className="rs-loop">
           <LogoLoop
             logos={partners}
@@ -25,7 +27,7 @@ export function RefStrip() {
             gap={72}
             fadeOut
             fadeOutColor="var(--bg)"
-            ariaLabel="Partnereink és referenciáink"
+            ariaLabel={t('refstrip.aria')}
           />
         </div>
       </div>
