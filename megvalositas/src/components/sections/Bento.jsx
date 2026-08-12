@@ -5,8 +5,8 @@ import { ParallaxImage } from '../ui/ParallaxImage.jsx'
 import { Button } from '../ui/Button.jsx'
 import { Arrow, serviceIcons } from '../ui/Icons.jsx'
 import { bentoStats } from '../../data/content.js'
-import { services } from '../../data/services.js'
 import { useT } from '../../i18n/index.jsx'
+import { useContent } from '../../i18n/content.js'
 
 // Statisztika-csempe animált számlálóval.
 function Stat({ to, decimals, suffix, label }) {
@@ -21,6 +21,7 @@ function Stat({ to, decimals, suffix, label }) {
 // Bento rács: bevezető + szolgáltatások + számok, egy vizuális blokkban.
 export function Bento() {
   const t = useT()
+  const { services } = useContent()
   const { years, projects } = bentoStats
   return (
     <section className="section" id="szolg">
