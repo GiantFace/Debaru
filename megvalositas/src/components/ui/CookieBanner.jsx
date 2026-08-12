@@ -26,7 +26,7 @@ export default function CookieBanner() {
       <strong>Sütik kezelése</strong>
       <p>
         Az oldal működéséhez és a spam elleni védelemhez (Cloudflare Turnstile) szükséges
-        sütiket használunk. Anonim, forgalommérési célú sütiket csak az Ön hozzájárulásával —
+        sütiket használunk. Anonim, forgalommérési célú sütiket csak az Ön hozzájárulásával,
         részletek az <Link to="/adatvedelem">Adatkezelési tájékoztatóban</Link>.
       </p>
       <div className="ck-actions">

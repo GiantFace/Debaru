@@ -30,7 +30,7 @@ export function Bento() {
               Teljes villamos életciklus, egy partnerrel
             </h2>
             <p style={{ fontSize: '15px', maxWidth: '38ch', color: 'rgba(255,255,255,.9)' }}>
-              A koncepciótól a tervezésen és gyártáson át az üzemeltetésig — nem kell külön beszállítókat koordinálnia.
+              A koncepciótól a tervezésen és gyártáson át az üzemeltetésig, nem kell külön beszállítókat koordinálnia.
             </p>
             <div className="mt" style={{ paddingTop: '20px' }}>
               <Button to="/szolgaltatasok" arrow style={{ background: '#fff', color: '#2c6f56', borderColor: '#fff' }}>
@@ -43,7 +43,7 @@ export function Bento() {
           <Stat to={team.to} label={team.label} />
 
           <div className="b b-img b-2w">
-            <ParallaxImage className="pm-layer" speed={0.12} placeholder="Fotó — saját berendezésgyártó műhely" />
+            <ParallaxImage className="pm-layer" speed={0.12} placeholder="Fotó, saját berendezésgyártó műhely" />
             <div className="b-scrim" />
             <div className="b-cap">
               <h3 style={{ fontSize: '19px', margin: '0 0 4px' }}>Saját berendezésgyártó műhely</h3>

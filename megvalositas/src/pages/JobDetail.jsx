@@ -47,7 +47,7 @@ function useJobPostingJsonLd(job) {
 export default function JobDetail() {
   const { slug } = useParams()
   const job = jobBySlug[slug]
-  useDocumentTitle(job ? `${job.title} — Karrier` : undefined, job?.summary)
+  useDocumentTitle(job ? `${job.title} · Karrier` : undefined, job?.summary)
   useJobPostingJsonLd(job)
   useJsonLd(job && breadcrumbLd([
     { name: 'Debaru', url: '/' },
@@ -145,7 +145,7 @@ export default function JobDetail() {
             </Reveal>
             <Reveal className="card" style={{ textAlign: 'center', padding: '56px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
               <h3 style={{ fontSize: 'clamp(22px,3vw,30px)', maxWidth: '18ch', margin: '0 auto 16px' }}>Érdekel a pozíció?</h3>
-              <p className="muted" style={{ margin: '0 auto 26px', maxWidth: '34ch' }}>Küldd el önéletrajzod — pár mondat is elég arról, mi motivál.</p>
+              <p className="muted" style={{ margin: '0 auto 26px', maxWidth: '34ch' }}>Küldd el önéletrajzod, pár mondat is elég arról, mi motivál.</p>
               <Button to={applyTo} arrow>Jelentkezem erre a pozícióra</Button>
             </Reveal>
           </div>

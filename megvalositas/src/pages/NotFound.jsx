@@ -9,7 +9,7 @@ import '../styles/notfound.css'
 
 // 404 — a designból: animált elosztószekrény kioldott 404-es kismegszakítóval.
 export default function NotFound() {
-  useDocumentTitle('404 — Az oldal nem található')
+  useDocumentTitle('404 · Az oldal nem található')
 
   // világos háttér → a nav sötét szövegű legyen (nincs sötét hero); + noindex.
   useEffect(() => {

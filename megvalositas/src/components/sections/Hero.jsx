@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section className="hero-full" id="top">
       <div className="hf-media" ref={media}>
-        <ImageSlot placeholder="Hero fotó — kapcsolószekrény / üzem / mérnöki munka" />
+        <ImageSlot placeholder="Hero fotó, kapcsolószekrény / üzem / mérnöki munka" />
       </div>
       <div className="hf-scrim" />
       <div className="hf-accent" />

@@ -11,7 +11,7 @@ export function Footer() {
           <div className="foot-brand">
             <img src={LOGO} alt="Debaru" />
             <p className="muted" style={{ fontSize: '14.5px', maxWidth: '34ch' }}>
-              Ipari automatizálás, villamos energetika és vezérléstechnika — tervezéstől a folyamatos üzemig.
+              Ipari automatizálás, villamos energetika és vezérléstechnika, tervezéstől a folyamatos üzemig.
             </p>
           </div>
 

@@ -40,7 +40,7 @@ export default function Services() {
         <div className="wrap">
           <Reveal className="card" style={{ textAlign: 'center', padding: '72px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
             <h2 style={{ fontSize: 'clamp(28px,4vw,44px)', maxWidth: '22ch', margin: '0 auto 18px' }}>Nem biztos, melyik szolgáltatás illik a feladatához?</h2>
-            <p className="lede" style={{ margin: '0 auto 32px', textAlign: 'center' }}>Írja le a kihívást — mérnökeink megmondják, mi a legjobb megoldás.</p>
+            <p className="lede" style={{ margin: '0 auto 32px', textAlign: 'center' }}>Írja le a kihívást, mérnökeink megmondják, mi a legjobb megoldás.</p>
             <Button to="/kapcsolat" arrow>Konzultációt kérek</Button>
           </Reveal>
         </div>

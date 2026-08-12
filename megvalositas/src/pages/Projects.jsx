@@ -85,7 +85,7 @@ export default function Projects() {
         <div className="wrap">
           <Reveal className="eyebrow">Munkáink videón</Reveal>
           <Reveal as="h2" style={{ fontSize: 'clamp(28px,4vw,44px)', margin: '16px 0 40px', maxWidth: '20ch' }}>
-            A BKV Etele téri projekt — élőben
+            A BKV Etele téri projekt, élőben
           </Reveal>
           <Reveal><VideoGallery videos={bkvVideos} /></Reveal>
         </div>
@@ -99,7 +99,7 @@ export default function Projects() {
             Több mint 100 projekt 2010 óta
           </Reveal>
           <Reveal as="p" className="muted" style={{ maxWidth: '60ch', margin: '0 0 28px' }}>
-            Válogatás nélkül, a hivatalos referencialistánk alapján — végfelhasználó, megrendelő és a konkrét feladat megjelölésével.
+            Válogatás nélkül, a hivatalos referencialistánk alapján, végfelhasználó, megrendelő és a konkrét feladat megjelölésével.
           </Reveal>
 
           <Reveal className="pstats">
@@ -127,7 +127,7 @@ export default function Projects() {
                   </div>
                   <div className="tl-items">
                     {items.map((r, i) => {
-                      const desc = [r.proj, r.fel].filter(Boolean).join(' — ')
+                      const desc = [r.proj, r.fel].filter(Boolean).join(' · ')
                       return (
                         <article className="tl-card" key={`${r.felh}-${i}`}>
                           <div className="tl-head">

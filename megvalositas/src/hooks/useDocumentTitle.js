@@ -28,7 +28,7 @@ function applyCanonical() {
 export function useDocumentTitle(title, description) {
   useEffect(() => {
     const prevTitle = document.title
-    const full = title ? `${title} — ${SITE}` : SITE
+    const full = title ? `${title} · ${SITE}` : SITE
     document.title = full
     const url = ORIGIN + window.location.pathname
     // oldalankénti meta + OG/Twitter felülírás (unmountra visszaáll az index.html-beli alap)

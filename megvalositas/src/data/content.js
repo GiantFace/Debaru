@@ -31,16 +31,16 @@ export const bentoStats = {
 export const projects = [
   {
     tag: 'Közlekedés · BKV',
-    title: '1-es villamos — Etele téri végállomás',
-    desc: 'SIL2 biztonsági vezérlés, áramátalakítók és a teljes védelem-irányítástechnika a végállomáshoz — a Siemens Mobility megbízásából.',
-    placeholder: 'Projektfotó — Etele téri villamos-végállomás',
+    title: '1-es villamos, Etele téri végállomás',
+    desc: 'SIL2 biztonsági vezérlés, áramátalakítók és a teljes védelem-irányítástechnika a végállomáshoz, a Siemens Mobility megbízásából.',
+    placeholder: 'Projektfotó, Etele téri villamos-végállomás',
     to: '/projektjeink#kiemelt',
   },
   {
     tag: 'Tisztatér · ASML Berlin',
-    title: 'ASML Berlin — tisztatéri automatizálás',
-    desc: 'Félvezetőgyári tisztaterek épületgépészeti automatizálása: tervezés, szerelés, kábelezés, szoftver és üzembe helyezés — az ap-systems megbízásából.',
-    placeholder: 'Projektfotó — tisztatéri technológia',
+    title: 'ASML Berlin, tisztatéri automatizálás',
+    desc: 'Félvezetőgyári tisztaterek épületgépészeti automatizálása: tervezés, szerelés, kábelezés, szoftver és üzembe helyezés, az ap-systems megbízásából.',
+    placeholder: 'Projektfotó, tisztatéri technológia',
     to: '/projektjeink#kiemelt',
   },
 ]
@@ -62,10 +62,10 @@ export const processSteps = [
 ]
 
 export const faq = [
-  { q: 'Hogyan kérhetek ajánlatot?', a: 'Töltse ki a kapcsolati űrlapot, kérjen e-mailben ajánlatot vagy hívjon minket — 3 munkanapon belül visszajelzünk egy első szakmai állásfoglalással.' },
+  { q: 'Hogyan kérhetek ajánlatot?', a: 'Töltse ki a kapcsolati űrlapot, kérjen e-mailben ajánlatot vagy hívjon minket. 3 munkanapon belül visszajelzünk egy első szakmai állásfoglalással.' },
   { q: 'Vállalnak munkát vidéken és külföldön is?', a: 'Igen. Vállalatunk az ország bármely területén és külföldön is vállal munkát.' },
   { q: 'Van sürgősségi ügyelet?', a: 'Egyedi szerződés alapján hibaelhárítási ügyeletet tartunk a karbantartási szerződéssel rendelkező ügyfeleink számára, garantált kiszállási idővel.' },
-  { q: 'Milyen platformokon dolgoznak?', a: 'Siemens, SAIA, Qronox és Wago PLC-k szoftveres megoldása, EPLAN alapú villamostervezés, WSCAD és EPLAN alapú 3D tervezés, HMI-programozás és saját SCADA-integráció — meglévő rendszerekhez is illesztve.' },
+  { q: 'Milyen platformokon dolgoznak?', a: 'Siemens, SAIA, Qronox és Wago PLC-k szoftveres megoldása, EPLAN alapú villamostervezés, WSCAD és EPLAN alapú 3D tervezés, HMI-programozás és saját SCADA-integráció, meglévő rendszerekhez is illesztve.' },
 ]
 
 export const footer = {

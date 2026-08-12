@@ -9,7 +9,7 @@ import { useDocumentTitle } from '../hooks/useDocumentTitle.js'
 
 // Kezdőlap — a szekciók az eredeti index.html sorrendjét követik.
 export default function Home() {
-  useDocumentTitle('Ipari automatizálás és villamos rendszerek', 'Ipari automatizálás, villamos energetika és vezérléstechnika egy kézben — tervezés, kapcsolószekrény-gyártás, SCADA és kivitelezés a koncepciótól a folyamatos üzemig.')
+  useDocumentTitle('Ipari automatizálás és villamos rendszerek', 'Ipari automatizálás, villamos energetika és vezérléstechnika egy kézben, tervezés, kapcsolószekrény-gyártás, SCADA és kivitelezés a koncepciótól a folyamatos üzemig.')
   return (
     <>
       <Hero />

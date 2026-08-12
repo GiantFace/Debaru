@@ -15,7 +15,7 @@ export function Cta() {
             Szeretne egy precíz, minőségi megoldást?
           </h2>
           <p className="lede" style={{ margin: '0 auto 32px', textAlign: 'center' }}>
-            Kérjen díjmentes szakmai konzultációt — kollégáink 3 munkanapon belül visszajeleznek.
+            Kérjen díjmentes szakmai konzultációt. Kollégáink 3 munkanapon belül visszajeleznek.
           </p>
           <Button to="/kapcsolat" arrow>Kapcsolatfelvétel</Button>
         </Reveal>

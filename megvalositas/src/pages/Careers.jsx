@@ -106,7 +106,7 @@ export default function Careers() {
 
       {/* teljes szélességű parallax kép-sáv */}
       <section className="career-band">
-        <ParallaxImage className="cb-media" speed={0.24} placeholder="Csapatfotó — mérnökök / helyszíni munka" />
+        <ParallaxImage className="cb-media" speed={0.24} placeholder="Csapatfotó, mérnökök / helyszíni munka" />
         <div className="cb-scrim" />
         <div className="cb-inner wrap">
           <Reveal className="eyebrow">Egy csapat, közös cél</Reveal>
@@ -146,7 +146,7 @@ export default function Careers() {
               </Link>
             ))}
             {shown.length === 0 && (
-              <div className="job-empty">Ebben a kategóriában jelenleg nincs nyitott pozíció — de a spontán jelentkezést mindig várjuk!</div>
+              <div className="job-empty">Ebben a kategóriában jelenleg nincs nyitott pozíció, de a spontán jelentkezést mindig várjuk!</div>
             )}
           </div>
         </div>
@@ -197,7 +197,7 @@ export default function Careers() {
           <ParallaxFade speed={0.1} className="card" style={{ textAlign: 'center', padding: '72px 32px', background: 'linear-gradient(180deg,var(--card-hover),var(--card))', borderColor: 'var(--accent-line)' }}>
             <h2 style={{ fontSize: 'clamp(26px,4vw,40px)', maxWidth: '22ch', margin: '0 auto 14px' }}>Nem találtad a pozíciód?</h2>
             <p className="muted" style={{ margin: '0 auto 28px', maxWidth: '46ch' }}>Küldd el az önéletrajzod, és ha felmerül egy hozzád illő pozíció, keresünk!</p>
-            <Button href={`mailto:${applyEmail}?subject=${encodeURIComponent('Jelentkezés — Debaru karrier')}`} arrow>Küldöm az önéletrajzom</Button>
+            <Button href={`mailto:${applyEmail}?subject=${encodeURIComponent('Jelentkezés, Debaru karrier')}`} arrow>Küldöm az önéletrajzom</Button>
           </ParallaxFade>
         </div>
       </section>

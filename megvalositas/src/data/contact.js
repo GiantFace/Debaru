@@ -2,7 +2,7 @@
 
 export const contactHead = {
   crumb: 'Kapcsolat',
-  headPlaceholder: 'Fotó — iroda / telephely',
+  headPlaceholder: 'Fotó, iroda / telephely',
   title: ['Beszéljünk a', 'projektjéről!'],
   lede: 'Írja le röviden a feladatot, és mérnökeink 3 munkanapon belül visszajeleznek egy első szakmai állásfoglalással. A konzultáció díjmentes.',
 }

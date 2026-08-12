@@ -45,54 +45,54 @@ const P = {
 // A kulcs PONTOSAN a placeholder-szöveg (így nem kell máshol semmit átírni).
 export const stockPhotos = {
   // ── Oldal-fejléc hero-k ───────────────────────────────────────────────────
-  'Hero fotó — kapcsolószekrény / üzem / mérnöki munka': P.panel,
-  'Fotó — mérnöki csapat / műhely': P.team,
-  'Fotó — üzem / technológia': P.factory,
-  'Fotó — ipari projekt / helyszín': P.catenary,
-  'Karrier — mérnöki csapat / helyszíni munka': P.team,
-  'Fotó — iroda / telephely': P.office,
+  'Hero fotó, kapcsolószekrény / üzem / mérnöki munka': P.panel,
+  'Fotó, mérnöki csapat / műhely': P.team,
+  'Fotó, üzem / technológia': P.factory,
+  'Fotó, ipari projekt / helyszín': P.catenary,
+  'Karrier, mérnöki csapat / helyszíni munka': P.team,
+  'Fotó, iroda / telephely': P.office,
   'Adatkezelési tájékoztató': P.server,
   'Általános Szerződési Feltételek': P.office,
   'Impresszum': P.office,
 
   // ── Szolgáltatások (8 kártya) ─────────────────────────────────────────────
-  'Fotó — BMS / vezérlőterem': P.scada,
-  'Fotó — transzformátor / elosztó': P.transformer,
-  'Fotó — berendezésgyártó műhely': P.cabinet,
-  'Fotó — karbantartás / szerviz': P.controlRoom,
-  'Fotó — villamos / felsővezeték': P.catenary2,
-  'Fotó — tisztatéri kivitelezés': P.cleanroom,
-  'Fotó — SCADA vezérlőpult': P.scada2,
-  'Fotó — KNX / épületautomatizálás': P.controlRoom,
+  'Fotó, BMS / vezérlőterem': P.scada,
+  'Fotó, transzformátor / elosztó': P.transformer,
+  'Fotó, berendezésgyártó műhely': P.cabinet,
+  'Fotó, karbantartás / szerviz': P.controlRoom,
+  'Fotó, villamos / felsővezeték': P.catenary2,
+  'Fotó, tisztatéri kivitelezés': P.cleanroom,
+  'Fotó, SCADA vezérlőpult': P.scada2,
+  'Fotó, KNX / épületautomatizálás': P.controlRoom,
 
   // ── Kiemelt projektek (12) ────────────────────────────────────────────────
   'Etele téri villamos-végállomás': P.tram,
   'MÁV vasúti felsővezeték': P.catenary,
-  'BKV M4 metró — távvezérlés': P.metro,
-  'ASML — tisztatéri technológia': P.cleanroom,
-  'Hungrana — 0,4 kV elosztó': P.panel,
-  'Audi gyár — automatizálás': P.carFactory,
-  'Villamosvonal — váltóvezérlés': P.tram2,
+  'BKV M4 metró, távvezérlés': P.metro,
+  'ASML, tisztatéri technológia': P.cleanroom,
+  'Hungrana, 0,4 kV elosztó': P.panel,
+  'Audi gyár, automatizálás': P.carFactory,
+  'Villamosvonal, váltóvezérlés': P.tram2,
   'Mercedes-Benz gyár': P.carFactory2,
   'HÉV-vonal áramellátás': P.hev,
   'Volkswagen gyártósor': P.carFactory,
-  'Tram-train — Szeged': P.tram2,
+  'Tram-train, Szeged': P.tram2,
   'Regor PLC / SCADA platform': P.scada,
 
   // ── Főoldali bento kép ────────────────────────────────────────────────────
-  'Fotó — saját berendezésgyártó műhely': P.cabinet,
+  'Fotó, saját berendezésgyártó műhely': P.cabinet,
 
   // ── Karrier – állás-illusztrációk (7) ─────────────────────────────────────
-  'Automatizálási mérnök — PLC / SCADA / HMI': P.scada,
-  'Szekrényszerelő — műhely / kábelezés': P.cabinet,
-  'Projektvezető — helyszíni villamos kivitelezés': P.team,
-  'Villanyszerelő — helyszíni kivitelezés': P.controlRoom,
-  'Külföldi villamos kivitelezés — helyszíni munka': P.catenary2,
-  'Gyakornok — villamosmérnök hallgató': P.student,
-  'Tervezőmérnök — EPLAN / villamos tervek': P.cad,
+  'Automatizálási mérnök, PLC / SCADA / HMI': P.scada,
+  'Szekrényszerelő, műhely / kábelezés': P.cabinet,
+  'Projektvezető, helyszíni villamos kivitelezés': P.team,
+  'Villanyszerelő, helyszíni kivitelezés': P.controlRoom,
+  'Külföldi villamos kivitelezés, helyszíni munka': P.catenary2,
+  'Gyakornok, villamosmérnök hallgató': P.student,
+  'Tervezőmérnök, EPLAN / villamos tervek': P.cad,
 
   // ── Rólunk – csapatkép ────────────────────────────────────────────────────
-  'Csapatfotó — mérnökök / helyszíni munka': P.team,
+  'Csapatfotó, mérnökök / helyszíni munka': P.team,
 
   // ── (Jelenleg nem renderelt szekciók – ha visszakerülnek, ezek is működnek) ─
   'Gyártóüzem': P.factory,
@@ -101,6 +101,6 @@ export const stockPhotos = {
   'Vasút': P.railway,
   'Vízművek': P.water,
   'Adatközpont': P.server,
-  'Projektfotó — Etele téri villamos-végállomás': P.tram,
-  'Projektfotó — tisztatéri technológia': P.cleanroom,
+  'Projektfotó, Etele téri villamos-végállomás': P.tram,
+  'Projektfotó, tisztatéri technológia': P.cleanroom,
 }

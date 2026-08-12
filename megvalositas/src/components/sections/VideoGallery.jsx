@@ -18,7 +18,7 @@ function VideoThumb({ v, onPlay }) {
       </div>
       <span className="vc-scrim" />
       {v.tag && <span className="vc-tag">{v.tag}</span>}
-      <button className="vc-play" onClick={onPlay} aria-label={`${v.title} — videó lejátszása`}><Play /></button>
+      <button className="vc-play" onClick={onPlay} aria-label={`${v.title}, videó lejátszása`}><Play /></button>
     </div>
   )
 }
@@ -42,8 +42,8 @@ export function VideoGallery({ videos, projectLink = false }) {
             {/* stretched link: az egész kártya a projektre visz (a play gomb fölötte marad),
                 a projekt oldalon viszont maga a kártya is videót játszik */}
             {projectLink
-              ? <Link to={v.href} className="vc-cover" aria-label={`${v.title} — projekt megtekintése`} />
-              : <button className="vc-cover" onClick={() => setActive(v.id)} aria-label={`${v.title} — videó lejátszása`} />}
+              ? <Link to={v.href} className="vc-cover" aria-label={`${v.title}, projekt megtekintése`} />
+              : <button className="vc-cover" onClick={() => setActive(v.id)} aria-label={`${v.title}, videó lejátszása`} />}
           </div>
         ))}
       </div>

@@ -80,7 +80,7 @@ export function Navbar() {
   const pickLang = (l) => {
     setLang(l)
     localStorage.setItem('debaru-lang', l)
-    if (l !== 'HU') toast(`${l} verzió hamarosan — a tartalom jelenleg magyarul érhető el.`)
+    if (l !== 'HU') toast(`${l} verzió hamarosan, a tartalom jelenleg magyarul érhető el.`)
   }
 
   return (

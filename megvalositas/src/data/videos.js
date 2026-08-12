@@ -3,11 +3,11 @@
 // valós paraméterei (a hivatalos referencialista alapján).
 export const bkvVideos = [
   {
-    id: 'QwBiXHysgeE', tag: 'Energetika', title: 'BKV Etele — áramátalakító', href: '/projektjeink#kiemelt',
+    id: 'QwBiXHysgeE', tag: 'Energetika', title: 'BKV Etele, áramátalakító', href: '/projektjeink#kiemelt',
     specs: ['600 V DC vontatási táplálás', 'Áramátalakító alállomás', 'Védelem-irányítástechnika'],
   },
   {
-    id: 'D8T7QD7JsII', tag: 'SCADA & felügyelet', title: 'BKV áramellátás — diszpécserközpont', href: '/projektjeink#kiemelt',
+    id: 'D8T7QD7JsII', tag: 'SCADA & felügyelet', title: 'BKV áramellátás, diszpécserközpont', href: '/projektjeink#kiemelt',
     specs: ['Központi SCADA-felügyelet', 'Távvezérlő rendszer', 'Valós idejű állapotkép'],
   },
   {

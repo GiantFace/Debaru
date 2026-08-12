@@ -24,10 +24,10 @@ const fmtSize = (b) => (b < 1024 * 1024 ? `${Math.round(b / 1024)} KB` : `${(b /
 function validate(f, phone) {
   const e = {}
   if (!f.nev.trim()) e.nev = 'Kérjük, adja meg a nevét.'
-  else if (f.nev.trim().length < 2) e.nev = 'A név túl rövid — legalább 2 karakter.'
+  else if (f.nev.trim().length < 2) e.nev = 'A név túl rövid, legalább 2 karakter.'
 
   if (!f.email.trim()) e.email = 'Kérjük, adja meg az e-mail címét.'
-  else if (!EMAIL_RE.test(f.email.trim())) e.email = 'Érvénytelen e-mail cím — ellenőrizze a formátumot (pl. nev@ceg.hu).'
+  else if (!EMAIL_RE.test(f.email.trim())) e.email = 'Érvénytelen e-mail cím, ellenőrizze a formátumot (pl. nev@ceg.hu).'
 
   if (phone && !isValidPhoneNumber(phone)) e.tel = 'A telefonszám érvénytelen a kiválasztott országhoz.'
 
@@ -76,7 +76,7 @@ export default function Contact() {
 
   const addFiles = (list) => {
     const incoming = Array.from(list)
-    if (incoming.some((f) => f.size > MAX_FILE)) toast('Néhány fájl túl nagy — max. 10 MB fájlonként.')
+    if (incoming.some((f) => f.size > MAX_FILE)) toast('Néhány fájl túl nagy, max. 10 MB fájlonként.')
     const ok = incoming.filter((f) => f.size <= MAX_FILE)
     setFiles((prev) => [...prev, ...ok].slice(0, 6))
   }
@@ -90,7 +90,7 @@ export default function Contact() {
   const onSubmit = (e) => {
     e.preventDefault()
     // honeypot: ha kitöltötték, bot — csendben elvetjük (nem áruljuk el a csapdát)
-    if (hp) { resetForm(); toast('Köszönjük! Üzenetét megkaptuk — hamarosan jelentkezünk.'); return }
+    if (hp) { resetForm(); toast('Köszönjük! Üzenetét megkaptuk, hamarosan jelentkezünk.'); return }
     const hasErr = Object.keys(errors).length > 0
     if (hasErr || !captcha) {
       setTouched({ nev: true, email: true, tel: true, uzenet: true, gdpr: true, captcha: true })
@@ -101,7 +101,7 @@ export default function Contact() {
     }
     // NOTE: a `captcha` tokent a szerveren kell ellenőrizni a Turnstile secret key-jel
     // (challenges.cloudflare.com/turnstile/v0/siteverify) — lásd a README-jegyzetet.
-    toast('Köszönjük! Üzenetét megkaptuk — hamarosan jelentkezünk.')
+    toast('Köszönjük! Üzenetét megkaptuk, hamarosan jelentkezünk.')
     resetForm()
   }
 
@@ -170,7 +170,7 @@ export default function Contact() {
 
                 {/* fájlcsatolás */}
                 <div className="field group">
-                  <span className="grp-label">Csatolmány<span className="opt"> · tervrajz, PDF, kép — max. 10 MB</span></span>
+                  <span className="grp-label">Csatolmány<span className="opt"> · tervrajz, PDF, kép, max. 10 MB</span></span>
                   <div
                     className={`dropzone${drag ? ' drag' : ''}`} onClick={() => fileRef.current?.click()}
                     onDragOver={(e) => { e.preventDefault(); setDrag(true) }} onDragLeave={(e) => { e.preventDefault(); setDrag(false) }} onDrop={onDrop}
@@ -241,7 +241,7 @@ export default function Contact() {
         <div className="wrap">
           <Reveal className="media" style={{ height: 420 }}>
             <iframe
-              title="Debaru Kft. — Budafoki út 97., Budapest"
+              title="Debaru Kft., Budafoki út 97., Budapest"
               src={MAP_EMBED} width="100%" height="100%" style={{ border: 0, display: 'block' }}
               loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen
             />

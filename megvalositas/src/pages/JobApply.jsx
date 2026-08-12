@@ -57,10 +57,10 @@ function FileDrop({ label, hint, accept, files, onAdd, onRemove, error }) {
 function validate(f, phone, cv, cover) {
   const e = {}
   if (!f.nev.trim()) e.nev = 'Kérjük, adja meg a nevét.'
-  else if (f.nev.trim().length < 2) e.nev = 'A név túl rövid — legalább 2 karakter.'
+  else if (f.nev.trim().length < 2) e.nev = 'A név túl rövid, legalább 2 karakter.'
 
   if (!f.email.trim()) e.email = 'Kérjük, adja meg az e-mail címét.'
-  else if (!EMAIL_RE.test(f.email.trim())) e.email = 'Érvénytelen e-mail cím — ellenőrizze a formátumot (pl. nev@ceg.hu).'
+  else if (!EMAIL_RE.test(f.email.trim())) e.email = 'Érvénytelen e-mail cím, ellenőrizze a formátumot (pl. nev@ceg.hu).'
 
   if (phone && !isValidPhoneNumber(phone)) e.tel = 'A telefonszám érvénytelen a kiválasztott országhoz.'
 
@@ -86,7 +86,7 @@ const loadDraft = (slug) => { try { return JSON.parse(localStorage.getItem(draft
 export default function JobApply() {
   const { slug } = useParams()
   const job = jobBySlug[slug]
-  useDocumentTitle(job ? `Jelentkezés — ${job.title}` : undefined, job?.summary)
+  useDocumentTitle(job ? `Jelentkezés · ${job.title}` : undefined, job?.summary)
   const toast = useToast()
 
   const [form, setForm] = useState(() => { const d = loadDraft(slug); return d?.form ? { ...EMPTY, ...d.form } : EMPTY })
@@ -118,7 +118,7 @@ export default function JobApply() {
   // fájl hozzáadása egy adott mezőhöz (max. 2 fájl / mező), méret-ellenőrzéssel
   const addTo = (setter, key) => (list) => {
     const incoming = Array.from(list)
-    if (incoming.some((f) => f.size > MAX_FILE)) toast('Néhány fájl túl nagy — max. 10 MB fájlonként.')
+    if (incoming.some((f) => f.size > MAX_FILE)) toast('Néhány fájl túl nagy, max. 10 MB fájlonként.')
     const ok = incoming.filter((f) => f.size <= MAX_FILE)
     setter((prev) => [...prev, ...ok].slice(0, 2))
     setTouched((t) => ({ ...t, [key]: true }))
@@ -152,7 +152,7 @@ export default function JobApply() {
         trail={[{ label: 'Karrier', to: '/karrier' }, { label: job.title, to: `/karrier/${job.slug}` }, { label: 'Jelentkezés' }]}
         tag={job.department}
         title="Jelentkezés"
-        lede={`${job.title} — töltse ki az űrlapot, és pár perc alatt jelentkezhet.`}
+        lede={`${job.title}, töltse ki az űrlapot, és pár perc alatt jelentkezhet.`}
       />
 
       <section className="section" style={{ paddingTop: 24 }}>

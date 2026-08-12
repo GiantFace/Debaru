@@ -31,11 +31,11 @@ export const legalDocs = {
       { id: 'kezelt-adatok', title: 'A kezelt adatok köre', body: [
         { p: 'A kapcsolatfelvételi űrlap kitöltésekor az alábbi adatokat kezeljük:' },
         { ul: [
-          'Név (kötelező) — a megkeresés azonosításához és a megszólításhoz.',
-          'E-mail cím (kötelező) — a válaszadáshoz.',
-          'Cégnév (opcionális) — az igény pontosabb megértéséhez.',
-          'Telefonszám (opcionális) — a gyorsabb egyeztetéshez.',
-          'Az üzenet szövege és az esetleg csatolt fájlok — a feladat felméréséhez.',
+          'Név (kötelező), a megkeresés azonosításához és a megszólításhoz.',
+          'E-mail cím (kötelező), a válaszadáshoz.',
+          'Cégnév (opcionális), az igény pontosabb megértéséhez.',
+          'Telefonszám (opcionális), a gyorsabb egyeztetéshez.',
+          'Az üzenet szövege és az esetleg csatolt fájlok, a feladat felméréséhez.',
         ] },
         { p: 'A weboldal működéséhez kapcsolódóan a rendszer technikai adatokat (pl. IP-cím) is kezelhet a visszaélések megelőzése érdekében.' },
       ] },
@@ -45,7 +45,7 @@ export const legalDocs = {
         { p: 'A visszaélések (spam, automatizált beküldés) megelőzéséhez fűződő jogos érdek (GDPR 6. cikk (1) f) pont) alapján CAPTCHA-védelmet alkalmazunk.' },
       ] },
       { id: 'megorzes', title: 'Az adatok megőrzési ideje', body: [
-        { p: 'A kapcsolatfelvétel során megadott adatokat a megkeresés megválaszolásához, illetve — ha együttműködés jön létre — annak lezárásáig, azt követően a jogszabályi kötelezettségeknek megfelelő ideig őrizzük.' },
+        { p: 'A kapcsolatfelvétel során megadott adatokat a megkeresés megválaszolásához, illetve, ha együttműködés jön létre, annak lezárásáig, azt követően a jogszabályi kötelezettségeknek megfelelő ideig őrizzük.' },
         { p: 'Ha a megkeresésből nem jön létre együttműködés, az adatokat legkésőbb 12 hónap elteltével, illetve a hozzájárulás visszavonásakor töröljük.' },
       ] },
       { id: 'adatfeldolgozok', title: 'Adatfeldolgozók és adattovábbítás', body: [
@@ -54,7 +54,7 @@ export const legalDocs = {
           { label: 'Tárhely / CDN', value: 'Cloudflare, Inc. (101 Townsend St, San Francisco, CA 94107, USA)' },
           { label: 'Botvédelem (CAPTCHA)', value: 'Cloudflare Turnstile' },
         ] },
-        { p: 'Az adatokat harmadik félnek — a fenti adatfeldolgozókon és a jogszabályi kötelezettségeken túl — nem adjuk át, és marketing célból nem használjuk fel.' },
+        { p: 'Az adatokat harmadik félnek, a fenti adatfeldolgozókon és a jogszabályi kötelezettségeken túl, nem adjuk át, és marketing célból nem használjuk fel.' },
       ] },
       { id: 'sutik', title: 'Sütik (cookies)', body: [
         { p: 'A weboldal a működéséhez szükséges sütiket használ. A CAPTCHA-védelem (Cloudflare Turnstile) a visszaélések megelőzéséhez technikai sütit / azonosítót helyezhet el.' },
@@ -64,7 +64,7 @@ export const legalDocs = {
         { p: 'A vonatkozó jogszabályok szerint Önt az alábbi jogok illetik meg a személyes adataival kapcsolatban:' },
         { ul: [
           'Hozzáférés a kezelt adatokhoz és tájékoztatás az adatkezelésről.',
-          'Helyesbítés — pontatlan adatok kijavítása.',
+          'Helyesbítés, pontatlan adatok kijavítása.',
           'Törlés („az elfeledtetéshez való jog”).',
           'Az adatkezelés korlátozása.',
           'Tiltakozás az adatkezelés ellen.',
@@ -93,7 +93,7 @@ export const legalDocs = {
     headPlaceholder: 'Általános Szerződési Feltételek',
     title: 'Általános Szerződési Feltételek',
     updated: 'Hatályos: 2026. május 28. napjától visszavonásig vagy módosításig.',
-    intro: 'A Debaru Kft. Általános Szerződési Feltételei a villamos, irányítástechnikai, automatizálási, berendezésgyártási, szoftverfejlesztési és helyszíni kivitelezési projektekre. A teljes, hatályos dokumentum alább letölthető és megtekinthető — magyar, német és angol nyelven.',
+    intro: 'A Debaru Kft. Általános Szerződési Feltételei a villamos, irányítástechnikai, automatizálási, berendezésgyártási, szoftverfejlesztési és helyszíni kivitelezési projektekre. A teljes, hatályos dokumentum alább letölthető és megtekinthető, magyar, német és angol nyelven.',
     sections: [
       { id: 'szolgaltato', title: 'A Szolgáltató adatai', body: [
         { rows: [
@@ -151,7 +151,7 @@ export const legalDocs = {
       { id: 'felugyelet', title: 'Felügyeleti szervek és jogorvoslat', body: [
         { p: 'A tevékenységgel kapcsolatos fogyasztói, adatvédelmi vagy egyéb panasz esetén az alábbi szervekhez lehet fordulni:' },
         { rows: [
-          { label: 'Adatvédelem', value: 'Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH) — naih.hu', href: 'https://naih.hu' },
+          { label: 'Adatvédelem', value: 'Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH), naih.hu', href: 'https://naih.hu' },
           { label: 'Fogyasztóvédelem', value: 'Területileg illetékes kormányhivatal fogyasztóvédelmi hatósága' },
           { label: 'Békéltető testület', value: 'A székhely szerint illetékes békéltető testület' },
         ] },

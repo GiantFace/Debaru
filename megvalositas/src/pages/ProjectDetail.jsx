@@ -67,11 +67,11 @@ export default function ProjectDetail() {
             <div style={{ marginTop: 48 }}>
               <Reveal className="eyebrow">A hivatalos referencialistából</Reveal>
               <Reveal as="h2" style={{ fontSize: 'clamp(22px,3vw,30px)', margin: '14px 0 22px' }}>
-                Kapcsolódó munkáink — {p.client}
+                Kapcsolódó munkáink · {p.client}
               </Reveal>
               <div className="related-grid">
                 {related.map((r, i) => {
-                  const desc = [r.proj, r.fel].filter(Boolean).join(' — ')
+                  const desc = [r.proj, r.fel].filter(Boolean).join(' · ')
                   return (
                     <div className="related-card" key={i}>
                       <div className="tl-head">
